@@ -389,3 +389,226 @@ footer {
   transform: translate(-2px, -2px);
   box-shadow: 4px 4px 0px var(--border-color);
 }
+
+/* Cotizador Interactivo Styles */
+.cotizador-card {
+  padding: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  overflow: clip;
+}
+
+.cotizador-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background-color: var(--bg-tertiary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.cotizador-progress-fill {
+  height: 100%;
+  background-color: var(--accent-primary);
+  transition: width 0.3s ease;
+}
+
+.cotizador-steps-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.step-badge {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  background-color: var(--text-primary);
+  color: #ffffff;
+  padding: 0.25rem 0.6rem;
+  border: 2px solid var(--border-color);
+}
+
+.error-alert {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 2px solid #b91c1c;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 2px 2px 0px #b91c1c;
+}
+
+.step-title {
+  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.step-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+/* Checkbox & Radio Brutalist styles */
+.checkbox-grid, .radio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .checkbox-grid, .radio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.checkbox-brutalist, .radio-brutalist {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  background-color: var(--bg-primary);
+  border: 3px solid var(--border-color);
+  box-shadow: 3px 3px 0px var(--border-color);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  user-select: none;
+}
+
+.checkbox-brutalist input, .radio-brutalist input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-brutalist:hover, .radio-brutalist:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px var(--border-color);
+}
+
+.checkbox-brutalist.checked, .radio-brutalist.checked {
+  background-color: var(--accent-primary);
+  color: #000000;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--border-color);
+}
+
+.checkbox-icon, .radio-icon {
+  font-size: 1.5rem;
+}
+
+.checkbox-text, .radio-text {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+/* Input Fields Brutalist */
+.input-group-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .input-group-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form-group-brutalist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group-brutalist label {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.form-group-brutalist input {
+  background-color: var(--bg-primary);
+  border: 3px solid var(--border-color);
+  padding: 0.8rem 1rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-primary);
+  box-shadow: 3px 3px 0px var(--border-color);
+  transition: all var(--transition-fast);
+}
+
+.form-group-brutalist input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 4px 4px 0px var(--border-color);
+  transform: translate(-1px, -1px);
+}
+
+/* Navigation Buttons */
+.cotizador-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+.cotizador-navigation .btn {
+  padding: 0.8rem 1.8rem;
+  font-size: 0.95rem;
+}
+
+.next-btn-brutalist, .submit-btn-brutalist {
+  margin-left: auto;
+}
+
+/* Success screen */
+.success-screen {
+  padding: 2rem 1rem;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  animation: pulse 1.5s infinite;
+}
+
+.success-screen h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.success-screen p {
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.whatsapp-success-btn {
+  background-color: var(--whatsapp-color);
+  color: #ffffff;
+  border: 3px solid var(--border-color);
+  box-shadow: 4px 4px 0px var(--border-color);
+}
+
+.whatsapp-success-btn:hover {
+  background-color: var(--whatsapp-hover);
+  box-shadow: 6px 6px 0px var(--border-color);
+}

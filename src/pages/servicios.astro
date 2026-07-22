@@ -1,0 +1,228 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Cotizador from '../components/Cotizador';
+
+const title = "Servicios de Trafficker Digital y Marketing | Fabián Pérez";
+const description = "Descubre mis servicios especializados de pauta publicitaria en Google, Meta y LinkedIn Ads, analítica web avanzada, medición de conversiones y páginas de aterrizaje CRO.";
+---
+
+<Layout title={title} description={description}>
+  <!-- Base Services Hero -->
+  <section class="section services-hero" id="hero">
+    <div class="container text-center">
+      <span class="step-subtitle highlight-box">Soluciones de Crecimiento</span>
+      <h1 class="services-title">Servicios de <span>Trafficker Digital</span></h1>
+      <p class="services-desc">
+        Diseño y ejecuto campañas publicitarias de alta precisión orientadas al retorno de inversión. Transforma tus visitas en clientes recurrentes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section services-grid-sec" id="grid">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card service-page-card">
+          <span class="card-num">01</span>
+          <h3>Google Ads</h3>
+          <p className="card-tagline">Captación de demanda consciente</p>
+          <p>Estrategias avanzadas en redes de Búsqueda, Shopping, YouTube Ads y Performance Max. Captura al cliente ideal en el momento preciso en que busca tu producto o servicio.</p>
+          <a href="/servicios/trafficker-google-ads" class="btn btn-secondary btn-sm-custom" id="srv-link-google">
+            Ver Detalles &rarr;
+          </a>
+        </div>
+
+        <div class="card service-page-card">
+          <span class="card-num">02</span>
+          <h3>Meta Ads</h3>
+          <p className="card-tagline">Generación de demanda & Retargeting</p>
+          <p>Campañas de conversión en Facebook, Instagram y Messenger. Creación de embudos de WhatsApp automatizados y captación de leads de alto valor.</p>
+          <a href="/servicios/trafficker-facebook-ads" class="btn btn-secondary btn-sm-custom" id="srv-link-facebook">
+            Ver Detalles &rarr;
+          </a>
+        </div>
+
+        <div class="card service-page-card">
+          <span class="card-num">03</span>
+          <h3>LinkedIn Ads</h3>
+          <p className="card-tagline">B2B de alto valor & Corporativo</p>
+          <p>Campañas hiper-segmentadas enfocadas a tomadores de decisiones corporativas, gerentes y dueños de empresas B2B. Captación de leads de ticket alto.</p>
+          <a href="/servicios/trafficker-linkedin-ads" class="btn btn-secondary btn-sm-custom" id="srv-link-linkedin">
+            Ver Detalles &rarr;
+          </a>
+        </div>
+
+        <div class="card service-page-card">
+          <span class="card-num">04</span>
+          <h3>Analítica Web & Tracking</h3>
+          <p className="card-tagline">GA4, Tag Manager y Server-Side CAPI</p>
+          <p>Implementación rigurosa de atribución. Configuración de API de Conversiones (CAPI) de Meta y tracking server-side para medir con exactitud tu ROI.</p>
+          <a href="/servicios/analitica-web-tracking" class="btn btn-secondary btn-sm-custom" id="srv-link-tracking">
+            Ver Detalles &rarr;
+          </a>
+        </div>
+
+        <div class="card service-page-card">
+          <span class="card-num">05</span>
+          <h3>CRO & Landing Pages</h3>
+          <p className="card-tagline">Funnels de alta conversión</p>
+          <p>Diseño y desarrollo de páginas de aterrizaje ligeras y persuasivas optimizadas al milisegundo. Optimizamos tu embudo para exprimir al máximo tu inversión en pauta.</p>
+          <a href="/servicios/cro-landing-pages" class="btn btn-secondary btn-sm-custom" id="srv-link-cro">
+            Ver Detalles &rarr;
+          </a>
+        </div>
+
+        <div class="card service-page-card cta-grid-card">
+          <h3>¿Buscas una propuesta a la medida?</h3>
+          <p>Utiliza nuestro cotizador interactivo en tiempo real para calcular los canales recomendados de acuerdo a tu objetivo de facturación.</p>
+          <a href="#cotizador-sec" class="btn btn-primary" id="srv-link-cotizador">
+            ⚡ Cotizar Ahora
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Quote Section -->
+  <section class="section quote-section" id="cotizador-sec">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Cotizador en Línea</span>
+        <h2>Calcula tu Presupuesto de Estrategia</h2>
+        <p style="max-width: 600px; margin: 1rem auto; font-weight: 500; color: var(--text-secondary);">
+          Selecciona tus intereses y presupuesto para obtener una estimación formal de servicios de inmediato.
+        </p>
+      </div>
+
+      <Cotizador client:visible />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .services-hero {
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+  }
+
+  .services-title {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.2rem;
+  }
+
+  .services-title span {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    padding: 0 0.5rem;
+    border: 3px solid var(--border-color);
+    box-shadow: 3px 3px 0px var(--border-color);
+    display: inline-block;
+    transform: rotate(-1deg);
+  }
+
+  .services-desc {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin: 0 auto;
+    font-weight: 500;
+  }
+
+  .services-grid-sec {
+    padding-bottom: 5rem;
+  }
+
+  .service-page-card {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+  }
+
+  .card-num {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--text-muted);
+  }
+
+  .card-tagline {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    margin-bottom: 1.2rem;
+  }
+
+  .service-page-card h3 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 0.2rem;
+  }
+
+  .service-page-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    line-height: 1.6;
+  }
+
+  .btn-sm-custom {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+    border-width: 2px;
+    box-shadow: 2px 2px 0px var(--border-color);
+    text-transform: none;
+    margin-top: auto;
+    align-self: flex-start;
+  }
+
+  .btn-sm-custom:hover {
+    box-shadow: 3px 3px 0px var(--border-color);
+  }
+
+  .cta-grid-card {
+    background-color: var(--text-primary);
+    color: #ffffff;
+    border: 3px solid var(--border-color);
+    box-shadow: 5px 5px 0px var(--border-color);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  .cta-grid-card h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  .cta-grid-card p {
+    color: var(--bg-tertiary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  .cta-grid-card .btn-primary {
+    border-color: #ffffff;
+    box-shadow: 3px 3px 0px #ffffff;
+  }
+
+  .cta-grid-card .btn-primary:hover {
+    box-shadow: 5px 5px 0px #ffffff;
+  }
+</style>
