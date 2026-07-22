@@ -1,0 +1,129 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "Fabipers | Trafficker Digital & Full Stack Marketer", 
+	description = "Te ayudo a hacer crecer tu negocio mediante campañas publicitarias altamente efectivas, analítica avanzada y optimización de conversiones." 
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={Astro.url.href} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url.href} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url.href} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+	</head>
+	<body>
+		<!-- Header / Nav -->
+		<header>
+			<div class="container header-container">
+				<a href="/" class="logo" id="header-logo-link">
+					fabipers<span>.com</span>
+				</a>
+				
+				<nav aria-label="Navegación principal">
+					<ul class="nav-links">
+						<li>
+							<a href="/" class={currentPath === "/" || currentPath === "" ? "active" : ""} id="nav-home">
+								Inicio
+							</a>
+						</li>
+						<li>
+							<a href="/blog" class={currentPath.startsWith("/blog") ? "active" : ""} id="nav-blog">
+								Blog
+							</a>
+						</li>
+						<li>
+							<a href="/traffikcer-digital-colombia" class={currentPath === "/traffikcer-digital-colombia" ? "active" : ""} id="nav-about">
+								Sobre mí
+							</a>
+						</li>
+						<li>
+							<a href="/testimonials" class={currentPath === "/testimonials" ? "active" : ""} id="nav-testimonials">
+								Testimonios
+							</a>
+						</li>
+						<li>
+							<a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20una%20asesor%C3%ADa" class="btn btn-primary" id="nav-cta" target="_blank" rel="noopener noreferrer">
+								Hablemos
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- Main Content Slot -->
+		<main>
+			<slot />
+		</main>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<div class="footer-grid">
+					<div class="footer-info">
+						<a href="/" class="logo" id="footer-logo-link">
+							fabipers<span>.com</span>
+						</a>
+						<p>Especialista en tráfico de pago y optimización de conversión. Conectando tu negocio con clientes de alto valor.</p>
+					</div>
+					
+					<div class="footer-links">
+						<h4>Navegación</h4>
+						<ul>
+							<li><a href="/" id="footer-nav-home">Inicio</a></li>
+							<li><a href="/blog" id="footer-nav-blog">Blog</a></li>
+							<li><a href="/traffikcer-digital-colombia" id="footer-nav-about">Sobre mí</a></li>
+							<li><a href="/testimonials" id="footer-nav-testimonials">Testimonios</a></li>
+						</ul>
+					</div>
+					
+					<div class="footer-links">
+						<h4>Contacto</h4>
+						<ul>
+							<li><a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20una%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer" id="footer-contact-whatsapp">WhatsApp</a></li>
+							<li><a href="mailto:fabipers@gmail.com" id="footer-contact-email">Email</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="footer-bottom">
+					<p>&copy; {new Date().getFullYear()} fabipers.com. Todos los derechos reservados.</p>
+					<div class="social-links">
+						<a href="https://twitter.com/fabipers" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X" id="social-twitter">𝕏</a>
+						<a href="https://instagram.com/fabipers" target="_blank" rel="noopener noreferrer" aria-label="Instagram" id="social-instagram">IG</a>
+						<a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" id="social-linkedin">LN</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

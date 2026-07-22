@@ -1,0 +1,224 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+// Generate paths for all blog posts and pages
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  const pageEntries = await getCollection('pages');
+  
+  const blogPaths = blogEntries.map(entry => ({
+    params: { slug: entry.id },
+    props: { entry, type: 'post' }
+  }));
+  
+  const pagePaths = pageEntries.map(entry => ({
+    params: { slug: entry.id },
+    props: { entry, type: 'page' }
+  }));
+  
+  return [...blogPaths, ...pagePaths];
+}
+
+const { entry, type } = Astro.props;
+const { Content } = await render(entry);
+
+// Format date helper
+const formatDate = (dateStr: string | Date) => {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('es-ES', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+};
+
+const title = `${entry.data.title} | Fabipers`;
+const description = entry.data.description || `Leer ${entry.data.title} en fabipers.com.`;
+---
+
+<Layout title={title} description={description}>
+  {type === 'post' ? (
+    /* Blog Post Layout */
+    <article class="post-layout section">
+      <div class="container post-container">
+        <header class="post-header text-center">
+          <div class="post-meta">
+            <time datetime={entry.data.pubDate.toString()}>{formatDate(entry.data.pubDate)}</time>
+            {entry.data.categories && entry.data.categories.length > 0 && (
+              <span class="post-category">{entry.data.categories[0]}</span>
+            )}
+          </div>
+          <h1 class="post-title">{entry.data.title}</h1>
+          
+          {entry.data.tags && entry.data.tags.length > 0 && (
+            <div class="post-tags">
+              {entry.data.tags.map((tag: string) => (
+                <span class="tag-badge">#{tag}</span>
+              ))}
+            </div>
+          )}
+        </header>
+
+        <div class="post-content">
+          <Content />
+        </div>
+
+        <footer class="post-footer">
+          <div class="post-cta card text-center">
+            <h3>¿Quieres potenciar tus campañas de marketing?</h3>
+            <p>Escríbeme por WhatsApp y analicemos cómo mejorar el retorno de inversión (ROI) de tus anuncios digitales.</p>
+            <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20una%20asesor%C3%ADa" class="btn btn-primary glow-effect" id="post-cta-btn" target="_blank" rel="noopener noreferrer">
+              Hablemos hoy mismo
+            </a>
+          </div>
+        </footer>
+      </div>
+    </article>
+  ) : (
+    /* Static Page Layout */
+    <div class="page-layout section">
+      <div class="container page-container">
+        <header class="page-header text-center">
+          <h1 class="page-title">{entry.data.title}</h1>
+        </header>
+        <div class="page-content">
+          <Content />
+        </div>
+      </div>
+    </div>
+  )}
+</Layout>
+
+<style is:global>
+  /* Base styles for post/page content rendering */
+  .post-container, .page-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .post-header, .page-header {
+    margin-bottom: 4rem;
+  }
+  
+  .post-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+  
+  .post-category {
+    background: rgba(245, 158, 11, 0.08);
+    color: var(--accent-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .post-title, .page-title {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+  }
+  
+  .post-tags {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  
+  .tag-badge {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+  
+  /* Markdown content styles */
+  .post-content, .page-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #e5e7eb;
+  }
+  
+  .post-content p, .page-content p {
+    margin-bottom: 1.8rem;
+  }
+  
+  .post-content h2, .page-content h2 {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+    color: #ffffff;
+  }
+  
+  .post-content h3, .page-content h3 {
+    font-size: 1.4rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+  
+  .post-content ul, .post-content ol,
+  .page-content ul, .page-content ol {
+    margin-bottom: 1.8rem;
+    padding-left: 2rem;
+  }
+  
+  .post-content li, .page-content li {
+    margin-bottom: 0.6rem;
+  }
+  
+  .post-content a, .page-content a {
+    color: var(--accent-primary);
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  
+  .post-content a:hover, .page-content a:hover {
+    color: var(--accent-hover);
+  }
+  
+  .post-content blockquote, .page-content blockquote {
+    border-left: 4px solid var(--accent-primary);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--text-secondary);
+  }
+  
+  .post-content img, .page-content img {
+    border-radius: 12px;
+    margin: 2rem 0;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  
+  .post-footer {
+    margin-top: 5rem;
+  }
+  
+  .post-cta {
+    background: radial-gradient(circle at top right, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+    padding: 3rem 2rem;
+    border-color: rgba(245, 158, 11, 0.15);
+  }
+  
+  .post-cta h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .post-cta p {
+    color: var(--text-secondary);
+    max-width: 550px;
+    margin: 0 auto 2rem auto;
+  }
+</style>
