@@ -74,7 +74,7 @@ const formatDate = (dateStr: string | Date) => {
               <div class="blog-meta">
                 <time datetime={post.data.pubDate.toString()}>{formatDate(post.data.pubDate)}</time>
                 {post.data.categories && post.data.categories.length > 0 && (
-                  <span class="blog-category">{post.data.categories[0]}</span>
+                  <a href={`/blog/tag/${slugify(post.data.categories[0])}/`} class="blog-category" id={`post-${post.id}-cat-${slugify(post.data.categories[0])}`}>{post.data.categories[0]}</a>
                 )}
               </div>
               
@@ -215,6 +215,16 @@ const formatDate = (dateStr: string | Date) => {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+  }
+
+  .blog-category:hover {
+    background: var(--text-primary);
+    color: var(--accent-primary);
+  }
+
+  .blog-tag-link:hover {
+    color: var(--text-primary);
+    background-color: var(--accent-alpha);
   }
   
   .blog-card-title {

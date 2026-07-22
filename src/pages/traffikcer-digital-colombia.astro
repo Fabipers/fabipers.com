@@ -2,121 +2,166 @@
 import Layout from '../layouts/Layout.astro';
 
 // SEO Title & Description
-const title = "Sobre Mí | Fabián Pérez - Full Stack Marketer & Ad Trafficker";
-const description = "Descubre la trayectoria de Fabián Pérez. Especialista en optimizar tus inversiones en publicidad digital, SEO, SEM y desarrollo de landing pages de alta conversión.";
+const title = "Trafficker Digital en Colombia | Especialista en Google & Meta Ads";
+const description = "Multiplica tus clientes y ventas en Bogotá y toda Colombia con campañas de publicidad digital de alto impacto. Especialista en optimizar el ROI.";
 ---
 
 <Layout title={title} description={description}>
+  <!-- Schema LocalBusiness / Service JSON-LD -->
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Servicios de Trafficker Digital y Google/Meta Ads",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Fabián Pérez",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bogotá",
+          "addressRegion": "Cundinamarca",
+          "addressCountry": "CO"
+        },
+        "telephone": "+573182873558",
+        "url": "https://fabipers.com/traffikcer-digital-colombia"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Colombia"
+      },
+      "description": "Optimización avanzada de campañas de Google Ads y Meta Ads para empresas en Colombia, buscando maximizar el retorno de inversión (ROI) con presupuestos locales.",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "COP"
+      }
+    }
+  </script>
+
   <!-- Hero Section -->
-  <section class="section about-hero-section" id="about-hero">
+  <section class="section hero-section" id="hero">
     <div class="container hero-grid">
       <div class="hero-content">
         <div class="badge-wrapper">
-          <span class="hero-badge rotate-left">⚡ Conoce mi trayectoria</span>
+          <span class="hero-badge rotate-left">⚡ Especialista en Ads & Tráfico en Colombia</span>
         </div>
         <h1 class="hero-title">
-          Full Stack Marketer & <span class="highlight-text">Ad Trafficker</span> Digital
+          Multiplica tus clientes en Colombia con publicidad de <span class="highlight-text">ALTO IMPACTO</span>
         </h1>
         <p class="hero-subtitle">
-          Años impulsando el crecimiento de negocios con SEO, SEM, Analítica Avanzada y Funnels de Alta Conversión. Creo estrategias digitales que no solo atraen miradas, sino que facturan.
+          ¿Buscas un Trafficker Digital en Bogotá que entienda el mercado colombiano y optimice cada peso de tu presupuesto? Aumento las ventas de tu negocio con estrategias de conversión avanzadas.
         </p>
         <div class="hero-actions">
-          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20auditar%20mi%20estrategia%20digital" class="btn btn-primary" id="about-cta-whatsapp" target="_blank" rel="noopener noreferrer">
-            Auditar mi estrategia (WhatsApp)
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20una%20asesor%C3%ADa%20en%20Colombia" class="btn btn-whatsapp" id="hero-cta-whatsapp" target="_blank" rel="noopener noreferrer">
+            <span class="whatsapp-icon">💬</span> Hablemos por WhatsApp
+          </a>
+          <a href="#servicios" class="btn btn-secondary" id="hero-cta-services">
+            Ver Servicios
           </a>
         </div>
       </div>
-      
       <div class="hero-visual">
-        <div class="profile-card-brutalist">
-          <div class="profile-halo"></div>
-          <div class="profile-card-content card">
-            <div class="profile-avatar">FP</div>
-            <h2 class="profile-name">Fabián Pérez</h2>
-            <span class="profile-title highlight-box">Full Stack Marketer</span>
+        <div class="visual-cube card rotate-right">
+          <span class="cube-tag highlight-box">COLOMBIA</span>
+          <div class="stat-box">
+            <span class="stat-num">+150%</span>
+            <span class="stat-lbl">Retorno de Inversión</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Technical Stack & Specialties -->
-  <section class="section specialties-section" id="especialidades">
+  <!-- Problem vs Solution (Brutalist blocks) -->
+  <section class="section compare-section" id="compare">
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="card problem-card">
+          <span class="card-tag rotate-left">El Problema</span>
+          <h2>¿Cansado de gastar en clics que no te traen clientes?</h2>
+          <p>Muchos negocios en Colombia delegan sus campañas en agencias tradicionales que solo reportan métricas de vanidad como 'impresiones' o 'likes'. Al final de mes, el presupuesto en pesos se agota y las ventas siguen igual.</p>
+        </div>
+        <div class="card solution-card">
+          <span class="card-tag rotate-right highlight-box">La Solución</span>
+          <h2>Optimización estricta basada en conversiones reales</h2>
+          <p>Estructuro tus embudos de ventas en pesos colombianos (COP), configurando la atribución de conversiones de forma exacta. Enfocamos la inversión en lo que realmente genera contactos de WhatsApp y ventas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section services-section" id="servicios">
     <div class="container">
       <div class="section-header text-center">
-        <span class="step-subtitle">Mis Pilares Clave</span>
-        <h2>Stack Técnico y Especialidades</h2>
+        <span class="step-subtitle">Servicios para Colombia</span>
+        <h2>Estrategias hechas para facturar más</h2>
       </div>
 
-      <div class="grid grid-2">
-        <div class="card specialty-card">
-          <div class="specialty-icon">🚀</div>
-          <h3>SEO & Organic Growth</h3>
-          <p class="specialty-tagline">Posicionamiento web de alto rendimiento</p>
-          <p>Estructuro el contenido y optimizo técnicamente tu sitio para posicionarte en los primeros resultados de Google. Menos gasto en publicidad, más tráfico orgánico recurrente y de alta intención de compra.</p>
+      <div class="grid grid-3">
+        <div class="card service-card">
+          <div class="service-icon">📈</div>
+          <h3>Paid Ads & Traffic</h3>
+          <p>Administración experta de campañas en Google Ads, Meta Ads y TikTok Ads para todo el territorio colombiano.</p>
         </div>
 
-        <div class="card specialty-card">
-          <div class="specialty-icon">💵</div>
-          <h3>Paid Media / SEM</h3>
-          <p class="specialty-tagline">Google Ads & Meta Ads enfocado en ROI</p>
-          <p>Estrategia y ejecución avanzada en campañas de tráfico pago. Diseño embudos de venta precisos, segmentación exacta y optimización analítica para que cada centavo invertido genere retorno.</p>
+        <div class="card service-card">
+          <div class="service-icon">🔍</div>
+          <h3>SEO & Orgánico</h3>
+          <p>Posicionamiento orgánico en Google para búsquedas de alta intención en Bogotá, Medellín, Cali y Barranquilla.</p>
         </div>
 
-        <div class="card specialty-card">
-          <div class="specialty-icon">📊</div>
-          <h3>Analítica Web Avanzada</h3>
-          <p class="specialty-tagline">Google Analytics 4 & Tag Manager</p>
-          <p>Lo que no se mide no se puede mejorar. Configuro modelos de atribución y medición de conversiones estrictos para saber con certeza de dónde vienen tus clientes y cómo optimizar la conversión.</p>
-        </div>
-
-        <div class="card specialty-card">
-          <div class="specialty-icon">💻</div>
-          <h3>Full Stack Development</h3>
-          <p class="specialty-tagline">Landings ultra rápidas con React y Astro</p>
-          <p>Desarrollo páginas web y landings de conversión optimizadas al milisegundo. Menor tiempo de carga significa menor tasa de rebote y un aumento directo en tus tasas de conversión.</p>
+        <div class="card service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>Embudos & Analítica</h3>
+          <p>Integración de Google Analytics 4, Tag Manager y WhatsApp Business para tener trazabilidad del 100% de tus prospectos.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Work Philosophy -->
-  <section class="section philosophy-section" id="filosofia">
+  <!-- How It Works -->
+  <section class="section steps-section" id="steps">
     <div class="container">
-      <div class="philosophy-wrap card">
-        <span class="highlight-box rotate-left">Cómo Trabajo</span>
-        <h2>Mi Filosofía de Trabajo</h2>
+      <div class="section-header text-center">
+        <span class="step-subtitle">Metodología de Trabajo</span>
+        <h2>Cuatro sencillos pasos para el crecimiento</h2>
+      </div>
+      
+      <div class="grid grid-2 step-grid">
+        <div class="card step-card">
+          <div class="step-number rotate-left">01</div>
+          <h3>Análisis Estratégico</h3>
+          <p>Revisamos tu producto o servicio, tus competidores en el mercado nacional y tu historial publicitario en pesos para trazar el camino más rentable.</p>
+        </div>
         
-        <div class="philosophy-grid grid grid-3" style="margin-top: 3rem;">
-          <div class="philosophy-item">
-            <span class="philosophy-num">01</span>
-            <h4>Enfoque en Resultados</h4>
-            <p>No busco "likes" o métricas de vanidad. Mi prioridad número uno es el retorno de tu inversión (ROI) y el crecimiento real de tus ventas.</p>
-          </div>
-          
-          <div class="philosophy-item">
-            <span class="philosophy-num">02</span>
-            <h4>Optimización Basada en Datos</h4>
-            <p>Las decisiones se toman analizando datos cuantitativos, no basándome en corazonadas. Analizo, pruebo, mido y mejoro constantemente.</p>
-          </div>
-          
-          <div class="philosophy-item">
-            <span class="philosophy-num">03</span>
-            <h4>Transparencia Total</h4>
-            <p>Acceso completo a tus cuentas de anuncios, informes claros de rendimiento y comunicación constante para que sepas exactamente qué hacemos.</p>
-          </div>
+        <div class="card step-card">
+          <div class="step-number rotate-right">02</div>
+          <h3>Planificación y Funnel</h3>
+          <p>Diseñamos el embudo (usualmente con WhatsApp como canal de cierre preferido en Colombia) y establecemos la segmentación ideal de audiencias.</p>
+        </div>
+        
+        <div class="card step-card">
+          <div class="step-number rotate-left">03</div>
+          <h3>Implementación y Lanzamiento</h3>
+          <p>Estructuramos las campañas desde cero en las herramientas oficiales de Google y Facebook, redactando anuncios persuasivos dirigidos a tu cliente ideal.</p>
+        </div>
+        
+        <div class="card step-card">
+          <div class="step-number rotate-right">04</div>
+          <h3>Optimización Semanal</h3>
+          <p>Realizamos ajustes diarios de presupuestos, audiencias y creativos para asegurar que mantengas un costo por lead bajo y rentable.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="section about-cta-section" id="about-cta">
+  <!-- Local CTA Section -->
+  <section class="section local-cta-section" id="local-cta">
     <div class="container">
       <div class="cta-banner-brutalist">
-        <h2>¿Listo para optimizar tu estrategia digital?</h2>
-        <p>Hablemos por WhatsApp y realicemos una auditoría rápida de tus campañas publicitarias y posicionamiento actual sin ningún compromiso.</p>
-        <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20auditar%20mi%20estrategia%20digital" class="btn btn-primary" id="about-footer-cta-btn" target="_blank" rel="noopener noreferrer">
+        <h2>¿Quieres auditar tu estrategia actual en Colombia?</h2>
+        <p>Hablemos por WhatsApp y analicemos de forma gratuita tu embudo de ventas, el coste por cliente potencial actual y tus oportunidades de optimización.</p>
+        <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20una%20asesor%C3%ADa%20en%20Colombia" class="btn btn-primary" id="colombia-footer-cta-btn" target="_blank" rel="noopener noreferrer">
           ⚡ Agendar Auditoría Gratuita
         </a>
       </div>
@@ -126,7 +171,7 @@ const description = "Descubre la trayectoria de Fabián Pérez. Especialista en 
 
 <style>
   /* Hero Styles */
-  .about-hero-section {
+  .hero-section {
     padding: 8rem 0 5rem 0;
   }
   
@@ -161,7 +206,7 @@ const description = "Descubre la trayectoria de Fabián Pérez. Especialista en 
   }
   
   .hero-title {
-    font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
     letter-spacing: -0.04em;
     line-height: 1.05;
     margin-bottom: 1.8rem;
@@ -180,151 +225,183 @@ const description = "Descubre la trayectoria de Fabián Pérez. Especialista en 
   }
   
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: var(--text-secondary);
     margin-bottom: 2.8rem;
     max-width: 650px;
     font-weight: 500;
   }
   
-  /* Profile visual */
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .hero-actions .btn {
+    border-width: 3px;
+  }
+  
+  /* Cube visual */
   .hero-visual {
     display: flex;
     justify-content: center;
-    position: relative;
   }
   
-  .profile-card-brutalist {
-    position: relative;
-    width: 280px;
-    height: 320px;
-  }
-  
-  .profile-halo {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    width: 280px;
-    height: 320px;
-    background-color: var(--accent-primary);
-    border: 3px solid var(--border-color);
-    z-index: 1;
-    transform: rotate(3deg);
-  }
-  
-  .profile-card-content {
-    position: absolute;
-    width: 280px;
-    height: 320px;
-    z-index: 2;
+  .visual-cube {
+    width: 250px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--bg-primary);
-    box-shadow: none;
+    position: relative;
+    padding: 2rem;
   }
   
-  .profile-avatar {
-    width: 90px;
-    height: 90px;
-    background-color: var(--text-primary);
-    color: var(--bg-primary);
+  .cube-tag {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    transform: rotate(-3deg);
+  }
+  
+  .stat-box {
+    text-align: center;
+  }
+  
+  .stat-num {
     font-family: var(--font-heading);
-    font-size: 2.2rem;
     font-weight: 900;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid var(--border-color);
-    margin-bottom: 1.2rem;
-  }
-  
-  .profile-name {
-    font-size: 1.6rem;
-    font-weight: 900;
+    font-size: 3.8rem;
+    line-height: 1;
+    color: var(--text-primary);
+    display: block;
     margin-bottom: 0.5rem;
   }
   
-  .profile-title {
-    font-size: 0.8rem;
-    padding: 0.2rem 0.5rem;
-    transform: rotate(-1deg);
+  .stat-lbl {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.9rem;
     text-transform: uppercase;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
   }
   
-  /* Specialties Section */
-  .specialties-section {
+  /* Compare Section */
+  .compare-section {
     background-color: var(--bg-secondary);
     border-top: 3px solid var(--border-color);
     border-bottom: 3px solid var(--border-color);
   }
   
-  .specialty-icon {
+  .problem-card, .solution-card {
+    position: relative;
+    padding: 3rem 2rem;
+    height: 100%;
+  }
+  
+  .problem-card .card-tag, .solution-card .card-tag {
+    position: absolute;
+    top: -18px;
+    left: 20px;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.65rem;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  
+  .problem-card .card-tag {
+    background-color: var(--text-primary);
+    color: #ffffff;
+    border: 2px solid var(--border-color);
+  }
+  
+  .problem-card h2, .solution-card h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 1.2rem;
+  }
+  
+  .problem-card p, .solution-card p {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* Services Section */
+  .service-card {
+    padding: 2.5rem 2rem;
+    height: 100%;
+  }
+  
+  .service-icon {
     font-size: 2.2rem;
     margin-bottom: 1rem;
   }
   
-  .specialty-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.2rem;
+  .service-card h3 {
+    font-size: 1.3rem;
     font-weight: 900;
-  }
-  
-  .specialty-tagline {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    margin-bottom: 1.2rem;
-  }
-  
-  .specialty-card p {
-    color: var(--text-secondary);
-    font-weight: 500;
-    font-size: 0.95rem;
-  }
-  
-  /* Philosophy Section */
-  .philosophy-wrap {
-    padding: 4rem;
-  }
-  
-  .philosophy-wrap h2 {
-    font-size: 2.2rem;
-    font-weight: 900;
-    margin-top: 1rem;
-  }
-  
-  .philosophy-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .philosophy-num {
-    font-family: var(--font-heading);
-    font-weight: 900;
-    font-size: 1.8rem;
-    background-color: var(--accent-primary);
-    color: #000000;
-    border: 3px solid var(--border-color);
-    box-shadow: 2px 2px 0px var(--border-color);
-    padding: 0.1rem 0.6rem;
-    margin-bottom: 1.2rem;
-  }
-  
-  .philosophy-item h4 {
-    font-size: 1.25rem;
-    font-weight: 800;
     margin-bottom: 0.8rem;
   }
   
-  .philosophy-item p {
+  .service-card p {
     color: var(--text-secondary);
-    font-size: 0.95rem;
     font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  /* Steps Section */
+  .steps-section {
+    background-color: var(--bg-secondary);
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+  }
+  
+  .step-grid {
+    margin-top: 4rem;
+  }
+  
+  .step-card {
+    padding: 2.5rem;
+    position: relative;
+    height: 100%;
+  }
+  
+  .step-number {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.4rem;
+    background-color: var(--accent-primary);
+    color: #000000;
+    border: 2px solid var(--border-color);
+    box-shadow: 2px 2px 0px var(--border-color);
+    padding: 0.1rem 0.5rem;
+  }
+  
+  .step-card h3 {
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-bottom: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  
+  .step-card p {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
   
   /* CTA banner */
@@ -339,7 +416,7 @@ const description = "Descubre la trayectoria de Fabián Pérez. Especialista en 
   
   .cta-banner-brutalist h2 {
     color: #ffffff;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 900;
     margin-bottom: 1rem;
   }
@@ -348,7 +425,7 @@ const description = "Descubre la trayectoria de Fabián Pérez. Especialista en 
     color: var(--bg-tertiary);
     max-width: 600px;
     margin: 0 auto 2.5rem auto;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 500;
   }
   

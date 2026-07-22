@@ -10,9 +10,10 @@
   --text-secondary: #3f3f46;
   --text-muted: #71717a;
   
-  --accent-primary: #a3e635; /* Neon Lime */
-  --accent-hover: #84cc16;
-  --accent-glow: rgba(163, 230, 53, 0.4);
+  --accent-primary: #f43f5e; /* Magenta Electric */
+  --accent-hover: #e11d48;
+  --accent-glow: rgba(244, 63, 94, 0.4);
+  --accent-alpha: rgba(244, 63, 94, 0.25);
   
   --whatsapp-color: #22c55e; /* Emerald Green */
   --whatsapp-hover: #16a34a;

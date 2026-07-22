@@ -7,6 +7,35 @@ const description = "Multiplica tus clientes en Miami con publicidad online de a
 ---
 
 <Layout title={title} description={description}>
+  <!-- Schema LocalBusiness / Service JSON-LD -->
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Miami Digital Trafficker & Ads Optimization Services",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Fabián Pérez",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Miami",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        "telephone": "+573182873558",
+        "url": "https://fabipers.com/traffikcer-digital-miami"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Miami Metropolitan Area"
+      },
+      "description": "Professional Google Ads and Meta Ads management tailored for Hispanic business owners targeting the United States and Miami local markets, focused on maximizing ROI.",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    }
+  </script>
   <!-- Hero Section -->
   <section class="section hero-section" id="hero">
     <div class="container hero-grid">

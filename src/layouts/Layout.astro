@@ -45,6 +45,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fabipers.com');
 		<meta property="twitter:url" content={canonicalURL.href} />
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
+		<slot name="head" />
 	</head>
 	<body>
 		<!-- Header / Nav -->
@@ -67,14 +68,26 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fabipers.com');
 							</a>
 						</li>
 						<li>
-							<a href="/traffikcer-digital-colombia" class={currentPath === "/traffikcer-digital-colombia" ? "active" : ""} id="nav-about">
+							<a href="/sobre-mi" class={currentPath === "/sobre-mi" ? "active" : ""} id="nav-about">
 								Sobre mí
 							</a>
 						</li>
-						<li>
-							<a href="/testimonials" class={currentPath === "/testimonials" ? "active" : ""} id="nav-testimonials">
-								Testimonios
-							</a>
+						<li class="dropdown">
+							<button class="dropdown-trigger" aria-expanded="false" id="nav-locations-btn">
+								Ubicaciones <span class="arrow">▼</span>
+							</button>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="/traffikcer-digital-colombia" class={currentPath === "/traffikcer-digital-colombia" ? "active" : ""} id="nav-loc-colombia">
+										🇨🇴 Colombia
+									</a>
+								</li>
+								<li>
+									<a href="/traffikcer-digital-miami" class={currentPath === "/traffikcer-digital-miami" ? "active" : ""} id="nav-loc-miami">
+										🇺🇸 Miami
+									</a>
+								</li>
+							</ul>
 						</li>
 						<li>
 							<a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20una%20asesor%C3%ADa" class="btn btn-primary" id="nav-cta" target="_blank" rel="noopener noreferrer">
@@ -107,8 +120,9 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fabipers.com');
 						<ul>
 							<li><a href="/" id="footer-nav-home">Inicio</a></li>
 							<li><a href="/blog" id="footer-nav-blog">Blog</a></li>
-							<li><a href="/traffikcer-digital-colombia" id="footer-nav-about">Sobre mí</a></li>
-							<li><a href="/testimonials" id="footer-nav-testimonials">Testimonios</a></li>
+							<li><a href="/sobre-mi" id="footer-nav-about">Sobre mí</a></li>
+							<li><a href="/traffikcer-digital-colombia" id="footer-nav-loc-colombia">🇨🇴 Colombia</a></li>
+							<li><a href="/traffikcer-digital-miami" id="footer-nav-loc-miami">🇺🇸 Miami</a></li>
 						</ul>
 					</div>
 					
@@ -133,3 +147,78 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fabipers.com');
 		</footer>
 	</body>
 </html>
+
+<style is:global>
+  /* Dropdown Styles */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-trigger {
+    background: none;
+    border: none;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .dropdown-trigger:hover {
+    color: var(--accent-primary);
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-primary);
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    padding: 0.5rem 0;
+    list-style: none;
+    z-index: 100;
+    min-width: 160px;
+    margin: 0;
+  }
+
+  .dropdown-menu li {
+    margin: 0;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: background-color var(--transition-fast);
+  }
+
+  .dropdown-menu a:hover {
+    background-color: var(--accent-primary);
+    color: #000000;
+  }
+
+  /* Show dropdown menu on hover */
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-trigger .arrow {
+    font-size: 0.7rem;
+    transition: transform 0.2s ease;
+  }
+
+  .dropdown:hover .dropdown-trigger .arrow {
+    transform: rotate(180deg);
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import { slugify } from '../utils/slugify';
 
 // Generate paths for all blog posts and pages
 export async function getStaticPaths() {
@@ -56,7 +57,7 @@ const description = entry.data.description || `Leer ${entry.data.title} en fabip
             {entry.data.tags && entry.data.tags.length > 0 && (
               <div class="post-tags">
                 {entry.data.tags.map((tag: string) => (
-                  <span class="tag-badge">#{tag}</span>
+                  <a href={`/blog/tag/${slugify(tag)}/`} class="tag-badge-link highlight-box" id={`post-tag-${slugify(tag)}`}>#{tag}</a>
                 ))}
               </div>
             )}
@@ -211,7 +212,7 @@ const description = entry.data.description || `Leer ${entry.data.title} en fabip
   .post-content-brutalist a, .page-content-brutalist a {
     color: var(--text-primary);
     text-decoration: underline;
-    background-color: rgba(163, 230, 53, 0.25);
+    background-color: var(--accent-alpha);
     padding: 0 0.2rem;
     font-weight: 600;
   }
