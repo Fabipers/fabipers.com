@@ -6,17 +6,35 @@ import { slugify } from '../../../utils/slugify';
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   
-  // Extract all unique tags
+  // Extract all unique tags and categories
   const allTagsMap = new Map<string, { name: string, posts: any[] }>();
   
   posts.forEach(post => {
+    // Process tags
     if (post.data.tags) {
       post.data.tags.forEach(tag => {
         const slug = slugify(tag);
         if (!allTagsMap.has(slug)) {
           allTagsMap.set(slug, { name: tag, posts: [] });
         }
-        allTagsMap.get(slug)?.posts.push(post);
+        const tagPosts = allTagsMap.get(slug)?.posts;
+        if (tagPosts && !tagPosts.some(p => p.id === post.id)) {
+          tagPosts.push(post);
+        }
+      });
+    }
+    
+    // Process categories
+    if (post.data.categories) {
+      post.data.categories.forEach(category => {
+        const slug = slugify(category);
+        if (!allTagsMap.has(slug)) {
+          allTagsMap.set(slug, { name: category, posts: [] });
+        }
+        const tagPosts = allTagsMap.get(slug)?.posts;
+        if (tagPosts && !tagPosts.some(p => p.id === post.id)) {
+          tagPosts.push(post);
+        }
       });
     }
   });

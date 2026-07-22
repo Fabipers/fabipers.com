@@ -10,12 +10,17 @@ const sortedPosts = posts.sort(
 
 import { slugify } from '../utils/slugify';
 
-// Extract all unique tags dynamically
+// Extract all unique tags and categories dynamically
 const allTagsMap = new Map<string, string>(); // slug -> display name
 posts.forEach(post => {
   if (post.data.tags) {
     post.data.tags.forEach(tag => {
       allTagsMap.set(slugify(tag), tag);
+    });
+  }
+  if (post.data.categories) {
+    post.data.categories.forEach(category => {
+      allTagsMap.set(slugify(category), category);
     });
   }
 });
