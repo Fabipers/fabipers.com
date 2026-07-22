@@ -15,5 +15,10 @@ export default defineConfig({
   integrations: [react(), sitemap()],
   build: {
     inlineStylesheets: 'auto',
+  },
+  vite: {
+    optimizeDeps: {
+      exclude: ['react', 'react-dom']
+    }
   }
 });
