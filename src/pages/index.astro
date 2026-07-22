@@ -11,24 +11,32 @@ const description = "Identifico las formas más eficaces de hacer crecer tu nego
   <section class="section hero-section" id="hero">
     <div class="container hero-grid">
       <div class="hero-content">
-        <span class="hero-tagline">Ad Trafficker Digital Colombia</span>
-        <h1 class="hero-title">Identifico las formas más eficaces de <span>hacer crecer</span> tu negocio.</h1>
-        <p class="hero-subtitle">Full Stack Marketer. Te ayudo a estructurar, implementar y optimizar tus campañas de publicidad online para atraer clientes altamente calificados.</p>
+        <div class="badge-wrapper">
+          <span class="hero-badge rotate-left">⚡ Trafficker Digital Colombia</span>
+        </div>
+        <h1 class="hero-title">
+          Multiplica tus clientes con publicidad de <span class="highlight-text">ALTO IMPACTO</span>
+        </h1>
+        <p class="hero-subtitle">
+          Full Stack Marketer & Trafficker Digital. Ayudo a tu negocio a estructurar y optimizar campañas altamente rentables que atraen clientes cualificados sin desperdiciar presupuesto.
+        </p>
         <div class="hero-actions">
-          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20una%20asesor%C3%ADa" class="btn btn-primary glow-effect" id="hero-cta-whatsapp" target="_blank" rel="noopener noreferrer">
-            Hablemos por WhatsApp
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20una%20asesor%C3%ADa" class="btn btn-primary" id="hero-cta-whatsapp" target="_blank" rel="noopener noreferrer">
+            Agendar Asesoría (WhatsApp)
           </a>
           <a href="/traffikcer-digital-colombia" class="btn btn-secondary" id="hero-cta-about">
-            Conóceme más
+            ¿Quién soy?
           </a>
         </div>
       </div>
       <div class="hero-visual">
-        <div class="visual-cube">
-          <div class="cube-item chart-bar-1"></div>
-          <div class="cube-item chart-bar-2"></div>
-          <div class="cube-item chart-bar-3"></div>
-          <div class="cube-item glow-ring"></div>
+        <div class="visual-cube card rotate-right">
+          <span class="cube-tag highlight-box">ROI +340%</span>
+          <div class="chart-container">
+            <div class="chart-bar chart-bar-1"></div>
+            <div class="chart-bar chart-bar-2"></div>
+            <div class="chart-bar chart-bar-3"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -38,9 +46,9 @@ const description = "Identifico las formas más eficaces de hacer crecer tu nego
   <section class="section focus-section" id="focus">
     <div class="container">
       <div class="focus-wrap card text-center">
-        <span class="focus-prefix">¿Qué hace un trafficker digital?</span>
-        <h2 class="focus-title">Me dedico a una sola cosa:<br/><span>atraer a clientes más comprometidos</span></h2>
-        <p class="focus-text">En un mundo cada vez más conectado, tener una presencia digital fuerte es esencial para el éxito de cualquier negocio. Como trafficker digital, mi objetivo es ayudar a las empresas a destacar en línea y llegar a su público objetivo de manera efectiva mediante estrategias de SEO, campañas publicitarias de pago optimizadas al céntimo y analítica web avanzada.</p>
+        <span class="focus-prefix highlight-box">¿Qué hace un trafficker?</span>
+        <h2 class="focus-title">Me dedico a una sola cosa: <span class="marker">atraer a clientes más comprometidos</span></h2>
+        <p class="focus-text">En un mundo saturado de información, destacar no es opcional, es obligatorio. Como trafficker digital, mi compromiso es implementar soluciones personalizadas mediante SEO, campañas de anuncios optimizadas y analítica avanzada para llevar a tu negocio al siguiente nivel de visibilidad y conversión.</p>
       </div>
     </div>
   </section>
@@ -55,25 +63,25 @@ const description = "Identifico las formas más eficaces de hacer crecer tu nego
       
       <div class="grid grid-2 step-grid">
         <div class="card step-card">
-          <div class="step-number">01</div>
+          <div class="step-number rotate-left">01</div>
           <h3>Tendremos una breve llamada</h3>
           <p>Identificamos y analizamos tus necesidades y cuáles son tus expectativas a corto y mediano plazo. Trazaremos una ruta de trabajo inicial y clara.</p>
         </div>
         
         <div class="card step-card">
-          <div class="step-number">02</div>
+          <div class="step-number rotate-right">02</div>
           <h3>Entendiendo tu negocio</h3>
           <p>Analizo y propongo las mejores prácticas y metodologías para tus necesidades específicas. Evaluamos qué herramientas tecnológicas y de analítica necesitas implementar.</p>
         </div>
         
         <div class="card step-card">
-          <div class="step-number">03</div>
+          <div class="step-number rotate-left">03</div>
           <h3>Te entrego la estrategia</h3>
           <p>Te entrego la estrategia estructurada con base en los análisis previos, acordamos los lineamientos de medición, determinamos tiempos de entrega y dejamos listo el Kick-off.</p>
         </div>
         
-        <div class="card step-card">
-          <div class="step-number">04</div>
+        <div class="card step-card font-bold-brutalist">
+          <div class="step-number rotate-right">04</div>
           <h3>Enfoque en resultados</h3>
           <p>Después del Kick-off, la trazabilidad de resultados será lo primordial. Analizamos métricas en tiempo real, optimizamos la inversión y te entregamos reportes enfocados en ROI.</p>
         </div>
@@ -100,62 +108,74 @@ const description = "Identifico las formas más eficaces de hacer crecer tu nego
 <style>
   /* Hero Styles */
   .hero-section {
-    position: relative;
-    padding: 7rem 0 5rem 0;
-    overflow: hidden;
+    padding: 8rem 0 5rem 0;
+    background-color: var(--bg-primary);
   }
   
   .hero-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 4rem;
     align-items: center;
   }
   
   @media (min-width: 992px) {
     .hero-grid {
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.25fr 0.75fr;
     }
   }
   
-  .hero-tagline {
-    color: var(--accent-primary);
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    display: block;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    letter-spacing: -0.03em;
-    line-height: 1.1;
+  .badge-wrapper {
     margin-bottom: 1.5rem;
   }
   
-  .hero-title span {
-    background: linear-gradient(135deg, var(--accent-primary) 0%, #ffc107 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .hero-badge {
+    background-color: var(--text-primary);
+    color: var(--accent-primary);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--border-color);
+    display: inline-block;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    margin-bottom: 1.8rem;
+    font-weight: 900;
+  }
+  
+  .highlight-text {
+    background-color: var(--accent-primary);
+    color: #000000;
+    padding: 0 0.5rem;
+    border: 3px solid var(--border-color);
+    box-shadow: 3px 3px 0px var(--border-color);
+    display: inline-block;
+    transform: rotate(-0.5deg);
+    margin-top: 0.2rem;
   }
   
   .hero-subtitle {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: var(--text-secondary);
-    margin-bottom: 2.5rem;
-    max-width: 600px;
+    margin-bottom: 2.8rem;
+    max-width: 650px;
+    font-weight: 500;
   }
   
   .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.2rem;
   }
   
-  /* Hero visual abstract decoration - high premium vibe */
+  /* Hero Visual - Neo Brutalist Design Card */
   .hero-visual {
     display: flex;
     justify-content: center;
@@ -163,111 +183,90 @@ const description = "Identifico las formas más eficaces de hacer crecer tu nego
   }
   
   .visual-cube {
-    width: 280px;
-    height: 280px;
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 30px;
-    position: relative;
+    width: 290px;
+    height: 290px;
+    background-color: var(--bg-secondary);
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
-    padding: 2rem;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.02);
+    padding: 2.5rem;
+    position: relative;
   }
   
-  .cube-item {
-    width: 45px;
-    border-radius: 8px;
-    background: linear-gradient(to top, var(--accent-hover), var(--accent-primary));
-    transition: height 1s ease-in-out;
+  .cube-tag {
+    position: absolute;
+    top: -1.2rem;
+    right: -1rem;
+    font-size: 1rem;
+    z-index: 10;
+  }
+  
+  .chart-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100%;
+    height: 140px;
+    border-bottom: 3px solid var(--border-color);
+  }
+  
+  .chart-bar {
+    width: 40px;
+    border: 3px solid var(--border-color);
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
   }
   
   .chart-bar-1 {
-    height: 40%;
-    animation: growBar1 3s infinite alternate;
+    height: 40px;
+    background-color: var(--bg-tertiary);
   }
   
   .chart-bar-2 {
-    height: 75%;
-    background: linear-gradient(to top, var(--brand-hover), var(--brand-color));
-    animation: growBar2 3s infinite alternate 0.5s;
+    height: 80px;
+    background-color: var(--text-primary);
   }
   
   .chart-bar-3 {
-    height: 55%;
-    animation: growBar3 3s infinite alternate 1s;
-  }
-  
-  .glow-ring {
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    border: 1.5px dashed rgba(245, 158, 11, 0.15);
-    border-radius: 50%;
-    top: -20px;
-    left: -20px;
-    z-index: -1;
-    animation: rotateRing 20s linear infinite;
-  }
-  
-  @keyframes growBar1 {
-    0% { height: 30%; }
-    100% { height: 60%; }
-  }
-  
-  @keyframes growBar2 {
-    0% { height: 50%; }
-    100% { height: 90%; }
-  }
-  
-  @keyframes growBar3 {
-    0% { height: 40%; }
-    100% { height: 75%; }
-  }
-  
-  @keyframes rotateRing {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    height: 120px;
+    background-color: var(--accent-primary);
   }
   
   /* Focus Section */
+  .focus-section {
+    background-color: var(--bg-secondary);
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+  }
+  
   .focus-wrap {
-    background: radial-gradient(circle at top left, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
-    border-color: rgba(245, 158, 11, 0.1);
+    background-color: var(--bg-primary);
+    padding: 4rem 3rem;
   }
   
   .focus-prefix {
-    color: var(--accent-primary);
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    display: block;
-    margin-bottom: 0.8rem;
-  }
-  
-  .focus-title {
-    font-size: clamp(2rem, 3.5vw, 2.8rem);
-    line-height: 1.2;
     margin-bottom: 1.5rem;
   }
   
-  .focus-title span {
-    color: #ffffff;
+  .focus-title {
+    font-size: clamp(2rem, 3.8vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 1.8rem;
+    font-weight: 800;
   }
   
   .focus-text {
     max-width: 800px;
     margin: 0 auto;
     color: var(--text-secondary);
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     line-height: 1.8;
+    font-weight: 500;
   }
   
   /* Steps section */
   .section-header {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
   }
   
   .step-subtitle {
@@ -275,14 +274,15 @@ const description = "Identifico las formas más eficaces de hacer crecer tu nego
     font-family: var(--font-heading);
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    font-weight: 600;
-    font-size: 0.85rem;
+    font-weight: 800;
+    font-size: 0.9rem;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
   }
   
   .step-title {
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 900;
   }
   
   .step-grid {
@@ -297,46 +297,53 @@ const description = "Identifico las formas más eficaces de hacer crecer tu nego
   
   .step-number {
     font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 2.5rem;
-    color: rgba(245, 158, 11, 0.15);
-    line-height: 1;
-    margin-bottom: 1rem;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #000000;
+    background-color: var(--accent-primary);
+    padding: 0.2rem 0.8rem;
+    border: 3px solid var(--border-color);
+    box-shadow: 2px 2px 0px var(--border-color);
+    margin-bottom: 1.5rem;
   }
   
   .step-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
   }
   
   .step-card p {
     color: var(--text-secondary);
+    font-weight: 500;
   }
   
   /* Newsletter */
   .newsletter-wrap {
-    background: linear-gradient(135deg, #10121a 0%, #151a2e 100%);
-    padding: 4rem 2rem;
+    background-color: var(--bg-secondary);
+    padding: 4.5rem 3rem;
   }
   
   .newsletter-wrap h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 900;
     margin-bottom: 0.8rem;
   }
   
   .newsletter-wrap p {
     color: var(--text-secondary);
-    margin-bottom: 2rem;
-    max-width: 500px;
+    margin-bottom: 2.5rem;
+    max-width: 550px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 500;
   }
   
   .newsletter-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    max-width: 500px;
+    gap: 1.2rem;
+    max-width: 550px;
     margin: 0 auto;
   }
   
@@ -344,31 +351,30 @@ const description = "Identifico las formas más eficaces de hacer crecer tu nego
     .newsletter-form {
       flex-direction: row;
       background: var(--bg-primary);
-      padding: 0.4rem;
-      border-radius: 9999px;
-      border: 1px solid var(--border-color);
-    }
-    
-    .newsletter-form:focus-within {
-      border-color: var(--border-focus);
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: 3px solid var(--border-color);
+      box-shadow: 4px 4px 0px var(--border-color);
     }
   }
   
   .newsletter-form input {
     background: transparent;
-    border: 1px solid var(--border-color);
-    border-radius: 9999px;
-    padding: 0.8rem 1.5rem;
-    color: #ffffff;
+    border: 3px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.9rem 1.5rem;
+    color: var(--text-primary);
     flex-grow: 1;
     font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-weight: 600;
     outline: none;
   }
   
   @media (min-width: 576px) {
     .newsletter-form input {
       border: none;
+      padding: 0.5rem 1rem;
     }
   }
   
@@ -377,7 +383,15 @@ const description = "Identifico las formas más eficaces de hacer crecer tu nego
   }
   
   .newsletter-form button {
-    border-radius: 9999px;
+    border-radius: 4px;
     white-space: nowrap;
+    box-shadow: none;
+    border-width: 3px;
+  }
+  
+  @media (min-width: 576px) {
+    .newsletter-form button {
+      border-width: 2px;
+    }
   }
 </style>

@@ -39,50 +39,86 @@ const description = entry.data.description || `Leer ${entry.data.title} en fabip
 
 <Layout title={title} description={description}>
   {type === 'post' ? (
-    /* Blog Post Layout */
-    <article class="post-layout section">
-      <div class="container post-container">
-        <header class="post-header text-center">
-          <div class="post-meta">
-            <time datetime={entry.data.pubDate.toString()}>{formatDate(entry.data.pubDate)}</time>
-            {entry.data.categories && entry.data.categories.length > 0 && (
-              <span class="post-category">{entry.data.categories[0]}</span>
-            )}
-          </div>
-          <h1 class="post-title">{entry.data.title}</h1>
-          
-          {entry.data.tags && entry.data.tags.length > 0 && (
-            <div class="post-tags">
-              {entry.data.tags.map((tag: string) => (
-                <span class="tag-badge">#{tag}</span>
-              ))}
+    /* Blog Post 2-Column Layout */
+    <div class="post-layout section">
+      <div class="container blog-container-2col">
+        <!-- Main Content (70%) -->
+        <article class="post-main-content">
+          <header class="post-header-brutalist">
+            <div class="post-meta">
+              <time datetime={entry.data.pubDate.toString()}>{formatDate(entry.data.pubDate)}</time>
+              {entry.data.categories && entry.data.categories.length > 0 && (
+                <span class="post-category highlight-box">{entry.data.categories[0]}</span>
+              )}
             </div>
-          )}
-        </header>
+            <h1 class="post-title-brutalist">{entry.data.title}</h1>
+            
+            {entry.data.tags && entry.data.tags.length > 0 && (
+              <div class="post-tags">
+                {entry.data.tags.map((tag: string) => (
+                  <span class="tag-badge">#{tag}</span>
+                ))}
+              </div>
+            )}
+          </header>
 
-        <div class="post-content">
-          <Content />
-        </div>
-
-        <footer class="post-footer">
-          <div class="post-cta card text-center">
-            <h3>¿Quieres potenciar tus campañas de marketing?</h3>
-            <p>Escríbeme por WhatsApp y analicemos cómo mejorar el retorno de inversión (ROI) de tus anuncios digitales.</p>
-            <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20una%20asesor%C3%ADa" class="btn btn-primary glow-effect" id="post-cta-btn" target="_blank" rel="noopener noreferrer">
-              Hablemos hoy mismo
-            </a>
+          <div class="post-content-brutalist">
+            <Content />
           </div>
-        </footer>
+
+          <footer class="post-footer">
+            <div class="post-cta card text-center">
+              <h3>¿Quieres potenciar tus campañas de marketing?</h3>
+              <p>Escríbeme por WhatsApp y analicemos cómo mejorar el retorno de inversión (ROI) de tus anuncios digitales.</p>
+              <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20una%20asesor%C3%ADa" class="btn btn-whatsapp" id="post-cta-btn" target="_blank" rel="noopener noreferrer">
+                Hablemos hoy mismo
+              </a>
+            </div>
+          </footer>
+        </article>
+
+        <!-- Sticky Sidebar (30%) -->
+        <aside class="post-sidebar">
+          <div class="card sidebar-widget sticky-sidebar">
+            <div class="avatar-container">
+              <div class="avatar-halo"></div>
+              <div class="avatar-placeholder">FP</div>
+            </div>
+            
+            <h3 class="sidebar-author-name">Fabián Pérez</h3>
+            <span class="sidebar-author-title highlight-box">Trafficker Digital</span>
+            
+            <p class="sidebar-author-bio">
+              Especialista en tráfico de pago y analítica web. Ayudo a negocios a optimizar al máximo el ROI de sus campañas digitales en Google Ads y Facebook Ads.
+            </p>
+            
+            <div class="sidebar-actions">
+              <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20una%20asesor%C3%ADa" class="btn btn-primary" id="sidebar-cta-whatsapp" target="_blank" rel="noopener noreferrer">
+                💬 WhatsApp Directo
+              </a>
+            </div>
+          </div>
+        </aside>
       </div>
-    </article>
+      
+      <!-- Mobile Floating CTA -->
+      <div class="mobile-floating-cta">
+        <div class="mobile-cta-content">
+          <span class="mobile-cta-text">🚀 ¿Quieres mejores resultados?</span>
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20una%20asesor%C3%ADa" class="btn btn-primary" id="mobile-cta-btn" target="_blank" rel="noopener noreferrer">
+            Agendar Asesoría
+          </a>
+        </div>
+      </div>
+    </div>
   ) : (
-    /* Static Page Layout */
+    /* Static Page Layout (Single Column) */
     <div class="page-layout section">
       <div class="container page-container">
         <header class="page-header text-center">
-          <h1 class="page-title">{entry.data.title}</h1>
+          <h1 class="page-title-brutalist">{entry.data.title}</h1>
         </header>
-        <div class="page-content">
+        <div class="page-content-brutalist">
           <Content />
         </div>
       </div>
@@ -91,134 +127,245 @@ const description = entry.data.description || `Leer ${entry.data.title} en fabip
 </Layout>
 
 <style is:global>
-  /* Base styles for post/page content rendering */
-  .post-container, .page-container {
+  /* Blog Container 2 Columns */
+  .blog-container-2col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+  }
+  
+  @media (min-width: 992px) {
+    .blog-container-2col {
+      grid-template-columns: 1.4fr 0.6fr;
+    }
+  }
+  
+  .post-main-content {
+    min-width: 0; /* Prevents grid flex overflow */
+  }
+  
+  .post-header-brutalist {
+    margin-bottom: 3rem;
+  }
+  
+  .post-title-brutalist {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-top: 1rem;
+  }
+  
+  .page-title-brutalist {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+  }
+  
+  /* Markdown content styling */
+  .post-content-brutalist, .page-content-brutalist {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--text-primary);
+  }
+  
+  .post-content-brutalist p, .page-content-brutalist p {
+    margin-bottom: 1.8rem;
+    font-weight: 500;
+  }
+  
+  /* Indicators on H2 headings */
+  .post-content-brutalist h2, .page-content-brutalist h2 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-top: 3.5rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 4px solid var(--accent-primary);
+  }
+  
+  .post-content-brutalist h3, .page-content-brutalist h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .post-content-brutalist ul, .post-content-brutalist ol,
+  .page-content-brutalist ul, .page-content-brutalist ol {
+    margin-bottom: 1.8rem;
+    padding-left: 2rem;
+    font-weight: 500;
+  }
+  
+  .post-content-brutalist li, .page-content-brutalist li {
+    margin-bottom: 0.6rem;
+  }
+  
+  .post-content-brutalist a, .page-content-brutalist a {
+    color: var(--text-primary);
+    text-decoration: underline;
+    background-color: rgba(163, 230, 53, 0.25);
+    padding: 0 0.2rem;
+    font-weight: 600;
+  }
+  
+  .post-content-brutalist a:hover, .page-content-brutalist a:hover {
+    background-color: var(--accent-primary);
+  }
+  
+  .post-content-brutalist blockquote, .page-content-brutalist blockquote {
+    border: 3px solid var(--border-color);
+    padding: 2rem;
+    margin: 2.5rem 0;
+    background-color: var(--bg-secondary);
+    box-shadow: 4px 4px 0px var(--border-color);
+    font-style: italic;
+    font-weight: 600;
+  }
+  
+  .post-content-brutalist img, .page-content-brutalist img {
+    border: 3px solid var(--border-color);
+    box-shadow: 6px 6px 0px var(--border-color);
+    margin: 2.5rem 0;
+    border-radius: 0px;
+  }
+  
+  /* Sidebar styles */
+  .post-sidebar {
+    display: block;
+  }
+  
+  .sticky-sidebar {
+    position: sticky;
+    top: 6rem;
+    z-index: 10;
+  }
+  
+  .sidebar-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+  
+  .avatar-container {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .avatar-halo {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 118px;
+    height: 118px;
+    border: 3px solid var(--border-color);
+    background-color: var(--accent-primary);
+    transform: rotate(4deg);
+    z-index: 1;
+  }
+  
+  .avatar-placeholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--border-color);
+    z-index: 2;
+  }
+  
+  .sidebar-author-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  
+  .sidebar-author-title {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    transform: rotate(-1deg);
+  }
+  
+  .sidebar-author-bio {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  
+  .sidebar-actions {
+    width: 100%;
+  }
+  
+  .sidebar-actions .btn {
+    width: 100%;
+    border-width: 3px;
+  }
+  
+  /* Mobile Floating CTA */
+  .mobile-floating-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-primary);
+    border-top: 3px solid var(--border-color);
+    padding: 1rem var(--container-padding);
+    z-index: 99;
+    display: none;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .mobile-cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     max-width: 800px;
     margin: 0 auto;
   }
   
-  .post-header, .page-header {
-    margin-bottom: 4rem;
+  .mobile-cta-text {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.95rem;
   }
   
-  .post-meta {
-    display: inline-flex;
-    align-items: center;
-    gap: 1.5rem;
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
+  .mobile-floating-cta .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    border-width: 2px;
+    box-shadow: 2px 2px 0px var(--border-color);
   }
   
-  .post-category {
-    background: rgba(245, 158, 11, 0.08);
-    color: var(--accent-primary);
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  
-  .post-title, .page-title {
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    margin-top: 0.5rem;
-  }
-  
-  .post-tags {
-    display: flex;
-    justify-content: center;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-    margin-top: 1.5rem;
-  }
-  
-  .tag-badge {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-  }
-  
-  /* Markdown content styles */
-  .post-content, .page-content {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    color: #e5e7eb;
-  }
-  
-  .post-content p, .page-content p {
-    margin-bottom: 1.8rem;
-  }
-  
-  .post-content h2, .page-content h2 {
-    font-size: 1.8rem;
-    margin-top: 3rem;
-    margin-bottom: 1.2rem;
-    color: #ffffff;
-  }
-  
-  .post-content h3, .page-content h3 {
-    font-size: 1.4rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    color: #ffffff;
-  }
-  
-  .post-content ul, .post-content ol,
-  .page-content ul, .page-content ol {
-    margin-bottom: 1.8rem;
-    padding-left: 2rem;
-  }
-  
-  .post-content li, .page-content li {
-    margin-bottom: 0.6rem;
-  }
-  
-  .post-content a, .page-content a {
-    color: var(--accent-primary);
-    text-decoration: underline;
-    font-weight: 500;
-  }
-  
-  .post-content a:hover, .page-content a:hover {
-    color: var(--accent-hover);
-  }
-  
-  .post-content blockquote, .page-content blockquote {
-    border-left: 4px solid var(--accent-primary);
-    padding-left: 1.5rem;
-    margin: 2rem 0;
-    font-style: italic;
-    color: var(--text-secondary);
-  }
-  
-  .post-content img, .page-content img {
-    border-radius: 12px;
-    margin: 2rem 0;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  }
-  
-  .post-footer {
-    margin-top: 5rem;
-  }
-  
-  .post-cta {
-    background: radial-gradient(circle at top right, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
-    padding: 3rem 2rem;
-    border-color: rgba(245, 158, 11, 0.15);
-  }
-  
-  .post-cta h3 {
-    font-size: 1.6rem;
-    margin-bottom: 0.8rem;
-  }
-  
-  .post-cta p {
-    color: var(--text-secondary);
-    max-width: 550px;
-    margin: 0 auto 2rem auto;
+  @media (max-width: 991px) {
+    .mobile-floating-cta {
+      display: block;
+    }
+    
+    /* Add extra padding at the bottom of the page to avoid content occlusion by the floating CTA */
+    .post-layout {
+      padding-bottom: 8rem;
+    }
   }
 </style>
