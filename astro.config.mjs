@@ -8,5 +8,8 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://fabipers.com',
-  integrations: [react(), sitemap()]
+  integrations: [react(), sitemap()],
+  build: {
+    inlineStylesheets: 'auto',
+  }
 });

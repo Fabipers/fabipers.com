@@ -12,6 +12,7 @@ const {
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
+const canonicalURL = new URL(Astro.url.pathname, 'https://fabipers.com');
 ---
 
 <!doctype html>
@@ -23,20 +24,25 @@ const currentPath = Astro.url.pathname;
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		
+		<!-- Google Fonts Preconnect & Stylesheet -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+		
 		<!-- SEO Meta Tags -->
 		<title>{title}</title>
 		<meta name="description" content={description} />
-		<link rel="canonical" href={Astro.url.href} />
+		<link rel="canonical" href={canonicalURL.href} />
 		
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content={Astro.url.href} />
+		<meta property="og:url" content={canonicalURL.href} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={Astro.url.href} />
+		<meta property="twitter:url" content={canonicalURL.href} />
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
 	</head>
