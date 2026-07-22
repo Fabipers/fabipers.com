@@ -1,0 +1,259 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import { slugify } from '../../../utils/slugify';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  
+  // Extract all unique tags
+  const allTagsMap = new Map<string, { name: string, posts: any[] }>();
+  
+  posts.forEach(post => {
+    if (post.data.tags) {
+      post.data.tags.forEach(tag => {
+        const slug = slugify(tag);
+        if (!allTagsMap.has(slug)) {
+          allTagsMap.set(slug, { name: tag, posts: [] });
+        }
+        allTagsMap.get(slug)?.posts.push(post);
+      });
+    }
+  });
+  
+  // Generate paths
+  return Array.from(allTagsMap.entries()).map(([slug, data]) => {
+    return {
+      params: { tag: slug },
+      props: { 
+        tagName: data.name, 
+        posts: data.posts.sort(
+          (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+        )
+      }
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { tagName, posts } = Astro.props;
+
+const title = `Artículos sobre ${tagName} | Fabián Pérez`;
+const description = `Explora todos los artículos del blog de Fabián Pérez etiquetados bajo "${tagName}". Consejos prácticos de marketing y optimización.`;
+
+// Helper to format date
+const formatDate = (dateStr: string | Date) => {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('es-ES', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+};
+---
+
+<Layout title={title} description={description}>
+  <section class="section blog-header-section">
+    <div class="container text-center">
+      <span class="blog-subtitle highlight-box">Filtrado por Etiqueta</span>
+      <h1 class="blog-title">Artículos sobre <span>{tagName}</span></h1>
+      <p class="blog-desc">Explora análisis, guías y consejos relacionados con {tagName}.</p>
+      <div style="margin-top: 1.5rem;">
+        <a href="/blog/" class="btn btn-secondary btn-sm-custom" id="back-to-blog-btn">
+          &larr; Volver al Blog completo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-grid-section">
+    <div class="container">
+      <div class="grid grid-3">
+        {posts.map((post) => (
+          <article class="card blog-card">
+            <div class="blog-meta">
+              <time datetime={post.data.pubDate.toString()}>{formatDate(post.data.pubDate)}</time>
+              {post.data.categories && post.data.categories.length > 0 && (
+                <span class="blog-category">{post.data.categories[0]}</span>
+              )}
+            </div>
+            
+            <h2 class="blog-card-title">
+              <a href={`/${post.id}/`} id={`blog-post-link-${post.id}`}>{post.data.title}</a>
+            </h2>
+            
+            <p class="blog-card-excerpt">
+              {post.data.description.replace(/^Migrado de WordPress: /, "")}
+            </p>
+            
+            <div class="blog-card-footer">
+              <div class="card-tags-list">
+                {post.data.tags && post.data.tags.slice(0, 2).map((t) => (
+                  <a href={`/blog/tag/${slugify(t)}/`} class={`blog-tag-link ${slugify(t) === tag ? 'active' : ''}`} id={`post-${post.id}-tag-${slugify(t)}`}>
+                    #{t}
+                  </a>
+                ))}
+              </div>
+              <a href={`/${post.id}/`} class="blog-readmore" aria-label={`Leer más sobre ${post.data.title}`} id={`read-more-${post.id}`}>
+                Leer &rarr;
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .blog-header-section {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+  
+  .blog-subtitle {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .blog-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.03em;
+    margin-bottom: 1.2rem;
+    font-weight: 900;
+  }
+  
+  .blog-title span {
+    background-color: var(--accent-primary);
+    color: #000000;
+    padding: 0 0.5rem;
+    border: 3px solid var(--border-color);
+    box-shadow: 3px 3px 0px var(--border-color);
+    display: inline-block;
+    transform: rotate(-1deg);
+  }
+  
+  .blog-desc {
+    color: var(--text-secondary);
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
+
+  .btn-sm-custom {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+    border-width: 2px;
+    box-shadow: 2px 2px 0px var(--border-color);
+    text-transform: none;
+  }
+
+  .btn-sm-custom:hover {
+    box-shadow: 3px 3px 0px var(--border-color);
+  }
+  
+  /* Blog Grid */
+  .blog-grid-section {
+    padding-bottom: 6rem;
+  }
+  
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 2rem;
+  }
+  
+  .blog-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    width: 100%;
+    font-weight: 600;
+  }
+  
+  .blog-category {
+    background: var(--text-primary);
+    color: var(--accent-primary);
+    padding: 0.25rem 0.6rem;
+    border: 2px solid var(--border-color);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .blog-card-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.25;
+    font-weight: 900;
+  }
+  
+  .blog-card-title a {
+    color: #09090b !important; /* Always black */
+    transition: background-color var(--transition-fast);
+    display: inline;
+  }
+  
+  .blog-card-title a:hover {
+    background-color: var(--accent-primary);
+    color: #09090b !important;
+  }
+  
+  .blog-card-excerpt {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.8rem;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    overflow: clip;
+    font-weight: 500;
+  }
+  
+  .blog-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--border-color);
+    padding-top: 1.2rem;
+    margin-top: auto;
+    font-size: 0.85rem;
+  }
+
+  .card-tags-list {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .blog-tag-link {
+    color: var(--text-muted);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .blog-tag-link:hover, .blog-tag-link.active {
+    color: var(--text-primary);
+    background-color: rgba(163, 230, 53, 0.25);
+  }
+  
+  .blog-readmore {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+  
+  .blog-readmore:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+  }
+</style>

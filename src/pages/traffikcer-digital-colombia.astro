@@ -1,0 +1,366 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// SEO Title & Description
+const title = "Sobre Mí | Fabián Pérez - Full Stack Marketer & Ad Trafficker";
+const description = "Descubre la trayectoria de Fabián Pérez. Especialista en optimizar tus inversiones en publicidad digital, SEO, SEM y desarrollo de landing pages de alta conversión.";
+---
+
+<Layout title={title} description={description}>
+  <!-- Hero Section -->
+  <section class="section about-hero-section" id="about-hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge-wrapper">
+          <span class="hero-badge rotate-left">⚡ Conoce mi trayectoria</span>
+        </div>
+        <h1 class="hero-title">
+          Full Stack Marketer & <span class="highlight-text">Ad Trafficker</span> Digital
+        </h1>
+        <p class="hero-subtitle">
+          Años impulsando el crecimiento de negocios con SEO, SEM, Analítica Avanzada y Funnels de Alta Conversión. Creo estrategias digitales que no solo atraen miradas, sino que facturan.
+        </p>
+        <div class="hero-actions">
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20auditar%20mi%20estrategia%20digital" class="btn btn-primary" id="about-cta-whatsapp" target="_blank" rel="noopener noreferrer">
+            Auditar mi estrategia (WhatsApp)
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="profile-card-brutalist">
+          <div class="profile-halo"></div>
+          <div class="profile-card-content card">
+            <div class="profile-avatar">FP</div>
+            <h2 class="profile-name">Fabián Pérez</h2>
+            <span class="profile-title highlight-box">Full Stack Marketer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Stack & Specialties -->
+  <section class="section specialties-section" id="especialidades">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Mis Pilares Clave</span>
+        <h2>Stack Técnico y Especialidades</h2>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card specialty-card">
+          <div class="specialty-icon">🚀</div>
+          <h3>SEO & Organic Growth</h3>
+          <p class="specialty-tagline">Posicionamiento web de alto rendimiento</p>
+          <p>Estructuro el contenido y optimizo técnicamente tu sitio para posicionarte en los primeros resultados de Google. Menos gasto en publicidad, más tráfico orgánico recurrente y de alta intención de compra.</p>
+        </div>
+
+        <div class="card specialty-card">
+          <div class="specialty-icon">💵</div>
+          <h3>Paid Media / SEM</h3>
+          <p class="specialty-tagline">Google Ads & Meta Ads enfocado en ROI</p>
+          <p>Estrategia y ejecución avanzada en campañas de tráfico pago. Diseño embudos de venta precisos, segmentación exacta y optimización analítica para que cada centavo invertido genere retorno.</p>
+        </div>
+
+        <div class="card specialty-card">
+          <div class="specialty-icon">📊</div>
+          <h3>Analítica Web Avanzada</h3>
+          <p class="specialty-tagline">Google Analytics 4 & Tag Manager</p>
+          <p>Lo que no se mide no se puede mejorar. Configuro modelos de atribución y medición de conversiones estrictos para saber con certeza de dónde vienen tus clientes y cómo optimizar la conversión.</p>
+        </div>
+
+        <div class="card specialty-card">
+          <div class="specialty-icon">💻</div>
+          <h3>Full Stack Development</h3>
+          <p class="specialty-tagline">Landings ultra rápidas con React y Astro</p>
+          <p>Desarrollo páginas web y landings de conversión optimizadas al milisegundo. Menor tiempo de carga significa menor tasa de rebote y un aumento directo en tus tasas de conversión.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Philosophy -->
+  <section class="section philosophy-section" id="filosofia">
+    <div class="container">
+      <div class="philosophy-wrap card">
+        <span class="highlight-box rotate-left">Cómo Trabajo</span>
+        <h2>Mi Filosofía de Trabajo</h2>
+        
+        <div class="philosophy-grid grid grid-3" style="margin-top: 3rem;">
+          <div class="philosophy-item">
+            <span class="philosophy-num">01</span>
+            <h4>Enfoque en Resultados</h4>
+            <p>No busco "likes" o métricas de vanidad. Mi prioridad número uno es el retorno de tu inversión (ROI) y el crecimiento real de tus ventas.</p>
+          </div>
+          
+          <div class="philosophy-item">
+            <span class="philosophy-num">02</span>
+            <h4>Optimización Basada en Datos</h4>
+            <p>Las decisiones se toman analizando datos cuantitativos, no basándome en corazonadas. Analizo, pruebo, mido y mejoro constantemente.</p>
+          </div>
+          
+          <div class="philosophy-item">
+            <span class="philosophy-num">03</span>
+            <h4>Transparencia Total</h4>
+            <p>Acceso completo a tus cuentas de anuncios, informes claros de rendimiento y comunicación constante para que sepas exactamente qué hacemos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section about-cta-section" id="about-cta">
+    <div class="container">
+      <div class="cta-banner-brutalist">
+        <h2>¿Listo para optimizar tu estrategia digital?</h2>
+        <p>Hablemos por WhatsApp y realicemos una auditoría rápida de tus campañas publicitarias y posicionamiento actual sin ningún compromiso.</p>
+        <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20auditar%20mi%20estrategia%20digital" class="btn btn-primary" id="about-footer-cta-btn" target="_blank" rel="noopener noreferrer">
+          ⚡ Agendar Auditoría Gratuita
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Styles */
+  .about-hero-section {
+    padding: 8rem 0 5rem 0;
+  }
+  
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 992px) {
+    .hero-grid {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+  }
+  
+  .badge-wrapper {
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-badge {
+    background-color: var(--text-primary);
+    color: var(--accent-primary);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--border-color);
+    display: inline-block;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    margin-bottom: 1.8rem;
+    font-weight: 900;
+  }
+  
+  .highlight-text {
+    background-color: var(--accent-primary);
+    color: #000000;
+    padding: 0 0.5rem;
+    border: 3px solid var(--border-color);
+    box-shadow: 3px 3px 0px var(--border-color);
+    display: inline-block;
+    transform: rotate(-0.5deg);
+    margin-top: 0.2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.8rem;
+    max-width: 650px;
+    font-weight: 500;
+  }
+  
+  /* Profile visual */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .profile-card-brutalist {
+    position: relative;
+    width: 280px;
+    height: 320px;
+  }
+  
+  .profile-halo {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 280px;
+    height: 320px;
+    background-color: var(--accent-primary);
+    border: 3px solid var(--border-color);
+    z-index: 1;
+    transform: rotate(3deg);
+  }
+  
+  .profile-card-content {
+    position: absolute;
+    width: 280px;
+    height: 320px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-primary);
+    box-shadow: none;
+  }
+  
+  .profile-avatar {
+    width: 90px;
+    height: 90px;
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--border-color);
+    margin-bottom: 1.2rem;
+  }
+  
+  .profile-name {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profile-title {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    transform: rotate(-1deg);
+    text-transform: uppercase;
+  }
+  
+  /* Specialties Section */
+  .specialties-section {
+    background-color: var(--bg-secondary);
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+  }
+  
+  .specialty-icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .specialty-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+    font-weight: 900;
+  }
+  
+  .specialty-tagline {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+  
+  .specialty-card p {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  
+  /* Philosophy Section */
+  .philosophy-wrap {
+    padding: 4rem;
+  }
+  
+  .philosophy-wrap h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-top: 1rem;
+  }
+  
+  .philosophy-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .philosophy-num {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.8rem;
+    background-color: var(--accent-primary);
+    color: #000000;
+    border: 3px solid var(--border-color);
+    box-shadow: 2px 2px 0px var(--border-color);
+    padding: 0.1rem 0.6rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .philosophy-item h4 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+  }
+  
+  .philosophy-item p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  
+  /* CTA banner */
+  .cta-banner-brutalist {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    border: 3px solid var(--border-color);
+    padding: 4rem 3rem;
+    text-align: center;
+    box-shadow: 6px 6px 0px var(--border-color);
+  }
+  
+  .cta-banner-brutalist h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-banner-brutalist p {
+    color: var(--bg-tertiary);
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
+  
+  .cta-banner-brutalist .btn-primary {
+    background-color: var(--accent-primary);
+    color: #000000;
+    box-shadow: 4px 4px 0px #ffffff;
+    border-color: #ffffff;
+  }
+  
+  .cta-banner-brutalist .btn-primary:hover {
+    background-color: var(--accent-hover);
+    box-shadow: 6px 6px 0px #ffffff;
+  }
+</style>
