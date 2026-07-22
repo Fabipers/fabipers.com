@@ -621,3 +621,265 @@ footer {
   background-color: var(--whatsapp-hover);
   box-shadow: 6px 6px 0px var(--border-color);
 }
+
+/* ===================================
+   COMPREHENSIVE MOBILE RESPONSIVE
+   =================================== */
+
+@media (max-width: 767px) {
+
+  /* Reduce container horizontal padding */
+  :root {
+    --container-padding: 1.25rem;
+  }
+
+  /* Prevent horizontal overflow */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* Sections: reduce padding dramatically */
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  /* Cards: reduce padding and shadow on mobile */
+  .card {
+    padding: 1.5rem;
+    box-shadow: 3px 3px 0px var(--border-color);
+  }
+
+  .card:hover {
+    transform: none;
+    box-shadow: 3px 3px 0px var(--border-color);
+  }
+
+  /* Grids: always single column on mobile */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  /* Header */
+  header {
+    padding: 0.75rem 0;
+  }
+
+  /* Logo slightly smaller */
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  /* Rotate elements: reset rotation to avoid overflow */
+  .rotate-left,
+  .rotate-right {
+    transform: none;
+  }
+
+  /* Hero section: reduce top padding */
+  .hero-section {
+    padding: 5.5rem 0 3rem 0;
+  }
+
+  /* Hero grid: no gap between text and visual card */
+  .hero-grid {
+    gap: 2rem;
+  }
+
+  /* Hero visual card: limit size */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .visual-cube {
+    width: 220px !important;
+    height: 220px !important;
+    margin: 0 auto;
+  }
+
+  /* Hero title smaller on mobile */
+  .hero-title {
+    font-size: clamp(2rem, 7vw, 2.8rem) !important;
+  }
+
+  /* Hero subtitle font reduction */
+  .hero-subtitle {
+    font-size: 1rem !important;
+    margin-bottom: 2rem;
+  }
+
+  /* Hero buttons: stack vertically */
+  .hero-actions {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 0.85rem 1.2rem;
+  }
+
+  /* Focus section */
+  .focus-wrap {
+    padding: 2rem 1.25rem;
+  }
+
+  .focus-title {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+  }
+
+  .focus-text {
+    font-size: 1rem;
+  }
+
+  /* Steps */
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .step-grid {
+    gap: 2rem;
+  }
+
+  .step-number {
+    font-size: 1.4rem;
+    padding: 0.1rem 0.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .step-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .step-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Newsletter */
+  .newsletter-wrap {
+    padding: 2rem 1.25rem;
+  }
+
+  .newsletter-wrap h3 {
+    font-size: 1.6rem;
+  }
+
+  /* Cotizador */
+  .cotizador-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .cotizador-steps-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .cotizador-navigation {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .cotizador-navigation .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .next-btn-brutalist,
+  .submit-btn-brutalist {
+    margin-left: 0;
+  }
+
+  /* Checkbox/radio grid: always single column on mobile */
+  .checkbox-grid,
+  .radio-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .checkbox-brutalist,
+  .radio-brutalist {
+    padding: 1rem;
+    box-shadow: 2px 2px 0px var(--border-color);
+  }
+
+  .checkbox-brutalist:hover,
+  .radio-brutalist:hover {
+    transform: none;
+  }
+
+  /* Footer grid: single column */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Footer info */
+  .footer-info p {
+    max-width: 100%;
+  }
+
+  /* Srv detail landing pages */
+  .srv-detail-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+
+  .service-hero-detail {
+    padding: 5.5rem 0 3rem 0 !important;
+  }
+
+  .hero-badge {
+    font-size: 0.75rem;
+  }
+
+  .visual-stat-card {
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0 auto;
+  }
+
+  .stat-number {
+    font-size: 2.5rem !important;
+  }
+
+  /* CTA banner */
+  .cta-banner-brutalist {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .cta-banner-brutalist h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-banner-brutalist .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Buttons: no lift on mobile (prevents layout shift) */
+  .btn:hover {
+    transform: none;
+  }
+
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .btn-whatsapp:hover {
+    transform: none;
+    box-shadow: 4px 4px 0px var(--border-color);
+  }
+
+  /* Sobre mi / blog cards */
+  .blog-card {
+    padding: 1.5rem;
+  }
+
+  /* Input groups in cotizador */
+  .input-group-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
