@@ -243,14 +243,15 @@ export default function Cotizador() {
                 </div>
 
                 <div className="form-group-brutalist">
-                  <label htmlFor="website">Sitio Web / URL Actual</label>
+                  <label htmlFor="website">Sitio Web / URL Actual <span style={{fontSize: '0.8rem', fontWeight: 500, color: 'var(--text-muted)'}}>opcional</span></label>
                   <input 
-                    type="url" 
+                    type="text" 
                     id="website" 
                     name="website" 
                     value={formData.website} 
                     onChange={handleInputChange}
-                    placeholder="Ej. https://minegocio.com"
+                    placeholder="Ej. minegocio.com o el nombre de tu marca"
+                    autoComplete="url"
                   />
                 </div>
               </div>

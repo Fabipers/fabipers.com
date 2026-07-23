@@ -6,7 +6,13 @@ export const prerender = false;
 export const POST: APIRoute = async ({ request }) => {
   try {
     const data = await request.json();
-    const { platforms, budget, goal, name, email, phone, website } = data;
+    const { platforms, budget, goal, name, email, phone } = data;
+    const rawWebsite: string = (data.website || '').trim();
+
+    // Normalize website: prepend https:// if the user omitted the protocol
+    const website = rawWebsite && !rawWebsite.match(/^https?:\/\//i)
+      ? `https://${rawWebsite}`
+      : rawWebsite;
 
     if (!name || !email || !phone) {
       return new Response(
@@ -65,7 +71,7 @@ export const POST: APIRoute = async ({ request }) => {
           </tr>
           <tr style="border-bottom: 2px solid #f1f5f9;">
             <td style="padding: 0.8rem 0; font-weight: 800; color: #09090b;">Sitio Web:</td>
-            <td style="padding: 0.8rem 0; color: #3f3f46;">${website || 'No especificado'}</td>
+            <td style="padding: 0.8rem 0; color: #3f3f46;">${website ? `<a href="${website}" style="color: #f43f5e; font-weight: 700;">${website}</a>` : 'No especificado'}</td>
           </tr>
           <tr style="border-bottom: 2px solid #f1f5f9;">
             <td style="padding: 0.8rem 0; font-weight: 800; color: #09090b;">Plataformas:</td>
