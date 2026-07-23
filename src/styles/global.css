@@ -87,6 +87,99 @@ img {
   width: 100%;
 }
 
+/* ===================================
+   NEO-BRUTALIST MARKDOWN TABLE STYLES
+   =================================== */
+
+/* Responsive wrapper to prevent horizontal overflow on mobile */
+.prose table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prose table,
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background-color: var(--bg-primary);
+  border: 3px solid var(--border-color);
+  box-shadow: 4px 4px 0px var(--border-color);
+  font-family: var(--font-body);
+  min-width: 400px; /* prevents too-narrow tables on mobile */
+}
+
+.prose th,
+article th {
+  background-color: var(--accent-primary);
+  color: #000000;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  padding: 1rem 1.2rem;
+  text-align: left;
+  border-bottom: 3px solid var(--border-color);
+  border-right: 2px solid rgba(0,0,0,0.25);
+  white-space: nowrap;
+}
+
+.prose th:last-child,
+article th:last-child {
+  border-right: none;
+}
+
+.prose td,
+article td {
+  padding: 0.85rem 1.2rem;
+  border-bottom: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.prose td:last-child,
+article td:last-child {
+  border-right: none;
+}
+
+.prose tr:last-child td,
+article tr:last-child td {
+  border-bottom: none;
+}
+
+/* Alternating row color for readability */
+.prose tbody tr:nth-child(even),
+article tbody tr:nth-child(even) {
+  background-color: var(--bg-secondary);
+}
+
+/* Hover effect */
+.prose tbody tr:hover,
+article tbody tr:hover {
+  background-color: var(--bg-tertiary);
+}
+
+/* Mobile: reduce padding */
+@media (max-width: 767px) {
+  .prose th,
+  article th {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.78rem;
+  }
+
+  .prose td,
+  article td {
+    padding: 0.65rem 0.8rem;
+    font-size: 0.88rem;
+  }
+}
+
 .section {
   padding: 6rem 0;
   overflow-x: hidden;
