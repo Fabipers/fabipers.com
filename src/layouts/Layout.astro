@@ -46,8 +46,35 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fabipers.com');
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
 		<slot name="head" />
+
+		<!-- Google Tag Manager -->
+		<script is:inline define:vars={{ gtmId: import.meta.env.PUBLIC_GTM_ID }}>
+			if (gtmId) {
+				window.dataLayer = window.dataLayer || [];
+				(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+				f.parentNode.insertBefore(j,f);
+				})(window,document,'script','dataLayer',gtmId);
+			}
+		</script>
+		<!-- End Google Tag Manager -->
 	</head>
 	<body>
+		<!-- Google Tag Manager (noscript) -->
+		{import.meta.env.PUBLIC_GTM_ID && (
+			<noscript>
+				<iframe
+					src={`https://www.googletagmanager.com/ns.html?id=${import.meta.env.PUBLIC_GTM_ID}`}
+					height="0"
+					width="0"
+					style="display:none;visibility:hidden"
+				></iframe>
+			</noscript>
+		)}
+		<!-- End Google Tag Manager (noscript) -->
+
 		<!-- Header / Nav -->
 		<header>
 			<div class="container header-container">
@@ -269,6 +296,22 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fabipers.com');
 				});
 			}
 		</script>
+
+		<!-- WhatsApp DataLayer Click Tracking -->
+		<script is:inline>
+			document.addEventListener('click', function(e) {
+				var el = e.target.closest('a[href*="api.whatsapp.com"]');
+				if (!el) return;
+				var loc = el.id || 'whatsapp_link';
+				window.dataLayer = window.dataLayer || [];
+				window.dataLayer.push({
+					event: 'contact_click',
+					contact_method: 'whatsapp',
+					click_location: loc
+				});
+			});
+		</script>
+		<!-- End WhatsApp DataLayer Click Tracking -->
 	</body>
 </html>
 

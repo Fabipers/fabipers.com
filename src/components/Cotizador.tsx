@@ -76,6 +76,18 @@ export default function Cotizador() {
       const data = await response.json();
 
       if (response.ok) {
+        // Fire DataLayer generate_lead event
+        if (typeof window !== 'undefined') {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: 'generate_lead',
+            form_name: 'cotizador_online',
+            lead_type: 'cotizacion_servicios',
+            selected_services: formData.platforms,
+            estimated_budget: formData.budget,
+            user_domain: formData.website || ''
+          });
+        }
         setSuccess(true);
       } else {
         setError(data.message || 'Ocurrió un error al procesar tu solicitud. Por favor inténtalo de nuevo.');
