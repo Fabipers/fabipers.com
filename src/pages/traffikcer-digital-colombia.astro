@@ -7,33 +7,45 @@ const description = "Multiplica tus clientes y ventas en Bogotá y toda Colombia
 ---
 
 <Layout title={title} description={description}>
-  <!-- Schema LocalBusiness / Service JSON-LD -->
+  <!-- Schema: ProfessionalService (Colombia) JSON-LD -->
   <script type="application/ld+json" slot="head">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Servicios de Trafficker Digital y Google/Meta Ads",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Fabián Pérez",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Bogotá",
-          "addressRegion": "Cundinamarca",
-          "addressCountry": "CO"
-        },
-        "telephone": "+573182873558",
-        "url": "https://fabipers.com/traffikcer-digital-colombia"
+      "@type": "ProfessionalService",
+      "name": "Fabián Pérez - Trafficker Digital",
+      "image": "https://fabipers.com/og-image.jpg",
+      "url": "https://fabipers.com/traffikcer-digital-colombia",
+      "telephone": "+573182873558",
+      "priceRange": "$$",
+      "description": "Especialista en tráfico de pago (Google Ads, Meta Ads) y analítica web avanzada para escalar negocios en Colombia. Optimización de ROI con presupuestos locales.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bogotá",
+        "addressRegion": "Cundinamarca",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 4.6097,
+        "longitude": -74.0817
       },
       "areaServed": {
         "@type": "Country",
         "name": "Colombia"
       },
-      "description": "Optimización avanzada de campañas de Google Ads y Meta Ads para empresas en Colombia, buscando maximizar el retorno de inversión (ROI) con presupuestos locales.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "COP"
-      }
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Pauta Digital",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trafficker Google Ads" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trafficker Meta Ads" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Analítica Web & Tracking" } }
+        ]
+      },
+      "sameAs": [
+        "https://linkedin.com/in/fabian-perez-trafficker",
+        "https://instagram.com/fabipers"
+      ]
     }
   </script>
 

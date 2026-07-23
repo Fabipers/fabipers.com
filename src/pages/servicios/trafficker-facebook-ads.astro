@@ -6,6 +6,39 @@ const description = "Genera demanda, optimiza tus embudos de conversión e imple
 ---
 
 <Layout title={title} description={description}>
+  <!-- Schema: FAQPage JSON-LD -->
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Es mejor hacer anuncios a WhatsApp o a una página web?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para negocios con equipos comerciales activos que cierran ventas conversacionales, WhatsApp funciona excelente. Para tiendas online (E-commerce) o venta automatizada, una landing page o web optimizada es imprescindible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el Píxel de Meta y la CAPI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El Píxel es un fragmento de código web y la CAPI (API de Conversiones) es un sistema server-side que reporta eventos de conversión directo del servidor. Hoy en día es crucial tener ambos activos para burlar las restricciones de iOS y cookies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Tengo que diseñar yo las imágenes y videos de los anuncios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yo me encargo de la estructuración de la estrategia, copy de los anuncios y sugerencia de creativos. Podemos trabajar en conjunto con tu diseñador interno o estructurar plantillas de anuncios brutalistas de alto impacto."
+          }
+        }
+      ]
+    }
+  </script>
   <!-- Hero Section -->
   <section class="section service-hero-detail" id="hero">
     <div class="container srv-detail-grid">

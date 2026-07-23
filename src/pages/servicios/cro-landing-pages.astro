@@ -6,6 +6,39 @@ const description = "Diseño y optimización de landings de conversión ultra r�
 ---
 
 <Layout title={title} description={description}>
+  <!-- Schema: FAQPage JSON-LD -->
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Por qué es importante la velocidad de carga de una landing page?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cada segundo de demora en móviles reduce la tasa de conversión en un 20%. Si estás pagando por cada clic en anuncios, un sitio lento significa quemar dinero antes de que el usuario vea tu propuesta de valor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es CRO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CRO (Conversion Rate Optimization) es el conjunto de técnicas científicas y de diseño utilizadas para incrementar el porcentaje de visitantes de tu web que realizan una acción deseada (comprar, rellenar un formulario)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Tengo que contratar hosting y dominio aparte para mi landing page?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yo me encargo de sugerirte las mejores alternativas (como Cloudflare, Vercel o servidores VPS con Coolify) y ayudarte con la configuración de DNS para que tu sitio cargue a la velocidad de la luz."
+          }
+        }
+      ]
+    }
+  </script>
   <!-- Hero Section -->
   <section class="section service-hero-detail" id="hero">
     <div class="container srv-detail-grid">

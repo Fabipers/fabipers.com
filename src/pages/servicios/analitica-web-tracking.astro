@@ -6,6 +6,39 @@ const description = "Auditoría e implementación de medición de conversiones c
 ---
 
 <Layout title={title} description={description}>
+  <!-- Schema: FAQPage JSON-LD -->
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Por qué las conversiones que reporta Facebook no cuadran con mis ventas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las restricciones de cookies en navegadores modernos y las protecciones de privacidad (como iOS 14.5+) bloquean el seguimiento tradicional de píxeles en el navegador. La solución es configurar el envío Server-Side para tener concordancia exacta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre Google Tag Manager y Google Analytics 4?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Analytics 4 (GA4) es la herramienta de analítica donde se almacenan y analizan los informes de datos. Google Tag Manager (GTM) es el gestor que facilita la instalación y envío de esos datos a GA4 y otras plataformas de anuncios."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es Server-Side Tracking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es un modelo donde las etiquetas de tu web envían datos a un servidor intermedio propio, y este servidor los envía de forma directa y segura a Meta o Google. Esto mejora la velocidad de carga de tu web y la precisión del tracking."
+          }
+        }
+      ]
+    }
+  </script>
   <!-- Hero Section -->
   <section class="section service-hero-detail" id="hero">
     <div class="container srv-detail-grid">

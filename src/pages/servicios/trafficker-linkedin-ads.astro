@@ -6,6 +6,39 @@ const description = "Captura tomadores de decisiones corporativas, dueños de ne
 ---
 
 <Layout title={title} description={description}>
+  <!-- Schema: FAQPage JSON-LD -->
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Por qué LinkedIn Ads es más costoso que Facebook Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El coste por clic en LinkedIn es más alto debido a la calidad de la base de datos y la capacidad única de segmentar por cargos y datos profesionales reales. Es ideal para negocios B2B donde un solo cliente cerrado compensa con creces el costo del lead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el LinkedIn Insight Tag?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es el píxel de seguimiento de LinkedIn. Te permite entender qué perfiles profesionales visitan tu web, crear públicos de retargeting en base a su industria y medir las conversiones de tus anuncios."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué formatos de anuncios son recomendables en LinkedIn?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los formularios de generación de prospectos (Lead Gen Forms) combinados con imágenes estáticas o videos cortos ofrecen excelentes tasas de conversión debido a la fricción mínima al rellenar datos."
+          }
+        }
+      ]
+    }
+  </script>
   <!-- Hero Section -->
   <section class="section service-hero-detail" id="hero">
     <div class="container srv-detail-grid">

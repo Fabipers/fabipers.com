@@ -7,33 +7,45 @@ const description = "Multiplica tus clientes en Miami con publicidad online de a
 ---
 
 <Layout title={title} description={description}>
-  <!-- Schema LocalBusiness / Service JSON-LD -->
+  <!-- Schema: ProfessionalService (Miami) JSON-LD -->
   <script type="application/ld+json" slot="head">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Miami Digital Trafficker & Ads Optimization Services",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Fabián Pérez",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Miami",
-          "addressRegion": "FL",
-          "addressCountry": "US"
-        },
-        "telephone": "+573182873558",
-        "url": "https://fabipers.com/traffikcer-digital-miami"
+      "@type": "ProfessionalService",
+      "name": "Fabián Pérez - Digital Trafficker Miami",
+      "image": "https://fabipers.com/og-image.jpg",
+      "url": "https://fabipers.com/traffikcer-digital-miami",
+      "telephone": "+573182873558",
+      "priceRange": "$$",
+      "description": "Paid traffic specialist (Google Ads, Meta Ads) and advanced web analytics for scaling businesses in Miami and the United States Hispanic market.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Miami",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.7617,
+        "longitude": -80.1918
       },
       "areaServed": {
         "@type": "AdministrativeArea",
         "name": "Miami Metropolitan Area"
       },
-      "description": "Professional Google Ads and Meta Ads management tailored for Hispanic business owners targeting the United States and Miami local markets, focused on maximizing ROI.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD"
-      }
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Advertising Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads Management" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Meta Ads Management" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Analytics & Tracking" } }
+        ]
+      },
+      "sameAs": [
+        "https://linkedin.com/in/fabian-perez-trafficker",
+        "https://instagram.com/fabipers"
+      ]
     }
   </script>
   <!-- Hero Section -->

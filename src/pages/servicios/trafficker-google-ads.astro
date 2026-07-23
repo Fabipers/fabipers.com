@@ -6,6 +6,39 @@ const description = "Captura demanda calificada e impulsa tus ventas con campañ
 ---
 
 <Layout title={title} description={description}>
+  <!-- Schema: FAQPage JSON-LD -->
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto presupuesto mínimo necesito para pautar en Google Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Recomiendo empezar con un presupuesto mensual mínimo de $500 USD para pauta para que la inteligencia artificial de Google pueda recopilar suficientes datos de conversión y optimizar correctamente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En cuánto tiempo se empiezan a ver los resultados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A diferencia del SEO, las campañas de Google Ads se activan de inmediato. Es común empezar a ver tráfico cualificado y leads desde los primeros días, aunque la estabilización de los costos de conversión suele tomar de 2 a 4 semanas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es Performance Max y me conviene implementarlo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Performance Max es un tipo de campaña omnicanal que utiliza aprendizaje automático para colocar tus anuncios en toda la red de Google. Es ideal para tiendas E-commerce y negocios locales con presupuestos robustos y tracking bien configurado."
+          }
+        }
+      ]
+    }
+  </script>
   <!-- Hero Section -->
   <section class="section service-hero-detail" id="hero">
     <div class="container srv-detail-grid">
