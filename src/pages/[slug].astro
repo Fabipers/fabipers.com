@@ -4,6 +4,7 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import { slugify } from '../utils/slugify';
 import LeadMagnet from '../components/LeadMagnet';
+import LeadMagnetModal from '../components/LeadMagnetModal';
 
 // Generate paths for all blog posts and pages
 export async function getStaticPaths() {
@@ -69,8 +70,32 @@ const description = entry.data.description || `Leer ${entry.data.title} en fabip
             <Content />
           </div>
 
-          <!-- Lead Magnet TOFU Section -->
-          <LeadMagnet client:visible />
+          <!-- In-Content Lead Magnet Container (relocated after 2nd paragraph via script) -->
+          <div id="in-content-lead-magnet" style="margin: 2rem 0;">
+            <LeadMagnet client:visible />
+          </div>
+
+          <script is:inline>
+            (function() {
+              function relocateLeadMagnet() {
+                var content = document.querySelector('.post-content-brutalist');
+                var magnet = document.getElementById('in-content-lead-magnet');
+                if (content && magnet) {
+                  var paragraphs = content.querySelectorAll(':scope > p');
+                  if (paragraphs.length >= 2) {
+                    paragraphs[1].after(magnet);
+                  } else if (paragraphs.length >= 1) {
+                    paragraphs[0].after(magnet);
+                  }
+                }
+              }
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', relocateLeadMagnet);
+              } else {
+                relocateLeadMagnet();
+              }
+            })();
+          </script>
 
           <footer class="post-footer">
             <div class="post-cta card text-center">
@@ -116,6 +141,9 @@ const description = entry.data.description || `Leer ${entry.data.title} en fabip
           </a>
         </div>
       </div>
+
+      <!-- 15-second Pop-up Lead Magnet -->
+      <LeadMagnetModal client:only="react" />
     </div>
   ) : (
     /* Static Page Layout (Single Column) */
