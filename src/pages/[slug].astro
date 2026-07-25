@@ -266,9 +266,15 @@ const description = entry.data.description || `Leer ${entry.data.title} en fabip
   
   .post-content-brutalist img, .page-content-brutalist img {
     border: 3px solid var(--border-color);
-    box-shadow: 6px 6px 0px var(--border-color);
-    margin: 2.5rem 0;
+    box-shadow: 4px 4px 0px var(--border-color);
+    margin: 1.25rem 0;
+    max-height: 64px;
+    max-width: 160px;
+    object-fit: contain;
+    background-color: var(--bg-primary);
+    padding: 0.6rem 1rem;
     border-radius: 0px;
+    display: block;
   }
   
   /* Sidebar styles */
