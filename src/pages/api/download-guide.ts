@@ -86,7 +86,7 @@ export const POST: APIRoute = async ({ request }) => {
         </p>
         
         <div style="text-align: center; margin: 2.5rem 0;">
-          <a href="https://fabipers.com/checklist.pdf" target="_blank" style="background-color: #f43f5e; color: #ffffff; padding: 1rem 2rem; font-weight: 900; font-size: 1.1rem; text-decoration: none; border: 3px solid #09090b; box-shadow: 4px 4px 0px #09090b; display: inline-block; text-transform: uppercase;">
+          <a href="https://fabipers.com/checklist-errores-ads.pdf" target="_blank" style="background-color: #f43f5e; color: #ffffff; padding: 1rem 2rem; font-weight: 900; font-size: 1.1rem; text-decoration: none; border: 3px solid #09090b; box-shadow: 4px 4px 0px #09090b; display: inline-block; text-transform: uppercase;">
             📄 Descargar Checklist PDF
           </a>
         </div>
