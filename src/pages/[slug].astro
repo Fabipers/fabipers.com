@@ -3,6 +3,7 @@ export const prerender = true;
 import { getCollection, render } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import { slugify } from '../utils/slugify';
+import LeadMagnet from '../components/LeadMagnet';
 
 // Generate paths for all blog posts and pages
 export async function getStaticPaths() {
@@ -67,6 +68,9 @@ const description = entry.data.description || `Leer ${entry.data.title} en fabip
           <div class="post-content-brutalist">
             <Content />
           </div>
+
+          <!-- Lead Magnet TOFU Section -->
+          <LeadMagnet client:visible />
 
           <footer class="post-footer">
             <div class="post-cta card text-center">

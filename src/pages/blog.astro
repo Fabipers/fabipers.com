@@ -9,6 +9,7 @@ const sortedPosts = posts.sort(
 );
 
 import { slugify } from '../utils/slugify';
+import LeadMagnet from '../components/LeadMagnet';
 
 // Extract all unique tags and categories dynamically
 const allTagsMap = new Map<string, string>(); // slug -> display name
@@ -73,39 +74,83 @@ const formatDate = (dateStr: string | Date) => {
           <p>No se encontraron artículos publicados.</p>
         </div>
       ) : (
-        <div class="grid grid-3">
-          {sortedPosts.map((post) => (
-            <article class="card blog-card">
-              <div class="blog-meta">
-                <time datetime={post.data.pubDate.toString()}>{formatDate(post.data.pubDate)}</time>
-                {post.data.categories && post.data.categories.length > 0 && (
-                  <a href={`/blog/tag/${slugify(post.data.categories[0])}/`} class="blog-category" id={`post-${post.id}-cat-${slugify(post.data.categories[0])}`}>{post.data.categories[0]}</a>
-                )}
-              </div>
-              
-              <h2 class="blog-card-title">
-                <a href={`/${post.id}/`} id={`blog-post-link-${post.id}`}>{post.data.title}</a>
-              </h2>
-              
-              <p class="blog-card-excerpt">
-                {post.data.description.replace(/^Migrado de WordPress: /, "")}
-              </p>
-              
-              <div class="blog-card-footer">
-                <div class="card-tags-list">
-                  {post.data.tags && post.data.tags.slice(0, 2).map((tag) => (
-                    <a href={`/blog/tag/${slugify(tag)}/`} class="blog-tag-link" id={`post-${post.id}-tag-${slugify(tag)}`}>
-                      #{tag}
-                    </a>
-                  ))}
+        <>
+          <div class="grid grid-3">
+            {sortedPosts.slice(0, 3).map((post) => (
+              <article class="card blog-card">
+                <div class="blog-meta">
+                  <time datetime={post.data.pubDate.toString()}>{formatDate(post.data.pubDate)}</time>
+                  {post.data.categories && post.data.categories.length > 0 && (
+                    <a href={`/blog/tag/${slugify(post.data.categories[0])}/`} class="blog-category" id={`post-${post.id}-cat-${slugify(post.data.categories[0])}`}>{post.data.categories[0]}</a>
+                  )}
                 </div>
-                <a href={`/${post.id}/`} class="blog-readmore" aria-label={`Leer más sobre ${post.data.title}`} id={`read-more-${post.id}`}>
-                  Leer &rarr;
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
+                
+                <h2 class="blog-card-title">
+                  <a href={`/${post.id}/`} id={`blog-post-link-${post.id}`}>{post.data.title}</a>
+                </h2>
+                
+                <p class="blog-card-excerpt">
+                  {post.data.description.replace(/^Migrado de WordPress: /, "")}
+                </p>
+                
+                <div class="blog-card-footer">
+                  <div class="card-tags-list">
+                    {post.data.tags && post.data.tags.slice(0, 2).map((tag) => (
+                      <a href={`/blog/tag/${slugify(tag)}/`} class="blog-tag-link" id={`post-${post.id}-tag-${slugify(tag)}`}>
+                        #{tag}
+                      </a>
+                    ))}
+                  </div>
+                  <a href={`/${post.id}/`} class="blog-readmore" aria-label={`Leer más sobre ${post.data.title}`} id={`read-more-${post.id}`}>
+                    Leer &rarr;
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <!-- Lead Magnet TOFU Section in Blog Grid -->
+          <div style="margin: 3rem 0;">
+            <LeadMagnet client:visible />
+          </div>
+
+          {sortedPosts.length > 3 && (
+            <div class="grid grid-3">
+              {sortedPosts.slice(3).map((post) => (
+                <article class="card blog-card">
+                  <div class="blog-meta">
+                    <time datetime={post.data.pubDate.toString()}>{formatDate(post.data.pubDate)}</time>
+                    {post.data.categories && post.data.categories.length > 0 && (
+                      <a href={`/blog/tag/${slugify(post.data.categories[0])}/`} class="blog-category" id={`post-${post.id}-cat-${slugify(post.data.categories[0])}`}>{post.data.categories[0]}</a>
+                    )}
+                  </div>
+                  
+                  <h2 class="blog-card-title">
+                    <a href={`/${post.id}/`} id={`blog-post-link-${post.id}`}>{post.data.title}</a>
+                  </h2>
+                  
+                  <p class="blog-card-excerpt">
+                    {post.data.description.replace(/^Migrado de WordPress: /, "")}
+                  </p>
+                  
+                  <div class="blog-card-footer">
+                    <div class="card-tags-list">
+                      {post.data.tags && post.data.tags.slice(0, 2).map((tag) => (
+                        <a href={`/blog/tag/${slugify(tag)}/`} class="blog-tag-link" id={`post-${post.id}-tag-${slugify(tag)}`}>
+                          #{tag}
+                        </a>
+                      ))}
+                    </div>
+                    <a href={`/${post.id}/`} class="blog-readmore" aria-label={`Leer más sobre ${post.data.title}`} id={`read-more-${post.id}`}>
+                      Leer &rarr;
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+        </>
+
       )}
     </div>
   </section>
