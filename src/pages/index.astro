@@ -11,75 +11,73 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
   <!-- 1. Hero Section (Above the Fold) -->
   <section class="hero-section">
     <div class="container hero-grid">
-      <!-- Columna Izquierda (Textos & CTA) -->
-      <div class="hero-left-col">
+      <!-- Columna Izquierda (Textos) -->
+      <div class="hero-left">
         <div class="badge-tag">
           ⚡ FABIÁN PÉREZ
         </div>
         
-        <h1 class="hero-main-title">
-          Trafficker Digital para negocios que están <span class="highlight-magenta-box">cansados de quemar dinero</span> en Ads.
+        <h1 class="hero-h1">
+          Trafficker Digital para negocios que están <span class="highlight-magenta-span">cansados de quemar dinero</span> en Ads.
         </h1>
         
-        <p class="hero-description">
+        <p class="hero-subtitle-p">
           No hago "anuncios bonitos". Construyo ecosistemas de adquisición B2B y E-commerce con Server-Side Tracking, automatización y embudos de alta conversión en Google y Meta Ads.
         </p>
         
-        <div class="hero-cta-box">
-          <a href="/servicios" class="btn-brutalist-hero" id="hero-main-cta">
-            CALCULA EL PRESUPUESTO DE TU ESTRATEGIA ➔
-          </a>
-          <p class="trust-micro-note">
-            🔒 Arquitectura basada en datos exactos. Sin presupuestos al azar.
-          </p>
-        </div>
+        <a href="/servicios" class="btn-hero-cta" id="hero-main-cta">
+          <span>CALCULA EL PRESUPUESTO DE TU ESTRATEGIA</span>
+          <span class="cta-arrow">➔</span>
+        </a>
+        
+        <p class="trust-note-text">
+          🔒 Arquitectura basada en datos exactos. Sin presupuestos al azar.
+        </p>
       </div>
 
-      <!-- Columna Derecha (Terminal Interactiva) -->
-      <div class="hero-right-col">
-        <div class="terminal-card">
-          <div class="terminal-header">
-            <div class="terminal-dots">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-            <span class="terminal-title">bash - root@fabipers:~</span>
-          </div>
-
-          <div class="terminal-body" id="diagnostic-form">
-            <div class="terminal-question" data-question="1">
-              <p class="prompt-text">> Ejecutando escaneo: ¿Usas Server-Side Tracking (CAPI)?</p>
-              <div class="btn-group">
-                <button type="button" class="answer-btn" data-val="yes">Sí</button>
-                <button type="button" class="answer-btn" data-val="no">No / No sé</button>
-              </div>
+      <!-- Columna Derecha (Calculadora Interactiva de Fuga de Presupuesto) -->
+      <div class="hero-right">
+        <div class="calc-card-brutalist">
+          <h3 class="calc-card-title">Calculadora de Fuga</h3>
+          <p class="calc-card-desc">
+            Descubre cuánto presupuesto pierdes al mes por tener el Píxel desactualizado y sin Server-Side Tracking (Aprox. 30%).
+          </p>
+          
+          <div class="calc-inputs-space">
+            <div class="slider-group">
+              <label class="slider-label">
+                <span>Inversión Mensual (USD)</span>
+                <span id="val-inversion" class="slider-val-highlight">$1,000</span>
+              </label>
+              <input type="range" id="slider-inversion" min="100" max="10000" step="100" value="1000" class="custom-range-input">
             </div>
 
-            <div class="terminal-question" data-question="2">
-              <p class="prompt-text">> Ping al servidor: ¿Tu web carga en menos de 3 segundos?</p>
-              <div class="btn-group">
-                <button type="button" class="answer-btn" data-val="yes">Sí</button>
-                <button type="button" class="answer-btn" data-val="no">No / No sé</button>
-              </div>
+            <div class="slider-group">
+              <label class="slider-label">
+                <span>CPA Promedio (USD)</span>
+                <span id="val-cpa" class="slider-val-highlight">$10</span>
+              </label>
+              <input type="range" id="slider-cpa" min="1" max="100" step="1" value="10" class="custom-range-input">
             </div>
 
-            <div class="terminal-question" data-question="3">
-              <p class="prompt-text">> Leyendo Datalayer: ¿Mides el valor exacto de compra en GA4?</p>
-              <div class="btn-group">
-                <button type="button" class="answer-btn" data-val="yes">Sí</button>
-                <button type="button" class="answer-btn" data-val="no">No / No sé</button>
-              </div>
+            <div class="calc-results-box">
+              <p class="calc-results-sub">Dinero Quemado</p>
+              <p id="calc-fuga" class="calc-fuga-amount">-$300<span class="per-month-text">/mes</span></p>
+              <p class="calc-equiv-text">
+                Equivale a <span id="calc-ventas" class="sales-lost-pill">30</span> ventas perdidas.
+              </p>
             </div>
 
-            <div id="terminal-result" class="terminal-result-box hidden"></div>
+            <a href="/servicios" class="btn-stop-fuga">
+              DETENER FUGA HOY
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 2. SECCIÓN SEO: ¿Qué hace un Trafficker Digital Experto? -->
+  <!-- 2. NUEVA SECCIÓN: Densidad SEO de la Keyword -->
   <section class="section seo-authority-section">
     <div class="container">
       <div class="section-intro-header text-center">
@@ -98,7 +96,7 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
           <div class="badge-tag magenta-tag">Pilar #1</div>
           <h3>Compra de Tráfico Estratégico</h3>
           <p>
-            Gestiono y escalo tu presupuesto en Meta Ads y Google Ads aplicando segmentación avanzada. Un trafficker digital analiza los datos para encontrar el costo por adquisición (CPA) más bajo del mercado.
+            Gestiono y escalo tu presupuesto en Meta Ads y Google Ads analizando datos para lograr el CPA más bajo del mercado.
           </p>
         </div>
 
@@ -107,7 +105,7 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
           <div class="badge-tag dark-tag">Pilar #2</div>
           <h3>Tracking y Analítica Avanzada</h3>
           <p>
-            El corazón de mis servicios de trafficker digital. Implemento Server-Side Tracking y flujos de datos con GA4 y GTM para que el algoritmo publicitario reciba información perfecta, incluso sin cookies.
+            Implemento Server-Side Tracking, GA4 y GTM para que el algoritmo publicitario reciba información perfecta, incluso sin cookies.
           </p>
         </div>
 
@@ -116,7 +114,7 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
           <div class="badge-tag magenta-tag">Pilar #3</div>
           <h3>Optimización de Embudos (CRO)</h3>
           <p>
-            El tráfico no sirve si la página no convierte. Como full-stack marketer y trafficker digital, audito y ajusto técnicamente tus landing pages para asegurar que cada dólar invertido retorne con ganancia.
+            Audito y ajusto técnicamente tus landing pages para asegurar que cada dólar invertido en publicidad retorne con alta conversión.
           </p>
         </div>
       </div>
@@ -141,7 +139,7 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
     </div>
   </section>
 
-  <!-- 4. Problema / Solución (Diagnóstico de 3 Errores) -->
+  <!-- 4. Problema / Solución (Grid de 3 columnas) -->
   <section class="section problem-section">
     <div class="container">
       <div class="section-intro-header text-center">
@@ -260,78 +258,51 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
       </h2>
       
       <div class="cta-center-align">
-        <a href="/servicios" class="btn-brutalist-hero big-btn" id="home-bottom-cta">
-          COTIZAR MI ESTRATEGIA AHORA ➔
+        <a href="/servicios" class="btn-hero-cta big-btn" id="home-bottom-cta">
+          <span>COTIZAR MI ESTRATEGIA AHORA</span>
+          <span class="cta-arrow">➔</span>
         </a>
       </div>
     </div>
   </section>
 </Layout>
 
-<!-- Script para la Terminal Interactiva -->
+<!-- Script para la Calculadora Interactiva de Fuga -->
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function() {
-    var answers = { 1: null, 2: null, 3: null };
-    var buttons = document.querySelectorAll('.answer-btn');
-    var resultBox = document.getElementById('terminal-result');
+    var sliderInversion = document.getElementById('slider-inversion');
+    var sliderCpa = document.getElementById('slider-cpa');
+    var valInversion = document.getElementById('val-inversion');
+    var valCpa = document.getElementById('val-cpa');
+    var calcFuga = document.getElementById('calc-fuga');
+    var calcVentas = document.getElementById('calc-ventas');
 
-    if (!buttons || !resultBox) return;
+    function calculate() {
+      if (!sliderInversion || !sliderCpa || !valInversion || !valCpa || !calcFuga || !calcVentas) return;
+      
+      var inversion = parseFloat(sliderInversion.value);
+      var cpa = parseFloat(sliderCpa.value);
 
-    buttons.forEach(function(btn) {
-      btn.addEventListener('click', function(e) {
-        var target = e.currentTarget;
-        var questionDiv = target.closest('.terminal-question');
-        if (!questionDiv) return;
-        var qId = questionDiv.getAttribute('data-question');
-        var val = target.getAttribute('data-val');
+      valInversion.textContent = '$' + inversion.toLocaleString('en-US');
+      valCpa.textContent = '$' + cpa.toLocaleString('en-US');
 
-        questionDiv.querySelectorAll('.answer-btn').forEach(function(b) {
-          b.classList.remove('active-yes', 'active-no');
-        });
+      var fuga = Math.round(inversion * 0.30);
+      var ventasPerdidas = Math.floor(fuga / cpa);
 
-        if (val === 'yes') {
-          target.classList.add('active-yes');
-        } else {
-          target.classList.add('active-no');
-        }
+      calcFuga.innerHTML = '-$' + fuga.toLocaleString('en-US') + '<span style="font-size: 1.1rem; color: #09090b; font-weight: 700;">/mes</span>';
+      calcVentas.textContent = ventasPerdidas.toString();
+    }
 
-        answers[qId] = val;
-        evaluateDiagnostics();
-      });
-    });
-
-    function evaluateDiagnostics() {
-      var answeredCount = Object.keys(answers).filter(function(k) { return answers[k] !== null; }).length;
-      if (answeredCount === 3) {
-        var hasError = Object.keys(answers).some(function(k) { return answers[k] === 'no'; });
-        resultBox.style.display = 'block';
-
-        if (hasError) {
-          resultBox.innerHTML = `
-            <p class="res-title danger">[FATAL] Infraestructura vulnerable.</p>
-            <p class="res-detail">> Fuga estimada: ~40% del presupuesto.</p>
-            <p class="res-detail">> Diagnóstico: El algoritmo está optimizando a ciegas.</p>
-            <a href="/servicios" class="res-btn danger-btn">
-              >> PARAR FUGA DE DINERO AHORA
-            </a>
-          `;
-        } else {
-          resultBox.innerHTML = `
-            <p class="res-title success">[OK] Infraestructura sólida.</p>
-            <p class="res-detail">> Ecosistema de datos verificado.</p>
-            <p class="res-detail">> Diagnóstico: Listo para inyectar presupuesto agresivo.</p>
-            <a href="/servicios" class="res-btn success-btn">
-              >> ESCALAR CAMPAÑAS HOY
-            </a>
-          `;
-        }
-      }
+    if (sliderInversion && sliderCpa) {
+      sliderInversion.addEventListener('input', calculate);
+      sliderCpa.addEventListener('input', calculate);
+      calculate();
     }
   });
 </script>
 
 <style>
-  /* Base Container */
+  /* Base Container & Grid System */
   .container {
     width: 100%;
     max-width: 1160px;
@@ -353,7 +324,7 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
 
   .hero-grid {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 3.5rem;
     align-items: center;
   }
@@ -365,7 +336,7 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
     }
   }
 
-  .hero-left-col {
+  .hero-left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -393,7 +364,7 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
     background-color: #09090b;
   }
 
-  .hero-main-title {
+  .hero-h1 {
     font-family: var(--font-heading, 'Outfit', sans-serif);
     font-size: clamp(2.1rem, 4.5vw, 3.4rem);
     font-weight: 900;
@@ -403,7 +374,7 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
     margin-bottom: 1.25rem;
   }
 
-  .highlight-magenta-box {
+  .highlight-magenta-span {
     background-color: #f43f5e;
     color: #ffffff;
     padding: 0.15rem 0.5rem;
@@ -414,7 +385,7 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
     margin: 0.1rem 0;
   }
 
-  .hero-description {
+  .hero-subtitle-p {
     font-size: clamp(1.05rem, 1.8vw, 1.2rem);
     font-weight: 500;
     color: #27272a;
@@ -422,18 +393,11 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
     margin-bottom: 2rem;
   }
 
-  .hero-cta-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-    width: 100%;
-  }
-
-  .btn-brutalist-hero {
+  .btn-hero-cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
     background-color: #f43f5e;
     color: #ffffff;
     font-family: var(--font-heading, 'Outfit', sans-serif);
@@ -448,164 +412,171 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
     transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 
-  .btn-brutalist-hero:hover {
+  .btn-hero-cta:hover {
     transform: translate(2px, 2px);
     box-shadow: 4px 4px 0px #09090b;
     color: #ffffff;
   }
 
-  .btn-brutalist-hero:active {
+  .btn-hero-cta:active {
     transform: translate(6px, 6px);
     box-shadow: 0px 0px 0px #09090b;
   }
 
-  .btn-brutalist-hero.big-btn {
+  .btn-hero-cta.big-btn {
     font-size: clamp(1.1rem, 2.4vw, 1.4rem);
     padding: 1.25rem 2.5rem;
     box-shadow: 8px 8px 0px #09090b;
   }
 
-  .trust-micro-note {
+  .trust-note-text {
     font-size: 0.85rem;
     font-weight: 700;
     color: #71717a;
+    margin-top: 1rem;
   }
 
-  /* Right Terminal Card */
-  .terminal-card {
+  /* Right Column: Calculadora Card */
+  .hero-right {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    max-width: 480px;
-    margin: 0 auto;
-    background-color: #09090b;
+  }
+
+  .calc-card-brutalist {
+    width: 100%;
+    max-width: 460px;
+    background-color: #ffffff;
     border: 4px solid #09090b;
-    box-shadow: 10px 10px 0px #f43f5e;
-    font-family: monospace, monospace;
-    color: #ffffff;
-    padding: 1.25rem;
+    box-shadow: 12px 12px 0px #f43f5e;
+    padding: 2rem 1.75rem;
   }
 
-  .terminal-header {
-    display: flex;
-    align-items: center;
-    padding-bottom: 0.75rem;
-    margin-bottom: 1.25rem;
-    border-bottom: 1px solid #27272a;
-  }
-
-  .terminal-dots {
-    display: flex;
-    gap: 0.4rem;
-  }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-  }
-
-  .dot.red { background-color: #ef4444; }
-  .dot.yellow { background-color: #eab308; }
-  .dot.green { background-color: #22c55e; }
-
-  .terminal-title {
-    color: #71717a;
-    font-size: 0.8rem;
-    margin-left: 0.75rem;
-  }
-
-  .terminal-body {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  .prompt-text {
-    color: #4ade80;
-    font-size: 0.85rem;
-    font-weight: 700;
-    line-height: 1.4;
+  .calc-card-title {
+    font-family: var(--font-heading, 'Outfit', sans-serif);
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #09090b;
     margin-bottom: 0.5rem;
   }
 
-  .btn-group {
+  .calc-card-desc {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #4b5563;
+    line-height: 1.5;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #09090b;
+    margin-bottom: 1.5rem;
+  }
+
+  .calc-inputs-space {
     display: flex;
-    gap: 0.75rem;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
-  .answer-btn {
-    background: transparent;
-    color: #ffffff;
-    border: 2px solid #52525b;
-    padding: 0.35rem 1rem;
-    font-family: inherit;
-    font-size: 0.85rem;
+  .slider-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .slider-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-weight: 700;
-    cursor: pointer;
-    transition: all 0.15s ease;
-  }
-
-  .answer-btn:hover {
-    border-color: #ffffff;
-    background-color: #ffffff;
+    font-size: 0.9rem;
     color: #09090b;
   }
 
-  .answer-btn.active-yes {
-    background-color: #ffffff !important;
-    color: #09090b !important;
-    border-color: #ffffff !important;
-  }
-
-  .answer-btn.active-no {
-    background-color: #f43f5e !important;
-    color: #ffffff !important;
-    border-color: #f43f5e !important;
-  }
-
-  .terminal-result-box {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid #27272a;
-  }
-
-  .terminal-result-box.hidden {
-    display: none;
-  }
-
-  .res-title {
-    font-size: 1rem;
+  .slider-val-highlight {
+    color: #f43f5e;
+    font-size: 1.25rem;
     font-weight: 900;
   }
 
-  .res-title.danger { color: #f43f5e; }
-  .res-title.success { color: #4ade80; }
-
-  .res-detail {
-    color: #a1a1aa;
-    font-size: 0.85rem;
-    margin-top: 0.35rem;
+  .custom-range-input {
+    width: 100%;
+    height: 10px;
+    accent-color: #09090b;
+    background-color: #e5e7eb;
+    border: 2px solid #09090b;
+    border-radius: 0px;
+    cursor: pointer;
+    appearance: auto;
   }
 
-  .res-btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.65rem 1.25rem;
+  .calc-results-box {
+    background-color: #f8fafc;
+    border: 4px solid #09090b;
+    padding: 1.25rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .calc-results-sub {
+    font-size: 0.75rem;
     font-weight: 900;
-    font-size: 0.85rem;
-    text-decoration: none;
     text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 0.05em;
+
   }
 
-  .res-btn.danger-btn {
+  .calc-fuga-amount {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #f43f5e;
+    margin: 0.25rem 0;
+    line-height: 1;
+  }
+
+  .per-month-text {
+    font-size: 1rem;
+    color: #09090b;
+    font-weight: 700;
+  }
+
+  .calc-equiv-text {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 0.5rem;
+  }
+
+  .sales-lost-pill {
     background-color: #f43f5e;
     color: #ffffff;
-    border: 2px solid #f43f5e;
+    padding: 0.1rem 0.4rem;
+    font-weight: 900;
+    border: 1px solid #09090b;
   }
 
-  .res-btn.success-btn {
-    background-color: #ffffff;
-    color: #09090b;
-    border: 2px solid #ffffff;
+  .btn-stop-fuga {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #09090b;
+    color: #ffffff;
+    font-family: var(--font-heading, 'Outfit', sans-serif);
+    font-weight: 900;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    border: 4px solid #09090b;
+    box-shadow: 6px 6px 0px #09090b;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  }
+
+  .btn-stop-fuga:hover {
+    background-color: #f43f5e;
+    color: #ffffff;
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0px #09090b;
   }
 
   /* 2. SEO & Strategy Section */
