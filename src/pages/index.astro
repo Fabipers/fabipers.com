@@ -9,92 +9,128 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
 
 <Layout title={title} description={description}>
   <!-- 1. Hero Section (Above the Fold) -->
-  <section class="hero-section">
-    <div class="container hero-grid">
-      <!-- Columna Izquierda (Textos & CTA) -->
-      <div class="hero-left">
-        <div class="badge-tag">
-          ⚡ FABIÁN PÉREZ
-        </div>
-        
-        <h1 class="hero-title">
-          Trafficker Digital para negocios que están <span class="highlight-magenta">cansados de quemar dinero</span> en Ads.
-        </h1>
-        
-        <p class="hero-subtitle">
-          No hago "anuncios bonitos". Construyo ecosistemas de adquisición B2B y E-commerce con Server-Side Tracking, automatización y embudos de alta conversión en Google y Meta Ads.
-        </p>
-        
-        <div class="hero-cta-wrapper">
-          <a href="/servicios" class="btn-cta-primary" id="hero-main-cta">
+  <section class="py-12 md:py-20 bg-white border-b-[4px] border-black">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <!-- Columna Izquierda (Textos) -->
+        <div class="flex flex-col items-start">
+          <div class="inline-block bg-black text-white font-extrabold text-xs tracking-wider uppercase px-3 py-1.5 border-[3px] border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+            ⚡ FABIÁN PÉREZ
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-balance mt-4 text-black">
+            Trafficker Digital para negocios que están <span class="inline-block bg-[#f43f5e] px-2 py-1 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1 text-black">cansados de quemar dinero</span> en Ads.
+          </h1>
+          
+          <p class="mt-6 text-lg md:text-xl text-gray-800 font-medium leading-relaxed">
+            No hago "anuncios bonitos". Construyo ecosistemas de adquisición B2B y E-commerce con Server-Side Tracking, automatización y embudos de alta conversión en Google y Meta Ads.
+          </p>
+          
+          <a href="/servicios" class="inline-flex items-center gap-2 mt-8 bg-[#f43f5e] text-black border-[4px] border-black px-6 py-4 font-extrabold text-lg shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all no-underline">
             <span>CALCULA EL PRESUPUESTO DE TU ESTRATEGIA</span>
-            <span class="arrow">➔</span>
+            <span>➔</span>
           </a>
+          
+          <p class="mt-4 text-sm text-gray-600 font-bold flex items-center gap-1.5">
+            🔒 Arquitectura basada en datos exactos. Sin presupuestos al azar.
+          </p>
         </div>
-        
-        <p class="trust-note">
-          🔒 Arquitectura basada en datos exactos. Sin presupuestos al azar.
-        </p>
-      </div>
 
-      <!-- Columna Derecha (Gráfico Dinámico Animado) -->
-      <div class="hero-right">
-        <div class="chart-container-brutalist">
-          <div class="roi-floating-badge">ROI +340%</div>
-          <div class="chart-bar bar-low"></div>
-          <div class="chart-bar bar-mid"></div>
-          <div class="chart-bar bar-high">
-            <div class="bar-shimmer"></div>
+        <!-- Columna Derecha (Terminal Interactiva) -->
+        <div class="w-full">
+          <div class="w-full max-w-lg mx-auto bg-black border-[4px] border-black shadow-[12px_12px_0px_0px_rgba(244,63,94,1)] p-6 font-mono text-white text-sm md:text-base">
+            <div class="flex items-center gap-2 mb-6 pb-2 border-b border-gray-800">
+              <div class="w-3 h-3 rounded-full bg-red-500"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div class="w-3 h-3 rounded-full bg-green-500"></div>
+              <span class="text-gray-500 ml-2 text-xs md:text-sm">bash - root@fabipers:~</span>
+            </div>
+            <div class="space-y-6" id="diagnostic-form">
+              <div class="terminal-question" data-question="1">
+                <p class="text-green-400 font-semibold">> Ejecutando escaneo: ¿Usas Server-Side Tracking (CAPI)?</p>
+                <div class="flex gap-4 mt-3">
+                  <button type="button" class="answer-btn border-2 border-gray-600 px-4 py-1.5 hover:border-white hover:bg-white hover:text-black transition-all cursor-pointer font-bold text-white bg-transparent" data-val="yes">Sí</button>
+                  <button type="button" class="answer-btn border-2 border-gray-600 px-4 py-1.5 hover:border-[#f43f5e] hover:bg-[#f43f5e] hover:text-black transition-all cursor-pointer font-bold text-white bg-transparent" data-val="no">No / No sé</button>
+                </div>
+              </div>
+              <div class="terminal-question" data-question="2">
+                <p class="text-green-400 font-semibold">> Ping al servidor: ¿Tu web carga en menos de 3 segundos?</p>
+                <div class="flex gap-4 mt-3">
+                  <button type="button" class="answer-btn border-2 border-gray-600 px-4 py-1.5 hover:border-white hover:bg-white hover:text-black transition-all cursor-pointer font-bold text-white bg-transparent" data-val="yes">Sí</button>
+                  <button type="button" class="answer-btn border-2 border-gray-600 px-4 py-1.5 hover:border-[#f43f5e] hover:bg-[#f43f5e] hover:text-black transition-all cursor-pointer font-bold text-white bg-transparent" data-val="no">No / No sé</button>
+                </div>
+              </div>
+              <div class="terminal-question" data-question="3">
+                <p class="text-green-400 font-semibold">> Leyendo Datalayer: ¿Mides el valor exacto de compra en GA4?</p>
+                <div class="flex gap-4 mt-3">
+                  <button type="button" class="answer-btn border-2 border-gray-600 px-4 py-1.5 hover:border-white hover:bg-white hover:text-black transition-all cursor-pointer font-bold text-white bg-transparent" data-val="yes">Sí</button>
+                  <button type="button" class="answer-btn border-2 border-gray-600 px-4 py-1.5 hover:border-[#f43f5e] hover:bg-[#f43f5e] hover:text-black transition-all cursor-pointer font-bold text-white bg-transparent" data-val="no">No / No sé</button>
+                </div>
+              </div>
+            </div>
+            <div id="terminal-result" class="hidden mt-8 pt-6 border-t border-gray-800"></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 2. NUEVA SECCIÓN: ¿Qué hace un Trafficker Digital Experto? -->
-  <section class="section seo-section">
-    <div class="container">
-      <div class="section-header text-center max-w-header">
-        <span class="badge-tag dark-tag">
+  <!-- 2. NUEVA SECCIÓN: Densidad SEO de la Keyword -->
+  <section class="py-16 md:py-24 bg-white border-b-[4px] border-black">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+        <span class="inline-block bg-black text-white font-extrabold text-xs uppercase px-3 py-1.5 border-[2px] border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-4">
           SEO & ESTRATEGIA
         </span>
-        <h2 class="section-title">
-          ¿Por qué tu negocio necesita un Trafficker Digital y no una agencia de vanidad?
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-black leading-tight mb-4">
+          ¿Por qué tu negocio necesita un Trafficker Digital y no una agencia tradicional?
         </h2>
-        <p class="section-intro">
+        <p class="text-base md:text-lg font-medium text-gray-800 leading-relaxed">
           Un trafficker digital no hace "posts bonitos" ni persigue likes. Como trafficker digital experto, mi único objetivo es diseñar sistemas de compra de tráfico que conviertan clics en facturación real y medible.
         </p>
       </div>
 
-      <div class="grid-3-col">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Tarjeta 1 -->
-        <div class="card card-brutalist">
+        <div class="bg-white border-[4px] border-black p-6 sm:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
           <div>
-            <div class="badge-tag magenta-badge">Pilar #1</div>
-            <h3>Compra de Tráfico Estratégico</h3>
-            <p>
+            <div class="bg-[#f43f5e] text-white font-black text-xs uppercase px-3 py-1 border-[2px] border-black inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-4">
+              Pilar #1
+            </div>
+            <h3 class="text-xl font-black text-black mb-3">
+              Compra de Tráfico Estratégico
+            </h3>
+            <p class="text-sm font-medium text-gray-700 leading-relaxed">
               Gestiono y escalo tu presupuesto en Meta Ads y Google Ads aplicando segmentación avanzada. Un trafficker digital analiza los datos para encontrar el costo por adquisición (CPA) más bajo del mercado.
             </p>
           </div>
         </div>
 
         <!-- Tarjeta 2 -->
-        <div class="card card-brutalist">
+        <div class="bg-white border-[4px] border-black p-6 sm:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
           <div>
-            <div class="badge-tag dark-badge">Pilar #2</div>
-            <h3>Tracking y Analítica Avanzada</h3>
-            <p>
+            <div class="bg-black text-white font-black text-xs uppercase px-3 py-1 border-[2px] border-black inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-4">
+              Pilar #2
+            </div>
+            <h3 class="text-xl font-black text-black mb-3">
+              Tracking y Analítica Avanzada
+            </h3>
+            <p class="text-sm font-medium text-gray-700 leading-relaxed">
               El corazón de mis servicios de trafficker digital. Implemento Server-Side Tracking y flujos de datos con GA4 y GTM para que el algoritmo publicitario reciba información perfecta, incluso sin cookies.
             </p>
           </div>
         </div>
 
         <!-- Tarjeta 3 -->
-        <div class="card card-brutalist">
+        <div class="bg-white border-[4px] border-black p-6 sm:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
           <div>
-            <div class="badge-tag magenta-badge">Pilar #3</div>
-            <h3>Optimización de Embudos (CRO)</h3>
-            <p>
+            <div class="bg-[#f43f5e] text-white font-black text-xs uppercase px-3 py-1 border-[2px] border-black inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-4">
+              Pilar #3
+            </div>
+            <h3 class="text-xl font-black text-black mb-3">
+              Optimización de Embudos (CRO)
+            </h3>
+            <p class="text-sm font-medium text-gray-700 leading-relaxed">
               El tráfico no sirve si la página no convierte. Como full-stack marketer y trafficker digital, audito y ajusto técnicamente tus landing pages para asegurar que cada dólar invertido retorne con ganancia.
             </p>
           </div>
@@ -104,12 +140,12 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
   </section>
 
   <!-- 3. Barra de Autoridad Tecnológica -->
-  <section class="tech-bar-section">
-    <div class="container text-center">
-      <span class="tech-bar-title">
+  <section class="py-8 bg-zinc-100 border-b-[4px] border-black">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <span class="block text-xs font-black uppercase tracking-widest text-zinc-500 mb-4">
         TECNOLOGÍAS QUE USAMOS PARA BLINDAR TU TRACKING:
       </span>
-      <div class="tech-tags-wrapper">
+      <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6">
         {[
           "Google Analytics 4",
           "Google Tag Manager",
@@ -117,7 +153,7 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
           "Astro",
           "Node.js"
         ].map((tech) => (
-          <div class="tech-badge">
+          <div class="bg-white text-black font-black text-xs sm:text-sm uppercase px-4 py-2.5 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
             ⚡ {tech}
           </div>
         ))}
@@ -126,574 +162,283 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
   </section>
 
   <!-- 4. Problema / Solución (Grid de 3 columnas) -->
-  <section class="section problem-section">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="badge-tag magenta-tag">Diagnóstico Técnico</span>
-        <h2 class="section-title">¿Estás quemando dinero en tráfico que no convierte?</h2>
+  <section class="py-16 md:py-24 bg-white border-b-[4px] border-black">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+        <span class="inline-block bg-[#f43f5e] text-white font-extrabold text-xs uppercase px-3 py-1 border-[2px] border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-4">
+          Diagnóstico Técnico
+        </span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase text-black leading-tight">
+          ¿Estás quemando dinero en tráfico que no convierte?
+        </h2>
       </div>
 
-      <div class="grid-3-col">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Caja 1 -->
-        <div class="card card-brutalist space-between-card">
+        <div class="bg-white border-[4px] border-black p-6 sm:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
           <div>
-            <div class="badge-tag magenta-badge">Error #1</div>
-            <h3>El Píxel Ciego</h3>
-            <p>
-              Con las nuevas políticas de privacidad, el píxel tradicional pierde hasta el 40% de las ventas. Implemento Server-Side Tracking para que el algoritmo siempre sepa quién te compra.
+            <div class="bg-[#f43f5e] text-white font-black text-xs uppercase px-3 py-1 border-[2px] border-black inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-4">
+              Error #1
+            </div>
+            <h3 class="text-xl font-black uppercase text-black mb-3">
+              El Píxel Ciego
+            </h3>
+            <p class="text-sm font-medium text-zinc-700 leading-relaxed">
+              Con las nuevas políticas de privacidad, pierdes hasta el 40% de las ventas. Implemento Server-Side Tracking para que el algoritmo siempre sepa quién te compra.
             </p>
           </div>
-          <div class="solution-footer">⚡ Solución: Meta CAPI + GTM Server</div>
+          <div class="mt-6 pt-4 border-t-[2px] border-zinc-200 text-xs font-bold text-black uppercase">
+            ⚡ Solución: Meta CAPI + GTM Server
+          </div>
         </div>
 
         <!-- Caja 2 -->
-        <div class="card card-brutalist space-between-card">
+        <div class="bg-white border-[4px] border-black p-6 sm:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
           <div>
-            <div class="badge-tag dark-badge">Error #2</div>
-            <h3>Landings Lentas</h3>
-            <p>
+            <div class="bg-black text-white font-black text-xs uppercase px-3 py-1 border-[2px] border-black inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-4">
+              Error #2
+            </div>
+            <h3 class="text-xl font-black uppercase text-black mb-3">
+              Landings Lentas
+            </h3>
+            <p class="text-sm font-medium text-zinc-700 leading-relaxed">
               Si tu web tarda 5 segundos en cargar, ya perdiste al prospecto. Desarrollo páginas de aterrizaje ultra-rápidas enfocadas 100% en disparar tu tasa de conversión.
             </p>
           </div>
-          <div class="solution-footer">⚡ Solución: Astro + CRO de alta velocidad</div>
+          <div class="mt-6 pt-4 border-t-[2px] border-zinc-200 text-xs font-bold text-black uppercase">
+            ⚡ Solución: Astro + CRO de alta velocidad
+          </div>
         </div>
 
         <!-- Caja 3 -->
-        <div class="card card-brutalist space-between-card">
+        <div class="bg-white border-[4px] border-black p-6 sm:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
           <div>
-            <div class="badge-tag magenta-badge">Error #3</div>
-            <h3>Leads de Baja Calidad</h3>
-            <p>
+            <div class="bg-[#f43f5e] text-white font-black text-xs uppercase px-3 py-1 border-[2px] border-black inline-block shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mb-4">
+              Error #3
+            </div>
+            <h3 class="text-xl font-black uppercase text-black mb-3">
+              Leads de Baja Calidad
+            </h3>
+            <p class="text-sm font-medium text-zinc-700 leading-relaxed">
               Dejamos de rogar por clics. Conectamos tus campañas a embudos automatizados que filtran a los curiosos y te entregan prospectos listos para cerrar.
             </p>
           </div>
-          <div class="solution-footer">⚡ Solución: Funnels B2B & Webhooks</div>
+          <div class="mt-6 pt-4 border-t-[2px] border-zinc-200 text-xs font-bold text-black uppercase">
+            ⚡ Solución: Funnels B2B & Webhooks
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- 5. Captación TOFU (Lead Magnet) -->
-  <section class="section tofu-section">
-    <div class="container">
-      <div class="tofu-banner-card">
-        <div class="badge-tag dark-tag">🎁 Recursos Gratuitos</div>
+  <section class="py-16 md:py-20 bg-zinc-900 border-b-[4px] border-black">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-[#f43f5e] border-[4px] border-black p-8 md:p-12 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] text-white">
+        <div class="inline-block bg-black text-white font-black text-xs uppercase px-3 py-1 border-[2px] border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-4">
+          🎁 Recursos Gratuitos
+        </div>
         
-        <h2 class="tofu-title">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase text-white leading-tight mb-4 drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]">
           ¿Aún no estás listo para escalar? Empieza cerrando la fuga de dinero.
         </h2>
         
-        <p class="tofu-text">
-          Descarga gratis el <span class="yellow-highlight">Checklist de Auditoría: Los 5 Errores Ocultos en tus Campañas de Ads</span> y aprende los ajustes técnicos para detener la fuga hoy mismo.
+        <p class="text-base md:text-lg font-bold text-white mb-6 leading-relaxed">
+          Descarga gratis el <span class="bg-black text-yellow-300 px-2 py-0.5 border-[2px] border-black inline-block">Checklist de Auditoría: Los 5 Errores Ocultos en tus Campañas de Ads</span> y aprende los ajustes técnicos para detener la fuga hoy mismo.
         </p>
 
-        <!-- Interactive Lead Magnet Form -->
+        <!-- Interactive Lead Magnet Form Component -->
         <LeadMagnet client:visible />
       </div>
     </div>
   </section>
 
   <!-- 6. Servicios BOFU -->
-  <section class="section bofu-section">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="badge-tag dark-tag">Servicios Especializados</span>
-        <h2 class="section-title">Ecosistemas de Crecimiento Digital</h2>
+  <section class="py-16 md:py-24 bg-white border-b-[4px] border-black">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+        <span class="inline-block bg-black text-white font-extrabold text-xs uppercase px-3 py-1 border-[2px] border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-4">
+          Servicios Especializados
+        </span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase text-black leading-tight">
+          Ecosistemas de Crecimiento Digital
+        </h2>
       </div>
 
-      <div class="grid-3-col">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Ítem 1 -->
-        <div class="card card-brutalist space-between-card">
+        <div class="bg-white border-[4px] border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
           <div>
-            <div class="icon-emoji">🎯</div>
-            <h3>Google Ads & Meta Ads</h3>
-            <p>
+            <div class="text-3xl mb-4">🎯</div>
+            <h3 class="text-xl font-black uppercase text-black mb-3">
+              Google Ads & Meta Ads
+            </h3>
+            <p class="text-sm font-medium text-zinc-700 leading-relaxed mb-6">
               Campañas de búsqueda de alta intención y pauta disruptiva en redes sociales. Diseñadas para capturar clientes calificados con el menor costo por adquisición.
             </p>
           </div>
-          <div class="service-nav-links vertical-links">
-            <a href="/servicios/trafficker-google-ads">Google Ads &rarr;</a>
-            <a href="/servicios/trafficker-facebook-ads">Meta Ads & Instagram &rarr;</a>
+          <div class="flex flex-col gap-2">
+            <a href="/servicios/trafficker-google-ads" class="text-xs font-black uppercase text-[#f43f5e] hover:underline flex items-center gap-1">
+              Google Ads →
+            </a>
+            <a href="/servicios/trafficker-facebook-ads" class="text-xs font-black uppercase text-[#f43f5e] hover:underline flex items-center gap-1">
+              Meta Ads & Instagram →
+            </a>
           </div>
         </div>
 
         <!-- Ítem 2 -->
-        <div class="card card-brutalist space-between-card">
+        <div class="bg-white border-[4px] border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
           <div>
-            <div class="icon-emoji">📊</div>
-            <h3>Analítica Web Avanzada</h3>
-            <p>
+            <div class="text-3xl mb-4">📊</div>
+            <h3 class="text-xl font-black uppercase text-black mb-3">
+              Analítica Web Avanzada
+            </h3>
+            <p class="text-sm font-medium text-zinc-700 leading-relaxed mb-6">
               Auditoría e implementación de GTM, GA4 y flujos de datos del servidor (Server-Side Tracking). Medición matemática exacta sin discrepancias de conversión.
             </p>
           </div>
-          <div class="service-nav-links">
-            <a href="/servicios/analitica-web-tracking">Analítica & Tracking &rarr;</a>
-          </div>
+          <a href="/servicios/analitica-web-tracking" class="text-xs font-black uppercase text-[#f43f5e] hover:underline flex items-center gap-1">
+            Analítica & Tracking →
+          </a>
         </div>
 
         <!-- Ítem 3 -->
-        <div class="card card-brutalist space-between-card">
+        <div class="bg-white border-[4px] border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
           <div>
-            <div class="icon-emoji">⚙️</div>
-            <h3>Automatización y Desarrollo</h3>
-            <p>
+            <div class="text-3xl mb-4">⚙️</div>
+            <h3 class="text-xl font-black uppercase text-black mb-3">
+              Automatización y Desarrollo
+            </h3>
+            <p class="text-sm font-medium text-zinc-700 leading-relaxed mb-6">
               Integración de webhooks, CRMs y optimización técnica de tu sitio web mediante Landing Pages CRO ultra-rápidas construidas para convertir visitantes en ventas.
             </p>
           </div>
-          <div class="service-nav-links">
-            <a href="/servicios/cro-landing-pages">Landing Pages & CRO &rarr;</a>
-          </div>
+          <a href="/servicios/cro-landing-pages" class="text-xs font-black uppercase text-[#f43f5e] hover:underline flex items-center gap-1">
+            Landing Pages & CRO →
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- 7. Cierre Final (Pre-Footer) -->
-  <section class="section final-cta-section text-center">
-    <div class="container">
-      <h2 class="final-headline">
+  <section class="py-16 md:py-24 bg-zinc-100 border-b-[4px] border-black text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-black uppercase text-black leading-tight tracking-tight mb-8">
         Es hora de dejar de adivinar y empezar a medir.
       </h2>
       
-      <div class="hero-cta-wrapper center-flex">
-        <a href="/servicios" class="btn-cta-primary big-cta" id="home-bottom-cta">
+      <div class="flex justify-center mt-8">
+        <a 
+          href="/servicios" 
+          class="w-fit inline-flex items-center gap-2 bg-[#f43f5e] text-black font-black text-lg md:text-2xl uppercase px-8 sm:px-12 py-5 border-[4px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-[8px] active:translate-y-[8px] active:shadow-none transition-all text-center no-underline" 
+          id="home-bottom-cta"
+        >
           <span>COTIZAR MI ESTRATEGIA AHORA</span>
-          <span class="arrow">➔</span>
+          <span>➔</span>
         </a>
       </div>
     </div>
   </section>
 </Layout>
 
-<style>
-  /* 1. Hero Section */
-  .hero-section {
-    padding-top: 4rem;
-    padding-bottom: 4.5rem;
-    background-color: #ffffff;
-    border-bottom: 4px solid #09090b;
-  }
+<!-- LÓGICA JAVASCRIPT TERMINAL DIAGNÓSTICO -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var answers = { 1: null, 2: null, 3: null };
+    var buttons = document.querySelectorAll('.answer-btn');
+    var resultBox = document.getElementById('terminal-result');
 
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 3rem;
-    align-items: center;
-  }
+    if (!buttons || !resultBox) return;
 
-  @media (max-width: 900px) {
-    .hero-grid {
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
+    buttons.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        var target = e.currentTarget;
+        var questionDiv = target.closest('.terminal-question');
+        if (!questionDiv) return;
+        var qId = questionDiv.getAttribute('data-question');
+        var val = target.getAttribute('data-val');
+
+        questionDiv.querySelectorAll('.answer-btn').forEach(function(b) {
+          b.style.backgroundColor = 'transparent';
+          b.style.color = '#ffffff';
+          b.style.borderColor = '#52525b';
+        });
+
+        if (val === 'yes') {
+          target.style.backgroundColor = '#ffffff';
+          target.style.color = '#000000';
+          target.style.borderColor = '#ffffff';
+        } else {
+          target.style.backgroundColor = '#f43f5e';
+          target.style.color = '#000000';
+          target.style.borderColor = '#f43f5e';
+        }
+
+        answers[qId] = val;
+        evaluateDiagnostics();
+      });
+    });
+
+    function evaluateDiagnostics() {
+      var answeredCount = Object.keys(answers).filter(function(k) { return answers[k] !== null; }).length;
+      if (answeredCount === 3) {
+        var hasError = Object.keys(answers).some(function(k) { return answers[k] === 'no'; });
+        resultBox.style.display = 'block';
+        resultBox.classList.remove('hidden');
+
+        if (hasError) {
+          resultBox.innerHTML = `
+            <p style="color: #f43f5e; font-weight: 800; font-size: 1.1rem;">[FATAL] Infraestructura vulnerable.</p>
+            <p style="color: #9ca3af; margin-top: 0.5rem; font-size: 0.9rem;">> Fuga estimada: ~40% del presupuesto.</p>
+            <p style="color: #9ca3af; font-size: 0.9rem;">> Diagnóstico: El algoritmo está optimizando a ciegas.</p>
+            <a href="/servicios" style="display: inline-block; margin-top: 1.25rem; background-color: #f43f5e; color: #000000; font-weight: 900; padding: 0.75rem 1.25rem; border: 2px solid #f43f5e; text-decoration: none; text-transform: uppercase;">
+              >> PARAR FUGA DE DINERO AHORA
+            </a>
+          `;
+        } else {
+          resultBox.innerHTML = `
+            <p style="color: #4ade80; font-weight: 800; font-size: 1.1rem;">[OK] Infraestructura sólida.</p>
+            <p style="color: #9ca3af; margin-top: 0.5rem; font-size: 0.9rem;">> Ecosistema de datos verificado.</p>
+            <p style="color: #9ca3af; font-size: 0.9rem;">> Diagnóstico: Listo para inyectar presupuesto agresivo.</p>
+            <a href="/servicios" style="display: inline-block; margin-top: 1.25rem; background-color: #ffffff; color: #000000; font-weight: 900; padding: 0.75rem 1.25rem; border: 2px solid #ffffff; text-decoration: none; text-transform: uppercase;">
+              >> ESCALAR CAMPAÑAS HOY
+            </a>
+          `;
+        }
+      }
     }
+  });
+</script>
+
+<style>
+  /* Base Layout Fallbacks for pixel-perfect rendering */
+  .max-w-6xl {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .max-w-lg {
+    max-width: 500px;
   }
 
-  .hero-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .badge-tag {
-    display: inline-block;
-    background-color: #09090b;
-    color: #ffffff;
-    font-weight: 900;
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 0.35rem 0.85rem;
-    border: 3px solid #09090b;
-    box-shadow: 3px 3px 0px #09090b;
-    margin-bottom: 1.5rem;
-  }
-
-  .badge-tag.magenta-badge {
-    background-color: #f43f5e;
-  }
-
-  .badge-tag.dark-badge {
-    background-color: #09090b;
-  }
-
-  .badge-tag.magenta-tag {
-    background-color: #f43f5e;
-    box-shadow: 3px 3px 0px #09090b;
-  }
-
-  .hero-title {
-    font-family: var(--font-heading, 'Outfit', sans-serif);
-    font-size: clamp(2.2rem, 4.8vw, 3.5rem);
-    font-weight: 900;
-    text-transform: none;
-    color: #09090b;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.25rem;
-  }
-
-  .highlight-magenta {
-    background-color: #f43f5e;
-    color: #ffffff;
-    padding: 0.15rem 0.5rem;
-    border: 2px solid #09090b;
-    box-shadow: 4px 4px 0px #09090b;
-    display: inline-block;
-    transform: rotate(-1deg);
-    margin: 0.1rem 0;
-  }
-
-  .hero-subtitle {
-    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-    font-weight: 600;
-    color: #27272a;
-    line-height: 1.65;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .hero-cta-wrapper {
-    display: flex;
-    width: 100%;
-  }
-
-  .hero-cta-wrapper.center-flex {
-    justify-content: center;
-    margin-top: 2rem;
-  }
-
-  .btn-cta-primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    width: fit-content;
-    background-color: #f43f5e;
-    color: #ffffff;
-    font-family: var(--font-heading, 'Outfit', sans-serif);
-    font-weight: 900;
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    text-transform: uppercase;
-    padding: 1.1rem 2rem;
-    border: 4px solid #09090b;
-    box-shadow: 6px 6px 0px #09090b;
-    text-decoration: none;
-    line-height: 1.2;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-
-  .btn-cta-primary:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 4px 4px 0px #09090b;
-    color: #ffffff;
-  }
-
-  .btn-cta-primary:active {
-    transform: translate(6px, 6px);
-    box-shadow: 0px 0px 0px #09090b;
-  }
-
-  .btn-cta-primary.big-cta {
-    font-size: clamp(1.1rem, 2.4vw, 1.4rem);
-    padding: 1.25rem 2.5rem;
-    box-shadow: 8px 8px 0px #09090b;
-  }
-
-  .trust-note {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #71717a;
-    margin-top: 0.85rem;
-  }
-
-  /* Right Chart Graphic */
-  .hero-right {
-    display: flex;
-    justify-content: center;
-  }
-
-  .chart-container-brutalist {
-    position: relative;
-    width: 100%;
-    max-width: 340px;
-    aspect-ratio: 1 / 1;
-    background-color: #ffffff;
-    border: 4px solid #09090b;
-    box-shadow: 12px 12px 0px #09090b;
-    display: flex;
-    align-items: flex-end;
-    padding: 1.5rem;
-    gap: 1rem;
-    margin: 0 auto;
-  }
-
-  .roi-floating-badge {
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    background-color: #f43f5e;
-    color: #ffffff;
-    font-weight: 900;
-    font-size: 1.15rem;
-    padding: 0.5rem 1rem;
-    border: 4px solid #09090b;
-    box-shadow: 6px 6px 0px #09090b;
-    animation: bounce 3s infinite;
-  }
-
-  .chart-bar {
-    width: 100%;
-    border: 4px solid #09090b;
-  }
-
-  .bar-low {
-    background-color: #f1f5f9;
-    height: 40%;
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  .bar-mid {
-    background-color: #09090b;
-    height: 60%;
-    animation: pulse 3s ease-in-out infinite 0.5s;
-  }
-
-  .bar-high {
-    background-color: #f43f5e;
-    height: 85%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .bar-shimmer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
-    animation: bounce 4s infinite;
-  }
-
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
-  }
-
-  /* 2. SEO Section */
-  .seo-section {
-    padding: 5rem 0;
-    background-color: #ffffff;
-    border-bottom: 4px solid #09090b;
-  }
-
-  .max-w-header {
-    max-width: 800px;
-    margin: 0 auto 3rem auto;
-  }
-
-  .section-title {
-    font-family: var(--font-heading, 'Outfit', sans-serif);
-    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-    font-weight: 900;
-    color: #09090b;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
-
-  .section-intro {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #27272a;
-    line-height: 1.65;
-  }
-
-  .grid-3-col {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-
-  .card-brutalist {
-    background-color: #ffffff;
-    border: 4px solid #09090b;
-    box-shadow: 8px 8px 0px #09090b;
-    padding: 2rem;
-  }
-
-  .space-between-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .card-brutalist h3 {
-    font-family: var(--font-heading, 'Outfit', sans-serif);
-    font-size: 1.35rem;
-    font-weight: 900;
-    color: #09090b;
-    margin-bottom: 0.75rem;
-  }
-
-  .card-brutalist p {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #3f3f46;
-    line-height: 1.6;
-  }
-
-  /* 3. Tech Bar */
-  .tech-bar-section {
-    padding: 2.5rem 0;
-    background-color: #f1f5f9;
-    border-bottom: 4px solid #09090b;
-  }
-
-  .tech-bar-title {
-    font-size: 0.75rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: #71717a;
-    margin-bottom: 1.25rem;
-    display: block;
-  }
-
-  .tech-tags-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.85rem;
-  }
-
-  .tech-badge {
-    background-color: #ffffff;
-    color: #09090b;
-    font-weight: 900;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    padding: 0.6rem 1.1rem;
-    border: 3px solid #09090b;
-    box-shadow: 3px 3px 0px #09090b;
-  }
-
-  /* 4. Problem / Solution */
-  .problem-section {
-    padding: 5rem 0;
-    background-color: #ffffff;
-    border-bottom: 4px solid #09090b;
-  }
-
-  .solution-footer {
-    font-size: 0.8rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #09090b;
-    padding-top: 1rem;
-    margin-top: 1.5rem;
-    border-top: 2px dashed #e4e4e7;
-  }
-
-  /* 5. TOFU Lead Magnet Section */
-  .tofu-section {
-    padding: 4rem 0;
-    background-color: #09090b;
-    border-bottom: 4px solid #09090b;
-  }
-
-  .tofu-banner-card {
-    background-color: #f43f5e;
-    border: 4px solid #09090b;
-    box-shadow: 10px 10px 0px #09090b;
-    padding: 2.5rem 2rem;
-    color: #ffffff;
+  .max-w-4xl {
     max-width: 900px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .tofu-title {
-    font-family: var(--font-heading, 'Outfit', sans-serif);
-    font-size: clamp(1.5rem, 3.5vw, 2.3rem);
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    color: #ffffff;
+  .max-w-3xl {
+    max-width: 780px;
   }
 
-  .tofu-text {
-    font-size: 1.05rem;
-    font-weight: 500;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+  .text-balance {
+    text-wrap: balance;
   }
 
-  .yellow-highlight {
-    background-color: #09090b;
-    color: #facc15;
-    padding: 0.2rem 0.5rem;
-    border: 2px solid #09090b;
-    display: inline-block;
-    font-weight: 900;
-  }
-
-  /* 6. BOFU Services */
-  .bofu-section {
-    padding: 5rem 0;
-    background-color: #ffffff;
-    border-bottom: 4px solid #09090b;
-  }
-
-  .icon-emoji {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .service-nav-links {
-    display: flex;
-    gap: 0.75rem;
-    padding-top: 1rem;
-    margin-top: 1.5rem;
-    border-top: 2px dashed #e4e4e7;
-  }
-
-  .service-nav-links.vertical-links {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .service-nav-links a {
-    font-size: 0.85rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #f43f5e;
-    text-decoration: none;
-  }
-
-  .service-nav-links a:hover {
-    text-decoration: underline;
-  }
-
-  /* 7. Final Pre-Footer CTA */
-  .final-cta-section {
-    padding: 6rem 0;
-    background-color: #f1f5f9;
-    border-bottom: 4px solid #09090b;
-  }
-
-  .final-headline {
-    font-family: var(--font-heading, 'Outfit', sans-serif);
-    font-size: clamp(1.8rem, 4vw, 3.2rem);
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #09090b;
-    line-height: 1.15;
-    max-width: 850px;
-    margin: 0 auto;
+  .hidden {
+    display: none;
   }
 </style>
