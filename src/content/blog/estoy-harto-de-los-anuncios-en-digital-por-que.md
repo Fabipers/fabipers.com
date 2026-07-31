@@ -59,7 +59,7 @@ De nosotros depende que el ecosistema sea saludable y que la publicidad mantenga
 
 **Si usted es un empresario** que decidió armar sus propias campañas, lo felicito, debe seguir instruyéndose y tomar en cuenta los pasos que le mostré, si definitivamente no lo ve viable, pruebe eligiendo una [agencia de marketing digital](https://www.pautavirtual.com/).
 
-**Si usted es Ad traffikcer, marketer o similiar**, la invitación es a que nos centremos en el usuario, hacer una auto evaluación de nuestras campañas y definir mejores y asertivas estrategias, recuerden que la cantidad no significa calidad.
+**Si usted es Ad trafficker, marketer o similiar**, la invitación es a que nos centremos en el usuario, hacer una auto evaluación de nuestras campañas y definir mejores y asertivas estrategias, recuerden que la cantidad no significa calidad.
 
 En un mundo sobre saturado de anuncios, van a ganar los que se adapten y entiendan que el usuario siempre va a estar en el primer lugar.
 

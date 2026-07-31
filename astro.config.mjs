@@ -11,6 +11,12 @@ export default defineConfig({
   adapter: node({
     mode: 'standalone'
   }),
+  redirects: {
+    '/traffikcer-digital-colombia': '/trafficker-digital-colombia',
+    '/traffikcer-digital-miami': '/trafficker-digital-miami',
+    '/trafficker-digital-colombia/': '/trafficker-digital-colombia',
+    '/trafficker-digital-miami/': '/trafficker-digital-miami'
+  },
   integrations: [react(), sitemap()],
   build: {
     inlineStylesheets: 'auto',

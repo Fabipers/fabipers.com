@@ -13,7 +13,7 @@ Siendo sincero cuando conocí el término, hace aproximadamente dos años, me er
 
 Pero en esta entrada quiero explicarles qué hace y cómo convertirse en un Ad Trafficker.
 
-Primero definamos qué es un Ad Traffikcer: es una persona con la capacidad de estructurar, implementar y realizar seguimiento a campañas de publicidad online, donde tendrá la destreza de realizar cambios, ofrecer al cliente o la empresa para la que trabaja opciones de mejoras y optimización de las campañas que maneja, apoyándose en la analítica web y los resultados que se van dando en las mismas.
+Primero definamos qué es un Ad Trafficker: es una persona con la capacidad de estructurar, implementar y realizar seguimiento a campañas de publicidad online, donde tendrá la destreza de realizar cambios, ofrecer al cliente o la empresa para la que trabaja opciones de mejoras y optimización de las campañas que maneja, apoyándose en la analítica web y los resultados que se van dando en las mismas.
 
 De igual manera un Ad Trafficker tiene o debería los conocimientos en estas áreas, por si te interesa este mundo del marketing digital, tendrías que ser un experto en:
 
