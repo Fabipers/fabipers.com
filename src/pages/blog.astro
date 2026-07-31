@@ -51,19 +51,16 @@ const formatDate = (dateStr: string | Date) => {
     </div>
   </section>
 
-  <!-- Tag Filter Bar -->
-  <section class="tag-filter-section">
-    <div class="container">
-      <div class="tag-bar-card card">
-        <span class="tag-bar-title">Filtrar por Etiqueta:</span>
-        <div class="tag-list-flex">
-          <a href="/blog/" class="tag-filter-item active" id="tag-filter-all">Todos</a>
-          {uniqueTags.map(([slug, name]) => (
-            <a href={`/blog/tag/${slug}/`} class="tag-filter-item" id={`tag-filter-${slug}`}>
-              {name}
-            </a>
-          ))}
-        </div>
+  <!-- Tag Filter Bar (Subtle Minimal Horizontal Pill Row) -->
+  <section class="tag-filter-section py-4">
+    <div class="container max-w-6xl mx-auto px-4">
+      <div class="flex overflow-x-auto whitespace-nowrap gap-2 pb-4 hide-scrollbar items-center">
+        <a href="/blog/" class="tag-filter-pill active" id="tag-filter-all">Todos</a>
+        {uniqueTags.map(([slug, name]) => (
+          <a href={`/blog/tag/${slug}/`} class="tag-filter-pill" id={`tag-filter-${slug}`}>
+            {name}
+          </a>
+        ))}
       </div>
     </div>
   </section>
@@ -196,45 +193,33 @@ const formatDate = (dateStr: string | Date) => {
     font-weight: 500;
   }
 
-  /* Tag Filter Bar Styles */
-  .tag-filter-section {
-    padding-bottom: 3rem;
+  /* Tag Filter Minimal Pills Styles */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
-  .tag-bar-card {
-    padding: 1.5rem 2rem;
-    border-radius: 0px;
-  }
-
-  .tag-bar-title {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    display: block;
-    margin-bottom: 0.8rem;
-  }
-
-  .tag-list-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-  }
-
-  .tag-filter-item {
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
-    border: 2px solid var(--border-color);
-    padding: 0.4rem 1rem;
+  .tag-filter-pill {
+    background-color: #ffffff;
+    color: #09090b;
+    border: 2px solid #09090b;
+    padding: 0.35rem 0.85rem;
     font-weight: 700;
-    font-size: 0.85rem;
-    transition: all var(--transition-fast);
+    font-size: 0.8rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    flex-shrink: 0;
   }
 
-  .tag-filter-item:hover, .tag-filter-item.active {
-    background-color: var(--accent-primary);
-    transform: translate(-1px, -1px);
-    box-shadow: 2px 2px 0px var(--border-color);
+  .tag-filter-pill:hover,
+  .tag-filter-pill.active {
+    background-color: #2563eb;
+    color: #ffffff;
+    box-shadow: 2px 2px 0px #09090b;
   }
   
   /* Blog Grid */

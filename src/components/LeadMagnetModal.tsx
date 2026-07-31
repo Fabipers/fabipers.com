@@ -93,7 +93,7 @@ export default function LeadMagnetModal() {
       <div
         onClick={(e) => e.stopPropagation()}
         style={{
-          backgroundColor: '#f43f5e',
+          backgroundColor: '#2563eb',
           border: '4px solid #09090b',
           boxShadow: '8px 8px 0px #09090b',
           padding: '2rem 1.5rem',
@@ -260,10 +260,10 @@ export default function LeadMagnetModal() {
               type="submit"
               disabled={loading}
               style={{
-                backgroundColor: '#09090b',
-                color: '#ffffff',
+                backgroundColor: '#facc15',
+                color: '#09090b',
                 border: '3px solid #09090b',
-                boxShadow: '4px 4px 0px #ffffff',
+                boxShadow: '4px 4px 0px #09090b',
                 padding: '0.9rem 1.5rem',
                 fontWeight: '900',
                 fontSize: '1rem',

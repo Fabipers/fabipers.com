@@ -46,7 +46,7 @@ export default function LeadMagnet() {
 
   return (
     <div style={{
-      backgroundColor: '#f43f5e',
+      backgroundColor: '#2563eb',
       border: '4px solid #09090b',
       boxShadow: '6px 6px 0px #09090b',
       padding: '2rem 1.5rem',
@@ -58,28 +58,27 @@ export default function LeadMagnet() {
     }}>
       <div style={{
         display: 'inline-block',
-        backgroundColor: '#facc15',
-        color: '#09090b',
+        backgroundColor: '#09090b',
+        color: '#ffffff',
         fontWeight: '900',
-        fontSize: '0.85rem',
+        fontSize: '0.75rem',
         textTransform: 'uppercase',
-        letterSpacing: '0.05em',
-        padding: '0.3rem 0.8rem',
+        padding: '0.3rem 0.75rem',
         border: '2px solid #09090b',
-        boxShadow: '2px 2px 0px #09090b',
-        marginBottom: '1rem'
+        boxShadow: '3px 3px 0px #ffffff',
+        marginBottom: '1rem',
+        letterSpacing: '0.05em'
       }}>
         ⚡ Recurso Gratuito
       </div>
 
       <h3 style={{
-        color: '#ffffff',
-        fontSize: 'clamp(1.25rem, 3.5vw, 1.6rem)',
+        fontSize: '1.4rem',
         fontWeight: '900',
+        textTransform: 'none',
         lineHeight: '1.25',
-        margin: '0 0 0.75rem 0',
-        fontFamily: 'var(--font-heading, sans-serif)',
-        textShadow: '1px 1px 0px #09090b'
+        marginBottom: '0.75rem',
+        color: '#ffffff'
       }}>
         Descarga Gratis: Checklist para Detener la Fuga de Presupuesto en tus Campañas
       </h3>
@@ -88,9 +87,8 @@ export default function LeadMagnet() {
         fontSize: '0.95rem',
         fontWeight: '500',
         lineHeight: '1.5',
-        color: '#ffffff',
         marginBottom: '1.5rem',
-        opacity: 0.95
+        color: '#f8fafc'
       }}>
         Descubre los 5 errores críticos que están gastando tu presupuesto publicitario en Google Ads y Meta Ads, y aprende exactamente cómo corregirlos hoy mismo.
       </p>
@@ -98,19 +96,35 @@ export default function LeadMagnet() {
       {success ? (
         <div style={{
           backgroundColor: '#09090b',
-          color: '#34d399',
-          border: '3px solid #ffffff',
-          boxShadow: '4px 4px 0px #09090b',
+          border: '3px solid #09090b',
+          boxShadow: '4px 4px 0px #ffffff',
           padding: '1.25rem',
-          textAlign: 'center',
-          fontWeight: '700'
+          textAlign: 'center'
         }}>
-          <p style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem', color: '#ffffff' }}>
-            🎉 ¡Solicitud Exitosa!
+          <p style={{ color: '#4ade80', fontWeight: '900', fontSize: '1.1rem', margin: '0 0 0.5rem 0' }}>
+            ✅ ¡Enviado con éxito!
           </p>
-          <p style={{ margin: 0, fontSize: '0.95rem' }}>
-            ¡Revisa tu bandeja de entrada! Te hemos enviado el enlace.
+          <p style={{ color: '#ffffff', fontSize: '0.9rem', margin: '0 0 1rem 0' }}>
+            Hemos enviado el archivo a tu correo. También puedes descargarlo directamente en el siguiente enlace:
           </p>
+          <a
+            href="https://fabipers.com/checklist-errores-ads.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-block',
+              backgroundColor: '#facc15',
+              color: '#09090b',
+              fontWeight: '900',
+              padding: '0.75rem 1.25rem',
+              border: '2px solid #09090b',
+              textDecoration: 'none',
+              textTransform: 'uppercase',
+              fontSize: '0.9rem'
+            }}
+          >
+            📥 Descargar Checklist (PDF)
+          </a>
         </div>
       ) : (
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -172,10 +186,10 @@ export default function LeadMagnet() {
             type="submit"
             disabled={loading}
             style={{
-              backgroundColor: '#09090b',
-              color: '#ffffff',
+              backgroundColor: '#facc15',
+              color: '#09090b',
               border: '3px solid #09090b',
-              boxShadow: '4px 4px 0px #ffffff',
+              boxShadow: '4px 4px 0px #09090b',
               padding: '0.9rem 1.5rem',
               fontWeight: '900',
               fontSize: '1rem',
