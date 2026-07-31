@@ -221,7 +221,7 @@ article tbody tr:hover {
 /* Neo-Brutalist Highlight & Marker */
 .highlight-box {
   background-color: var(--accent-primary);
-  color: #000000;
+  color: #ffffff;
   display: inline-block;
   padding: 0.2rem 0.6rem;
   border: 2px solid var(--border-color);
@@ -232,7 +232,7 @@ article tbody tr:hover {
 
 .marker {
   background-color: var(--accent-primary);
-  color: #000000;
+  color: #ffffff;
   padding: 0.1rem 0.4rem;
   font-weight: 800;
 }
@@ -256,13 +256,14 @@ article tbody tr:hover {
 }
 
 .btn-primary {
-  background-color: var(--accent-primary);
-  color: #000000;
+  background-color: var(--accent-secondary);
+  color: #09090b;
   box-shadow: 4px 4px 0px var(--border-color);
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-hover);
+  background-color: #eab308;
+  color: #09090b;
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0px var(--border-color);
 }
