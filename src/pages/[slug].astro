@@ -39,9 +39,49 @@ const formatDate = (dateStr: string | Date) => {
 
 const title = `${entry.data.title} | Fabipers`;
 const description = entry.data.description || `Leer ${entry.data.title} en fabipers.com.`;
+const postImage = (entry.data as any).image || '/favicon.svg';
+const pubDate = entry.data.pubDate ? new Date(entry.data.pubDate) : undefined;
 ---
 
-<Layout title={title} description={description}>
+<Layout 
+  title={title} 
+  description={description}
+  type={type === 'post' ? 'article' : 'website'}
+  image={postImage}
+  publishedTime={pubDate}
+>
+  {type === 'post' && (
+    <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": new URL(Astro.url.pathname, 'https://fabipers.com').href
+      },
+      "headline": entry.data.title,
+      "description": description,
+      "image": postImage ? new URL(postImage, 'https://fabipers.com').href : "https://fabipers.com/favicon.svg",
+      "datePublished": pubDate ? pubDate.toISOString() : undefined,
+      "dateModified": pubDate ? pubDate.toISOString() : undefined,
+      "author": {
+        "@type": "Person",
+        "name": "Fabián Pérez",
+        "url": "https://fabipers.com/sobre-mi",
+        "jobTitle": "Trafficker Digital"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fabipers",
+        "url": "https://fabipers.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://fabipers.com/favicon.svg"
+        }
+      },
+      "keywords": (entry.data as any).tags ? (entry.data as any).tags.join(', ') : undefined,
+      "inLanguage": "es-CO"
+    })} />
+  )}
   {type === 'post' ? (
     /* Blog Post 2-Column Layout */
     <div class="post-layout section">

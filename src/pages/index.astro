@@ -8,6 +8,93 @@ const description = "Impulsa tus ventas con un Trafficker Digital experto. Estra
 ---
 
 <Layout title={title} description={description}>
+  <!-- Schema: ProfessionalService JSON-LD -->
+  <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Fabipers - Fabián Pérez Trafficker Digital",
+    "image": "https://fabipers.com/favicon.svg",
+    "@id": "https://fabipers.com/#business",
+    "url": "https://fabipers.com",
+    "telephone": "+573182873558",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 4.7110,
+      "longitude": -74.0721
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Fabián Pérez",
+      "jobTitle": "Trafficker Digital & Full Stack Marketer",
+      "url": "https://fabipers.com/sobre-mi"
+    },
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "Colombia"
+      },
+      {
+        "@type": "Country",
+        "name": "United States"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Latinoamérica"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de Publicidad Digital y Analítica",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Trafficker Google Ads",
+            "url": "https://fabipers.com/servicios/trafficker-google-ads"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Trafficker Meta Ads (Facebook e Instagram)",
+            "url": "https://fabipers.com/servicios/trafficker-facebook-ads"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "LinkedIn Ads para B2B",
+            "url": "https://fabipers.com/servicios/trafficker-linkedin-ads"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Analítica Web & Server-Side Tracking",
+            "url": "https://fabipers.com/servicios/analitica-web-tracking"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "CRO y Landing Pages de Alta Conversión",
+            "url": "https://fabipers.com/servicios/cro-landing-pages"
+          }
+        }
+      ]
+    }
+  })} />
+
   <!-- 1. Hero Section (Above the Fold) -->
   <section class="hero-section">
     <div class="container hero-grid">

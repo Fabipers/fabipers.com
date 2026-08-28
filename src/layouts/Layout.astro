@@ -4,15 +4,24 @@ import '../styles/global.css';
 interface Props {
 	title?: string;
 	description?: string;
+	image?: string;
+	type?: 'website' | 'article';
+	publishedTime?: string | Date;
+	modifiedTime?: string | Date;
 }
 
 const { 
 	title = "Fabipers | Trafficker Digital & Full Stack Marketer", 
-	description = "Te ayudo a hacer crecer tu negocio mediante campañas publicitarias altamente efectivas, analítica avanzada y optimización de conversiones." 
+	description = "Te ayudo a hacer crecer tu negocio mediante campañas publicitarias altamente efectivas, analítica avanzada y optimización de conversiones.",
+	image = "/favicon.svg",
+	type = "website",
+	publishedTime,
+	modifiedTime
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
 const canonicalURL = new URL(Astro.url.pathname, 'https://fabipers.com');
+const ogImageURL = new URL(image, 'https://fabipers.com').href;
 ---
 
 <!doctype html>
@@ -35,16 +44,62 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://fabipers.com');
 		<link rel="canonical" href={canonicalURL.href} />
 		
 		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Fabipers" />
+		<meta property="og:locale" content="es_CO" />
+		<meta property="og:type" content={type} />
 		<meta property="og:url" content={canonicalURL.href} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImageURL} />
+		{publishedTime && <meta property="article:published_time" content={new Date(publishedTime).toISOString()} />}
+		{modifiedTime && <meta property="article:modified_time" content={new Date(modifiedTime).toISOString()} />}
 		
 		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={canonicalURL.href} />
-		<meta property="twitter:title" content={title} />
-		<meta property="twitter:description" content={description} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@fabipers" />
+		<meta name="twitter:creator" content="@fabipers" />
+		<meta name="twitter:url" content={canonicalURL.href} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageURL} />
+
+		<!-- Google Search Console Verification -->
+		{import.meta.env.PUBLIC_GSC_VERIFICATION && (
+			<meta name="google-site-verification" content={import.meta.env.PUBLIC_GSC_VERIFICATION} />
+		)}
+
+		<!-- Base Schema.org JSON-LD (WebSite & Person Entity) -->
+		<script type="application/ld+json" is:inline set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "WebSite",
+					"@id": "https://fabipers.com/#website",
+					"url": "https://fabipers.com",
+					"name": "Fabipers",
+					"description": "Servicios de Trafficker Digital, Paid Media, Analítica Web y CRO por Fabián Pérez.",
+					"inLanguage": "es-CO"
+				},
+				{
+					"@type": "Person",
+					"@id": "https://fabipers.com/#person",
+					"name": "Fabián Pérez",
+					"url": "https://fabipers.com/sobre-mi",
+					"jobTitle": "Trafficker Digital & Full Stack Marketer",
+					"image": "https://fabipers.com/favicon.svg",
+					"sameAs": [
+						"https://twitter.com/fabipers",
+						"https://instagram.com/fabipers",
+						"https://github.com/Fabipers"
+					],
+					"worksFor": {
+						"@type": "Organization",
+						"name": "Fabipers",
+						"url": "https://fabipers.com"
+					}
+				}
+			]
+		})} />
 		<slot name="head" />
 
 		<!-- Google Tag Manager -->

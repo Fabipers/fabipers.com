@@ -1,4 +1,35 @@
+# ==========================================
+# Robots.txt - fabipers.com
+# ==========================================
+
 User-agent: *
 Allow: /
 
+# Motores de Inteligencia Artificial (Permitidos para GEO / AI Citations)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemap y Archivo de contexto para LLMs
 Sitemap: https://fabipers.com/sitemap-index.xml
+# LLMs Context: https://fabipers.com/llms.txt

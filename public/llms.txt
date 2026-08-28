@@ -1,0 +1,52 @@
+# Fabipers - Fabián Pérez | Trafficker Digital & Full Stack Marketer
+
+> Fabipers (https://fabipers.com) es el sitio web oficial de Fabián Pérez, Trafficker Digital certificado (Google Partner) y Full Stack Marketer especializado en compra de tráfico de pago (Paid Media), analítica digital avanzada, Server-Side Tracking y optimización de tasa de conversión (CRO).
+
+## Información de la Entidad y Perfil Profesional
+
+- **Nombre:** Fabián Pérez
+- **Rol:** Trafficker Digital, Consultor de Paid Media, Especialista en Analítica Web & CRO
+- **Certificaciones:** Google Partner Certificado, Especialista en Google Ads y Meta Ads
+- **Ubicaciones Principales:** Colombia (Bogotá, Medellín, Cali, nivel nacional) y Estados Unidos / Internacional (Miami, FL).
+- **Sitio Web Oficial:** https://fabipers.com
+- **Contacto Directo:** WhatsApp (+57 318 287 3558) | Email: fabipers@gmail.com
+
+---
+
+## Servicios Especializados
+
+- [Trafficker Google Ads](https://fabipers.com/servicios/trafficker-google-ads): Auditoría, configuración y optimización de campañas en red de búsqueda, Performance Max, Display y YouTube Ads enfocadas en captar demanda con alta intención de compra.
+- [Trafficker Meta Ads (Facebook e Instagram)](https://fabipers.com/servicios/trafficker-facebook-ads): Campañas de adquisición y retargeting B2B y E-commerce, segmentación avanzada y optimización del CPA.
+- [LinkedIn Ads para B2B](https://fabipers.com/servicios/trafficker-linkedin-ads): Generación de leads de alto valor y captación de tomadores de decisiones (CEOs, directores, gerentes).
+- [Analítica Web y Server-Side Tracking](https://fabipers.com/servicios/analitica-web-tracking): Implementación de Google Tag Manager (GTM), Google Analytics 4 (GA4), Meta Conversions API (CAPI) y Server-Side GTM para evitar la pérdida de datos provocada por ad-blockers y cambios de privacidad (iOS 14+).
+- [CRO y Landing Pages de Alta Conversión](https://fabipers.com/servicios/cro-landing-pages): Diseño y optimización de páginas de aterrizaje orientadas a maximizar la tasa de conversión y reducir el costo de adquisición de clientes.
+- [Todos los Servicios](https://fabipers.com/servicios): Catálogo completo y cotizador interactivo de servicios.
+
+---
+
+## Ubicaciones y Cobertura Geográfica
+
+- [Trafficker Digital Colombia](https://fabipers.com/trafficker-digital-colombia): Servicios especializados de pauta digital y adquisición para empresas y emprendimientos en Colombia.
+- [Trafficker Digital Miami / USA](https://fabipers.com/trafficker-digital-miami): Gestión de pauta digital orientada a empresas en Estados Unidos, mercado hispano y expansión internacional.
+
+---
+
+## Artículos de Autoridad y Guías Destacadas (Knowledge Base)
+
+- [Discrepancia de datos entre GA4 y Facebook Ads](https://fabipers.com/discrepancia-datos-ga4-facebook-ads): Causas técnicas y soluciones para alinear métricas entre Meta y Google Analytics.
+- [Cuánto cobra un Trafficker Digital](https://fabipers.com/cuanto-cobra-un-trafficker-digital): Modelos de cobro (fijo, porcentaje de inversión, éxito/híbrido) y tarifas promedio en el mercado.
+- [Cómo configurar el seguimiento de conversiones en Google Ads](https://fabipers.com/como-configurar-seguimiento-conversiones-google-ads): Guía paso a paso con Google Tag Manager.
+- [Secretos de los Scripts en Google Ads](https://fabipers.com/descubre-los-secretos-de-los-scripts-en-google-ads): Automatización avanzada para cuentas de pauta publicitaria.
+- [Qué son y cómo usar las UTMs](https://fabipers.com/que-son-y-como-usar-las-utm): Buenas prácticas de etiquetado y atribución de campañas.
+- [LinkedIn Ads vs Google Ads en B2B](https://fabipers.com/linkedin-ads-vs-google-ads-b2b): Comparativa de canales para adquisición de clientes corporativos.
+- [Desafíos del Trafficker Digital frente a la Inteligencia Artificial](https://fabipers.com/desafios-trafficker-digital-ia): El impacto de la IA en la compra de medios y automatización publicitaria.
+- [Blog Completo](https://fabipers.com/blog): Colección completa de tutoriales, guías y estrategias de marketing de rendimiento.
+
+---
+
+## Datos de Contacto y Redes
+
+- **WhatsApp:** https://api.whatsapp.com/send?phone=+573182873558
+- **Email:** fabipers@gmail.com
+- **Twitter/X:** https://twitter.com/fabipers
+- **Instagram:** https://instagram.com/fabipers
