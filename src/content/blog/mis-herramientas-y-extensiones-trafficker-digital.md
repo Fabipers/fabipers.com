@@ -1,7 +1,7 @@
 ---
 title: "Mis Herramientas y Extensiones Imprescindibles para el Día a Día como Trafficker Digital (Guía 2026)"
 description: "Descubre el stack de herramientas, extensiones de navegador y widgets que utilizo a diario para auditar campañas en Google Ads, Meta Ads y GTM con máxima precisión."
-pubDate: "2026-09-15"
+pubDate: "2026-09-15T12:00:00"
 author: "Fabián Pérez"
 tags: ["herramientas", "trafficker-digital", "google-ads", "meta-ads", "gtm", "productividad"]
 categories: ["Herramientas", "Trafficker Digital"]

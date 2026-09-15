@@ -3,7 +3,7 @@ author: "Fabián Pérez"
 
 title: "El Arsenal del Trafficker Digital en 2027: Herramientas y Extensiones Clave para Maximizar tu Éxito"
 description: "Descubre las herramientas y extensiones de Google Chrome esenciales que todo trafficker digital debe dominar en 2027 para optimizar campañas, analizar datos y liderar el mercado."
-pubDate: "2027-01-15" # Fecha proyectada para el post
+pubDate: "2026-05-15"
 tags: ["trafficker digital", "marketing digital", "herramientas seo", "google ads", "chrome extensions", "productividad"]
 ---
 
