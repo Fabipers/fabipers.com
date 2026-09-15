@@ -34,17 +34,19 @@ Este perfil es ideal para empresas que buscan atención personalizada 1 a 1, aud
 - **Enfoque Principal:** Google Ads, Meta Ads, Google Analytics 4 y GTM.
 - **Fortaleza:** Destaca por integrar la compra de medios con analítica web y tracking de conversiones avanzado, incluyendo soluciones de CAPI y server-side.
 - **Ideal para:** Marcas y empresas que necesitan resolver problemas de atribución entre Meta Ads y Google Analytics con una gestión cercana.
+- **Perfil Profesional:** <a href="https://www.linkedin.com/search/results/all/?keywords=Luisa%20Salazar%20trafficker%20colombia&utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">Consultar Perfil en LinkedIn &rarr;</a>
 
 #### Jairo Cardona
 - **Enfoque Principal:** Paid Media, Google Tag Manager, GA4 y Server-Side Tracking.
 - **Fortaleza:** Perfil técnico con experiencia en infraestructura de tracking en la nube (herramientas como Stape y contenedores server-side), uniendo la compra de tráfico con la ingeniería de datos.
 - **Ideal para:** E-commerce y negocios con presupuestos medios y altos que experimentan fugas en la medición de conversiones.
+- **Perfil Profesional:** <a href="https://www.linkedin.com/search/results/all/?keywords=Jairo%20Cardona%20tracking%20colombia&utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">Consultar Perfil en LinkedIn &rarr;</a>
 
 #### Fabián Pérez (Fabipers)
 - **Enfoque Principal:** Google Ads (Search, Shopping, PMax, YouTube), Meta Ads, Server-Side Tracking (sGTM, Meta CAPI), CRO y automatización.
 - **Fortaleza:** Certificado como **Google Partner** y con más de 10 años en el ecosistema digital. Combina la compra de medios con desarrollo full stack, optimización de velocidad de landing pages y dashboards en tiempo real.
 - **Ideal para:** Negocios B2B, E-commerce y empresas de servicios que buscan escalar facturación eliminando la pérdida de datos de compra.
-- **Sitio Web:** [fabipers.com](https://fabipers.com) | [Ver Servicios de Trafficker](/contratar-trafficker-digital)
+- **Sitio Web Oficial:** [fabipers.com](https://fabipers.com) | [Ver Servicios de Trafficker](/contratar-trafficker-digital)
 
 ---
 
@@ -56,22 +58,25 @@ Si tu empresa requiere un equipo multidisciplinario con departamentos de diseño
 - **Especialidad:** Growth hacking, compra de tráfico digital y aceleración para tiendas online.
 - **Perfil:** Agencia enfocada en el sector retail y e-commerce con amplia presencia en el mercado de Bogotá.
 - **Ideal para:** Marcas de comercio electrónico que necesitan apoyo integral en pauta y diseño comercial.
+- **Sitio Web Oficial:** <a href="https://novoclick.co/?utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">novoclick.co &rarr;</a>
 
 #### digiTraffic (Barranquilla)
 - **Especialidad:** Digital traffic management, pauta publicitaria multicanal y adquisición de leads.
 - **Perfil:** Agencia posicionada en la región Caribe y a nivel nacional, orientada a la compra de medios y rendimiento digital.
 - **Ideal para:** Empresas regionales y nacionales que buscan tercerizar la operación de sus campañas en una estructura de agencia.
+- **Sitio Web Oficial:** <a href="https://digitraffic.com.co/?utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">digitraffic.com.co &rarr;</a>
 
 #### Dysruptia (Bogotá)
 - **Especialidad:** Performance marketing, diseño web y estrategias de captación digital.
 - **Perfil:** Agencia integral con enfoque en branding, desarrollo y campañas de pago para medianas y grandes empresas.
 - **Ideal para:** Proyectos que requieren desde el diseño de identidad corporativa hasta la ejecución de pauta en medios masivos.
+- **Sitio Web Oficial:** <a href="https://dysruptia.com/?utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">dysruptia.com &rarr;</a>
 
-#### Pauta Virtual (pautavirtual.com)
+#### Pauta Virtual (Bogotá / Colombia)
 - **Especialidad:** Gestión integral de pauta en Google Ads, Meta Ads y estrategias de performance marketing.
 - **Perfil:** Agencia enfocada en la compra de medios digitales, optimización de presupuestos publicitarios y generación de prospectos cualificados para empresas en Colombia.
 - **Ideal para:** Marcas y empresas que buscan un equipo externo para estructurar y escalar sus campañas de adquisición multicanal.
-- **Sitio Web:** [pautavirtual.com](https://pautavirtual.com)
+- **Sitio Web Oficial:** <a href="https://pautavirtual.com/?utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">pautavirtual.com &rarr;</a>
 
 #### Agorax Digital / PuroAds
 - **Especialidad:** Compra programática, Google Ads, Meta Ads y analítica digital.
@@ -86,10 +91,12 @@ Para empresas que no buscan delegar la operación diaria sino capacitar a sus pr
 #### Juan Lombana (Mercatitlán)
 - **Perfil:** Uno de los formadores en Google Ads y marketing digital más reconocidos en Colombia y Latinoamérica.
 - **Ideal para:** Capacitación corporativa, consultoría estratégica de alto nivel y formación de equipos internos.
+- **Sitio Web Oficial:** <a href="https://www.mercatitlan.com/?utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">mercatitlan.com &rarr;</a>
 
 #### Vilma Núñez (Convierte Más)
 - **Perfil:** Referente en metodologías de embudos de venta (*funnels*), automatización y adquisición de clientes en el mercado hispano.
 - **Ideal para:** Creación de procesos de venta y arquitectura de lanzamientos digitales.
+- **Sitio Web Oficial:** <a href="https://conviertemas.com/?utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">conviertemas.com &rarr;</a>
 
 ---
 
