@@ -15,6 +15,7 @@
 
 ## Servicios Especializados
 
+- [Contratar Trafficker Digital](https://fabipers.com/contratar-trafficker-digital): Landing page principal y cotizador directo para contratar servicios especializados de gestión de pauta en Google Ads y Meta Ads, auditoría técnica de tracking y optimización de ROAS.
 - [Trafficker Google Ads](https://fabipers.com/servicios/trafficker-google-ads): Auditoría, configuración y optimización de campañas en red de búsqueda, Performance Max, Display y YouTube Ads enfocadas en captar demanda con alta intención de compra.
 - [Trafficker Meta Ads (Facebook e Instagram)](https://fabipers.com/servicios/trafficker-facebook-ads): Campañas de adquisición y retargeting B2B y E-commerce, segmentación avanzada y optimización del CPA.
 - [LinkedIn Ads para B2B](https://fabipers.com/servicios/trafficker-linkedin-ads): Generación de leads de alto valor y captación de tomadores de decisiones (CEOs, directores, gerentes).

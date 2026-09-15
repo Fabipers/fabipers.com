@@ -1,0 +1,1097 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LeadForm from '../components/LeadForm';
+
+const title = "Contratar Trafficker Digital | Pauta Rentable & Escalamiento de Ads";
+const description = "¿Buscas contratar un Trafficker Digital certificado? Maximiza tu ROAS en Google Ads y Meta Ads con un especialista senior. Solicita tu cotización personalizada hoy.";
+---
+
+<Layout title={title} description={description}>
+  <!-- Schema: ProfessionalService & FAQPage JSON-LD -->
+  <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://fabipers.com/contratar-trafficker-digital#service",
+        "name": "Servicio de Trafficker Digital y Gestión de Pauta - Fabián Pérez",
+        "url": "https://fabipers.com/contratar-trafficker-digital",
+        "image": "https://fabipers.com/og-image.jpg",
+        "telephone": "+573182873558",
+        "priceRange": "$$$",
+        "description": "Servicio profesional de Trafficker Digital para escalamiento de ventas y captación de leads mediante Google Ads, Meta Ads y Server-Side Tracking.",
+        "founder": {
+          "@type": "Person",
+          "name": "Fabián Pérez",
+          "jobTitle": "Trafficker Digital & Full Stack Marketer",
+          "url": "https://fabipers.com/sobre-mi",
+          "sameAs": [
+            "https://www.linkedin.com/in/fabian-perez-trafficker",
+            "https://twitter.com/fabipers",
+            "https://instagram.com/fabipers",
+            "https://github.com/Fabipers"
+          ]
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Tráfico de Pago y Performance",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Gestión Integral de Google Ads (Search, Shopping, PMax, YouTube)"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Gestión de Meta Ads (Facebook Ads & Instagram Ads de Alto Retorno)"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Implementación de Server-Side Tracking (GTM Server, GA4, Meta CAPI)"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Optimización de Tasa de Conversión (CRO & Landing Pages)"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://fabipers.com/contratar-trafficker-digital#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuánto cobra un Trafficker Digital profesional?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Los honorarios de un Trafficker Digital varían según el alcance y el volumen de inversión: fee mensual fijo para gestión de campañas (generalmente desde $500 a $1,500 USD/mes), porcentaje sobre la inversión publicitaria (10% a 15% en cuentas de alto presupuesto) o modelos híbridos con incentivos por rendimiento/ROAS alcanzado."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuál es la diferencia entre un Trafficker Digital y un Community Manager?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un Community Manager se enfoca en la gestión de contenidos orgánicos, interacciones y branding en redes sociales. Un Trafficker Digital es un especialista técnico en medios de pago (Paid Media) enfocado estrictamente en comprar tráfico cualificado en Google Ads y Meta Ads, configurar analítica avanzada y generar ventas o leads con el menor costo de adquisición (CPA/ROAS) posible."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto presupuesto publicitario mínimo necesito para contratar el servicio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Se recomienda una inversión mínima de $800 a $1,000 USD mensuales en pauta publicitaria en plataformas como Google Ads o Meta Ads. Esto permite que los algoritmos de Machine Learning obtengan el volumen de datos necesario para optimizar ofertas y generar resultados medibles rápidamente."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿En cuánto tiempo se obtienen resultados al pautar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A diferencia del SEO que requiere meses, las campañas de tráfico de pago comienzan a generar clics y prospectos en las primeras 48 a 72 horas. Durante las primeras 2 a 4 semanas se ejecutan pruebas de creativos y audiencias para estabilizar el CPA y maximizar el retorno de inversión."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Quién es el dueño de las cuentas publicitarias y los datos del píxel?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tú eres 100% el propietario de tus cuentas publicitarias (Google Ads, Meta Business Manager), activos de píxel, eventos y datos de clientes. Trabajo mediante accesos de administrador/socio delegado con total transparencia."
+            }
+          }
+        ]
+      }
+    ]
+  })} />
+
+  <!-- Hero Section -->
+  <section class="section hire-hero-section" id="hero">
+    <div class="container hire-hero-grid">
+      <!-- Columna Izquierda: Mensaje y Propuesta de Valor -->
+      <div class="hire-hero-left">
+        <div class="badge-wrapper">
+          <span class="hero-badge rotate-left">⚡ ESPECIALISTA SENIOR EN PAID MEDIA & PERFORMANCE</span>
+        </div>
+        
+        <h1 class="hire-hero-h1">
+          Contratar Trafficker Digital: <span class="highlight-text">Escala tu Facturación</span> con Pauta Rentable
+        </h1>
+        
+        <p class="hire-hero-lead">
+          Deja de quemar presupuesto en clics vacíos y métricas de vanidad. Diseño, ejecuto y optimizo ecosistemas de adquisición en <strong>Google Ads</strong> y <strong>Meta Ads</strong> respaldados por <strong>Server-Side Tracking</strong> y un enfoque obsesivo en tu <strong>ROAS</strong> y <strong>CPA</strong>.
+        </p>
+
+        <!-- Puntos Clave / Garantías de Calidad -->
+        <div class="hire-trust-list">
+          <div class="trust-item">
+            <span class="trust-check">✔</span>
+            <div class="trust-text">
+              <strong>Google Partner Certificado:</strong> Dominio de campañas avanzadas de Búsqueda, Shopping, Performance Max y YouTube.
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-check">✔</span>
+            <div class="trust-text">
+              <strong>Tracking Server-Side de Precisión:</strong> Cero pérdida de eventos post iOS 14 con Meta CAPI, GTM Server y GA4.
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-check">✔</span>
+            <div class="trust-text">
+              <strong>Atención 1 a 1 sin Intermediarios:</strong> Tratas directamente con el especialista técnico que optimiza tus campañas diariamente.
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-check">✔</span>
+            <div class="trust-text">
+              <strong>+$500k USD Gestionados:</strong> Experiencia comprobada escalando cuentas de e-commerce, servicios B2B y SaaS en Colombia, USA y Latinoamérica.
+            </div>
+          </div>
+        </div>
+
+        <!-- Botones de Acción Rápida -->
+        <div class="hire-hero-buttons">
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20cotizar%20la%20contrataci%C3%B3n%20de%20tus%20servicios%20de%20Trafficker%20Digital" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" id="hire-cta-whatsapp">
+            <span class="whatsapp-icon">💬</span> Chatear Directo por WhatsApp
+          </a>
+          <a href="#comparativa" class="btn btn-secondary" id="hire-cta-comparativa">
+            Ver Comparativa &darr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Formulario de Cotización Directa -->
+      <div class="hire-hero-right">
+        <LeadForm client:load />
+      </div>
+    </div>
+  </section>
+
+  <!-- Métricas Rápidas / Social Proof Bar -->
+  <section class="section-stats-strip">
+    <div class="container stats-strip-grid">
+      <div class="stat-pill">
+        <span class="stat-big">+10 Años</span>
+        <span class="stat-label">Experiencia en Marketing Digital</span>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-big">+3.8x</span>
+        <span class="stat-label">ROAS Promedio en E-commerce</span>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-big">-35%</span>
+        <span class="stat-label">Reducción en Costo por Lead (CPL)</span>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-big">100%</span>
+        <span class="stat-label">Transparencia y Propiedad de Cuentas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 1: Comparativa Especialista vs Agencia vs In-House -->
+  <section class="section compare-section" id="comparativa">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Toma la Decisión Correcta</span>
+        <h2>¿Por qué contratar un Trafficker Digital especializado vs. Agencia tradicional o In-house?</h2>
+        <p class="section-lead-max">
+          Delegar la pauta de tu negocio es una decisión crítica. Compara los beneficios de trabajar con un Trafficker Senior independiente frente a otras opciones del mercado:
+        </p>
+      </div>
+
+      <div class="comparison-table-wrapper">
+        <table class="neo-table">
+          <thead>
+            <tr>
+              <th>Criterio de Evaluación</th>
+              <th class="col-highlight">Fabián Pérez (Trafficker Senior)</th>
+              <th>Agencia Tradicional</th>
+              <th>Empleado In-House Junior</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Atención & Comunicación</strong></td>
+              <td class="col-highlight"><span class="tag-good">Directa 1 a 1 con el especialista</span></td>
+              <td>A través de ejecutivos de cuenta que no tocan las campañas</td>
+              <td>Directa pero con conocimiento limitado</td>
+            </tr>
+            <tr>
+              <td><strong>Especialización Técnica</strong></td>
+              <td class="col-highlight"><span class="tag-good">Avanzada (Paid Media + Server CAPI + CRO)</span></td>
+              <td>Generalista y tercerizada a practicantes</td>
+              <td>Básica / Requiere capacitación constante</td>
+            </tr>
+            <tr>
+              <td><strong>Agilidad de Optimización</strong></td>
+              <td class="col-highlight"><span class="tag-good">Ajustes diarios y toma de decisiones rápida</span></td>
+              <td>Lenta por burocracia y aprobaciones internas</td>
+              <td>Moderada según carga laboral</td>
+            </tr>
+            <tr>
+              <td><strong>Costos Operativos</strong></td>
+              <td class="col-highlight"><span class="tag-good">Inversión 100% flexible y predecible</span></td>
+              <td>Fees elevados con contratos de permanencia forzosa</td>
+              <td>Salario fijo + cargas prestacionales + equipos</td>
+            </tr>
+            <tr>
+              <td><strong>Enfoque en Resultados</strong></td>
+              <td class="col-highlight"><span class="tag-good">ROAS, CPA y Facturación Neta</span></td>
+              <td>Impresiones, alcance y "likes" de vanidad</td>
+              <td>Tareas operativas sin visión de negocio</td>
+            </tr>
+            <tr>
+              <td><strong>Propiedad de Datos & Cuentas</strong></td>
+              <td class="col-highlight"><span class="tag-good">100% tuya desde el día 1</span></td>
+              <td>Frecuentemente retienen tus cuentas y píxeles</td>
+              <td>Tuya</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: Qué Incluye el Servicio de Traffic Management -->
+  <section class="section services-included-section" id="servicios">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle highlight-box">Ecosistema de Crecimiento</span>
+        <h2>¿Qué incluye el servicio integral al contratar a tu Trafficker Digital?</h2>
+        <p class="section-lead-max">
+          No me limito a crear anuncios. Construyo un ecosistema integral de adquisición diseñado para convertir prospectos fríos en compradores recurrentes:
+        </p>
+      </div>
+
+      <div class="grid grid-2">
+        <!-- Servicio 1 -->
+        <div class="card service-feature-card">
+          <div class="service-card-header">
+            <span class="service-num-badge">01</span>
+            <div class="service-icon-box">🔍</div>
+          </div>
+          <h3>Auditoría Profunda & Tracking Server-Side (GTM, GA4, CAPI)</h3>
+          <p>
+            El 40% del presupuesto de pauta se pierde por fallas de atribución. Configuro Google Tag Manager, Google Analytics 4 y la API de Conversiones de Meta (CAPI) vía servidor para asegurar que los algoritmos de pauta reciban datos de compra sin bloqueos.
+          </p>
+          <ul class="feature-bullets">
+            <li>✔ Deduplicación de eventos del navegador y servidor.</li>
+            <li>✔ Medición precisa de valor de compra y eventos clave.</li>
+            <li>✔ Seguimiento de micro-conversiones y scroll depth.</li>
+          </ul>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="card service-feature-card">
+          <div class="service-card-header">
+            <span class="service-num-badge">02</span>
+            <div class="service-icon-box">📈</div>
+          </div>
+          <h3>Arquitectura de Campañas en Google Ads & Meta Ads</h3>
+          <p>
+            Estructuro tus cuentas publicitarias separando campañas de prospección (tráfico frío), retargeting dinámico y demanda de alta intención en motores de búsqueda (Search & Performance Max) con segmentaciones personalizadas.
+          </p>
+          <ul class="feature-bullets">
+            <li>✔ Campañas de Búsqueda con palabras clave de alta intención transaccional.</li>
+            <li>✔ Catálogos dinámicos en Meta Ads con audiencias Advantage+.</li>
+            <li>✔ Exclusión rigurosa de términos de búsqueda no cualificados.</li>
+          </ul>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="card service-feature-card">
+          <div class="service-card-header">
+            <span class="service-num-badge">03</span>
+            <div class="service-icon-box">🎨</div>
+          </div>
+          <h3>Creatividades Persuasivas & Optimización de Landings (CRO)</h3>
+          <p>
+            El mejor anuncio falla si aterriza en una página lenta o confusa. Te asesoro en la creación de copies persuasivos, ángulos creativos (UGC, testimonios, dolor/beneficio) y optimizo la velocidad y claridad de tus páginas de aterrizaje.
+          </p>
+          <ul class="feature-bullets">
+            <li>✔ Copywriting de respuesta directa adaptado a tu cliente ideal.</li>
+            <li>✔ Asesoría en formatos estáticos, carruseles y video ads.</li>
+            <li>✔ Auditoría CRO para eliminar fricción en checkout y formularios.</li>
+          </ul>
+        </div>
+
+        <!-- Servicio 4 -->
+        <div class="card service-feature-card">
+          <div class="service-card-header">
+            <span class="service-num-badge">04</span>
+            <div class="service-icon-box">⚡</div>
+          </div>
+          <h3>Optimización Diaria, Smart Bidding & Escalamiento del ROAS</h3>
+          <p>
+            Monitoreo continuo de subastas, ajustes de pujas automáticas (tCPA, tROAS, Maximizar Conversiones), rotación de creativos para evitar la fatiga publicitaria y escalamiento vertical/horizontal controlado.
+          </p>
+          <ul class="feature-bullets">
+            <li>✔ Ajuste estratégico de presupuestos según días y horarios pico.</li>
+            <li>✔ Escalamiento sin disparar los costos de adquisición.</li>
+            <li>✔ Dashboard en tiempo real (Looker Studio) para ver tu rendimiento.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: Metodología en 4 Fases -->
+  <section class="section methodology-section" id="metodologia">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Proceso Probado de Escalamiento</span>
+        <h2>Metodología de Trabajo en 4 Fases para Garantizar Rentabilidad</h2>
+        <p class="section-lead-max">
+          Un proceso paso a paso transparente que transforma tu inversión publicitaria en un motor predecible de adquisición de clientes:
+        </p>
+      </div>
+
+      <div class="methodology-grid">
+        <!-- Fase 1 -->
+        <div class="card step-card">
+          <div class="step-badge-circle">1</div>
+          <h3>Fase 1: Diagnóstico Técnico & Atribución</h3>
+          <p>
+            Auditamos tus cuentas de anuncios existentes, historial de conversiones, píxeles y embudo de ventas. Corregimos cualquier fuga en el tracking antes de invertir un solo dólar adicional.
+          </p>
+          <span class="step-duration">Duración: Semana 1</span>
+        </div>
+
+        <!-- Fase 2 -->
+        <div class="card step-card">
+          <div class="step-badge-circle">2</div>
+          <h3>Fase 2: Arquitectura del Funnel & Setup</h3>
+          <p>
+            Definimos tu avatar de cliente, propuesta de valor y ángulos publicitarios. Creamos la estructura de campañas, configuramos las audiencias personalizadas y redactamos los copies de alto impacto.
+          </p>
+          <span class="step-duration">Duración: Semana 1 - 2</span>
+        </div>
+
+        <!-- Fase 3 -->
+        <div class="card step-card">
+          <div class="step-badge-circle">3</div>
+          <h3>Fase 3: Lanzamiento & Aprendizaje Algorítmico</h3>
+          <p>
+            Activamos las campañas bajo una estrategia de prueba controlada. Analizamos CTR, tasa de conversión en landing y costo por lead/venta para alimentar los algoritmos de Machine Learning.
+          </p>
+          <span class="step-duration">Duración: Semanas 2 a 4</span>
+        </div>
+
+        <!-- Fase 4 -->
+        <div class="card step-card">
+          <div class="step-badge-circle">4</div>
+          <h3>Fase 4: Escalamiento Rentable & Optimización Continua</h3>
+          <p>
+            Identificamos los anuncios y audiencias ganadoras para incrementar el presupuesto de forma progresiva sin diluir el ROAS. Aplicamos mejoras continuas basadas en datos reales.
+          </p>
+          <span class="step-duration">Duración: Mes 2 en adelante</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: Para Quién es Este Servicio -->
+  <section class="section who-is-for-section" id="para-quien">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle highlight-box">Sectores y Modelos</span>
+        <h2>¿Para qué tipo de negocios es ideal contratar un Trafficker Digital?</h2>
+        <p class="section-lead-max">
+          Mis servicios están especializados en empresas con productos o servicios validados que desean escalar su volumen de ventas:
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card target-card">
+          <div class="target-icon">🛍️</div>
+          <h3>E-commerce & Tiendas Online</h3>
+          <p>
+            Marcas con tiendas en Shopify, WooCommerce o VTEX que buscan aumentar su facturación mensual, reducir carritos abandonados y maximizar el Ticket Promedio mediante Shopping, Performance Max y Meta DPA.
+          </p>
+        </div>
+
+        <div class="card target-card">
+          <div class="target-icon">🏢</div>
+          <h3>Empresas B2B & Servicios Profesionales</h3>
+          <p>
+            Empresas que necesitan un flujo constante de prospectos cualificados y llamadas de venta con tomadores de decisiones a través de Google Search de alta intención y LinkedIn Ads segmentado.
+          </p>
+        </div>
+
+        <div class="card target-card">
+          <div class="target-icon">🚀</div>
+          <h3>Infoproductos & Startups de Alto Crecimiento</h3>
+          <p>
+            Negocios digitales con ofertas de alto valor (High-Ticket) o modelos de suscripción que requieren lanzamientos de tráfico masivo y embudos de captación automatizados por WhatsApp o videollamadas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: Preguntas Frecuentes (FAQ) -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Resolvemos tus Dudas</span>
+        <h2>Preguntas Frecuentes al Contratar un Trafficker Digital</h2>
+        <p class="section-lead-max">
+          Todo lo que necesitas saber sobre el servicio, modelos de trabajo y garantías de transparencia antes de comenzar:
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item card">
+          <h3 class="faq-question">¿Cuánto cuesta contratar a un Trafficker Digital?</h3>
+          <p class="faq-answer">
+            El costo depende de la complejidad de la cuenta y el presupuesto publicitario mensual. Trabajo bajo tres modalidades transparentes: fee mensual de gestión, porcentaje sobre inversión publicitaria para presupuestos altos, o modelo híbrido con bonificación por cumplimiento de objetivos de ROAS. Solicita tu cotización en el formulario para recibir una propuesta exacta.
+          </p>
+        </div>
+
+        <div class="faq-item card">
+          <h3 class="faq-question">¿Cuál es la diferencia entre un Trafficker Digital y un Community Manager?</h3>
+          <p class="faq-answer">
+            Un Community Manager crea contenido orgánico, contesta comentarios y gestiona la imagen de marca en redes. Un Trafficker Digital es un perfil analítico y cuantitativo que invierte tu dinero en plataformas publicitarias (Google Ads, Meta Ads) con el objetivo directo de generar ventas, leads y facturación medible con métricas financieras (CPA, ROAS, ROI).
+          </p>
+        </div>
+
+        <div class="faq-item card">
+          <h3 class="faq-question">¿Cuánto presupuesto de pauta necesito para empezar?</h3>
+          <p class="faq-answer">
+            Para garantizar que las plataformas recopilen suficiente volumen de datos y los algoritmos de Machine Learning optimicen las subastas, se recomienda un presupuesto de pauta mínimo de $800 a $1,000 USD al mes.
+          </p>
+        </div>
+
+        <div class="faq-item card">
+          <h3 class="faq-question">¿En cuánto tiempo empezaré a ver ventas o clientes potenciales?</h3>
+          <p class="faq-answer">
+            El tráfico de pago genera impactos desde las primeras 24 a 48 horas de encendido de campañas. La fase de estabilización del costo por adquisición (CPA) y calibración de audiencias toma entre 2 y 4 semanas para alcanzar su máximo nivel de eficiencia.
+          </p>
+        </div>
+
+        <div class="faq-item card">
+          <h3 class="faq-question">¿Quién es el dueño de las cuentas publicitarias y los datos del píxel?</h3>
+          <p class="faq-answer">
+            Tú mantienes el 100% de la propiedad y control sobre tus cuentas publicitarias de Google Ads, Meta Business Manager, píxeles y bases de datos. Trabajo mediante acceso delegado como administrador de confianza.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 6: CTA Final Banner -->
+  <section class="section cta-banner-section" id="contacto">
+    <div class="container">
+      <div class="card cta-banner-card">
+        <div class="cta-banner-content">
+          <span class="badge-tag dark-tag">¿LISTO PARA ESCALAR?</span>
+          <h2>Comienza a Generar Clientes Cualificados con Pauta Rentable</h2>
+          <p>
+            No dejes que tu competencia se quede con los mejores clientes en Google y Redes Sociales. Agenda una llamada de diagnóstico o envía tu solicitud de cotización para revisar tu caso.
+          </p>
+          <div class="cta-banner-actions">
+            <a href="#hero" class="btn btn-primary" id="cta-final-cotizar">
+              ⚡ Completar Formulario Arriba
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20agendar%20una%20reuni%C3%B3n%20para%20contratar%20tus%20servicios%20de%20Trafficker%20Digital" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" id="cta-final-whatsapp">
+              💬 Hablar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* ===================================
+     HERO SECTION
+     =================================== */
+  .hire-hero-section {
+    padding-top: 6.5rem;
+    padding-bottom: 4rem;
+    background-color: var(--bg-primary);
+  }
+
+  .hire-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    align-items: flex-start;
+  }
+
+  @media (min-width: 992px) {
+    .hire-hero-grid {
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3rem;
+    }
+  }
+
+  .badge-wrapper {
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background-color: var(--accent-secondary);
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 900;
+    padding: 0.4rem 0.9rem;
+    border: 3px solid var(--border-color);
+    box-shadow: 3px 3px 0px var(--border-color);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .rotate-left {
+    transform: rotate(-1.5deg);
+  }
+
+  .hire-hero-h1 {
+    font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+  }
+
+  .highlight-text {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    padding: 0 0.4rem;
+    border: 3px solid var(--border-color);
+    box-shadow: 3px 3px 0px var(--border-color);
+    display: inline-block;
+    transform: rotate(-1deg);
+  }
+
+  .hire-hero-lead {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+  }
+
+  .hire-trust-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .trust-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-secondary);
+    color: var(--text-primary);
+    font-weight: 900;
+    font-size: 0.9rem;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--border-color);
+    box-shadow: 2px 2px 0px var(--border-color);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .trust-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-primary);
+  }
+
+  .hire-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+
+  /* ===================================
+     LEAD FORM STYLING
+     =================================== */
+  :global(.lead-form-card) {
+    background-color: #ffffff;
+    border: 4px solid var(--border-color);
+    box-shadow: 8px 8px 0px var(--border-color);
+    padding: 2.2rem;
+    position: relative;
+  }
+
+  :global(.lead-form-header) {
+    margin-bottom: 1.5rem;
+  }
+
+  :global(.lead-form-tag) {
+    display: inline-block;
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 900;
+    padding: 0.25rem 0.6rem;
+    border: 2px solid var(--border-color);
+    box-shadow: 2px 2px 0px var(--border-color);
+    margin-bottom: 0.75rem;
+  }
+
+  :global(.lead-form-title) {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.4rem;
+    color: var(--text-primary);
+  }
+
+  :global(.lead-form-subtitle) {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  :global(.lead-form-body) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+
+  :global(.form-group) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  :global(.form-row-2) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 600px) {
+    :global(.form-row-2) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  :global(.form-label) {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+  }
+
+  :global(.req) {
+    color: #e11d48;
+  }
+
+  :global(.form-input),
+  :global(.form-select) {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    border: 3px solid var(--border-color);
+    background-color: #ffffff;
+    color: var(--text-primary);
+    box-shadow: 2px 2px 0px var(--border-color);
+    outline: none;
+    transition: all var(--transition-fast);
+  }
+
+  :global(.form-input:focus),
+  :global(.form-select:focus) {
+    border-color: var(--accent-primary);
+    box-shadow: 4px 4px 0px var(--accent-primary);
+  }
+
+  :global(.lead-submit-btn) {
+    margin-top: 0.5rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.05rem;
+    cursor: pointer;
+  }
+
+  :global(.form-privacy-note) {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 0.25rem;
+  }
+
+  :global(.lead-form-error) {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 2px solid #ef4444;
+    padding: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  :global(.lead-form-success) {
+    text-align: center;
+    padding: 1.5rem 0.5rem;
+  }
+
+  :global(.success-icon) {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  :global(.success-title) {
+    font-size: 1.35rem;
+    font-weight: 900;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+  }
+
+  :global(.success-text) {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ===================================
+     STATS STRIP
+     =================================== */
+  .section-stats-strip {
+    background-color: var(--text-primary);
+    color: #ffffff;
+    padding: 2.5rem 0;
+    border-top: 4px solid var(--border-color);
+    border-bottom: 4px solid var(--border-color);
+  }
+
+  .stats-strip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .stats-strip-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .stat-pill {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .stat-big {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 900;
+    color: var(--accent-secondary);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #e4e4e7;
+  }
+
+  /* ===================================
+     COMPARISON TABLE
+     =================================== */
+  .section-lead-max {
+    max-width: 750px;
+    margin: 1rem auto 0;
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+  }
+
+  .comparison-table-wrapper {
+    margin-top: 3.5rem;
+    overflow-x: auto;
+  }
+
+  .neo-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: 4px solid var(--border-color);
+    box-shadow: 6px 6px 0px var(--border-color);
+  }
+
+  .neo-table th,
+  .neo-table td {
+    padding: 1.2rem 1.4rem;
+    border: 2px solid var(--border-color);
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  .neo-table th {
+    background-color: var(--bg-tertiary);
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.05rem;
+  }
+
+  .neo-table th.col-highlight,
+  .neo-table td.col-highlight {
+    background-color: #f0fdf4;
+  }
+
+  .tag-good {
+    color: #166534;
+    font-weight: 800;
+  }
+
+  /* ===================================
+     SERVICES INCLUDED
+     =================================== */
+  .services-included-section {
+    background-color: var(--bg-secondary);
+  }
+
+  .service-feature-card {
+    padding: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 3px solid var(--border-color);
+    box-shadow: 5px 5px 0px var(--border-color);
+    background-color: #ffffff;
+  }
+
+  .service-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .service-num-badge {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 900;
+    background-color: var(--text-primary);
+    color: #ffffff;
+    padding: 0.2rem 0.6rem;
+    border: 2px solid var(--border-color);
+  }
+
+  .service-icon-box {
+    font-size: 2rem;
+  }
+
+  .service-feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .feature-bullets {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* ===================================
+     METHODOLOGY 4 STEPS
+     =================================== */
+  .methodology-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .methodology-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .methodology-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .step-card {
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    position: relative;
+    background-color: #ffffff;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+  }
+
+  .step-badge-circle {
+    width: 44px;
+    height: 44px;
+    background-color: var(--accent-secondary);
+    border: 3px solid var(--border-color);
+    box-shadow: 2px 2px 0px var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+  }
+
+  .step-card h3 {
+    font-size: 1.15rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .step-duration {
+    margin-top: auto;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+  }
+
+  /* ===================================
+     TARGET AUDIENCE
+     =================================== */
+  .who-is-for-section {
+    background-color: var(--bg-secondary);
+  }
+
+  .target-card {
+    padding: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #ffffff;
+    border: 3px solid var(--border-color);
+    box-shadow: 5px 5px 0px var(--border-color);
+  }
+
+  .target-icon {
+    font-size: 2.5rem;
+  }
+
+  .target-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+
+  /* ===================================
+     FAQ SECTION
+     =================================== */
+  .faq-container {
+    max-width: 850px;
+    margin: 3.5rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .faq-item {
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+  }
+
+  .faq-question {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+  }
+
+  .faq-answer {
+    color: var(--text-secondary);
+    line-height: 1.65;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  /* ===================================
+     CTA BANNER
+     =================================== */
+  .cta-banner-section {
+    padding-bottom: 6rem;
+  }
+
+  .cta-banner-card {
+    background-color: var(--accent-secondary);
+    border: 4px solid var(--border-color);
+    box-shadow: 8px 8px 0px var(--border-color);
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .cta-banner-content {
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .cta-banner-content h2 {
+    font-size: clamp(2rem, 3.8vw, 2.8rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin: 0;
+  }
+
+  .cta-banner-content p {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .cta-banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .dark-tag {
+    background-color: var(--text-primary);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+    border: 2px solid var(--border-color);
+  }
+</style>
