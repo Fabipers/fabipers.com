@@ -101,9 +101,13 @@ Si tu servicio tiene un ticket promedio de $5.000.000 COP y el trafficker cobra 
 
 Cada empresa tiene necesidades distintas: canales, presupuesto de pauta, objetivo de ventas y mercado geográfico. Por eso, la mejor forma de saberlo es con una propuesta personalizada.
 
-Usa nuestro **[Cotizador Interactivo Dinámico](/servicios)** para obtener una estimación formal adaptada a tu negocio en menos de 2 minutos — sin compromiso.
+> ⚡ **¿Listo para calcular el presupuesto exacto de tu negocio?**  
+> Puedes solicitar tu propuesta formal directamente en nuestra página de contratación:  
+> 👉 **[Contratar Trafficker Digital: Cotizador y Propuesta Personalizada](/contratar-trafficker-digital)**
 
-O si prefieres hablar directamente, revisa nuestras páginas de servicios especializados:
+O si prefieres explorar nuestros servicios específicos por canal:
 - [Trafficker Google Ads → Búsqueda, Shopping y YouTube](/servicios/trafficker-google-ads)
 - [Trafficker Meta Ads → Facebook, Instagram y WhatsApp](/servicios/trafficker-facebook-ads)
 - [Trafficker LinkedIn Ads → B2B de Alto Valor](/servicios/trafficker-linkedin-ads)
+- [Analítica Web y Server-Side Tracking](/servicios/analitica-web-tracking)
+- [Trafficker Digital en Colombia](/trafficker-digital-colombia)

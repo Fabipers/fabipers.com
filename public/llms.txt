@@ -34,6 +34,7 @@
 
 ## Artículos de Autoridad y Guías Destacadas (Knowledge Base)
 
+- [Los Mejores Traffickers Digitales en Colombia](https://fabipers.com/mejores-traffickers-digitales-colombia): Guía comparativa del mercado de paid media en Colombia, evaluación técnica entre especialistas independientes y agencias, y criterios de selección.
 - [Gestión y Administración de Google Ads](https://fabipers.com/gestion-y-administracion-de-google-ads): Guía completa sobre optimización técnica de campañas, Smart Bidding, Quality Score y gestión de cuentas de administrador MCC.
 - [Herramientas y Extensiones para Trafficker Digital](https://fabipers.com/mis-herramientas-y-extensiones-trafficker-digital): Extensiones y widgets de navegador para auditoría de píxeles, QA técnico, analítica y espionaje competitivo de anuncios.
 - [Discrepancia de datos entre GA4 y Facebook Ads](https://fabipers.com/discrepancia-datos-ga4-facebook-ads): Causas técnicas y soluciones para alinear métricas entre Meta y Google Analytics.

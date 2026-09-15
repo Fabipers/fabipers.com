@@ -100,4 +100,6 @@ El éxito en Google Ads no es una cuestión de suerte, sino de ingeniería de da
 
 > **¿Quieres saber cuánto presupuesto está desperdiciando tu cuenta de Google Ads actualmente?**
 >
-> Revisa tus números en vivo con nuestra [Calculadora de Fuga de Presupuesto en el Inicio](/) o [agenda una auditoría técnica conmigo](/servicios/trafficker-google-ads) para optimizar tus campañas hoy mismo.
+> Revisa tus números con nuestra [Calculadora de Fuga de Presupuesto en el Inicio](/) o [solicita una propuesta para Contratar un Trafficker Digital](/contratar-trafficker-digital) para auditar y escalar tus campañas con un Google Partner certificado.
+> 
+> También puedes consultar nuestros servicios locales de [Trafficker Digital en Colombia](/trafficker-digital-colombia) o explorar nuestra [Guía de Precios de Trafficker Digital](/cuanto-cobra-un-trafficker-digital).
