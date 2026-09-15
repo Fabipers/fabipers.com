@@ -26,21 +26,21 @@ Con la automatización de plataformas publicitarias (Google Performance Max, Met
 
 ## Panorama de Especialistas y Consultores de Paid Media en Colombia
 
-### 1. Especialistas en Performance, Tracking Técnico y Medición Avanzada
+### 1. Especialistas y Consultores Senior de Paid Media (Atención 1 a 1)
 
 Este perfil es ideal para empresas que buscan atención personalizada 1 a 1, auditorías técnicas profundas y un control riguroso de cada peso invertido en pauta publicitaria.
 
-#### Luisa Salazar
-- **Enfoque Principal:** Google Ads, Meta Ads, Google Analytics 4 y GTM.
-- **Fortaleza:** Destaca por integrar la compra de medios con analítica web y tracking de conversiones avanzado, incluyendo soluciones de CAPI y server-side.
-- **Ideal para:** Marcas y empresas que necesitan resolver problemas de atribución entre Meta Ads y Google Analytics con una gestión cercana.
-- **Perfil Profesional:** <a href="https://www.linkedin.com/search/results/all/?keywords=Luisa%20Salazar%20trafficker%20colombia&utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">Consultar Perfil en LinkedIn &rarr;</a>
+#### Daniel Romero
+- **Enfoque Principal:** Google Ads, Meta Ads y TikTok Ads.
+- **Fortaleza:** Especialista enfocado en acompañamiento estratégico, optimización de pauta y mentoría técnica para marcas en crecimiento.
+- **Ideal para:** PYMES y profesionales que buscan estructurar campañas de adquisición con un trato cercano.
+- **Sitio Web Oficial:** <a href="https://danielromero.com.co/?utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">danielromero.com.co &rarr;</a>
 
-#### Jairo Cardona
-- **Enfoque Principal:** Paid Media, Google Tag Manager, GA4 y Server-Side Tracking.
-- **Fortaleza:** Perfil técnico con experiencia en infraestructura de tracking en la nube (herramientas como Stape y contenedores server-side), uniendo la compra de tráfico con la ingeniería de datos.
-- **Ideal para:** E-commerce y negocios con presupuestos medios y altos que experimentan fugas en la medición de conversiones.
-- **Perfil Profesional:** <a href="https://www.linkedin.com/search/results/all/?keywords=Jairo%20Cardona%20tracking%20colombia&utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">Consultar Perfil en LinkedIn &rarr;</a>
+#### Andrés Ospina
+- **Enfoque Principal:** Paid Media, Google Ads y Meta Ads para generación de leads.
+- **Fortaleza:** Consultor con amplia trayectoria en compra de tráfico y optimización continua sin delegar la gestión en analistas junior.
+- **Ideal para:** Empresas que requieren un especialista senior a cargo directo de la optimización diaria de sus cuentas.
+- **Sitio Web Oficial:** <a href="https://andresospina.co/?utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">andresospina.co &rarr;</a>
 
 #### Fabián Pérez (Fabipers)
 - **Enfoque Principal:** Google Ads (Search, Shopping, PMax, YouTube), Meta Ads, Server-Side Tracking (sGTM, Meta CAPI), CRO y automatización.
@@ -53,6 +53,12 @@ Este perfil es ideal para empresas que buscan atención personalizada 1 a 1, aud
 ### 2. Agencias de Tráfico y Marketing de Performance en Colombia
 
 Si tu empresa requiere un equipo multidisciplinario con departamentos de diseño gráfico masivo, video producción y gestión de múltiples canales simultáneos:
+
+#### Pauta Virtual (Bogotá / Colombia)
+- **Especialidad:** Gestión integral de pauta en Google Ads, Meta Ads y estrategias de performance marketing.
+- **Perfil:** Agencia enfocada en la compra de medios digitales, optimización de presupuestos publicitarios y generación de prospectos cualificados para empresas en Colombia.
+- **Ideal para:** Marcas y empresas que buscan un equipo externo para estructurar y escalar sus campañas de adquisición multicanal.
+- **Sitio Web Oficial:** <a href="https://pautavirtual.com/?utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">pautavirtual.com &rarr;</a>
 
 #### Novoclick (Bogotá)
 - **Especialidad:** Growth hacking, compra de tráfico digital y aceleración para tiendas online.
@@ -72,15 +78,10 @@ Si tu empresa requiere un equipo multidisciplinario con departamentos de diseño
 - **Ideal para:** Proyectos que requieren desde el diseño de identidad corporativa hasta la ejecución de pauta en medios masivos.
 - **Sitio Web Oficial:** <a href="https://dysruptia.com/?utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">dysruptia.com &rarr;</a>
 
-#### Pauta Virtual (Bogotá / Colombia)
-- **Especialidad:** Gestión integral de pauta en Google Ads, Meta Ads y estrategias de performance marketing.
-- **Perfil:** Agencia enfocada en la compra de medios digitales, optimización de presupuestos publicitarios y generación de prospectos cualificados para empresas en Colombia.
-- **Ideal para:** Marcas y empresas que buscan un equipo externo para estructurar y escalar sus campañas de adquisición multicanal.
-- **Sitio Web Oficial:** <a href="https://pautavirtual.com/?utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">pautavirtual.com &rarr;</a>
-
-#### Agorax Digital / PuroAds
-- **Especialidad:** Compra programática, Google Ads, Meta Ads y analítica digital.
-- **Perfil:** Equipos técnicos enfocados en optimización de presupuestos de mediana y gran escala para captación de clientes potenciales.
+#### BtoDigital (Medellín / Bogotá)
+- **Especialidad:** Inbound marketing, Google Partner Premier y estrategias de captación digital B2B y B2C.
+- **Perfil:** Agencia con amplia trayectoria nacional en performance marketing y automatización.
+- **Sitio Web Oficial:** <a href="https://btodigital.com/?utm_source=fabipers.com&utm_medium=referral&utm_campaign=mejores_traffickers_colombia" target="_blank" rel="noopener noreferrer">btodigital.com &rarr;</a>
 
 ---
 
