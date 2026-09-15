@@ -117,10 +117,13 @@ const pubDate = entry.data.pubDate ? new Date(entry.data.pubDate) : undefined;
 
           <script is:inline>
             (function() {
-              function relocateLeadMagnet() {
+              function setupPostContent() {
                 var content = document.querySelector('.post-content-brutalist');
+                if (!content) return;
+
+                // 1. Relocate lead magnet
                 var magnet = document.getElementById('in-content-lead-magnet');
-                if (content && magnet) {
+                if (magnet) {
                   var paragraphs = content.querySelectorAll(':scope > p');
                   if (paragraphs.length >= 2) {
                     paragraphs[1].after(magnet);
@@ -128,11 +131,21 @@ const pubDate = entry.data.pubDate ? new Date(entry.data.pubDate) : undefined;
                     paragraphs[0].after(magnet);
                   }
                 }
+
+                // 2. Open all external links in new tab
+                var links = content.querySelectorAll('a[href^="http://"], a[href^="https://"]');
+                links.forEach(function(link) {
+                  if (!link.href.includes('fabipers.com') && !link.href.includes('localhost')) {
+                    link.setAttribute('target', '_blank');
+                    link.setAttribute('rel', 'noopener noreferrer');
+                  }
+                });
               }
+
               if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', relocateLeadMagnet);
+                document.addEventListener('DOMContentLoaded', setupPostContent);
               } else {
-                relocateLeadMagnet();
+                setupPostContent();
               }
             })();
           </script>
