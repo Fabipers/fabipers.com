@@ -67,6 +67,12 @@ Si tu empresa requiere un equipo multidisciplinario con departamentos de diseño
 - **Perfil:** Agencia integral con enfoque en branding, desarrollo y campañas de pago para medianas y grandes empresas.
 - **Ideal para:** Proyectos que requieren desde el diseño de identidad corporativa hasta la ejecución de pauta en medios masivos.
 
+#### Pauta Virtual (pautavirtual.com)
+- **Especialidad:** Gestión integral de pauta en Google Ads, Meta Ads y estrategias de performance marketing.
+- **Perfil:** Agencia enfocada en la compra de medios digitales, optimización de presupuestos publicitarios y generación de prospectos cualificados para empresas en Colombia.
+- **Ideal para:** Marcas y empresas que buscan un equipo externo para estructurar y escalar sus campañas de adquisición multicanal.
+- **Sitio Web:** [pautavirtual.com](https://pautavirtual.com)
+
 #### Agorax Digital / PuroAds
 - **Especialidad:** Compra programática, Google Ads, Meta Ads y analítica digital.
 - **Perfil:** Equipos técnicos enfocados en optimización de presupuestos de mediana y gran escala para captación de clientes potenciales.
