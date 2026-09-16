@@ -1,14 +1,30 @@
 import { useState } from 'react';
 
-export default function LeadForm() {
+interface LeadFormProps {
+  locationName?: string;
+  formTitle?: string;
+  formSubtitle?: string;
+  tagText?: string;
+  sourcePage?: string;
+  defaultService?: string;
+}
+
+export default function LeadForm({
+  locationName = '',
+  formTitle = 'Solicita tu Propuesta Personalizada',
+  formSubtitle = 'Analizaré tu cuenta publicitaria y modelo de negocio para diseñar una estrategia de pauta a tu medida.',
+  tagText = '⚡ COTIZACIÓN EN 24H',
+  sourcePage = 'landing_page',
+  defaultService = 'Google Ads & Meta Ads (Estrategia Integral)'
+}: LeadFormProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     website: '',
+    platform: defaultService,
     budget: '$1,000 - $3,000 USD',
-    platform: 'Google Ads & Meta Ads',
-    goal: 'Aumentar ventas y generar leads cualificados'
+    goal: locationName ? `Estrategia de pauta y adquisición para ${locationName}` : 'Aumentar ventas y generar leads cualificados'
   });
 
   const [loading, setLoading] = useState(false);
@@ -24,8 +40,14 @@ export default function LeadForm() {
     e.preventDefault();
     setError('');
 
-    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
-      setError('Por favor completa todos los campos obligatorios (*).');
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.phone.trim() ||
+      !formData.website.trim() ||
+      !formData.platform.trim()
+    ) {
+      setError('Por favor completa todos los campos requeridos (*).');
       return;
     }
 
@@ -39,7 +61,7 @@ export default function LeadForm() {
         website: formData.website.trim(),
         budget: formData.budget,
         platforms: [formData.platform],
-        goal: formData.goal
+        goal: `${formData.goal} | Ubicación: ${locationName || 'General'}`
       };
 
       const res = await fetch('/api/send-quote', {
@@ -55,10 +77,10 @@ export default function LeadForm() {
           (window as any).dataLayer = (window as any).dataLayer || [];
           (window as any).dataLayer.push({
             event: 'generate_lead',
-            form_name: 'landing_contratar_trafficker',
+            form_name: sourcePage,
             lead_type: 'contratacion_directa',
+            lead_location: locationName || 'General',
             selected_services: [formData.platform],
-            estimated_budget: formData.budget,
             user_domain: formData.website || ''
           });
         }
@@ -74,17 +96,15 @@ export default function LeadForm() {
   };
 
   const whatsappLink = `https://api.whatsapp.com/send?phone=+573182873558&text=${encodeURIComponent(
-    `Hola Fabián, acabo de enviar mi solicitud para contratar servicios de Trafficker Digital. Mi nombre es ${formData.name || 'un cliente potencial'} y mi web es ${formData.website || 'aún no especificada'}.`
+    `Hola Fabián, acabo de enviar mi solicitud para cotizar servicios de Trafficker Digital${locationName ? ` en ${locationName}` : ''}. Mi nombre es ${formData.name || 'un cliente'} y mi web es ${formData.website || 'no especificada'}. Servicio de interés: ${formData.platform}.`
   )}`;
 
   return (
     <div className="lead-form-card" id="formulario-contacto">
       <div className="lead-form-header">
-        <span className="lead-form-tag">⚡ COTIZACIÓN EN 24H</span>
-        <h3 className="lead-form-title">Solicita tu Propuesta Personalizada</h3>
-        <p className="lead-form-subtitle">
-          Analizaré tu cuenta publicitaria y modelo de negocio para diseñar una estrategia de pauta a tu medida.
-        </p>
+        <span className="lead-form-tag">{tagText}</span>
+        <h3 className="lead-form-title">{formTitle}</h3>
+        <p className="lead-form-subtitle">{formSubtitle}</p>
       </div>
 
       {success ? (
@@ -110,6 +130,7 @@ export default function LeadForm() {
         <form onSubmit={handleSubmit} className="lead-form-body">
           {error && <div className="lead-form-error">{error}</div>}
 
+          {/* 1. Nombre Completo (Obligatorio) */}
           <div className="form-group">
             <label htmlFor="name" className="form-label">
               Nombre Completo <span className="req">*</span>
@@ -126,10 +147,11 @@ export default function LeadForm() {
             />
           </div>
 
+          {/* 2 & 3. Correo y Teléfono (Obligatorios) */}
           <div className="form-row-2">
             <div className="form-group">
               <label htmlFor="email" className="form-label">
-                Email Corporativo <span className="req">*</span>
+                Correo Electrónico <span className="req">*</span>
               </label>
               <input
                 type="email"
@@ -145,7 +167,7 @@ export default function LeadForm() {
 
             <div className="form-group">
               <label htmlFor="phone" className="form-label">
-                WhatsApp / Teléfono <span className="req">*</span>
+                Teléfono / WhatsApp <span className="req">*</span>
               </label>
               <input
                 type="tel"
@@ -160,57 +182,42 @@ export default function LeadForm() {
             </div>
           </div>
 
-          <div className="form-row-2">
-            <div className="form-group">
-              <label htmlFor="website" className="form-label">
-                Sitio Web o Instagram
-              </label>
-              <input
-                type="text"
-                id="website"
-                name="website"
-                placeholder="www.tuempresa.com"
-                value={formData.website}
-                onChange={handleChange}
-                className="form-input"
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="budget" className="form-label">
-                Inversión Mensual en Ads
-              </label>
-              <select
-                id="budget"
-                name="budget"
-                value={formData.budget}
-                onChange={handleChange}
-                className="form-select"
-              >
-                <option value="Menos de $1,000 USD/mes">&lt; $1,000 USD/mes</option>
-                <option value="$1,000 - $3,000 USD/mes">$1,000 - $3,000 USD/mes</option>
-                <option value="$3,000 - $10,000 USD/mes">$3,000 - $10,000 USD/mes</option>
-                <option value="Más de $10,000 USD/mes">&gt; $10,000 USD/mes</option>
-              </select>
-            </div>
+          {/* 4. Sitio Web o Negocio (Obligatorio) */}
+          <div className="form-group">
+            <label htmlFor="website" className="form-label">
+              Sitio Web o Instagram del Negocio <span className="req">*</span>
+            </label>
+            <input
+              type="text"
+              id="website"
+              name="website"
+              required
+              placeholder="www.tuempresa.com o @tunegocio"
+              value={formData.website}
+              onChange={handleChange}
+              className="form-input"
+            />
           </div>
 
+          {/* 5. Tipo de Servicio (Obligatorio) */}
           <div className="form-group">
             <label htmlFor="platform" className="form-label">
-              Canal Publicitario de Interés
+              Tipo de Servicio <span className="req">*</span>
             </label>
             <select
               id="platform"
               name="platform"
+              required
               value={formData.platform}
               onChange={handleChange}
               className="form-select"
             >
-              <option value="Google Ads & Meta Ads">Google Ads + Meta Ads (Recomendado)</option>
-              <option value="Solo Google Ads (Search & PMax)">Solo Google Ads (Búsqueda, Shopping, PMax)</option>
+              <option value="Google Ads & Meta Ads (Estrategia Integral)">Google Ads + Meta Ads (Estrategia Integral)</option>
+              <option value="Solo Google Ads (Search, Shopping, PMax, YouTube)">Solo Google Ads (Búsqueda, Shopping, PMax)</option>
               <option value="Solo Meta Ads (Facebook & Instagram)">Solo Meta Ads (Instagram & Facebook)</option>
-              <option value="LinkedIn Ads B2B">LinkedIn Ads (B2B High Ticket)</option>
-              <option value="Auditoría & Server-Side Tracking">Auditoría & Tracking Server-Side (GA4/GTM)</option>
+              <option value="LinkedIn Ads para B2B / High-Ticket">LinkedIn Ads (B2B de Alto Valor)</option>
+              <option value="Analítica Web & Server-Side Tracking (GA4/GTM/CAPI)">Analítica Web & Tracking Server-Side (GA4/GTM)</option>
+              <option value="Auditoría de Cuentas & Optimización CRO">Auditoría de Cuentas & Optimización CRO</option>
             </select>
           </div>
 
@@ -223,7 +230,7 @@ export default function LeadForm() {
           </button>
 
           <p className="form-privacy-note">
-            🔒 Tus datos están 100% protegidos. Sin spam, solo comunicación profesional directa.
+            🔒 Datos 100% confidenciales. Sin spam, respuesta profesional directa en menos de 24h.
           </p>
         </form>
       )}
