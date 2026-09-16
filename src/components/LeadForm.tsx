@@ -92,15 +92,18 @@ export default function LeadForm() {
           <div className="success-icon">🎉</div>
           <h4 className="success-title">¡Solicitud Recibida con Éxito!</h4>
           <p className="success-text">
-            Gracias <strong>{formData.name}</strong>. He recibido los detalles de tu proyecto. Te responderé en menos de 24 horas laborables a <strong>{formData.email}</strong> o por WhatsApp al <strong>{formData.phone}</strong>.
+            Gracias <strong>{formData.name}</strong>. He recibido los detalles de tu proyecto. Te responderé en menos de 24 horas laborables a <strong>{formData.email}</strong> o a tu número de contacto.
           </p>
+          <div className="lead-direct-whatsapp-box" style={{ marginTop: '1.2rem', padding: '0.8rem', backgroundColor: '#f4f4f5', border: '2px solid #09090b', fontSize: '0.9rem', fontWeight: 600 }}>
+            📞 WhatsApp Directo de Fabián: <span style={{ color: '#0284c7', fontWeight: 800 }}>+57 318 287 3558</span>
+          </div>
           <a
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-whatsapp w-full justify-center mt-4"
           >
-            <span>💬 ¿Prefieres respuesta inmediata? Escríbeme a WhatsApp</span>
+            <span>💬 ¿Prefieres respuesta inmediata? Escríbeme al +57 318 287 3558</span>
           </a>
         </div>
       ) : (
