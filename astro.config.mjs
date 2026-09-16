@@ -13,7 +13,8 @@ export default defineConfig({
   }),
   redirects: {
     '/traffikcer-digital-colombia': '/trafficker-digital-colombia',
-    '/traffikcer-digital-miami': '/trafficker-digital-miami'
+    '/traffikcer-digital-miami': '/trafficker-digital-miami',
+    '/blog/page/2': '/blog'
   },
   integrations: [react(), sitemap()],
   build: {
