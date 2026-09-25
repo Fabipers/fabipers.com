@@ -22,7 +22,7 @@ En esta guía desglosamos **cuánto cuesta un clic (CPC promedio) en Colombia y 
 
 El costo total de tu campaña se compone de dos factores independientes:
 1. **Presupuesto de Pauta (Medios):** El dinero que pagas directamente a Google por cada clic (*Pay-Per-Click* o CPC).
-2. **Fee de Gestión Profesional:** La tarifa del [Trafficker Digital o Especialista en Google Ads](/servicios/trafficker-google-ads) encargado de la estrategia, optimización y analítica.
+2. **Fee de Gestión Profesional:** La tarifa del [Trafficker Digital o Especialista en Google Ads](/servicios/trafficker-google-ads) encargado de la estrategia, optimización y analítica (conoce los alcances y tarifas en nuestra guía completa de [gestión de Google Ads](/gestion-y-administracion-de-google-ads)).
 
 ---
 
@@ -88,5 +88,6 @@ Si tu ticket promedio por cliente es de $2.000.000 COP, facturarás **$10.000.00
 > - 🇨🇴 **[Trafficker Digital en Colombia](/trafficker-digital-colombia)**: Estrategias en pesos colombianos para el mercado local.  
 > - 🇺🇸 **[Trafficker Digital en Miami](/trafficker-digital-miami)**: Captación de clientes de alto valor en EE. UU.  
 > - 🔍 **[Gestión Profesional de Google Ads](/servicios/trafficker-google-ads)**  
+> - 📖 **[Guía de Gestión y Administración de Google Ads](/gestion-y-administracion-de-google-ads)**: Entregables, fees y estrategia paso a paso.  
 > - ⚡ **[Solicitar Cotización y Propuesta en 24h](/contratar-trafficker-digital)**  
 > - 💰 **[Guía de Tarifas: ¿Cuánto cobra un Trafficker Digital?](/cuanto-cobra-un-trafficker-digital)**
