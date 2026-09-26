@@ -35,25 +35,11 @@ En la versión v2, Google introdujo dos nuevos parámetros de consentimiento obl
 
 Existen dos maneras de implementarlo en tu sitio web:
 
-```
-                  ┌─────────────────────────────────┐
-                  │ Consent Mode v2 Implementación  │
-                  └────────────────┬────────────────┘
-                                   │
-         ┌─────────────────────────┴─────────────────────────┐
-         ▼                                                   ▼
-┌──────────────────┐                               ┌──────────────────┐
-│   Modo Básico    │                               │  Modo Avanzado   │
-│ (Basic Mode)     │                               │ (Advanced Mode)  │
-├──────────────────┤                               ├──────────────────┤
-│• Etiquetas bloqueadas                            │• Etiquetas cargan│
-│  hasta dar 'Aceptar'.                            │  con 'pings sin  │
-│• Cero datos de usuarios                          │  cookies'.       │
-│  que rechazan.                                   │• Google modela   │
-│• Pérdida del 30%+ de                             │  conversiones con│
-│  volumen de data.                                │  IA en un 70-80%.│
-└──────────────────┘                               └──────────────────┘
-```
+| Característica | 🔴 Modo Básico (*Basic Mode*) | 🟢 Modo Avanzado (*Advanced Mode*) |
+| :--- | :--- | :--- |
+| **Carga de Etiquetas** | Bloqueadas totalmente hasta que el usuario hace clic en "Aceptar". | Las etiquetas cargan con *pings sin cookies* desde el primer segundo. |
+| **Comportamiento si Rechaza** | Cero datos recopilados (pérdida total de la sesión). | Google modela las conversiones mediante Machine Learning con un 70-80% de precisión. |
+| **Impacto en Pauta** | Pérdida de más del 30% del volumen de datos de conversión. | Mantiene los algoritmos de Smart Bidding y PMax óptimamente entrenados. |
 
 En mis implementaciones para clientes, el **Modo Avanzado** es el estándar indispensable en 2027, ya que permite a Google Ads modelar conversiones anónimas mediante inteligencia artificial, manteniendo los algoritmos de Smart Bidding entrenados con datos suficientes.
 
@@ -74,20 +60,16 @@ Mientras que Consent Mode gestiona los permisos legales del usuario, el **Server
 
 ## Arquitectura de Medición que Configuro para Mis Clientes en 2027
 
-Una infraestructura moderna y profesional de tracking debe estructurarse en 4 capas:
+Una infraestructura moderna y profesional de tracking debe estructurarse en **4 capas complementarias**:
 
-```text
-1. CAPA DE CONSENTIMIENTO (CMP Banner): Cookiebot / OneTrust / Usercentrics
-   │
-2. CAPA WEB (GTM Web Container): Disparo de eventos del DataLayer (generate_lead, purchase, add_to_cart)
-   │
-3. CAPA DE SERVIDOR (sGTM Container): Normalización, encriptación SHA-256 de correos/teléfonos y filtrado
-   │
-   ├──► Google Analytics 4 (GA4)
-   ├──► Google Ads Conversion API + Enhanced Conversions
-   ├──► Meta Conversions API (CAPI)
-   └──► LinkedIn Insight CAPI / TikTok Events API
-```
+1. **🛡️ Capa de Consentimiento (Banner CMP):** Gestión de cookies mediante Cookiebot, OneTrust o Usercentrics.
+2. **🌐 Capa Web (Contenedor Web GTM):** Disparo de eventos del DataLayer (`generate_lead`, `purchase`, `add_to_cart`).
+3. **☁️ Capa de Servidor (Contenedor sGTM):** Normalización, encriptación `SHA-256` de datos de usuario y filtrado de bots.
+4. **🚀 Distribución a Plataformas Finales:**
+   * ➔ **Google Analytics 4 (GA4):** Atribución neutral e informes de ciclo de vida.
+   * ➔ **Google Ads API:** Conversiones mejoradas (*Enhanced Conversions*).
+   * ➔ **Meta CAPI:** API de conversiones del servidor para Facebook e Instagram.
+   * ➔ **LinkedIn & TikTok CAPI:** Eventos de alta coincidencia para B2B y social commerce.
 
 ---
 

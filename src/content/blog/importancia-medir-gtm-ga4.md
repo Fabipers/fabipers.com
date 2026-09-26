@@ -43,12 +43,10 @@ Google Tag Manager no es una herramienta de análisis; es tu centro de comando t
 
 Mientras las plataformas de pauta solo ven su propio canal, **GA4 analiza la película completa de tu negocio**.
 
-```
-Recorrido Real del Comprador (Customer Journey):
-Día 1: Clic en Anuncio de Google Ads ──► Descubre la marca (No compra)
-Día 3: Retargeting en Instagram ──────► Lee testimonios (No compra)
-Día 5: Búsqueda Orgánica en Google ──► Completa formulario en la web (¡Conversión!)
-```
+#### 🗺️ El Recorrido Real del Comprador (*Customer Journey*):
+1. **Día 1 (Atracción):** Clic en Anuncio de Google Ads ➔ El usuario descubre la marca pero no compra de inmediato.
+2. **Día 3 (Consideración):** Impacto de Retargeting en Instagram ➔ Lee testimonios y casos de éxito.
+3. **Día 5 (Decisión y Cierre):** Búsqueda directa u orgánica en Google ➔ Completa el formulario en tu sitio web (*¡Conversión!*).
 
 En este escenario:
 * Meta dirá: *"Fue gracias a mi anuncio"*.

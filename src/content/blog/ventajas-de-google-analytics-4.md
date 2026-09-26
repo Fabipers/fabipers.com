@@ -22,13 +22,11 @@ En esta guía te comparto desde mi experiencia técnica **cómo está estructura
 
 En mis auditorías suelo encontrar cuentas que cometen el error de querer usar GA4 como si fuera Universal Analytics. Comprender su estructura basada en eventos es el primer paso para no perder información crítica.
 
-```
-Estructura de Datos en GA4:
-[ EVENTO ] ──────────► Nombre de la acción (ej. `generate_lead`)
-   ├── Parámetro 1 ──► `lead_type: 'formulario_cotizacion'`
-   ├── Parámetro 2 ──► `service_name: 'gestion_google_ads'`
-   └── Parámetro 3 ──► `value: 500` (USD)
-```
+#### 📌 Estructura Jerárquica de un Evento en GA4:
+* **🎯 Evento Principal:** Nombre de la acción realizada (ejemplo: `generate_lead` o `purchase`).
+  * 🔹 **Parámetro 1:** Tipo de lead (`lead_type: 'formulario_cotizacion'`).
+  * 🔹 **Parámetro 2:** Servicio cotizado (`service_name: 'gestion_google_ads'`).
+  * 🔹 **Parámetro 3:** Valor estimado (`value: 500 USD`).
 
 ---
 

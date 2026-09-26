@@ -88,12 +88,10 @@ Cuando los enlaces de tus anuncios no tienen etiquetas UTM bien estructuradas, G
 
 La solución técnica definitiva para acercar los números a la realidad y tener control de tus datos es implementar **Server-Side Tracking con Google Tag Manager (sGTM)** combinado con la **API de Conversiones de Meta (CAPI)** y **Consent Mode v2**.
 
-```
-Arquitectura de Medición Recomendada:
-Navegador Web ───────► Contenedor GTM Server-Side ───────► Meta CAPI (API Servidor)
-                              │
-                              └────────────────────────► Google Analytics 4 (GA4)
-```
+#### ⚡ Flujo de Atribución Server-Side:
+1. **Paso 1 (Navegador):** El usuario interactúa en la web y envía un único stream de eventos al contenedor de servidor.
+2. **Paso 2 (Servidor sGTM):** El servidor procesa, limpia y encripta los datos en un entorno seguro bajo tu dominio.
+3. **Paso 3 (Distribución Directa):** Envía la señal simultánea a **Meta CAPI** y a **Google Analytics 4 (GA4)** sin depender de cookies de terceros.
 
 ### Los 4 Pasos Técnicos de Mi Implementación:
 
