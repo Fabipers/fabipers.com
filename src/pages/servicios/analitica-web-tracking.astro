@@ -35,6 +35,14 @@ const description = "Auditoría e implementación de Google Analytics 4, GTM y S
             "@type": "Answer",
             "text": "Es un modelo donde las etiquetas de tu web envían datos a un servidor intermedio propio, y este servidor los envía de forma directa y segura a Meta o Google. Esto mejora la velocidad de carga de tu web y la precisión del tracking."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué es obligatorio implementar Google Consent Mode v2 en 2027?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Consent Mode v2 es indispensable para que las etiquetas publicitarias ajusten su comportamiento según los permisos del usuario y Google pueda modelar conversiones anónimas con IA sin perder audiencias de remarketing."
+          }
         }
       ]
     }
@@ -141,17 +149,22 @@ const description = "Auditoría e implementación de Google Analytics 4, GTM y S
       <div class="faq-wrap card">
         <div class="faq-item">
           <h4>¿Por qué las conversiones que reporta Facebook no cuadran con mis ventas?</h4>
-          <p>Las restricciones de cookies en navegadores modernos y las protecciones de privacidad (como iOS 14.5+) bloquean el seguimiento tradicional de píxeles en el navegador. La solución es configurar el envío Server-Side para tener concordancia exacta.</p>
+          <p>Las restricciones de cookies en navegadores modernos y las protecciones de privacidad (como iOS 14.5+) bloquean el seguimiento tradicional de píxeles en el navegador. Conoce las causas y soluciones en nuestro análisis sobre <a href="/discrepancia-datos-ga4-facebook-ads" style="text-decoration: underline; font-weight: 700; color: inherit;">por qué las conversiones de GA4 no coinciden con Facebook Ads</a>.</p>
         </div>
 
         <div class="faq-item">
           <h4>¿Cuál es la diferencia entre Google Tag Manager y Google Analytics 4?</h4>
-          <p>Google Analytics 4 (GA4) es la herramienta de analítica donde se almacenan y analizan los informes de datos. Google Tag Manager (GTM) es el gestor que facilita la instalación y envío de esos datos a GA4 y otras plataformas de anuncios.</p>
+          <p>Google Analytics 4 (GA4) es la herramienta de analítica donde se almacenan y analizan los informes de datos. Google Tag Manager (GTM) es el gestor que facilita la instalación y envío de esos datos a GA4 y otras plataformas de anuncios. Descubre <a href="/importancia-medir-gtm-ga4" style="text-decoration: underline; font-weight: 700; color: inherit;">por qué operar sin GTM y GA4 es operar a ciegas</a>.</p>
         </div>
 
         <div class="faq-item">
           <h4>¿Qué es Server-Side Tracking?</h4>
           <p>Es un modelo donde las etiquetas de tu web envían datos a un servidor intermedio propio, y este servidor los envía de forma directa y segura a Meta o Google. Esto mejora la velocidad de carga de tu web y la precisión del tracking.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>¿Por qué es obligatorio implementar Google Consent Mode v2 en 2027?</h4>
+          <p>Google Consent Mode v2 es indispensable para que las etiquetas publicitarias ajusten su comportamiento según los permisos del usuario y Google pueda modelar conversiones anónimas con IA sin perder audiencias de remarketing. Lee los detalles en nuestra <a href="/consent-mode-v2-server-side-tracking-guia-2027" style="text-decoration: underline; font-weight: 700; color: inherit;">guía completa de Consent Mode v2 y Server-Side Tracking</a>.</p>
         </div>
       </div>
     </div>
