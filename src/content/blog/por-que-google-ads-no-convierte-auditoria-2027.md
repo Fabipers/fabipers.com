@@ -80,14 +80,12 @@ Con un volumen tan bajo, una tasa de conversión promedio del 5% requerirá **10
 
 Utiliza este checklist técnico para evaluar tu cuenta o auditar el trabajo de tu agencia:
 
-```
-[ ] 1. MEDICIÓN: ¿Las conversiones principales son transacciones reales (leads, WhatsApp, compras) y no visitas a páginas?
-[ ] 2. TÉRMINOS NEGATIVOS: ¿Hay una lista de exclusión activa con términos informacionales ('gratis', 'empleo', etc.)?
-[ ] 3. SEGMENTACIÓN GEOGRÁFICA: ¿Está configurado en "Presencia en esta ubicación" y no en "Presencia o Interés"?
-[ ] 4. ESTRUCTURA: ¿Cada grupo de anuncios tiene palabras clave estrechamente relacionadas con su texto publicitario?
-[ ] 5. LANDING PAGE: ¿La página carga en menos de 3 segundos en móviles y tiene un botón de WhatsApp / Formulario visible?
-[ ] 6. SMART BIDDING: ¿Tienes activadas las conversiones mejoradas (Enhanced Conversions) y Consent Mode v2?
-```
+- [ ] **1. Medición de Valor Real:** ¿Tus conversiones principales son transacciones reales (leads calificados, llamadas, clics a WhatsApp, compras) y no simples visitas a páginas?
+- [ ] **2. Lista de Términos Negativos:** ¿Tienes una lista de exclusión activa a nivel de cuenta bloqueando términos informacionales (*"gratis"*, *"empleo"*, *"pdf"*, *"cursos"*)?
+- [ ] **3. Segmentación Geográfica Estricta:** ¿La ubicación está configurada en *"Presencia en esta ubicación"* en lugar de *"Presencia o interés"* (que atrae clics de otros países)?
+- [ ] **4. Relevancia y Estructura:** ¿Cada grupo de anuncios tiene palabras clave estrechamente alineadas con los titulares y descripciones del anuncio (*Nivel de Calidad > 7/10*)?
+- [ ] **5. Fricción en Landing Page:** ¿La página de aterrizaje carga en menos de 2.8 segundos en móviles, tiene propuesta de valor clara y botón de contacto inmediato?
+- [ ] **6. Atribución y Smart Bidding:** ¿Tienes configuradas las Conversiones Mejoradas (*Enhanced Conversions*), Consent Mode v2 y GA4 correctamente enlazado?
 
 ---
 
