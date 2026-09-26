@@ -383,6 +383,7 @@ const description = "Contrata a un especialista certificado como Google Partner.
   <section class="section mid-cta-section">
     <div class="container">
       <div class="cta-banner-brutalist">
+        <span class="cta-tag">⚡ AUDITORÍA & PROYECCIÓN</span>
         <h2>¿Quieres saber qué potencial de ventas tiene tu sector en Google Ads?</h2>
         <p>Analicemos juntos los costos por clic, palabras clave de alta intención y competencia en Colombia o Miami.</p>
         <div class="cta-banner-actions">
@@ -472,6 +473,7 @@ const description = "Contrata a un especialista certificado como Google Partner.
   <section class="section detail-cta-section">
     <div class="container">
       <div class="cta-banner-brutalist">
+        <span class="cta-tag">⚡ COMIENZA HOY MISMO</span>
         <h2>¿Listo para dejar de quemar presupuesto y empezar a captar clientes?</h2>
         <p>Hablemos hoy para analizar tu mercado objetivo y estructurar una estrategia de Google Ads con retorno de inversión medible.</p>
         <div class="cta-banner-actions">
@@ -990,30 +992,32 @@ const description = "Contrata a un especialista certificado como Google Partner.
     padding-left: 1.5rem;
   }
 
-  /* CTAs Brutalistas */
+  /* CTAs Neo-Brutalistas (Fondo Amarillo Vibrante / Alto Contraste) */
   .cta-banner-brutalist {
-    background-color: var(--text-primary);
-    color: var(--bg-primary);
-    border: 3px solid var(--border-color);
-    padding: 4rem 2rem;
+    background-color: var(--accent-secondary);
+    color: var(--text-primary);
+    border: 4px solid var(--border-color);
+    padding: 3.5rem 2rem;
     text-align: center;
-    box-shadow: 6px 6px 0px var(--border-color);
+    box-shadow: 8px 8px 0px var(--border-color);
+    position: relative;
   }
 
   .cta-banner-brutalist h2 {
-    color: #ffffff;
+    color: var(--text-primary);
     font-size: clamp(1.8rem, 3.5vw, 2.4rem);
     font-weight: 900;
     margin-bottom: 1rem;
     line-height: 1.2;
+    letter-spacing: -0.02em;
   }
 
   .cta-banner-brutalist p {
-    color: var(--bg-tertiary);
+    color: #18181b;
     max-width: 650px;
-    margin: 0 auto 2.5rem auto;
-    font-size: 1.05rem;
-    font-weight: 500;
+    margin: 0 auto 2.2rem auto;
+    font-size: 1.1rem;
+    font-weight: 600;
     line-height: 1.6;
   }
 
@@ -1021,18 +1025,38 @@ const description = "Contrata a un especialista certificado como Google Partner.
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.2rem;
   }
 
   .cta-banner-brutalist .btn-primary {
-    background-color: var(--accent-primary);
-    color: #000000;
-    box-shadow: 4px 4px 0px #ffffff;
-    border-color: #ffffff;
+    background-color: var(--text-primary);
+    color: #ffffff;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
   }
 
   .cta-banner-brutalist .btn-primary:hover {
-    background-color: var(--accent-hover);
-    box-shadow: 6px 6px 0px #ffffff;
+    background-color: #18181b;
+    color: var(--accent-secondary);
+    box-shadow: 6px 6px 0px var(--border-color);
+  }
+
+  .cta-banner-brutalist .btn-whatsapp {
+    box-shadow: 4px 4px 0px var(--border-color);
+  }
+
+  .cta-tag {
+    display: inline-block;
+    background-color: var(--text-primary);
+    color: var(--accent-secondary);
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border: 2px solid var(--border-color);
+    box-shadow: 2px 2px 0px var(--border-color);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
   }
 </style>
