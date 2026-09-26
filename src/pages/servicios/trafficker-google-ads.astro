@@ -158,29 +158,37 @@ const description = "Contrata a un especialista certificado como Google Partner.
     </div>
   </section>
 
-  <!-- Barra de Autoridad y Métricas Clave -->
-  <section class="section authority-metrics-bar">
+  <!-- Barra de Autoridad y Métricas Clave (Compacta) -->
+  <section class="authority-metrics-bar">
     <div class="container">
-      <div class="grid grid-4 metrics-grid">
-        <div class="card metric-stat-card text-center">
+      <div class="metrics-compact-grid">
+        <div class="metric-compact-item">
           <span class="metric-number">10+ Años</span>
-          <span class="metric-title">Experiencia Práctica</span>
-          <p class="metric-caption">Especialista dedicado a pauta digital y analítica.</p>
+          <div class="metric-info">
+            <strong class="metric-title">Experiencia Práctica</strong>
+            <span class="metric-caption">Especialista en pauta y analítica</span>
+          </div>
         </div>
-        <div class="card metric-stat-card text-center">
+        <div class="metric-compact-item">
           <span class="metric-number">Google Partner</span>
-          <span class="metric-title">Certificación Oficial</span>
-          <p class="metric-caption">Acreditación directa en Búsqueda y PMax.</p>
+          <div class="metric-info">
+            <strong class="metric-title">Certificación Oficial</strong>
+            <span class="metric-caption">Acreditación Búsqueda & PMax</span>
+          </div>
         </div>
-        <div class="card metric-stat-card text-center">
+        <div class="metric-compact-item">
           <span class="metric-number">3.8x ROAS</span>
-          <span class="metric-title">Retorno Promedio</span>
-          <p class="metric-caption">En campañas optimizadas para conversión real.</p>
+          <div class="metric-info">
+            <strong class="metric-title">Retorno Promedio</strong>
+            <span class="metric-caption">Campañas de conversión real</span>
+          </div>
         </div>
-        <div class="card metric-stat-card text-center">
+        <div class="metric-compact-item">
           <span class="metric-number">100% Tuyo</span>
-          <span class="metric-title">Propiedad de Datos</span>
-          <p class="metric-caption">Cuentas, píxeles e historial siempre a tu nombre.</p>
+          <div class="metric-info">
+            <strong class="metric-title">Propiedad de Datos</strong>
+            <span class="metric-caption">Cuentas siempre a tu nombre</span>
+          </div>
         </div>
       </div>
     </div>
@@ -603,45 +611,65 @@ const description = "Contrata a un especialista certificado como Google Partner.
     font-weight: 600;
   }
 
-  /* Métricas de Autoridad */
+  /* Métricas de Autoridad Compactas */
   .authority-metrics-bar {
     background-color: var(--bg-secondary);
     border-top: 3px solid var(--border-color);
     border-bottom: 3px solid var(--border-color);
-    padding: 3rem 0;
+    padding: 1.25rem 0;
   }
 
-  .metric-stat-card {
-    padding: 2rem 1.5rem;
-    background-color: var(--bg-primary);
+  .metrics-compact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  @media (min-width: 900px) {
+    .metrics-compact-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  .metric-compact-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 4px solid var(--accent-primary);
+    padding-left: 0.9rem;
+    text-align: left;
   }
 
   .metric-number {
     font-family: var(--font-heading);
     font-weight: 900;
-    font-size: 2.2rem;
+    font-size: 1.35rem;
     color: var(--text-primary);
-    display: block;
-    line-height: 1.1;
-    margin-bottom: 0.4rem;
+    line-height: 1.15;
+    margin-bottom: 0.2rem;
+  }
+
+  .metric-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
   }
 
   .metric-title {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    color: var(--accent-primary);
-    display: block;
-    margin-bottom: 0.5rem;
+    color: var(--text-primary);
   }
 
   .metric-caption {
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     color: var(--text-secondary);
+    line-height: 1.3;
     margin: 0;
-    line-height: 1.4;
     font-weight: 500;
   }
 
