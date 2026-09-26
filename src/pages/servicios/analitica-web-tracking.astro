@@ -1,209 +1,633 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import LeadForm from '../../components/LeadForm';
 
-const title = "Analítica Web & Tracking Avanzado | GA4 & GTM Expert";
-const description = "Auditoría e implementación de Google Analytics 4, GTM y Server-Side Tracking. Mide el ROI de tus campañas con datos precisos y sin perder conversiones.";
+const title = "Especialista en Analítica Web & Server-Side Tracking | GA4, GTM & CAPI";
+const description = "Auditoría e implementación técnica de Google Analytics 4, Tag Manager Server-Side, Meta CAPI y Consent Mode v2. Detén la fuga de datos y mide tu ROI real.";
 ---
 
 <Layout title={title} description={description}>
-  <!-- Schema: FAQPage JSON-LD -->
+  <!-- Schema: Service & FAQPage JSON-LD -->
   <script type="application/ld+json" slot="head">
     {
       "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
+      "@graph": [
         {
-          "@type": "Question",
-          "name": "¿Por qué las conversiones que reporta Facebook no cuadran con mis ventas?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Las restricciones de cookies en navegadores modernos y las protecciones de privacidad (como iOS 14.5+) bloquean el seguimiento tradicional de píxeles en el navegador. La solución es configurar el envío Server-Side para tener concordancia exacta."
-          }
+          "@type": "Service",
+          "name": "Servicio de Analítica Web & Server-Side Tracking",
+          "serviceType": "Consultoría de Analítica Digital & Tracking Avanzado",
+          "provider": {
+            "@type": "Person",
+            "name": "Fabián Pérez",
+            "jobTitle": "Consultor Senior en Analítica Web & Trafficker Digital",
+            "url": "https://fabipers.com"
+          },
+          "areaServed": [
+            { "@type": "Country", "name": "Colombia" },
+            { "@type": "Country", "name": "Estados Unidos" }
+          ],
+          "description": "Implementación, auditoría y arquitectura de medición digital avanzada con Google Tag Manager Server-Side, GA4, Meta Conversions API (CAPI), Google Enhanced Conversions y Consent Mode v2."
         },
         {
-          "@type": "Question",
-          "name": "¿Cuál es la diferencia entre Google Tag Manager y Google Analytics 4?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Google Analytics 4 (GA4) es la herramienta de analítica donde se almacenan y analizan los informes de datos. Google Tag Manager (GTM) es el gestor que facilita la instalación y envío de esos datos a GA4 y otras plataformas de anuncios."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué es Server-Side Tracking?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Es un modelo donde las etiquetas de tu web envían datos a un servidor intermedio propio, y este servidor los envía de forma directa y segura a Meta o Google. Esto mejora la velocidad de carga de tu web y la precisión del tracking."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Por qué es obligatorio implementar Google Consent Mode v2 en 2027?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Google Consent Mode v2 es indispensable para que las etiquetas publicitarias ajusten su comportamiento según los permisos del usuario y Google pueda modelar conversiones anónimas con IA sin perder audiencias de remarketing."
-          }
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué es Server-Side Tracking y en qué se diferencia del tracking tradicional?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El tracking tradicional (Client-Side) ejecuta fragmentos de código de JavaScript directamente en el navegador del usuario, donde es vulnerable a bloqueos por parte de navegadores como Safari (ITP), navegadores basados en Chromium con adblockers y las restricciones de privacidad de iOS (ATT). El Server-Side Tracking traslada este proceso a un servidor en la nube gestionado bajo tu propio dominio (First-Party). La web envía los datos a tu servidor y este los transmite de forma encriptada y limpia a Google Analytics 4, Meta o Google Ads, recuperando entre un 30% y 40% de conversiones no registradas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Por qué las ventas reportadas en Facebook Ads nunca coinciden con Google Analytics o con mi banco?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Esta discrepancia ocurre por tres motivos técnicos: modelos de atribución dispares (Meta suele atribuir conversiones por vista y clics a 7 días, mientras GA4 aplica atribución basada en datos de último clic no directo), pérdida de cookies de terceros por bloqueos de navegador, y falta de deduplicación de eventos. Al implementar Server-Side Tracking con Meta CAPI y parámetros ID únicos, se resuelven las discrepancias y se unifica la lectura real del negocio."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Por qué es obligatorio tener Google Consent Mode v2 activo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Google Consent Mode v2 es un protocolo técnico obligatorio para las empresas que utilizan Google Ads y GA4. Permite que las etiquetas ajusten su comportamiento dinámicamente según el consentimiento del usuario sobre cookies publicitarias y analíticas. Si un usuario no acepta cookies, Google utiliza modelado predictivo mediante Inteligencia Artificial para recuperar conversiones anónimas, evitando que tus campañas de Smart Bidding queden ciegas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué son las Conversiones Mejoradas de Google Ads (Enhanced Conversions)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Es una función avanzada que envía a Google datos de clientes de primera parte con hash SHA-256 (como correo electrónico o número telefónico capturados en el formulario o checkout). Google cruza estos datos de manera segura con usuarios que iniciaron sesión en cuentas de Google y vieron tus anuncios, permitiendo atribuir conversiones en múltiples dispositivos que antes se perdían por completo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuánto tiempo toma una implementación completa de GA4 y GTM Server-Side?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Una auditoría e implementación técnica integral suele tomar entre 7 y 15 días laborables, dependiendo de la complejidad del sitio web o tienda online (Shopify, WooCommerce, VTEX o desarrollo a medida). Este plazo incluye el diseño del plan de medición (SDR), el despliegue del DataLayer, la configuración del servidor en la nube, la deduplicación de eventos y un periodo estricto de control de calidad (QA)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿A nombre de quién queda la infraestructura de servidores y datos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A tu nombre al 100%. Toda la arquitectura se monta dentro de tus propias cuentas de Google Tag Manager, Google Cloud o Stape.io y Google Analytics 4. Nunca retengo propiedad de activos ni creo dependencias técnicas ocultas; te entrego documentación completa y acceso de administrador total."
+              }
+            }
+          ]
         }
       ]
     }
   </script>
-  <!-- Hero Section -->
+
+  <!-- Hero Section con Formulario en Parte Superior Derecha -->
   <section class="section service-hero-detail" id="hero">
-    <div class="container srv-detail-grid">
+    <div class="container srv-hero-grid">
+      <!-- Columna Izquierda: Mensaje Comercial y Autoridad -->
       <div class="srv-hero-content">
         <div class="badge-wrapper">
-          <span class="hero-badge rotate-left">⚡ Especialista en Analítica & Tracking</span>
+          <span class="hero-badge rotate-left">⚡ ESPECIALISTA EN ANALÍTICA DIGITAL & SERVER-SIDE TRACKING</span>
         </div>
         <h1 class="hero-title">
-          Auditoría de <span class="highlight-text">Analítica Web</span> y Server-Side Tracking
+          Consultor en <span class="highlight-text">Analítica Web</span> y Server-Side Tracking (GA4 & GTM)
         </h1>
         <p class="hero-subtitle">
-          Lo que no se mide no se puede mejorar. Implemento arquitecturas de medición sólidas mediante Google Tag Manager, Google Analytics 4 y Server-Side Tracking para darle visibilidad real a tu retorno de inversión.
+          Lo que no se mide con exactitud matemática se pierde en conjeturas. Como consultor senior en analítica y tracking, diseño e implemento arquitecturas de medición <strong>Server-Side (GA4, GTM, Meta CAPI y Google Enhanced Conversions)</strong> para blindar tus datos frente a bloqueos de iOS, adblockers y la degradación de cookies.
         </p>
+
+        <!-- Puntos Fuertes en Viñetas Brutalistas -->
+        <div class="hero-bullet-list">
+          <div class="hero-bullet-item">
+            <span class="bullet-icon">🛡️</span>
+            <div>
+              <strong>Tracking Server-Side de Primera Parte:</strong> Envío directo de eventos desde un servidor en la nube bajo tu propio subdominio, recuperando entre el 30% y 40% de conversiones perdidas.
+            </div>
+          </div>
+          <div class="hero-bullet-item">
+            <span class="bullet-icon">📊</span>
+            <div>
+              <strong>Atribución Real y Sin Duplicados en GA4:</strong> Configuración impecable de canales (Paid Search, Paid Social, Orgánico) con exclusión de pasarelas de pago y eventos limpios.
+            </div>
+          </div>
+          <div class="hero-bullet-item">
+            <span class="bullet-icon">⚡</span>
+            <div>
+              <strong>Consent Mode v2 & Enhanced Conversions:</strong> Cumplimiento normativo y modelado de conversiones con IA para entrenar los algoritmos de puja inteligente sin interrupciones.
+            </div>
+          </div>
+        </div>
+
         <div class="hero-actions">
-          <a href="/servicios#cotizador-sec" class="btn btn-primary" id="tracking-cta-quote">
-            ⚡ Cotizar Configuración
+          <a href="#formulario-contacto" class="btn btn-primary" id="tracking-cta-quote-top">
+            ⚡ Cotizar Auditoría / Setup
           </a>
-          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20cotizar%20servicios%20de%20Anal%C3%ADtica%20y%20Tracking" class="btn btn-whatsapp" id="tracking-cta-whatsapp" target="_blank" rel="noopener noreferrer">
-            💬 WhatsApp Directo
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20cotizar%20servicios%20de%20Anal%C3%ADtica%20y%20Server-Side%20Tracking" class="btn btn-whatsapp" id="tracking-cta-whatsapp" target="_blank" rel="noopener noreferrer">
+            💬 WhatsApp (+57 318 287 3558)
+          </a>
+          <a href="#entregables" class="btn btn-secondary" id="tracking-cta-deliverables">
+            Ver Entregables &darr;
           </a>
         </div>
       </div>
 
-      <div class="srv-hero-visual">
-        <div class="visual-stat-card card rotate-right">
-          <span class="stat-badge highlight-box">TRACKING</span>
-          <div class="stat-group">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Precisión de Atribución Server-Side</span>
+      <!-- Columna Derecha: Formulario de Contacto Superior -->
+      <div class="srv-hero-form-col">
+        <div class="google-partner-hero-bar">
+          <div class="gp-bar-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="gp-bar-text">
+            <strong>Arquitectura Server-Side Certificada</strong>
+            <span class="gp-subtle-sep">•</span>
+            <span class="gp-subtle-desc">GA4, GTM SS & Meta CAPI</span>
+          </div>
+        </div>
+
+        <LeadForm 
+          client:load 
+          locationName="Colombia & Miami"
+          formTitle="Cotiza tu Auditoría o Setup de Tracking"
+          formSubtitle="Analizaré tu infraestructura actual de GTM, GA4 o Píxeles para detectar fugas de datos y entregarte un plan en menos de 24h."
+          tagText="⚡ DIAGNÓSTICO EN 24H"
+          sourcePage="landing_servicio_analitica_tracking"
+          defaultService="Analítica Web & Server-Side Tracking (GA4/GTM/CAPI)"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Barra de Autoridad y Métricas Clave (Compacta) -->
+  <section class="authority-metrics-bar">
+    <div class="container">
+      <div class="metrics-compact-grid">
+        <div class="metric-compact-item">
+          <span class="metric-number">10+ Años</span>
+          <div class="metric-info">
+            <strong class="metric-title">Experiencia Práctica</strong>
+            <span class="metric-caption">Medición avanzada y pauta digital</span>
+          </div>
+        </div>
+        <div class="metric-compact-item">
+          <span class="metric-number">+35% Datos</span>
+          <div class="metric-info">
+            <strong class="metric-title">Conversiones Recuperadas</strong>
+            <span class="metric-caption">Server-Side vs píxeles tradicionales</span>
+          </div>
+        </div>
+        <div class="metric-compact-item">
+          <span class="metric-number">100% Fiable</span>
+          <div class="metric-info">
+            <strong class="metric-title">Deduplicación Exacta</strong>
+            <span class="metric-caption">Event Match Quality superior a 8.5/10</span>
+          </div>
+        </div>
+        <div class="metric-compact-item">
+          <span class="metric-number">First-Party</span>
+          <div class="metric-info">
+            <strong class="metric-title">Control Total de Datos</strong>
+            <span class="metric-caption">Infraestructura bajo tu propio subdominio</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Metrics / Key value -->
-  <section class="section metrics-section" id="metrics">
-    <div class="container">
-      <div class="grid grid-3">
-        <div class="card metric-card text-center">
-          <h3>Server-Side Tracking</h3>
-          <p>Envía datos directo desde tu servidor a Meta y Google, mitigando bloqueadores de anuncios e iOS 14+.</p>
-        </div>
-        <div class="card metric-card text-center">
-          <h3>Auditoría de Embudo</h3>
-          <p>Identificación exacta de dónde abandonan tus usuarios el carrito de compras o formulario.</p>
-        </div>
-        <div class="card metric-card text-center">
-          <h3>Dashboards en Tiempo Real</h3>
-          <p>Creación de paneles en Looker Studio para visualizar de forma clara tus ventas, CPA y ROI.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="section process-section" id="proceso">
+  <!-- Problema vs Solución: Por Qué el Tracking Tradicional Está Roto -->
+  <section class="section compare-problem-section" id="problema">
     <div class="container">
       <div class="section-header text-center">
-        <span class="step-subtitle">Mi Metodología</span>
-        <h2>¿Cómo Trabajaremos en Tracking & Analítica?</h2>
+        <span class="step-subtitle">Diagnóstico Crítico</span>
+        <h2>¿Por Qué el 90% de las Empresas Están Tomando Decisiones con Datos Falsos?</h2>
+        <p class="section-lead">
+          En mis auditorías técnicas de analítica encuentro que las empresas gastan miles de dólares en anuncios basándose en reportes contaminados, etiquetas desactualizadas y conversiones que nunca ocurrieron:
+        </p>
       </div>
 
-      <div class="grid grid-4 step-grid">
-        <div class="card step-card">
-          <div class="step-number rotate-left">01</div>
-          <h3>Auditoría</h3>
-          <p>Revisión exhaustiva de tus etiquetas de Google, Tag Manager, píxeles actuales y discrepancias de datos.</p>
+      <div class="grid grid-2 compare-grid">
+        <!-- Tarjeta Problema -->
+        <div class="card problem-brutalist-card">
+          <div class="card-status-badge status-bad">❌ El Tracking Tradicional Roto (Client-Side)</div>
+          <h3>Píxeles Directos en el Navegador</h3>
+          <ul class="problem-list">
+            <li><strong>Bloqueo masivo de iOS y navegadores modernos:</strong> Safari ITP, Brave y extensiones adblockers destruyen las cookies de terceros y silencian las conversiones.</li>
+            <li><strong>Discrepancia abismal entre plataformas:</strong> Meta Ads reporta 60 ventas, Google Ads dice que 45, y tu pasarela de pagos real solo cobró 30.</li>
+            <li><strong>Duplicación de compras por recarga de página:</strong> Si el usuario actualiza la página de "Gracias" (F5), se dispara una segunda compra inflando tus métricas.</li>
+            <li><strong>Código JavaScript pesado que destruye la velocidad web:</strong> Múltiples píxeles de Facebook, Google, TikTok y Hotjar hundiendo tu calificación de Core Web Vitals.</li>
+            <li><strong>Falta de Google Consent Mode v2:</strong> Google bloquea el modelado predictivo y reduce el tamaño de tus listas de remarketing.</li>
+          </ul>
         </div>
 
-        <div class="card step-card">
-          <div class="step-number rotate-right">02</div>
-          <h3>Planificación</h3>
-          <p>Diseño del plan de medición personalizado indicando qué eventos (clicks, leads, compras) registrar.</p>
-        </div>
-
-        <div class="card step-card">
-          <div class="step-number rotate-left">03</div>
-          <h3>Implementación</h3>
-          <p>Instalación mediante GTM y configuración Server-Side a través de Stape.io o Google Cloud.</p>
-        </div>
-
-        <div class="card step-card">
-          <div class="step-number rotate-right">04</div>
-          <h3>Verificación</h3>
-          <p>Pruebas estrictas en tiempo real para verificar que las plataformas de anuncios reportan datos 100% veraces.</p>
+        <!-- Tarjeta Solución -->
+        <div class="card solution-brutalist-card">
+          <div class="card-status-badge status-good">✓ Mi Arquitectura Server-Side (Datos Reales)</div>
+          <h3>Infraestructura Robusta con GTM Server-Side</h3>
+          <ul class="solution-list">
+            <li><strong>Servidor en la Nube de Primera Parte (First-Party):</strong> Alojo tu contenedor en Stape o Google Cloud bajo `ss.tudominio.com`, burlando los bloqueos de adblockers.</li>
+            <li><strong>Deduplicación Criptográfica con `event_id`:</strong> Envío simultáneo por navegador y servidor con identificador único; las plataformas reconocen el evento duplicado y solo cuentan uno.</li>
+            <li><strong>DataLayer Estandarizado y Seguro:</strong> Monitoreo de carritos, compras, leads y clics de WhatsApp respaldado por código limpio en tu sitio web.</li>
+            <li><strong>Google Ads Enhanced Conversions & Meta CAPI:</strong> Encriptación hash de correos y teléfonos para alimentar los algoritmos con máxima precisión de compra.</li>
+            <li><strong>Web Ultrarrápida y Consent Mode v2:</strong> Alivias la carga del navegador enviando un solo paquete de datos a tu servidor propio.</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
+  <!-- Mis 4 Frentes de Especialización en Tracking & Analítica -->
+  <section class="section frameworks-section" id="especialidades">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Soluciones de Ingeniería Digital</span>
+        <h2>Mis 4 Frentes de Especialización en Medición Digital</h2>
+        <p class="section-lead">
+          Diseño e implemento soluciones robustas para que cada centavo invertido en pauta publicitaria tenga un respaldo numérico incuestionable:
+        </p>
+      </div>
+
+      <div class="grid grid-2 framework-grid">
+        <div class="card framework-card">
+          <div class="framework-icon-box">☁️</div>
+          <h3>1. Arquitectura GTM Server-Side (Stape.io & Google Cloud)</h3>
+          <p>
+            Configuración del servidor intermediario que recibe los eventos desde tu sitio web y los distribuye a Meta, Google y otras plataformas sin depender de cookies de terceros.
+          </p>
+          <ul class="framework-bullets">
+            <li>Dominio de primera parte personalizado con certificados SSL dedicados.</li>
+            <li>Filtrado de datos sensibles (PII) antes de enviarlos a las redes publicitarias.</li>
+            <li>Aceleración notable del tiempo de carga web al eliminar scripts invasivos.</li>
+          </ul>
+        </div>
+
+        <div class="card framework-card">
+          <div class="framework-icon-box">📊</div>
+          <h3>2. Auditoría y Configuración Limpia de GA4</h3>
+          <p>
+            Parametrización completa de Google Analytics 4 para el seguimiento exacto de embudos de compra e-commerce, generación de clientes potenciales y eventos personalizados.
+          </p>
+          <ul class="framework-bullets">
+            <li>Eventos de comercio electrónico unificados (`view_item`, `add_to_cart`, `purchase`).</li>
+            <li>Exclusión de pasarelas de pago (Wompi, PayU, Stripe, PSE) de la lista de referencias.</li>
+            <li>Atribución basada en datos (DDA) para evaluar el aporte de cada canal de pauta.</li>
+          </ul>
+        </div>
+
+        <div class="card framework-card">
+          <div class="framework-icon-box">🎯</div>
+          <h3>3. Conversiones Mejoradas de Google Ads & Consent Mode v2</h3>
+          <p>
+            Alimentamos el Smart Bidding de Google Ads con señales avanzadas de primera parte para que los algoritmos de Búsqueda y Performance Max encuentren a compradores reales.
+          </p>
+          <ul class="framework-bullets">
+            <li>Envío seguro de datos hash SHA-256 (email y teléfono normalizados).</li>
+            <li>Configuración de Consent Mode v2 (Advanced Mode) adaptado a banners CMP.</li>
+            <li>Modelado de conversiones anónimas para evitar la pérdida de atribución.</li>
+          </ul>
+        </div>
+
+        <div class="card framework-card">
+          <div class="framework-icon-box">💬</div>
+          <h3>4. Meta Conversions API (CAPI) para Facebook & WhatsApp</h3>
+          <p>
+            Conexión directa entre tu servidor y el endpoint de Meta para maximizar el Event Quality Score y garantizar que las compras y aperturas de WhatsApp se registren al 100%.
+          </p>
+          <ul class="framework-bullets">
+            <li>Deduplicación perfecta entre el Píxel de navegador y la CAPI server-side.</li>
+            <li>Registro de prospectos calificados cuando inician conversaciones de WhatsApp.</li>
+            <li>Puntaje de coincidencia de eventos superior a 8.5/10 en el Administrador de Eventos.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Entregables Concretos de la Implementación -->
+  <section class="section deliverables-section" id="entregables">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Metodología Paso a Paso</span>
+        <h2>¿Qué Incluye el Servicio de Implementación de Tracking?</h2>
+        <p class="section-lead">
+          Entrego una infraestructura técnica completa, verificada y documentada, lista para ser aprovechada por tus campañas publicitarias:
+        </p>
+      </div>
+
+      <div class="grid grid-3 deliverables-grid">
+        <div class="card deliverable-card">
+          <span class="deliv-number">01</span>
+          <h3>Auditoría de Discrepancias</h3>
+          <p>Diagnóstico exhaustivo de las etiquetas actuales, etiquetas huérfanas, eventos duplicados y fuga de ventas en tu analítica.</p>
+          <ul class="deliv-bullets">
+            <li>Revisión de cookies y extensiones de bloqueo.</li>
+            <li>Verificación de estado de GA4 y Píxeles.</li>
+            <li>Reporte de hallazgos y plan correctivo.</li>
+          </ul>
+        </div>
+
+        <div class="card deliverable-card">
+          <span class="deliv-number">02</span>
+          <h3>Plan de Medición (SDR)</h3>
+          <p>Documento de especificación técnica donde se define cada evento, variable, parámetro y trigger que se capturará en tu negocio.</p>
+          <ul class="deliv-bullets">
+            <li>Nomenclatura limpia según estándares de GA4.</li>
+            <li>Definición de valores de conversión y monedas.</li>
+            <li>Parámetros de usuario para Enhanced Conversions.</li>
+          </ul>
+        </div>
+
+        <div class="card deliverable-card">
+          <span class="deliv-number">03</span>
+          <h3>Despliegue de DataLayer</h3>
+          <p>Implementación o corrección del DataLayer en tu plataforma (Shopify, WordPress/WooCommerce, VTEX, Magento o web custom).</p>
+          <ul class="deliv-bullets">
+            <li>Captura de transacciones reales en el checkout.</li>
+            <li>Parámetros de producto (ID, SKU, precio, categoría).</li>
+            <li>Eventos de formulario y clics hacia WhatsApp.</li>
+          </ul>
+        </div>
+
+        <div class="card deliverable-card">
+          <span class="deliv-number">04</span>
+          <h3>Configuración GTM Server-Side</h3>
+          <p>Aprovisionamiento del contenedor de servidor en Stape o Google Cloud, vinculación de subdominio First-Party y certificados SSL.</p>
+          <ul class="deliv-bullets">
+            <li>Creación de clientes GA4 y transformadores.</li>
+            <li>Tags server-side para Meta CAPI y Google Ads.</li>
+            <li>Almacenamiento de cookies seguras `HttpOnly`.</li>
+          </ul>
+        </div>
+
+        <div class="card deliverable-card">
+          <span class="deliv-number">05</span>
+          <h3>Control de Calidad (QA) & Pruebas</h3>
+          <p>Simulación de compras reales y envíos de formularios para comprobar que las plataformas reciben los datos deduplicados sin errores.</p>
+          <ul class="deliv-bullets">
+            <li>Validación en Tag Assistant y DebugView de GA4.</li>
+            <li>Prueba de Event Quality Match en Meta Business.</li>
+            <li>Verificación de alertas de Google Consent Mode.</li>
+          </ul>
+        </div>
+
+        <div class="card deliverable-card">
+          <span class="deliv-number">06</span>
+          <h3>Dashboard en Looker Studio</h3>
+          <p>Construcción de un tablero visual que unifica tus ventas, inversión de pauta, CPA y ROAS en una sola pantalla interactiva.</p>
+          <ul class="deliv-bullets">
+            <li>Datos en tiempo real sin muestreo.</li>
+            <li>Entrega de documentación técnica completa.</li>
+            <li>Sesión de traspaso y explicación de métricas.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 2rem;">
+        <a href="#formulario-contacto" class="btn btn-primary" id="tracking-cta-deliverables-bottom">
+          ⚡ Solicitar Cotización de este Servicio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calificación: Para Quién Es y Para Quién NO Es -->
+  <section class="section qualification-section" id="criterio">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Filtro de Compatibilidad</span>
+        <h2>¿Este Servicio es el Adecuado para Tu Empresa?</h2>
+        <p class="section-lead">
+          La ingeniería de datos y tracking avanzado requiere sitios con tráfico activo e inversión comercial para generar un impacto financiero claro:
+        </p>
+      </div>
+
+      <div class="grid grid-2 qualification-grid">
+        <div class="card qual-card qual-good">
+          <h3 class="qual-title text-success">✓ Sí es para ti si:</h3>
+          <ul class="qual-list">
+            <li><strong>Inviertes activamente en publicidad digital:</strong> Destinas presupuesto en Google Ads, Meta Ads o TikTok y necesitas optimizar el retorno real.</li>
+            <li><strong>Gestionas un E-commerce o negocio de generación de leads:</strong> Tienes ventas online o formularios comerciales y notas discrepancias con tus analíticas.</li>
+            <li><strong>Tienes acceso a la administración técnica de tu web:</strong> Cuentas con credenciales para configurar Tag Manager, dominios (DNS) y analítica.</li>
+            <li><strong>Buscas decisiones basadas en datos objetivos:</strong> Quieres saber con certeza qué canal genera tus ventas y qué anuncio está quemando presupuesto.</li>
+            <li><strong>Deseas una solución definitiva y moderna:</strong> Buscas una arquitectura server-side que soporte los cambios normativos y de privacidad de los próximos años.</li>
+          </ul>
+        </div>
+
+        <div class="card qual-card qual-bad">
+          <h3 class="qual-title text-danger">✗ NO es para ti si:</h3>
+          <ul class="qual-list">
+            <li><strong>Tu sitio web aún no está publicado o no tiene tráfico:</strong> Si no hay usuarios navegando ni comprando, no hay datos para procesar ni optimizar.</li>
+            <li><strong>No inviertes en publicidad digital ni planeas hacerlo:</strong> La mayor ventaja del tracking server-side es alimentar los algoritmos de pauta paga.</li>
+            <li><strong>No tienes acceso a los registros DNS ni al código de tu web:</strong> Se requieren permisos de nivel administrador para configurar el subdominio de servidor.</li>
+            <li><strong>Buscas un plugin gratuito para resolver todo con un clic:</strong> Las soluciones genéricas de plugins no ofrecen deduplicación exacta ni control de servidores.</li>
+            <li><strong>No te interesa entender tus números:</strong> Si solo buscas métricas superficiales sin intención de optimizar costos operativos.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabla Comparativa: Conmigo vs Agencia Tradicional vs Desarrollador Web Generalista -->
+  <section class="section comparison-table-section" id="comparativa">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Comparativa Técnica</span>
+        <h2>¿Por Qué Trabajar Conmigo la Medición de tu Negocio?</h2>
+      </div>
+
+      <div class="comparison-table-wrapper card">
+        <table class="brutalist-table">
+          <thead>
+            <tr>
+              <th>Criterio Técnico</th>
+              <th class="highlight-col">Conmigo (Especialista en Analítica)</th>
+              <th>Agencia Tradicional</th>
+              <th>Desarrollador Web Generalista</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Arquitectura Server-Side (GTM SS)</strong></td>
+              <td class="highlight-col"><strong>Implementación en la nube con subdominio First-Party dedicado</strong></td>
+              <td>Solo instalan plugins estándar de WordPress o Shopify</td>
+              <td>Conocen programación pero no la lógica de analítica publicitaria</td>
+            </tr>
+            <tr>
+              <td><strong>Deduplicación de Eventos Píxel + CAPI</strong></td>
+              <td class="highlight-col"><strong>Deduplicación exacta con `event_id` y `transaction_id`</strong></td>
+              <td>Eventos duplicados que inflan las conversiones en reportes</td>
+              <td>Suelen disparar eventos repetidos por falta de conocimiento en paid media</td>
+            </tr>
+            <tr>
+              <td><strong>Google Consent Mode v2 & Enhanced Conversions</strong></td>
+              <td class="highlight-col"><strong>Configuración avanzada con hash SHA-256 y modelado IA</strong></td>
+              <td>Banner básico de cookies que no interactúa con las etiquetas</td>
+              <td>Instalan librerías visuales sin conectar con Google Ads</td>
+            </tr>
+            <tr>
+              <td><strong>Enfoque Estratégico Publicitario</strong></td>
+              <td class="highlight-col"><strong>Optimizado para alimentar Smart Bidding y ROAS en Ads</strong></td>
+              <td>Solo configuran páginas vistas y métricas de vanidad</td>
+              <td>Configuran eventos sin entender el embudo de ventas</td>
+            </tr>
+            <tr>
+              <td><strong>Propiedad Total y Sin Cajas Negras</strong></td>
+              <td class="highlight-col"><strong>100% de accesos y propiedad en tus propias cuentas</strong></td>
+              <td>Suelen monopolizar el GTM de la agencia para retenerte</td>
+              <td>Archivos de código huérfanos sin documentación</td>
+            </tr>
+            <tr>
+              <td><strong>Soporte y Pruebas Reales (QA)</strong></td>
+              <td class="highlight-col"><strong>Simulación de compras reales en vivo y documentación completa</strong></td>
+              <td>"Ya quedó instalado" sin verificar en los debuggers</td>
+              <td>Pruebas superficiales de consola</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Intermedio (Amarillo Vibrante Neo-Brutalista) -->
+  <section class="section mid-cta-section">
+    <div class="container">
+      <div class="cta-banner-brutalist">
+        <span class="cta-tag">⚡ AUDITORÍA DE TRACKING</span>
+        <h2>¿Sospechas que tus plataformas de anuncios no están midiendo tus ventas reales?</h2>
+        <p>Auditamos tu DataLayer, GTM, Meta CAPI y GA4 para identificar exactamente dónde se están perdiendo tus datos y corregirlo de inmediato.</p>
+        <div class="cta-banner-actions">
+          <a href="#hero" class="btn btn-primary" id="tracking-mid-cta-form">
+            ⚡ Cotizar Diagnóstico Arriba
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20consultarte%20sobre%20mi%20anal%C3%ADtica%20y%20tracking" class="btn btn-whatsapp" id="tracking-mid-cta-whatsapp" target="_blank" rel="noopener noreferrer">
+            💬 Preguntar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recursos del Cluster de Analítica & Tracking (Interlinking de Autoridad) -->
+  <section class="section cluster-resources-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Guías y Recursos Técnicos</span>
+        <h2>Aprende Más Sobre Analítica Web y Medición de Datos</h2>
+        <p class="section-lead">Artículos en profundidad redactados desde mi experiencia práctica como consultor digital para que tomes decisiones informadas:</p>
+      </div>
+
+      <div class="grid grid-3 cluster-grid">
+        <a href="/importancia-medir-gtm-ga4" class="card cluster-card">
+          <span class="cluster-tag">Fundamentos Técnicos</span>
+          <h3>La Importancia de Medir con GTM y GA4 en 2027</h3>
+          <p>Por qué operar campañas sin un DataLayer limpio es regalarle tu dinero a las plataformas de pauta.</p>
+          <span class="read-more-link">Leer Artículo &rarr;</span>
+        </a>
+
+        <a href="/consent-mode-v2-server-side-tracking-guia-2027" class="card cluster-card">
+          <span class="cluster-tag">Privacidad & IA</span>
+          <h3>Consent Mode v2 y Server-Side Tracking</h3>
+          <p>Cómo cumplir las normas de privacidad sin perder el modelado de conversiones ni las audiencias en Google.</p>
+          <span class="read-more-link">Ver Guía Técnica &rarr;</span>
+        </a>
+
+        <a href="/discrepancia-datos-ga4-facebook-ads" class="card cluster-card">
+          <span class="cluster-tag">Atribución de Ventas</span>
+          <h3>Discrepancia de Datos: GA4 vs Facebook Ads</h3>
+          <p>Causas exactas por las que las conversiones no coinciden y la solución definitiva mediante CAPI y deduplicación.</p>
+          <span class="read-more-link">Conocer Solución &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Schema FAQPage) -->
   <section class="section faq-section" id="faq">
     <div class="container">
       <div class="section-header text-center">
-        <span class="step-subtitle">Dudas Comunes</span>
-        <h2>Preguntas Frecuentes sobre Tracking</h2>
+        <span class="step-subtitle">Respuestas Técnicas</span>
+        <h2>Preguntas Frecuentes sobre Mi Servicio de Analítica & Tracking</h2>
       </div>
 
       <div class="faq-wrap card">
         <div class="faq-item">
-          <h4>¿Por qué las conversiones que reporta Facebook no cuadran con mis ventas?</h4>
-          <p>Las restricciones de cookies en navegadores modernos y las protecciones de privacidad (como iOS 14.5+) bloquean el seguimiento tradicional de píxeles en el navegador. Conoce las causas y soluciones en nuestro análisis sobre <a href="/discrepancia-datos-ga4-facebook-ads" style="text-decoration: underline; font-weight: 700; color: inherit;">por qué las conversiones de GA4 no coinciden con Facebook Ads</a>.</p>
+          <h4>¿Qué es Server-Side Tracking y por qué lo necesita mi negocio?</h4>
+          <p>El seguimiento tradicional en navegador pierde entre un 30% y un 40% de conversiones por bloqueadores de anuncios y restricciones de privacidad de iOS y navegadores como Safari. El Server-Side Tracking envía los datos directamente desde tu propio servidor en la nube (First-Party), garantizando que las ventas reales lleguen intactas a Google Analytics, Meta y Google Ads.</p>
         </div>
 
         <div class="faq-item">
-          <h4>¿Cuál es la diferencia entre Google Tag Manager y Google Analytics 4?</h4>
-          <p>Google Analytics 4 (GA4) es la herramienta de analítica donde se almacenan y analizan los informes de datos. Google Tag Manager (GTM) es el gestor que facilita la instalación y envío de esos datos a GA4 y otras plataformas de anuncios. Descubre <a href="/importancia-medir-gtm-ga4" style="text-decoration: underline; font-weight: 700; color: inherit;">por qué operar sin GTM y GA4 es operar a ciegas</a>.</p>
+          <h4>¿Por qué las ventas reportadas en Meta no coinciden con las de GA4?</h4>
+          <p>Ocurre por diferencias en los modelos de atribución (Meta suele atribuir compras por vista y clics de 7 días, mientras GA4 usa atribución multicanal de último clic no directo) y por la falta de deduplicación de eventos. Con Server-Side Tracking y Meta CAPI unificamos la medición y eliminamos la distorsión de datos.</p>
         </div>
 
         <div class="faq-item">
-          <h4>¿Qué es Server-Side Tracking?</h4>
-          <p>Es un modelo donde las etiquetas de tu web envían datos a un servidor intermedio propio, y este servidor los envía de forma directa y segura a Meta o Google. Esto mejora la velocidad de carga de tu web y la precisión del tracking.</p>
+          <h4>¿Qué es Google Consent Mode v2 y por qué es obligatorio?</h4>
+          <p>Es un estándar técnico obligatorio que permite a las etiquetas publicitarias ajustar su funcionamiento según el consentimiento del usuario sobre cookies. Si un usuario rechaza cookies, Google emplea modelado predictivo con IA para estimar las conversiones anónimas, evitando que tus campañas de Smart Bidding pierdan su entrenamiento.</p>
         </div>
 
         <div class="faq-item">
-          <h4>¿Por qué es obligatorio implementar Google Consent Mode v2 en 2027?</h4>
-          <p>Google Consent Mode v2 es indispensable para que las etiquetas publicitarias ajusten su comportamiento según los permisos del usuario y Google pueda modelar conversiones anónimas con IA sin perder audiencias de remarketing. Lee los detalles en nuestra <a href="/consent-mode-v2-server-side-tracking-guia-2027" style="text-decoration: underline; font-weight: 700; color: inherit;">guía completa de Consent Mode v2 y Server-Side Tracking</a>.</p>
+          <h4>¿Cómo ayudan las Conversiones Mejoradas (Enhanced Conversions) a mis campañas?</h4>
+          <p>Envían datos hash de primera parte (como email o teléfono capturado en el checkout) de manera encriptada a Google Ads. Esto permite atribuir conversiones en múltiples dispositivos (cross-device) y alimentar los algoritmos de puja inteligente con clientes de mayor valor comercial.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>¿En qué plataformas web puedes implementar este tracking?</h4>
+          <p>Implemento arquitecturas de medición en Shopify, WordPress/WooCommerce, VTEX, Magento, Webflow, Astro, Next.js y desarrollos a medida basados en React o Vue con DataLayer personalizado.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>¿A nombre de quién queda la propiedad de las cuentas y servidores?</h4>
+          <p>A tu nombre al 100%. Toda la infraestructura se monta dentro de tus propias cuentas de Google Tag Manager, Google Cloud o Stape.io y Google Analytics 4. Recibes accesos de administrador total y documentación paso a paso para tu equipo.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bottom CTA -->
+  <!-- Bottom Closing CTA (Amarillo Vibrante Neo-Brutalista) -->
   <section class="section detail-cta-section">
     <div class="container">
       <div class="cta-banner-brutalist">
-        <h2>¿Quieres visibilidad absoluta de tus métricas comerciales?</h2>
-        <p>Hablemos por WhatsApp y diseñemos un plan de medición exacto para tu sitio web.</p>
-        <a href="/servicios#cotizador-sec" class="btn btn-primary" id="tracking-bottom-cta">
-          ⚡ Cotizar mi tracking
-        </a>
+        <span class="cta-tag">⚡ BLINDA TUS DATOS HOY</span>
+        <h2>¿Listo para tomar decisiones de negocio con datos 100% confiables?</h2>
+        <p>Deja de operar a ciegas. Implementemos una arquitectura de medición Server-Side profesional que alimente a tus algoritmos con precisión quirúrgica.</p>
+        <div class="cta-banner-actions">
+          <a href="#hero" class="btn btn-primary" id="tracking-bottom-cta">
+            ⚡ Solicitar Auditoría / Setup Arriba
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20cotizar%20servicios%20de%20Anal%C3%ADtica%20y%20Server-Side%20Tracking" class="btn btn-whatsapp" id="tracking-bottom-whatsapp" target="_blank" rel="noopener noreferrer">
+            💬 Escríbeme por WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
+  /* Hero 2 Columnas */
   .service-hero-detail {
-    padding: 8rem 0 5rem 0;
+    padding: 7rem 0 4rem 0;
   }
 
-  .srv-detail-grid {
+  .srv-hero-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
-    align-items: center;
+    gap: 3.5rem;
+    align-items: start;
   }
 
   @media (min-width: 992px) {
-    .srv-detail-grid {
-      grid-template-columns: 1.25fr 0.75fr;
+    .srv-hero-grid {
+      grid-template-columns: 1.15fr 0.85fr;
     }
   }
 
   .badge-wrapper {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
   }
 
   .hero-badge {
@@ -211,40 +635,61 @@ const description = "Auditoría e implementación de Google Analytics 4, GTM y S
     color: var(--accent-primary);
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding: 0.4rem 1rem;
+    padding: 0.4rem 0.9rem;
     border: 2px solid var(--border-color);
     display: inline-block;
   }
 
   .hero-title {
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-size: clamp(2rem, 4vw, 3.4rem);
     letter-spacing: -0.04em;
-    line-height: 1.05;
-    margin-bottom: 1.8rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
     font-weight: 900;
   }
 
   .highlight-text {
     background-color: var(--accent-primary);
     color: #000000;
-    padding: 0 0.5rem;
+    padding: 0 0.4rem;
     border: 3px solid var(--border-color);
     box-shadow: 3px 3px 0px var(--border-color);
     display: inline-block;
     transform: rotate(-0.5deg);
-    margin-top: 0.2rem;
   }
 
   .hero-subtitle {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: 2.8rem;
-    max-width: 650px;
+    margin-bottom: 2rem;
     font-weight: 500;
     line-height: 1.6;
+  }
+
+  /* Viñetas del Hero */
+  .hero-bullet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .hero-bullet-item {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .bullet-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
   }
 
   .hero-actions {
@@ -253,124 +698,447 @@ const description = "Auditoría e implementación de Google Analytics 4, GTM y S
     gap: 1rem;
   }
 
-  .hero-actions .btn {
-    border-width: 3px;
-  }
-
-  .srv-hero-visual {
+  /* Barra de Google Tag Manager sobre el formulario */
+  .google-partner-hero-bar {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: #ffffff;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    padding: 0.7rem 1.2rem;
+    margin-bottom: 1.2rem;
   }
 
-  .visual-stat-card {
-    width: 260px;
-    height: 260px;
+  .gp-bar-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg-primary);
-    position: relative;
-    padding: 2rem;
   }
 
-  .stat-badge {
-    position: absolute;
-    top: -15px;
-    left: 20px;
-    font-size: 0.8rem;
-    padding: 0.2rem 0.6rem;
-    transform: rotate(-3deg);
+  .gp-bar-text {
+    font-size: 0.85rem;
+    color: var(--text-primary);
   }
 
-  .stat-group {
-    text-align: center;
+  .gp-subtle-sep {
+    margin: 0 0.4rem;
+    color: #a1a1aa;
   }
 
-  .stat-number {
+  .gp-subtle-desc {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* Métricas de Autoridad Compactas */
+  .authority-metrics-bar {
+    background-color: var(--bg-secondary);
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+    padding: 1.25rem 0;
+  }
+
+  .metrics-compact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  @media (min-width: 900px) {
+    .metrics-compact-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  .metric-compact-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 4px solid var(--accent-primary);
+    padding-left: 0.9rem;
+    text-align: left;
+  }
+
+  .metric-number {
     font-family: var(--font-heading);
     font-weight: 900;
-    font-size: 3.5rem;
+    font-size: 1.35rem;
     color: var(--text-primary);
-    display: block;
-    line-height: 1;
-    margin-bottom: 0.5rem;
+    line-height: 1.15;
+    margin-bottom: 0.2rem;
   }
 
-  .stat-label {
+  .metric-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .metric-title {
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: 0.85rem;
     text-transform: uppercase;
-    color: var(--text-muted);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
+    color: var(--text-primary);
   }
 
-  .metrics-section {
-    background-color: var(--bg-secondary);
-    border-top: 3px solid var(--border-color);
-    border-bottom: 3px solid var(--border-color);
+  .metric-caption {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.3;
+    margin: 0;
+    font-weight: 500;
   }
 
-  .metric-card {
+  /* Problema vs Solución */
+  .section-lead {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0.8rem auto 0 auto;
+    font-weight: 500;
+  }
+
+  .compare-grid {
+    margin-top: 3.5rem;
+  }
+
+  .problem-brutalist-card {
+    background-color: #fef2f2;
+    border-color: #ef4444;
+    padding: 2.5rem;
+  }
+
+  .solution-brutalist-card {
+    background-color: #f0fdf4;
+    border-color: #16a34a;
+    padding: 2.5rem;
+  }
+
+  .card-status-badge {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border: 2px solid;
+    margin-bottom: 1.2rem;
+  }
+
+  .status-bad {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border-color: #ef4444;
+  }
+
+  .status-good {
+    background-color: #dcfce7;
+    color: #15803d;
+    border-color: #16a34a;
+  }
+
+  .problem-brutalist-card h3, .solution-brutalist-card h3 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+  }
+
+  .problem-list, .solution-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .problem-list li::before {
+    content: "✗ ";
+    color: #ef4444;
+    font-weight: 900;
+  }
+
+  .solution-list li::before {
+    content: "✓ ";
+    color: #16a34a;
+    font-weight: 900;
+  }
+
+  /* Frameworks / Frentes */
+  .framework-grid {
+    margin-top: 3.5rem;
+  }
+
+  .framework-card {
     padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
   }
 
-  .metric-card h3 {
+  .framework-icon-box {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .framework-card h3 {
     font-size: 1.3rem;
     font-weight: 900;
     margin-bottom: 0.8rem;
   }
 
-  .metric-card p {
+  .framework-card p {
+    font-size: 0.95rem;
     color: var(--text-secondary);
-    font-weight: 500;
-    font-size: 0.9rem;
     line-height: 1.6;
+    margin-bottom: 1.2rem;
   }
 
-  .process-section {
-    padding-bottom: 5rem;
+  .framework-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border-top: 1px dashed var(--border-color);
+    padding-top: 1rem;
+    margin-top: auto;
   }
 
-  .step-grid {
-    margin-top: 4rem;
+  .framework-bullets li::before {
+    content: "• ";
+    color: var(--accent-primary);
+    font-weight: 900;
   }
 
-  .step-card {
+  /* Entregables */
+  .deliverables-section {
+    background-color: var(--bg-secondary);
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+  }
+
+  .deliverables-grid {
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .deliverable-card {
     padding: 2.5rem 2rem;
     position: relative;
-    height: 100%;
+    background-color: var(--bg-primary);
   }
 
-  .step-number {
+  .deliv-number {
     position: absolute;
     top: -15px;
     left: 20px;
     font-family: var(--font-heading);
     font-weight: 900;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     background-color: var(--accent-primary);
     color: #000000;
     border: 2px solid var(--border-color);
     box-shadow: 2px 2px 0px var(--border-color);
-    padding: 0.1rem 0.5rem;
+    padding: 0.1rem 0.6rem;
   }
 
-  .step-card h3 {
+  .deliverable-card h3 {
     font-size: 1.25rem;
     font-weight: 900;
-    margin-bottom: 0.8rem;
     margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
   }
 
-  .step-card p {
-    color: var(--text-secondary);
-    font-weight: 500;
+  .deliverable-card p {
     font-size: 0.9rem;
+    color: var(--text-secondary);
     line-height: 1.6;
+    margin-bottom: 1rem;
+    font-weight: 500;
   }
 
-  /* FAQ Styles */
+  .deliv-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-top: 1px dashed var(--border-color);
+    padding-top: 0.8rem;
+  }
+
+  .deliv-bullets li::before {
+    content: "✓ ";
+    color: #16a34a;
+    font-weight: 800;
+  }
+
+  /* Calificación */
+  .qualification-grid {
+    margin-top: 3.5rem;
+  }
+
+  .qual-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .qual-title {
+    font-size: 1.35rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+  }
+
+  .text-success {
+    color: #15803d;
+  }
+
+  .text-danger {
+    color: #b91c1c;
+  }
+
+  .qual-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .qual-good .qual-list li::before {
+    content: "✓ ";
+    color: #15803d;
+    font-weight: 900;
+  }
+
+  .qual-bad .qual-list li::before {
+    content: "✗ ";
+    color: #b91c1c;
+    font-weight: 900;
+  }
+
+  /* Tabla Comparativa */
+  .comparison-table-section {
+    background-color: var(--bg-secondary);
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+  }
+
+  .comparison-table-wrapper {
+    margin-top: 3.5rem;
+    overflow-x: auto;
+    padding: 0;
+  }
+
+  .brutalist-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .brutalist-table th, .brutalist-table td {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
+  }
+
+  .brutalist-table th:last-child, .brutalist-table td:last-child {
+    border-right: none;
+  }
+
+  .brutalist-table thead tr {
+    background-color: var(--text-primary);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-weight: 800;
+  }
+
+  .brutalist-table thead th.highlight-col {
+    background-color: var(--accent-primary);
+    color: #000000;
+  }
+
+  .brutalist-table td.highlight-col {
+    background-color: #fefce8;
+    color: #000000;
+  }
+
+  /* Cluster Resources */
+  .cluster-resources-section {
+    background-color: var(--bg-primary);
+  }
+
+  .cluster-grid {
+    margin-top: 3rem;
+  }
+
+  .cluster-card {
+    padding: 2.2rem 1.8rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .cluster-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 6px 0px var(--border-color);
+  }
+
+  .cluster-tag {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    background-color: var(--text-primary);
+    color: var(--accent-primary);
+    padding: 0.2rem 0.6rem;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .cluster-card h3 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .cluster-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .read-more-link {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: var(--accent-primary);
+    text-decoration: underline;
+  }
+
+  /* FAQ */
   .faq-section {
     background-color: var(--bg-secondary);
     border-top: 3px solid var(--border-color);
@@ -378,13 +1146,13 @@ const description = "Auditoría e implementación de Google Analytics 4, GTM y S
   }
 
   .faq-wrap {
-    max-width: 800px;
+    max-width: 850px;
     margin: 3rem auto 0 auto;
     padding: 3rem;
   }
 
   .faq-item {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.2rem;
   }
 
   .faq-item:last-child {
@@ -392,9 +1160,9 @@ const description = "Auditoría e implementación de Google Analytics 4, GTM y S
   }
 
   .faq-item h4 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 900;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
     position: relative;
     padding-left: 1.5rem;
   }
@@ -404,7 +1172,6 @@ const description = "Auditoría e implementación de Google Analytics 4, GTM y S
     position: absolute;
     left: 0;
     color: var(--accent-primary);
-    font-weight: 900;
   }
 
   .faq-item p {
@@ -415,40 +1182,71 @@ const description = "Auditoría e implementación de Google Analytics 4, GTM y S
     padding-left: 1.5rem;
   }
 
-  /* CTA banner */
+  /* CTAs Neo-Brutalistas (Fondo Amarillo Vibrante / Alto Contraste) */
   .cta-banner-brutalist {
-    background-color: var(--text-primary);
-    color: var(--bg-primary);
-    border: 3px solid var(--border-color);
-    padding: 4rem 3rem;
+    background-color: var(--accent-secondary);
+    color: var(--text-primary);
+    border: 4px solid var(--border-color);
+    padding: 3.5rem 2rem;
     text-align: center;
-    box-shadow: 6px 6px 0px var(--border-color);
+    box-shadow: 8px 8px 0px var(--border-color);
+    position: relative;
   }
 
   .cta-banner-brutalist h2 {
-    color: #ffffff;
-    font-size: 2rem;
+    color: var(--text-primary);
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
     font-weight: 900;
     margin-bottom: 1rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
   }
 
   .cta-banner-brutalist p {
-    color: var(--bg-tertiary);
-    max-width: 600px;
-    margin: 0 auto 2.5rem auto;
+    color: #18181b;
+    max-width: 650px;
+    margin: 0 auto 2.2rem auto;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  .cta-banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
   }
 
   .cta-banner-brutalist .btn-primary {
-    background-color: var(--accent-primary);
-    color: #000000;
-    box-shadow: 4px 4px 0px #ffffff;
-    border-color: #ffffff;
+    background-color: var(--text-primary);
+    color: #ffffff;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
   }
 
   .cta-banner-brutalist .btn-primary:hover {
-    background-color: var(--accent-hover);
-    box-shadow: 6px 6px 0px #ffffff;
+    background-color: #18181b;
+    color: var(--accent-secondary);
+    box-shadow: 6px 6px 0px var(--border-color);
+  }
+
+  .cta-banner-brutalist .btn-whatsapp {
+    box-shadow: 4px 4px 0px var(--border-color);
+  }
+
+  .cta-tag {
+    display: inline-block;
+    background-color: var(--text-primary);
+    color: var(--accent-secondary);
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border: 2px solid var(--border-color);
+    box-shadow: 2px 2px 0px var(--border-color);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
   }
 </style>
