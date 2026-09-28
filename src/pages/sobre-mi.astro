@@ -1,133 +1,375 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LeadForm from '../components/LeadForm';
 
 // SEO Title & Description
-const title = "Sobre Mí | Fabián Pérez - Full Stack Marketer & Ad Trafficker";
-const description = "Conoce a Fabián Pérez, Full Stack Marketer y Trafficker Digital. Años de experiencia impulsando negocios con SEO, SEM y analítica avanzada.";
+const title = "Sobre Mí | Fabián Pérez - Trafficker Digital & Google Partner (2027)";
+const description = "Conoce a Fabián Pérez, especialista senior en Paid Media, Google Partner certificado y consultor de Server-Side Tracking & CRO con más de 10 años de experiencia.";
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} image="/images/og-default.png">
+  <!-- Schema: Person & ProfilePage JSON-LD -->
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfilePage",
+          "@id": "https://fabipers.com/sobre-mi",
+          "url": "https://fabipers.com/sobre-mi",
+          "name": "Sobre Fabián Pérez | Trafficker Digital & Consultor de Growth",
+          "mainEntity": {
+            "@type": "Person",
+            "name": "Fabián Pérez",
+            "url": "https://fabipers.com",
+            "jobTitle": "Trafficker Digital Senior & Google Partner",
+            "image": "https://fabipers.com/images/og-default.png",
+            "sameAs": [
+              "https://www.linkedin.com/in/fabian-perez-trafficker",
+              "https://twitter.com/fabipers",
+              "https://instagram.com/fabipers",
+              "https://github.com/Fabipers"
+            ],
+            "knowsAbout": [
+              "Google Ads",
+              "Meta Ads",
+              "LinkedIn Ads B2B",
+              "Google Tag Manager Server-Side",
+              "Google Analytics 4",
+              "Conversion Rate Optimization (CRO)",
+              "Astro Web Architecture"
+            ]
+          }
+        }
+      ]
+    }
+  </script>
+
   <!-- Hero Section -->
-  <section class="section about-hero-section" id="about-hero">
+  <section class="section about-hero-section" id="hero">
     <div class="container hero-grid">
       <div class="hero-content">
         <div class="badge-wrapper">
-          <span class="hero-badge rotate-left">⚡ Conoce mi trayectoria</span>
+          <span class="hero-badge rotate-left">⚡ CONSULTOR SENIOR & GOOGLE PARTNER</span>
         </div>
         <h1 class="hero-title">
-          Full Stack Marketer & <span class="highlight-text">Ad Trafficker</span> Digital
+          Hola, soy <span class="highlight-text">Fabián Pérez</span>: Especialista Senior en Paid Media & Analítica
         </h1>
         <p class="hero-subtitle">
-          Años impulsando el crecimiento de negocios con SEO, SEM, Analítica Avanzada y Funnels de Alta Conversión. Creo estrategias digitales que no solo atraen miradas, sino que facturan.
+          Durante más de 10 años he ayudado a marcas y empresas en <strong>Colombia, Estados Unidos y Latinoamérica</strong> a transformar presupuestos publicitarios en ventas medibles. No creo en "anuncios bonitos" que no convierten; construyo ecosistemas de adquisición de alta rentabilidad técnica mediante <strong>Google Ads, Meta Ads, Server-Side Tracking y CRO</strong>.
         </p>
+
+        <div class="hero-bullet-list">
+          <div class="hero-bullet-item">
+            <span class="bullet-icon">🛡️</span>
+            <div>
+              <strong>Acreditación Google Partner:</strong> Certificación activa en Búsqueda, Performance Max y Analítica Avanzada.
+            </div>
+          </div>
+          <div class="hero-bullet-item">
+            <span class="bullet-icon">💼</span>
+            <div>
+              <strong>Gestión Directa 1 a 1:</strong> Sin intermediarios, ejecutivos de cuenta que no saben de código ni analistas junior.
+            </div>
+          </div>
+          <div class="hero-bullet-item">
+            <span class="bullet-icon">🔒</span>
+            <div>
+              <strong>Propiedad 100% Tuya:</strong> Cuentas, píxeles, dominios y bases de prospectos siempre a nombre de tu empresa.
+            </div>
+          </div>
+        </div>
+
         <div class="hero-actions">
-          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20auditar%20mi%20estrategia%20digital" class="btn btn-primary" id="about-cta-whatsapp" target="_blank" rel="noopener noreferrer">
-            Auditar mi estrategia (WhatsApp)
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20conversar%20sobre%20mi%20estrategia%20digital" class="btn btn-whatsapp" id="about-cta-whatsapp" target="_blank" rel="noopener noreferrer">
+            💬 WhatsApp Directo (+57 318 287 3558)
+          </a>
+          <a href="#formulario-contacto" class="btn btn-primary" id="about-cta-quote">
+            ⚡ Cotizar Estrategia
+          </a>
+          <a href="#historia" class="btn btn-secondary" id="about-cta-story">
+            Mi Trayectoria &darr;
           </a>
         </div>
       </div>
       
-      <div class="hero-visual">
-        <div class="profile-card-brutalist">
-          <div class="profile-halo"></div>
-          <div class="profile-card-content card">
-            <div class="google-partner-chip mb-4">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
-                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
-              </svg>
-              <span>Google Partner Certificado</span>
-            </div>
-            <div class="profile-avatar">FP</div>
-            <h2 class="profile-name">Fabián Pérez</h2>
-            <span class="profile-title highlight-box">Full Stack Marketer</span>
+      <!-- Columna Derecha: Formulario Superior Directo -->
+      <div class="hero-form-col">
+        <div class="google-partner-hero-bar">
+          <div class="gp-bar-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+            </svg>
+          </div>
+          <div class="gp-bar-text">
+            <strong>Fabián Pérez • Consultor Senior</strong>
+            <span class="gp-subtle-sep">•</span>
+            <span class="gp-subtle-desc">Google Partner Oficial</span>
+          </div>
+        </div>
+
+        <LeadForm 
+          client:load 
+          locationName="Colombia & Internacional"
+          formTitle="Hablemos de Tu Proyecto o Empresa"
+          formSubtitle="Analizaré la madurez de tus campañas y te entregaré una propuesta estratégica clara en menos de 24 horas."
+          tagText="⚡ ATENCIÓN PERSONALIZADA"
+          sourcePage="pagina_sobre_mi"
+          defaultService="Auditoría de Cuentas & Optimización CRO"
+        />
+
+        <div class="hero-form-trust">
+          <span>🔒 Acuerdo de Confidencialidad NDA</span>
+          <span>•</span>
+          <span>Sin permanencia forzosa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barra de Autoridad y Métricas Clave (Ribbon Compacto) -->
+  <section class="authority-metrics-bar">
+    <div class="container">
+      <div class="metrics-compact-grid">
+        <div class="metric-compact-item">
+          <span class="metric-number">10+ Años</span>
+          <div class="metric-info">
+            <strong class="metric-title">Experiencia Práctica</strong>
+            <span class="metric-caption">Especialista dedicado a pauta y analítica</span>
+          </div>
+        </div>
+        <div class="metric-compact-item">
+          <span class="metric-number">Google Partner</span>
+          <div class="metric-info">
+            <strong class="metric-title">Acreditación Oficial</strong>
+            <span class="metric-caption">Certificación en Búsqueda y PMax</span>
+          </div>
+        </div>
+        <div class="metric-compact-item">
+          <span class="metric-number">+$1M USD</span>
+          <div class="metric-info">
+            <strong class="metric-title">Presupuesto Gestionado</strong>
+            <span class="metric-caption">En campañas orientadas a conversión real</span>
+          </div>
+        </div>
+        <div class="metric-compact-item">
+          <span class="metric-number">100% Tuyo</span>
+          <div class="metric-info">
+            <strong class="metric-title">Propiedad de Datos</strong>
+            <span class="metric-caption">Cuentas, píxeles e historial a tu nombre</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Technical Stack & Specialties -->
-  <section class="section specialties-section" id="especialidades">
+  <!-- Trayectoria y Contexto Real -->
+  <section class="section story-section" id="historia">
     <div class="container">
       <div class="section-header text-center">
-        <span class="step-subtitle">Mis Pilares Clave</span>
-        <h2>Stack Técnico y Especialidades</h2>
+        <span class="step-subtitle">Mi Trayectoria</span>
+        <h2>¿Por Qué Trabajo Diferente a las Agencias Tradicionales?</h2>
+        <p class="section-lead">
+          Inicié en el marketing digital hace más de una década. A lo largo de este tiempo he visto a cientos de empresas perder miles de dólares por los mismos errores estructurales:
+        </p>
       </div>
 
-      <div class="grid grid-2">
-        <div class="card specialty-card">
-          <div class="specialty-icon">🚀</div>
-          <h3>SEO & Organic Growth</h3>
-          <p class="specialty-tagline">Posicionamiento web de alto rendimiento</p>
-          <p>Estructuro el contenido y optimizo técnicamente tu sitio para posicionarte en los primeros resultados de Google. Menos gasto en publicidad, más tráfico orgánico recurrente y de alta intención de compra.</p>
+      <div class="grid grid-2 story-grid">
+        <div class="card story-card">
+          <span class="story-tag">El Problema de las Agencias</span>
+          <h3>El Modelo Roto de la Delegación Junior</h3>
+          <p>
+            En las agencias convencionales, un director senior te vende la propuesta comercial con entusiasmo. Sin embargo, al día siguiente tu cuenta publicitaria es asignada a un practicante o analista junior que maneja entre 30 y 50 cuentas al mismo tiempo.
+          </p>
+          <p>
+            El resultado es predecible: campañas genéricas montadas con plantillas, cero análisis de negocio, reportes de "impresiones y clics" que no pagan facturas y semanas completas sin que nadie entre a optimizar los términos de búsqueda negativos.
+          </p>
         </div>
 
-        <div class="card specialty-card">
-          <div class="specialty-icon">💵</div>
-          <h3>Paid Media / SEM</h3>
-          <p class="specialty-tagline">Google Ads & Meta Ads enfocado en ROI</p>
-          <p>Estrategia y ejecución avanzada en campañas de tráfico pago. Diseño embudos de venta precisos, segmentación exacta y optimización analítica para que cada centavo invertido genere retorno.</p>
-        </div>
-
-        <div class="card specialty-card">
-          <div class="specialty-icon">📊</div>
-          <h3>Analítica Web Avanzada</h3>
-          <p class="specialty-tagline">Google Analytics 4 & Tag Manager</p>
-          <p>Lo que no se mide no se puede mejorar. Configuro modelos de atribución y medición de conversiones estrictos para saber con certeza de dónde vienen tus clientes y cómo optimizar la conversión.</p>
-        </div>
-
-        <div class="card specialty-card">
-          <div class="specialty-icon">💻</div>
-          <h3>Full Stack Development</h3>
-          <p class="specialty-tagline">Landings ultra rápidas con React y Astro</p>
-          <p>Desarrollo páginas web y landings de conversión optimizadas al milisegundo. Menor tiempo de carga significa menor tasa de rebote y un aumento directo en tus tasas de conversión.</p>
+        <div class="card story-card highlight-story">
+          <span class="story-tag highlight-box">Mi Enfoque 1 a 1</span>
+          <h3>Atención Quirúrgica de Especialista Senior</h3>
+          <p>
+            Decidí operar bajo un modelo selectivo: trabajo personalmente con un número limitado de cuentas para garantizar que cada cliente reciba análisis técnico profundo, calibraciones semanales y optimizaciones reales orientadas a <strong>facturación neta, ROAS y Costo por Adquisición (CPA)</strong>.
+          </p>
+          <p>
+            Si me contratas a mí, es conmigo con quien hablas por WhatsApp, quien diseña la arquitectura técnica de Google Tag Manager, quien redacta los anuncios y quien responde por los resultados de tus campañas.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Work Philosophy -->
+  <!-- Filosofía de Trabajo (4 Principios) -->
   <section class="section philosophy-section" id="filosofia">
     <div class="container">
-      <div class="philosophy-wrap card">
-        <span class="highlight-box rotate-left">Cómo Trabajo</span>
-        <h2>Mi Filosofía de Trabajo</h2>
-        
-        <div class="philosophy-grid grid grid-3" style="margin-top: 3rem;">
-          <div class="philosophy-item">
-            <span class="philosophy-num">01</span>
-            <h4>Enfoque en Resultados</h4>
-            <p>No busco "likes" o métricas de vanidad. Mi prioridad número uno es el retorno de tu inversión (ROI) y el crecimiento real de tus ventas.</p>
+      <div class="section-header text-center">
+        <span class="step-subtitle">Ética de Rendimiento</span>
+        <h2>Mis 4 Principios Inquebrantables de Trabajo</h2>
+      </div>
+
+      <div class="grid grid-2 phil-grid">
+        <div class="card phil-card">
+          <div class="phil-header">
+            <span class="phil-num">01</span>
+            <h3>Cero Métricas de Vanidad</h3>
           </div>
-          
-          <div class="philosophy-item">
-            <span class="philosophy-num">02</span>
-            <h4>Optimización Basada en Datos</h4>
-            <p>Las decisiones se toman analizando datos cuantitativos, no basándome en corazonadas. Analizo, pruebo, mido y mejoro constantemente.</p>
+          <p>
+            Los "me gusta", los seguidores y el alcance bruto no pagan la nómina de tu equipo. Solo optimizo por métricas transaccionales: leads calificados, llamadas cerradas, compras de e-commerce y retorno sobre la inversión publicitaria (ROAS).
+          </p>
+        </div>
+
+        <div class="card phil-card">
+          <div class="phil-header">
+            <span class="phil-num">02</span>
+            <h3>Medición Matemática Primero</h3>
           </div>
-          
-          <div class="philosophy-item">
-            <span class="philosophy-num">03</span>
-            <h4>Transparencia Total</h4>
-            <p>Acceso completo a tus cuentas de anuncios, informes claros de rendimiento y comunicación constante para que sepas exactamente qué hacemos.</p>
+          <p>
+            No toco una campaña publicitaria sin auditar primero la infraestructura de tracking. Si Google Analytics 4, Tag Manager Server-Side o la API de Conversiones están descalibrados, cualquier dinero que inviertas se estará quemando a ciegas.
+          </p>
+        </div>
+
+        <div class="card phil-card">
+          <div class="phil-header">
+            <span class="phil-num">03</span>
+            <h3>Propiedad Absoluta del Negocio</h3>
           </div>
+          <p>
+            Nunca creo cuentas a mi nombre ni retengo accesos como rehén. Tu empresa es la dueña del 100% de la facturación, los públicos de retargeting y el historial publicitario. Si decides terminar el servicio, todo tu activo continúa intacto.
+          </p>
+        </div>
+
+        <div class="card phil-card">
+          <div class="phil-header">
+            <span class="phil-num">04</span>
+            <h3>Sinergia entre Tráfico y Conversión (CRO)</h3>
+          </div>
+          <p>
+            El mejor anuncio del mundo fracasa si la página de aterrizaje tarda 5 segundos en cargar o tiene formularios con demasiada fricción. Por eso integro el desarrollo de Landing Pages ultrarrápidas con la estrategia de pauta.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="section about-cta-section" id="about-cta">
+  <!-- Stack Técnico y Especialidades -->
+  <section class="section tech-stack-section" id="stack">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Capacidades Técnicas</span>
+        <h2>Ecosistema de Herramientas que Domino</h2>
+        <p class="section-lead">La combinación de destreza en pauta con ingeniería de datos y desarrollo web moderno:</p>
+      </div>
+
+      <div class="grid grid-3 stack-grid">
+        <div class="card stack-card">
+          <div class="stack-icon">🎯</div>
+          <h3>Paid Media & Plataformas</h3>
+          <ul class="stack-list">
+            <li>Google Ads (Búsqueda, Shopping, PMax, YouTube)</li>
+            <li>Meta Ads (Facebook & Instagram Ads)</li>
+            <li>LinkedIn Campaign Manager (ABM & B2B)</li>
+            <li>TikTok Ads for Business</li>
+          </ul>
+        </div>
+
+        <div class="card stack-card">
+          <div class="stack-icon">📊</div>
+          <h3>Analítica & Server-Side</h3>
+          <ul class="stack-list">
+            <li>Google Tag Manager Web & Server-Side</li>
+            <li>Google Analytics 4 (GA4) & BigQuery</li>
+            <li>Meta Conversions API (CAPI Gateway / Stape)</li>
+            <li>Consent Mode v2 & Enhanced Conversions</li>
+          </ul>
+        </div>
+
+        <div class="card stack-card">
+          <div class="stack-icon">💻</div>
+          <h3>CRO & Arquitectura Web</h3>
+          <ul class="stack-list">
+            <li>Desarrollo ultrarrápido con Astro & React</li>
+            <li>Optimización de Core Web Vitals (LCP &lt; 1.5s)</li>
+            <li>Copywriting persuasivo con fórmulas de respuesta directa</li>
+            <li>Webhooks, automatización con Zapier / Make y CRMs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios Especializados que Ofrezco -->
+  <section class="section services-nav-section" id="servicios">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Servicios Especializados</span>
+        <h2>¿Cómo Podemos Trabajar Juntos?</h2>
+      </div>
+
+      <div class="grid grid-3 services-mini-grid">
+        <a href="/servicios/trafficker-google-ads" class="card mini-srv-card">
+          <span class="mini-srv-icon">🔍</span>
+          <h3>Google Ads</h3>
+          <p>Campañas de búsqueda con alta intención transaccional y Performance Max.</p>
+          <span class="mini-srv-link">Ver Especialización &rarr;</span>
+        </a>
+
+        <a href="/servicios/trafficker-facebook-ads" class="card mini-srv-card">
+          <span class="mini-srv-icon">📱</span>
+          <h3>Meta Ads</h3>
+          <p>Adquisición multiformato, creatividades persuasivas y embudos a WhatsApp.</p>
+          <span class="mini-srv-link">Ver Especialización &rarr;</span>
+        </a>
+
+        <a href="/servicios/trafficker-linkedin-ads" class="card mini-srv-card">
+          <span class="mini-srv-icon">💼</span>
+          <h3>LinkedIn Ads</h3>
+          <p>Prospección corporativa para contactar con directores C-Level y comités de compra.</p>
+          <span class="mini-srv-link">Ver Especialización &rarr;</span>
+        </a>
+
+        <a href="/servicios/analitica-web-tracking" class="card mini-srv-card">
+          <span class="mini-srv-icon">📊</span>
+          <h3>Analítica & Tracking</h3>
+          <p>GTM Server-Side, GA4 y CAPI para blindar tus datos ante ad-blockers.</p>
+          <span class="mini-srv-link">Ver Especialización &rarr;</span>
+        </a>
+
+        <a href="/servicios/cro-landing-pages" class="card mini-srv-card">
+          <span class="mini-srv-icon">💻</span>
+          <h3>CRO & Landing Pages</h3>
+          <p>Páginas de aterrizaje de carga en menos de 1 segundo creadas para vender.</p>
+          <span class="mini-srv-link">Ver Especialización &rarr;</span>
+        </a>
+
+        <a href="/servicios" class="card mini-srv-card cta-card-box">
+          <span class="mini-srv-icon">⚡</span>
+          <h3>Cotizador Interactivo</h3>
+          <p>Calcula el presupuesto estimado para tu estrategia en tiempo real.</p>
+          <span class="mini-srv-link">Cotizar en Línea &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner Final (Amarillo Vibrante Neo-Brutalista) -->
+  <section class="section about-cta-section" id="contacto">
     <div class="container">
       <div class="cta-banner-brutalist">
-        <h2>¿Listo para optimizar tu estrategia digital?</h2>
-        <p>Hablemos por WhatsApp y realicemos una auditoría rápida de tus campañas publicitarias y posicionamiento actual sin ningún compromiso.</p>
-        <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Quiero%20auditar%20mi%20estrategia%20digital" class="btn btn-primary" id="about-footer-cta-btn" target="_blank" rel="noopener noreferrer">
-          ⚡ Agendar Auditoría Gratuita
-        </a>
+        <span class="cta-tag">⚡ CONVERSACIÓN DIRECTA SIN COMPROMISO</span>
+        <h2>¿Quieres auditar tu estrategia actual y descubrir dónde se pierde presupuesto?</h2>
+        <p>Hablemos directamente por WhatsApp. Revisemos en 15 minutos tus números actuales, el costo por adquisición que estás pagando y el potencial de escalamiento de tu negocio.</p>
+        <div class="cta-banner-actions">
+          <a href="#hero" class="btn btn-primary" id="about-bottom-form-btn">
+            ⚡ Cotizar Estrategia Arriba
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20agendar%20una%20auditor%C3%ADa%20gratuita" class="btn btn-whatsapp" id="about-footer-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+            💬 Escríbeme a WhatsApp (+57 318 287 3558)
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -136,24 +378,24 @@ const description = "Conoce a Fabián Pérez, Full Stack Marketer y Trafficker D
 <style>
   /* Hero Styles */
   .about-hero-section {
-    padding: 8rem 0 5rem 0;
+    padding: 7rem 0 4rem 0;
   }
   
   .hero-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
-    align-items: center;
+    gap: 3.5rem;
+    align-items: start;
   }
   
   @media (min-width: 992px) {
     .hero-grid {
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.15fr 0.85fr;
     }
   }
   
   .badge-wrapper {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
   }
   
   .hero-badge {
@@ -161,232 +403,377 @@ const description = "Conoce a Fabián Pérez, Full Stack Marketer y Trafficker D
     color: var(--accent-primary);
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding: 0.4rem 1rem;
+    padding: 0.4rem 0.9rem;
     border: 2px solid var(--border-color);
     display: inline-block;
   }
   
   .hero-title {
-    font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+    font-size: clamp(2rem, 4vw, 3.4rem);
     letter-spacing: -0.04em;
-    line-height: 1.05;
-    margin-bottom: 1.8rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
     font-weight: 900;
   }
   
   .highlight-text {
     background-color: var(--accent-primary);
     color: #000000;
-    padding: 0 0.5rem;
+    padding: 0 0.4rem;
     border: 3px solid var(--border-color);
     box-shadow: 3px 3px 0px var(--border-color);
     display: inline-block;
     transform: rotate(-0.5deg);
-    margin-top: 0.2rem;
   }
   
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: 2.8rem;
-    max-width: 650px;
+    margin-bottom: 2rem;
     font-weight: 500;
-  }
-  
-  /* Profile visual */
-  .hero-visual {
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .profile-card-brutalist {
-    position: relative;
-    width: 280px;
-    height: 320px;
-  }
-  
-  .profile-halo {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    width: 280px;
-    height: 320px;
-    background-color: var(--accent-primary);
-    border: 3px solid var(--border-color);
-    z-index: 1;
-    transform: rotate(3deg);
-  }
-  
-  .profile-card-content {
-    position: absolute;
-    width: 280px;
-    height: 320px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--bg-primary);
-    box-shadow: none;
-  }
-  
-  .profile-avatar {
-    width: 90px;
-    height: 90px;
-    background-color: var(--text-primary);
-    color: var(--bg-primary);
-    font-family: var(--font-heading);
-    font-size: 2.2rem;
-    font-weight: 900;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid var(--border-color);
-    margin-bottom: 1.2rem;
-  }
-  
-  .profile-name {
-    font-size: 1.6rem;
-    font-weight: 900;
-    margin-bottom: 0.5rem;
-  }
-  
-  .profile-title {
-    font-size: 0.8rem;
-    padding: 0.2rem 0.5rem;
-    transform: rotate(-1deg);
-    text-transform: uppercase;
-  }
-  
-  /* Specialties Section */
-  .specialties-section {
-    background-color: var(--bg-secondary);
-    border-top: 3px solid var(--border-color);
-    border-bottom: 3px solid var(--border-color);
-  }
-  
-  .specialty-icon {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .specialty-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.2rem;
-    font-weight: 900;
-  }
-  
-  .specialty-tagline {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    margin-bottom: 1.2rem;
-  }
-  
-  .specialty-card p {
-    color: var(--text-secondary);
-    font-weight: 500;
-    font-size: 0.95rem;
-  }
-  
-  /* Philosophy Section */
-  .philosophy-wrap {
-    padding: 4rem;
-  }
-  
-  .philosophy-wrap h2 {
-    font-size: 2.2rem;
-    font-weight: 900;
-    margin-top: 1rem;
-  }
-  
-  .philosophy-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .philosophy-num {
-    font-family: var(--font-heading);
-    font-weight: 900;
-    font-size: 1.8rem;
-    background-color: var(--accent-primary);
-    color: #000000;
-    border: 3px solid var(--border-color);
-    box-shadow: 2px 2px 0px var(--border-color);
-    padding: 0.1rem 0.6rem;
-    margin-bottom: 1.2rem;
-  }
-  
-  .philosophy-item h4 {
-    font-size: 1.25rem;
-    font-weight: 800;
-    margin-bottom: 0.8rem;
-  }
-  
-  .philosophy-item p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    font-weight: 500;
-  }
-  
-  /* CTA banner */
-  .cta-banner-brutalist {
-    background-color: var(--text-primary);
-    color: var(--bg-primary);
-    border: 3px solid var(--border-color);
-    padding: 4rem 3rem;
-    text-align: center;
-    box-shadow: 6px 6px 0px var(--border-color);
-  }
-  
-  .cta-banner-brutalist h2 {
-    color: #ffffff;
-    font-size: 2.2rem;
-    font-weight: 900;
-    margin-bottom: 1rem;
-  }
-  
-  .cta-banner-brutalist p {
-    color: var(--bg-tertiary);
-    max-width: 600px;
-    margin: 0 auto 2.5rem auto;
-    font-size: 1.15rem;
-    font-weight: 500;
-  }
-  
-  .cta-banner-brutalist .btn-primary {
-    background-color: var(--accent-primary);
-    color: #000000;
-    box-shadow: 4px 4px 0px #ffffff;
-    border-color: #ffffff;
-  }
-  
-  .cta-banner-brutalist .btn-primary:hover {
-    background-color: var(--accent-hover);
-    box-shadow: 6px 6px 0px #ffffff;
+    line-height: 1.6;
   }
 
-  /* Clean Google Partner Chip */
-  .google-partner-chip {
-    display: inline-flex;
+  .hero-bullet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .hero-bullet-item {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .bullet-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* Barra de Google Partner */
+  .google-partner-hero-bar {
+    display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
     background-color: #ffffff;
-    color: #09090b;
-    border: 2px solid #09090b;
-    box-shadow: 2px 2px 0px #09090b;
-    padding: 0.35rem 0.85rem;
-    border-radius: 9999px;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    padding: 0.7rem 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .gp-bar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .gp-bar-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+  }
+
+  .gp-subtle-sep {
+    color: var(--text-muted);
+  }
+
+  .gp-subtle-desc {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .hero-form-trust {
+    margin-top: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
     font-size: 0.78rem;
+    color: var(--text-secondary);
+    font-family: var(--font-heading);
+  }
+
+  /* Barra de Autoridad y Métricas Compacta (Ribbon) */
+  .authority-metrics-bar {
+    background-color: var(--bg-surface);
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+    padding: 1.2rem 0;
+  }
+
+  .metrics-compact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .metrics-compact-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+    }
+  }
+
+  .metric-compact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding-left: 0.8rem;
+    border-left: 4px solid var(--accent-primary);
+  }
+
+  .metric-number {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--text-primary);
+    white-space: nowrap;
+  }
+
+  .metric-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .metric-title {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
     font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+    line-height: 1.2;
+    color: var(--text-primary);
+  }
+
+  .metric-caption {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    line-height: 1.2;
+  }
+
+  /* Story Grid */
+  .story-grid {
+    gap: 2rem;
+  }
+
+  .story-card {
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    padding: 2.2rem;
+    background-color: #ffffff;
+  }
+
+  .highlight-story {
+    box-shadow: 6px 6px 0px var(--border-color);
+    border-color: var(--border-color);
+    background-color: #fefce8;
+  }
+
+  .story-tag {
+    display: inline-block;
+    background-color: var(--text-primary);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+  }
+
+  .story-card h3 {
+    font-size: 1.35rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  .story-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  .story-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Philosophy */
+  .phil-grid {
+    gap: 2rem;
+  }
+
+  .phil-card {
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    padding: 2rem;
+    background-color: #ffffff;
+  }
+
+  .phil-header {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .phil-num {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 900;
+    background-color: var(--accent-primary);
+    color: #000000;
+    padding: 0.25rem 0.6rem;
+    border: 2px solid var(--border-color);
+    box-shadow: 2px 2px 0px var(--border-color);
+    flex-shrink: 0;
+  }
+
+  .phil-header h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin: 0;
+  }
+
+  .phil-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  /* Stack */
+  .stack-grid {
+    gap: 2rem;
+  }
+
+  .stack-card {
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    padding: 2rem;
+    background-color: #ffffff;
+  }
+
+  .stack-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .stack-card h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  .stack-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .stack-list li {
+    font-size: 0.88rem;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 1.2rem;
+    color: var(--text-secondary);
+  }
+
+  .stack-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: 900;
+    color: #16a34a;
+  }
+
+  /* Services Mini Grid */
+  .services-mini-grid {
+    gap: 1.8rem;
+  }
+
+  .mini-srv-card {
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    padding: 1.8rem;
+    background-color: #ffffff;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .mini-srv-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0px var(--border-color);
+  }
+
+  .mini-srv-icon {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .mini-srv-card h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+  }
+
+  .mini-srv-card p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+
+  .mini-srv-link {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+  }
+
+  .cta-card-box {
+    background-color: #fef08a;
+  }
+
+  /* CTA Banner Actions */
+  .cta-banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .about-cta-section {
+    padding: 5rem 0;
   }
 </style>

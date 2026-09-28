@@ -10,6 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "start": "node ./dist/server/entry.mjs",
+    "index": "node scripts/google-index.mjs",
+    "og:generate": "node scripts/generate-og-images.mjs",
     "astro": "astro"
   },
   "dependencies": {
