@@ -125,27 +125,47 @@ const description = "¿Buscas un Trafficker Digital en Colombia? Optimiza tu pre
   <section class="section services-section" id="servicios">
     <div class="container">
       <div class="section-header text-center">
-        <span class="step-subtitle">Servicios para Colombia</span>
-        <h2>Estrategias hechas para facturar más</h2>
+        <span class="step-subtitle">Especializaciones en Colombia</span>
+        <h2>Ecosistemas de Tráfico y Ventas Diseñados para Facturar</h2>
+        <p class="section-lead" style="max-width: 700px; margin: 0.8rem auto 2.5rem; color: var(--text-secondary);">
+          Cada canal tiene un propósito estratégico específico. Conoce mis servicios especializados de pauta digital y optimización:
+        </p>
       </div>
 
-      <div class="grid grid-3">
-        <div class="card service-card">
-          <div class="service-icon">📈</div>
-          <h3>Paid Ads & Traffic</h3>
-          <p>Administración experta de campañas en Google Ads, Meta Ads y TikTok Ads para todo el territorio colombiano.</p>
-        </div>
-
+      <div class="services-local-grid">
         <div class="card service-card">
           <div class="service-icon">🔍</div>
-          <h3>SEO & Orgánico</h3>
-          <p>Posicionamiento orgánico en Google para búsquedas de alta intención en Bogotá, Medellín, Cali y Barranquilla.</p>
+          <h3>Google Ads (Búsqueda & PMax)</h3>
+          <p>Aparece frente a clientes que buscan activamente tus productos o servicios en Colombia con intención transaccional inmediata.</p>
+          <a href="/servicios/trafficker-google-ads" class="service-detail-link">Ver Servicio Google Ads &rarr;</a>
         </div>
 
         <div class="card service-card">
-          <div class="service-icon">⚙️</div>
-          <h3>Embudos & Analítica</h3>
-          <p>Integración de Google Analytics 4, Tag Manager y WhatsApp Business para tener trazabilidad del 100% de tus prospectos.</p>
+          <div class="service-icon">📱</div>
+          <h3>Meta Ads & WhatsApp Funnels</h3>
+          <p>Campañas de captación masiva en Facebook e Instagram conectadas directamente a WhatsApp Business con Meta CAPI.</p>
+          <a href="/servicios/trafficker-facebook-ads" class="service-detail-link">Ver Servicio Meta Ads &rarr;</a>
+        </div>
+
+        <div class="card service-card">
+          <div class="service-icon">💼</div>
+          <h3>LinkedIn Ads para B2B</h3>
+          <p>Prospección corporativa y captación de directores, gerentes y decisores de compra con Lead Gen Forms nativos y ABM.</p>
+          <a href="/servicios/trafficker-linkedin-ads" class="service-detail-link">Ver Servicio LinkedIn Ads &rarr;</a>
+        </div>
+
+        <div class="card service-card">
+          <div class="service-icon">📊</div>
+          <h3>Analítica & Server-Side Tracking</h3>
+          <p>GTM Server-Side, GA4 y Consent Mode v2 para medir el 100% de tus ventas y alimentar el algoritmo publicitario sin pérdidas.</p>
+          <a href="/servicios/analitica-web-tracking" class="service-detail-link">Ver Servicio Analítica &rarr;</a>
+        </div>
+
+        <div class="card service-card">
+          <div class="service-icon">💻</div>
+          <h3>CRO & Landing Pages</h3>
+          <p>Páginas de aterrizaje de carga ultrarrápida (&lt; 1s) desarrolladas para duplicar la tasa de conversión de tus anuncios.</p>
+          <a href="/servicios/cro-landing-pages" class="service-detail-link">Ver Servicio CRO &rarr;</a>
         </div>
       </div>
     </div>
@@ -375,8 +395,17 @@ const description = "¿Buscas un Trafficker Digital en Colombia? Optimiza tu pre
   }
   
   /* Services Section */
+  .services-local-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
   .service-card {
-    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.2rem 1.8rem;
     height: 100%;
   }
   
@@ -396,6 +425,26 @@ const description = "¿Buscas un Trafficker Digital en Colombia? Optimiza tu pre
     font-weight: 500;
     font-size: 0.9rem;
     line-height: 1.6;
+    flex-grow: 1;
+  }
+
+  .service-detail-link {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding-top: 0.8rem;
+    border-top: 2px dashed var(--border-color);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.88rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.15s ease;
+  }
+
+  .service-detail-link:hover {
+    color: #0284c7;
+    text-decoration: underline;
   }
   
   /* Steps Section */

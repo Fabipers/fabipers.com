@@ -115,6 +115,7 @@ export default function LeadForm({
             📞 WhatsApp Directo de Fabián: <span style={{ color: '#0284c7', fontWeight: 800 }}>+57 318 287 3558</span>
           </div>
           <a
+            id="leadform-success-whatsapp-btn"
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"

@@ -84,13 +84,13 @@ No esperas a que te busquen. Tú vas exactamente donde está el perfil que neces
 Los equipos de marketing B2B de mayor rendimiento no eligen entre Google o LinkedIn — los combinan de forma inteligente:
 
 ### Capa 1 — Captura de demanda inmediata (Google Ads)
-Activa Search Ads para las palabras clave con mayor intención de compra en tu categoría. Estos leads llegan calientes y en proceso de evaluación activa.
+Activa Search Ads para las palabras clave con mayor intención de compra en tu categoría. En mi [servicio de gestión de Google Ads](/servicios/trafficker-google-ads) estructuramos estos grupos de anuncios para que los prospectos lleguen calificados y en proceso de evaluación activa.
 
 ### Capa 2 — Construcción de pipeline ejecutivo (LinkedIn Ads)
-Lanza campañas de Lead Gen Forms en LinkedIn dirigidas exactamente al cargo y tamaño de empresa de tu cliente ideal, ofreciendo un contenido de alto valor (estudio de caso, guía técnica, demo gratuita). Estos leads tienen más fricción inicial pero mayor calidad a largo plazo.
+Lanza campañas de Lead Gen Forms y Account-Based Marketing (ABM) dirigidas exactamente al cargo y tamaño de empresa de tu cliente ideal. Con mi [servicio especializado de LinkedIn Ads B2B](/servicios/trafficker-linkedin-ads), optimizamos la captación de directores C-Level con formularios de auto-relleno y contenido de alta autoridad.
 
 ### Capa 3 — Nurturing multicanal (Meta Retargeting + Email)
-Reimpacta con Meta Ads y secuencias de email a todos los prospectos que interactuaron con tus campañas de Google y LinkedIn pero no convirtieron en la primera touchpoint. En B2B, el 80% de los leads necesitan múltiples puntos de contacto antes de agendar una reunión.
+Reimpacta con [campañas de Meta Ads](/servicios/trafficker-facebook-ads) y secuencias de email a todos los prospectos que interactuaron con tus campañas de Google y LinkedIn pero no convirtieron en el primer punto de contacto. En B2B, el 80% de los leads necesitan múltiples impactos antes de agendar una reunión comercial.
 
 > **Presupuesto mínimo recomendado para este modelo completo:** $3.000 – $5.000 USD mensuales en inversión publicitaria combinada, más la gestión estratégica.
 
@@ -118,4 +118,7 @@ Esta es la pregunta real que deberías hacerte antes de elegir plataforma. El co
 
 La elección entre Google Ads y LinkedIn Ads no debería hacerse en el vacío — debe estar alineada con tu ciclo de ventas real, tu ticket promedio, tu capacidad de nurturing y el perfil exacto de tu comprador ideal.
 
-Descubre cómo diseñamos estrategias B2B multicanal personalizadas en nuestra página de **[Trafficker LinkedIn Ads](/servicios/trafficker-linkedin-ads)** o solicita una propuesta mediante el **[Cotizador Interactivo](/servicios)**.
+- 💼 **[Servicio Especializado en LinkedIn Ads B2B](/servicios/trafficker-linkedin-ads)**: Prospección directa para directores y comités de compra.
+- 🔍 **[Servicio de Gestión de Google Ads](/servicios/trafficker-google-ads)**: Captura de demanda transaccional con intención de compra.
+- 💻 **[Optimización CRO y Landing Pages de Alta Conversión](/servicios/cro-landing-pages)**: Embudos de aterrizaje que retienen prospectos ejecutivos.
+- ⚡ **[Solicita una Propuesta B2B Personalizada](/servicios)**: Auditoría y cotización adaptada a tu modelo corporativo.

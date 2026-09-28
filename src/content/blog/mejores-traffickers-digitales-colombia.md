@@ -138,5 +138,8 @@ Si estás evaluando opciones para la pauta de tu empresa, consulta nuestras guí
 - 💰 **[Guía de Tarifas: ¿Cuánto cobra un Trafficker Digital en Colombia y USA?](/cuanto-cobra-un-trafficker-digital)**
 - ⚡ **[Solicitar Cotización de Servicios de Trafficker Digital](/contratar-trafficker-digital)**
 - 🇨🇴 **[Servicio Local: Trafficker Digital en Colombia](/trafficker-digital-colombia)**
+- 🔍 **[Gestión Profesional de Google Ads (Búsqueda & PMax)](/servicios/trafficker-google-ads)**
+- 📱 **[Especialista en Meta Ads (Facebook, Instagram & WhatsApp)](/servicios/trafficker-facebook-ads)**
+- 💼 **[Publicidad B2B & Prospección en LinkedIn Ads](/servicios/trafficker-linkedin-ads)**
 - 📊 **[Analítica Web & Tracking Server-Side (GTM / GA4 / CAPI)](/servicios/analitica-web-tracking)**
-- 🔍 **[Gestión y Administración Profesional de Google Ads](/gestion-y-administracion-de-google-ads)**
+- 💻 **[Diseño de Landing Pages de Alta Conversión (CRO)](/servicios/cro-landing-pages)**

@@ -13,7 +13,7 @@ interface Props {
 const { 
 	title = "Fabipers | Trafficker Digital & Full Stack Marketer", 
 	description = "Te ayudo a hacer crecer tu negocio mediante campañas publicitarias altamente efectivas, analítica avanzada y optimización de conversiones.",
-	image = "/favicon.svg",
+	image = "/images/og-default.png",
 	type = "website",
 	publishedTime,
 	modifiedTime
@@ -43,7 +43,7 @@ const ogImageURL = new URL(image, 'https://fabipers.com').href;
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonicalURL.href} />
 		
-		<!-- Open Graph / Facebook -->
+		<!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
 		<meta property="og:site_name" content="Fabipers" />
 		<meta property="og:locale" content="es_CO" />
 		<meta property="og:type" content={type} />
@@ -51,10 +51,14 @@ const ogImageURL = new URL(image, 'https://fabipers.com').href;
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={ogImageURL} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:alt" content={title} />
 		{publishedTime && <meta property="article:published_time" content={new Date(publishedTime).toISOString()} />}
 		{modifiedTime && <meta property="article:modified_time" content={new Date(modifiedTime).toISOString()} />}
 		
-		<!-- Twitter -->
+		<!-- Twitter / X -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@fabipers" />
 		<meta name="twitter:creator" content="@fabipers" />
@@ -388,14 +392,17 @@ const ogImageURL = new URL(image, 'https://fabipers.com').href;
 		<!-- WhatsApp DataLayer Click Tracking -->
 		<script is:inline>
 			document.addEventListener('click', function(e) {
-				var el = e.target.closest('a[href*="api.whatsapp.com"]');
+				var el = e.target.closest('a[href*="api.whatsapp.com"], a[href*="wa.me"]');
 				if (!el) return;
 				var loc = el.id || 'whatsapp_link';
 				window.dataLayer = window.dataLayer || [];
 				window.dataLayer.push({
 					event: 'contact_click',
 					contact_method: 'whatsapp',
-					click_location: loc
+					click_location: loc,
+					link_url: el.href,
+					page_location: window.location.href,
+					page_path: window.location.pathname
 				});
 			});
 		</script>

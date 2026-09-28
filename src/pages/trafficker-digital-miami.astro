@@ -124,27 +124,47 @@ const description = "Contrata un Trafficker Digital en Miami especializado en el
   <section class="section services-section" id="servicios">
     <div class="container">
       <div class="section-header text-center">
-        <span class="step-subtitle">Servicios Destacados</span>
-        <h2>Estrategias hechas para facturar más</h2>
+        <span class="step-subtitle">Especializaciones en Miami & USA</span>
+        <h2>Ecosistemas de Tráfico y Ventas para Escalar en Dólares</h2>
+        <p class="section-lead" style="max-width: 700px; margin: 0.8rem auto 2.5rem; color: var(--text-secondary);">
+          Cada canal cumple una función precisa en tu embudo de adquisición. Descubre mis servicios especializados de pauta digital:
+        </p>
       </div>
 
-      <div class="grid grid-3">
-        <div class="card service-card">
-          <div class="service-icon">📈</div>
-          <h3>Paid Ads & Traffic</h3>
-          <p>Gestión avanzada de Google Ads y Meta Ads (Facebook e Instagram). Segmentación hiperlocal enfocada en conversiones directas.</p>
-        </div>
-
+      <div class="services-local-grid">
         <div class="card service-card">
           <div class="service-icon">🔍</div>
-          <h3>SEO & Posicionamiento</h3>
-          <p>Optimizo tu visibilidad orgánica para que tus clientes locales en Miami te encuentren a ti antes que a tu competencia.</p>
+          <h3>Google Ads (Search & PMax)</h3>
+          <p>Captura demanda con alta intención de compra en el mercado hispano y anglo de Florida y todo Estados Unidos con ROAS positivo.</p>
+          <a href="/servicios/trafficker-google-ads" class="service-detail-link">Ver Servicio Google Ads &rarr;</a>
         </div>
 
         <div class="card service-card">
-          <div class="service-icon">⚙️</div>
-          <h3>Marketing Automation</h3>
-          <p>Automatización de flujos de trabajo e integración de herramientas de analítica web para optimizar tus procesos comerciales.</p>
+          <div class="service-icon">📱</div>
+          <h3>Meta Ads (Facebook & IG)</h3>
+          <p>Campañas de prospección hiperlocal y retargeting en Miami con creatividades persuasivas y Meta Conversions API (CAPI).</p>
+          <a href="/servicios/trafficker-facebook-ads" class="service-detail-link">Ver Servicio Meta Ads &rarr;</a>
+        </div>
+
+        <div class="card service-card">
+          <div class="service-icon">💼</div>
+          <h3>LinkedIn Ads para B2B</h3>
+          <p>Prospección corporativa y Account-Based Marketing (ABM) para conectar con directores ejecutivos y comités de compra en EE. UU.</p>
+          <a href="/servicios/trafficker-linkedin-ads" class="service-detail-link">Ver Servicio LinkedIn Ads &rarr;</a>
+        </div>
+
+        <div class="card service-card">
+          <div class="service-icon">📊</div>
+          <h3>Analítica & Tracking Server-Side</h3>
+          <p>GTM Server-Side, GA4 y Consent Mode v2 para proteger tu atribución de datos ante ad-blockers y normativas de privacidad.</p>
+          <a href="/servicios/analitica-web-tracking" class="service-detail-link">Ver Servicio Analítica &rarr;</a>
+        </div>
+
+        <div class="card service-card">
+          <div class="service-icon">💻</div>
+          <h3>CRO & Landing Pages</h3>
+          <p>Páginas de aterrizaje ultrarrápidas (&lt; 1s) diseñadas para reducir el CPA y duplicar la tasa de conversión de tus clics.</p>
+          <a href="/servicios/cro-landing-pages" class="service-detail-link">Ver Servicio CRO &rarr;</a>
         </div>
       </div>
     </div>
@@ -373,6 +393,20 @@ const description = "Contrata un Trafficker Digital en Miami especializado en el
   .services-section {
     background-color: var(--bg-primary);
   }
+
+  .services-local-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.2rem 1.8rem;
+    height: 100%;
+  }
   
   .service-icon {
     font-size: 2.5rem;
@@ -388,6 +422,27 @@ const description = "Contrata un Trafficker Digital en Miami especializado en el
   .service-card p {
     color: var(--text-secondary);
     font-weight: 500;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+
+  .service-detail-link {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding-top: 0.8rem;
+    border-top: 2px dashed var(--border-color);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.88rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.15s ease;
+  }
+
+  .service-detail-link:hover {
+    color: #0284c7;
+    text-decoration: underline;
   }
   
   /* Steps */

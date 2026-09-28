@@ -111,4 +111,5 @@ O si prefieres explorar nuestras guías y servicios específicos:
 - 📱 [Trafficker Meta Ads → Facebook, Instagram y WhatsApp](/servicios/trafficker-facebook-ads)
 - 💼 [Trafficker LinkedIn Ads → B2B de Alto Valor](/servicios/trafficker-linkedin-ads)
 - 📊 [Analítica Web y Server-Side Tracking](/servicios/analitica-web-tracking)
+- 💻 [CRO y Landing Pages de Alta Conversión](/servicios/cro-landing-pages)
 - 🇨🇴 [Trafficker Digital en Colombia](/trafficker-digital-colombia)

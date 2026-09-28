@@ -84,8 +84,8 @@ Utiliza este checklist técnico para evaluar tu cuenta o auditar el trabajo de t
 - [ ] **2. Lista de Términos Negativos:** ¿Tienes una lista de exclusión activa a nivel de cuenta bloqueando términos informacionales (*"gratis"*, *"empleo"*, *"pdf"*, *"cursos"*)?
 - [ ] **3. Segmentación Geográfica Estricta:** ¿La ubicación está configurada en *"Presencia en esta ubicación"* en lugar de *"Presencia o interés"* (que atrae clics de otros países)?
 - [ ] **4. Relevancia y Estructura:** ¿Cada grupo de anuncios tiene palabras clave estrechamente alineadas con los titulares y descripciones del anuncio (*Nivel de Calidad > 7/10*)?
-- [ ] **5. Fricción en Landing Page:** ¿La página de aterrizaje carga en menos de 2.8 segundos en móviles, tiene propuesta de valor clara y botón de contacto inmediato?
-- [ ] **6. Atribución y Smart Bidding:** ¿Tienes configuradas las Conversiones Mejoradas (*Enhanced Conversions*), Consent Mode v2 y GA4 correctamente enlazado?
+- [ ] **5. Fricción en Landing Page:** ¿La página de aterrizaje carga en menos de 2.8 segundos en móviles, tiene propuesta de valor clara y botón de contacto inmediato? Si tu página actual tiene fugas, un [rediseño orientado a CRO y páginas de aterrizaje de alta conversión](/servicios/cro-landing-pages) suele duplicar las ventas de forma inmediata.
+- [ ] **6. Atribución y Smart Bidding:** ¿Tienes configuradas las Conversiones Mejoradas (*Enhanced Conversions*), Consent Mode v2 y GA4 correctamente enlazado? Con una correcta [implementación de Analítica Web y Server-Side Tracking](/servicios/analitica-web-tracking) evitas la pérdida de datos y alimentas el algoritmo de Google con información exacta.
 
 ---
 
@@ -95,7 +95,9 @@ Si tu empresa está invirtiendo en pauta publicitaria pero no estás viendo el r
 
 Como especialista certificado como **Google Partner**, audito y optimizo tus campañas para transformarlas en un canal predecible de captación de clientes:
 
-- 🔍 **[Servicio de Gestión y Administración de Google Ads](/servicios/trafficker-google-ads)**: Auditoría, optimización continua y escalado.
+- 🔍 **[Servicio de Gestión y Administración de Google Ads](/servicios/trafficker-google-ads)**: Auditoría, optimización continua y escalado de ventas.
+- 💻 **[Servicio de Landing Pages & Optimización CRO](/servicios/cro-landing-pages)**: Páginas de destino ultrarrápidas diseñadas para convertir clics en clientes.
+- 📊 **[Servicio de Analítica Web & Server-Side Tracking](/servicios/analitica-web-tracking)**: Medición infalible de llamadas, formularios y ventas.
 - 📖 **[Guía Completa de Gestión de Google Ads](/gestion-y-administracion-de-google-ads)**: Alcances y tarifas de un servicio profesional.
 - 🇨🇴 **[Trafficker Digital en Colombia](/trafficker-digital-colombia)** | 🇺🇸 **[Trafficker Digital en Miami](/trafficker-digital-miami)**
 - ⚡ **[Solicitar Auditoría y Propuesta Personalizada en 24h](/contratar-trafficker-digital)**
