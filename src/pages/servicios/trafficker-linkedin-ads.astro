@@ -1,196 +1,612 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import LeadForm from '../../components/LeadForm';
 
-const title = "Trafficker LinkedIn Ads | Publicidad B2B de Alto Valor";
-const description = "Capta clientes corporativos con un Trafficker especialista en LinkedIn Ads. Campañas B2B de alta precisión enfocadas en tomadores de decisiones.";
+const title = "Especialista en LinkedIn Ads B2B | Generación de Leads de Alto Valor (2027)";
+const description = "Capta clientes corporativos, tomadores de decisión (C-Level) y cuentas clave con un especialista en LinkedIn Ads. Estrategias ABM y Lead Gen Forms.";
 ---
 
 <Layout title={title} description={description}>
-  <!-- Schema: FAQPage JSON-LD -->
+  <!-- Schema: Service & FAQPage JSON-LD -->
   <script type="application/ld+json" slot="head">
     {
       "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
+      "@graph": [
         {
-          "@type": "Question",
-          "name": "¿Por qué LinkedIn Ads es más costoso que Facebook Ads?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "El coste por clic en LinkedIn es más alto debido a la calidad de la base de datos y la capacidad única de segmentar por cargos y datos profesionales reales. Es ideal para negocios B2B donde un solo cliente cerrado compensa con creces el costo del lead."
-          }
+          "@type": "Service",
+          "name": "Gestión y Publicidad B2B en LinkedIn Ads",
+          "serviceType": "Account-Based Marketing & Publicidad B2B",
+          "provider": {
+            "@type": "Person",
+            "name": "Fabián Pérez",
+            "jobTitle": "Especialista Senior en LinkedIn Ads & Pauta B2B",
+            "url": "https://fabipers.com"
+          },
+          "areaServed": [
+            { "@type": "Country", "name": "Colombia" },
+            { "@type": "Country", "name": "Estados Unidos" },
+            { "@type": "Country", "name": "Latinoamérica" }
+          ],
+          "description": "Servicio integral de gestión, optimización y prospección en LinkedIn Ads enfocado en empresas B2B, SaaS, consultoría corporativa y servicios de alto ticket."
         },
         {
-          "@type": "Question",
-          "name": "¿Qué es el LinkedIn Insight Tag?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Es el píxel de seguimiento de LinkedIn. Te permite entender qué perfiles profesionales visitan tu web, crear públicos de retargeting en base a su industria y medir las conversiones de tus anuncios."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué formatos de anuncios son recomendables en LinkedIn?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Los formularios de generación de prospectos (Lead Gen Forms) combinados con imágenes estáticas o videos cortos ofrecen excelentes tasas de conversión debido a la fricción mínima al rellenar datos."
-          }
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Por qué LinkedIn Ads es más costoso por clic y cómo se justifica el ROI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El coste por clic en LinkedIn es más elevado porque compras certeza profesional: accedes a datos verificados de cargos, nivel de antigüedad, industrias y tamaño de empresa que ninguna otra red social posee. En negocios B2B o servicios de alto ticket, un solo contrato cerrado de $5,000 o $20,000 USD compensa con creces el costo por lead, logrando un retorno sobre la inversión (ROI) exponencial."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué presupuesto mínimo de inversión se requiere para que LinkedIn Ads funcione?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Para empresas en Colombia y Latinoamérica recomiendo iniciar con un presupuesto de pauta de al menos $800 a $1,500 USD al mes. Para campañas dirigidas a Estados Unidos y Europa, el mínimo sugerido es de $2,000 a $3,500 USD al mes. Esto permite pujar con solvencia en las subastas de LinkedIn, alimentar el algoritmo y conseguir un volumen estadístico sólido de prospectos calificados."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué son los Lead Gen Forms nativos y por qué superan a las landing pages en B2B?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Los Lead Gen Forms son formularios integrados directamente en el feed de LinkedIn. Cuando un profesional pulsa tu anuncio, el formulario se auto-rellena al instante con su nombre, correo corporativo, cargo y empresa según su perfil verificado. Esto elimina la fricción de navegación externa y suele triplicar la tasa de conversión en comparación con una landing page tradicional."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué es una estrategia de Account-Based Marketing (ABM) con Matched Audiences?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Es la técnica más poderosa de LinkedIn Ads: nos permite cargar una lista específica de empresas objetivo (target accounts) que tu equipo comercial desea cerrar. El algoritmo de LinkedIn cruza la lista y muestra tus anuncios exclusivamente a los tomadores de decisión (CEOs, CFOs, Directores de TI, etc.) de esas organizaciones, cercando comercialmente al comité evaluador."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo conectamos los prospectos de LinkedIn con nuestro CRM?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Integro tus campañas directamente con HubSpot, Salesforce, Zoho, ActiveCampaign o mediante Webhooks y Zapier/Make. Cada vez que un tomador de decisión completa un Lead Gen Form, los datos ingresan en tiempo real a tu pipeline comercial y disparan alertas inmediatas por correo o Slack para que tus ejecutivos atiendan el prospecto en minutos."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Quién es el propietario de la cuenta publicitaria y de los datos de prospección?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tu empresa es la única y legítima dueña del 100% de la cuenta en LinkedIn Campaign Manager, de las audiencias creadas y de cada registro captado. Yo administro la cuenta con acceso delegado de especialista. Toda la información histórica y estratégica permanece siempre bajo tu absoluto control."
+              }
+            }
+          ]
         }
       ]
     }
   </script>
-  <!-- Hero Section -->
+
+  <!-- Hero Section con Formulario en Parte Superior Derecha -->
   <section class="section service-hero-detail" id="hero">
-    <div class="container srv-detail-grid">
+    <div class="container srv-hero-grid">
+      <!-- Columna Izquierda: Mensaje Comercial y Autoridad B2B -->
       <div class="srv-hero-content">
         <div class="badge-wrapper">
-          <span class="hero-badge rotate-left">⚡ Especialista en LinkedIn Ads</span>
+          <span class="hero-badge rotate-left">⚡ ESPECIALISTA EN PUBLICIDAD B2B & ABM</span>
         </div>
         <h1 class="hero-title">
-          Trafficker Especialista en <span class="highlight-text">LinkedIn Ads</span> para B2B
+          Especialista en <span class="highlight-text">LinkedIn Ads</span>: Prospectos Calificados para Negocios B2B
         </h1>
         <p class="hero-subtitle">
-          Especialista en estructurar campañas de captación B2B de alto valor. Te ayudo a impactar a profesionales, gerentes y CEOs específicos según su cargo, sector, tamaño de empresa y decisiones ejecutivas.
+          No desperdicies tu presupuesto en clics de estudiantes o curiosos. Como consultor senior en pauta digital corporativa, diseño y administro campañas de precisión milimétrica en <strong>LinkedIn Campaign Manager</strong> para conectar tu oferta de alto valor directamente con directores, gerentes, decisores C-Level y comités de compra en Colombia, Estados Unidos y Latinoamérica.
         </p>
+
+        <!-- Viñetas de Autoridad B2B -->
+        <div class="hero-bullet-list">
+          <div class="hero-bullet-item">
+            <span class="bullet-icon">🎯</span>
+            <div>
+              <strong>Segmentación Quirúrgica por Cargo & Empresa:</strong> Impacta exactamente a Directores de Operaciones, TI, Finanzas o CEOs en las industrias que te interesan.
+            </div>
+          </div>
+          <div class="hero-bullet-item">
+            <span class="bullet-icon">⚡</span>
+            <div>
+              <strong>Lead Gen Forms Nativos con Auto-Relleno:</strong> Formularios integrados en el feed que multiplican la tasa de captura sin fricción de carga web.
+            </div>
+          </div>
+          <div class="hero-bullet-item">
+            <span class="bullet-icon">🏢</span>
+            <div>
+              <strong>Account-Based Marketing (ABM) Real:</strong> Pautamos sobre tu lista de empresas objetivo (cuentas soñadas) y nutrimos a su comité evaluador.
+            </div>
+          </div>
+        </div>
+
         <div class="hero-actions">
-          <a href="/servicios#cotizador-sec" class="btn btn-primary" id="linkedin-cta-quote">
-            ⚡ Cotizar Campaña
+          <a href="#formulario-contacto" class="btn btn-primary" id="linkedin-cta-quote-top">
+            ⚡ Cotizar Estrategia B2B
           </a>
-          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20cotizar%20campa%C3%B1as%20de%20LinkedIn%20Ads" class="btn btn-whatsapp" id="linkedin-cta-whatsapp" target="_blank" rel="noopener noreferrer">
-            💬 WhatsApp Directo
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20cotizar%20la%20gesti%C3%B3n%20de%20campa%C3%B1as%20de%20LinkedIn%20Ads%20B2B" class="btn btn-whatsapp" id="linkedin-cta-whatsapp" target="_blank" rel="noopener noreferrer">
+            💬 WhatsApp (+57 318 287 3558)
+          </a>
+          <a href="#entregables" class="btn btn-secondary" id="linkedin-cta-deliverables">
+            Ver Entregables &darr;
           </a>
         </div>
       </div>
 
-      <div class="srv-hero-visual">
-        <div class="visual-stat-card card rotate-right">
-          <span class="stat-badge highlight-box">LINKEDIN ADS</span>
-          <div class="stat-group">
-            <span class="stat-number">B2B</span>
-            <span class="stat-label">Segmentación Profesional Exacta</span>
+      <!-- Columna Derecha: Formulario Superior Directo -->
+      <div class="srv-hero-form-col">
+        <div class="google-partner-hero-bar">
+          <div class="gp-bar-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="#0077b5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="2" y="9" width="4" height="12" stroke="#0077b5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="4" cy="4" r="2" stroke="#0077b5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="gp-bar-text">
+            <strong>B2B Audience Intelligence & ABM</strong>
+            <span class="gp-subtle-sep">•</span>
+            <span class="gp-subtle-desc">Decisores C-Level & Cuentas Clave</span>
+          </div>
+        </div>
+
+        <LeadForm 
+          client:load 
+          locationName="B2B & High-Ticket"
+          formTitle="Cotiza tu Campaña B2B en LinkedIn Ads"
+          formSubtitle="Analizaré tu modelo de negocio y tu perfil de cliente ideal (ICP) para diseñar una propuesta de prospección corporativa en menos de 24h."
+          tagText="⚡ PROPUESTA EN 24H"
+          sourcePage="landing_servicio_linkedin_ads"
+          defaultService="LinkedIn Ads para B2B / High-Ticket"
+        />
+
+        <div class="hero-form-trust">
+          <span>🔒 Confidencialidad total con NDA</span>
+          <span>•</span>
+          <span>Sin contratos de permanencia forzosa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barra de Métricas y Autoridad (Ribbon Compacto) -->
+  <section class="authority-metrics-bar">
+    <div class="container">
+      <div class="metrics-compact-grid">
+        <div class="metric-compact-item">
+          <span class="metric-number">10+ Años</span>
+          <div class="metric-info">
+            <strong class="metric-title">Experiencia Práctica</strong>
+            <span class="metric-caption">Especialista dedicado en pauta B2B</span>
+          </div>
+        </div>
+        <div class="metric-compact-item">
+          <span class="metric-number">C-Level</span>
+          <div class="metric-info">
+            <strong class="metric-title">Segmentación Exacta</strong>
+            <span class="metric-caption">Directores y comités de compra reales</span>
+          </div>
+        </div>
+        <div class="metric-compact-item">
+          <span class="metric-number">3.2x ROI</span>
+          <div class="metric-info">
+            <strong class="metric-title">Retorno Promedio B2B</strong>
+            <span class="metric-caption">En contratos corporativos y consultoría</span>
+          </div>
+        </div>
+        <div class="metric-compact-item">
+          <span class="metric-number">100% Tuyo</span>
+          <div class="metric-info">
+            <strong class="metric-title">Propiedad de Datos</strong>
+            <span class="metric-caption">Audiencias, cuentas y CRM a tu nombre</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Metrics / Key value -->
-  <section class="section metrics-section" id="metrics">
-    <div class="container">
-      <div class="grid grid-3">
-        <div class="card metric-card text-center">
-          <h3>Lead Gen Forms</h3>
-          <p>Formularios integrados nativos que se rellenan automáticamente con los datos del perfil del usuario.</p>
-        </div>
-        <div class="card metric-card text-center">
-          <h3>Filtros por Cargo</h3>
-          <p>Segmenta campañas por cargo exacto, antigüedad, sector, y tamaño de facturación o empleados de la compañía.</p>
-        </div>
-        <div class="card metric-card text-center">
-          <h3>Mensajes InMail</h3>
-          <p>Anuncios directos al buzón de entrada de profesionales de alto nivel con tasas de apertura increíbles.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="section process-section" id="proceso">
+  <!-- Problema vs Solución: Por Qué la Pauta B2B Tradicional Falla -->
+  <section class="section compare-problem-section" id="problema">
     <div class="container">
       <div class="section-header text-center">
-        <span class="step-subtitle">Mi Metodología</span>
-        <h2>¿Cómo Trabajaremos en LinkedIn Ads?</h2>
+        <span class="step-subtitle">El Dilema Corporativo</span>
+        <h2>¿Por Qué las Redes Sociales Convencionales No Te Traen Clientes de Alto Ticket?</h2>
+        <p class="section-lead">
+          En mis consultorías con empresas B2B y firmas de consultoría, veo a directores de marketing frustrados por invertir miles de dólares en plataformas masivas sin cerrar un solo contrato empresarial:
+        </p>
       </div>
 
-      <div class="grid grid-4 step-grid">
-        <div class="card step-card">
-          <div class="step-number rotate-left">01</div>
-          <h3>Perfilado</h3>
-          <p>Definimos con precisión quirúrgica el Buyer Persona corporativo (ICPs, industrias, cargos).</p>
+      <div class="grid grid-3 problem-cards-grid">
+        <div class="card problem-card">
+          <div class="problem-card-icon">🚫</div>
+          <h3>Públicos Sin Poder de Decisión</h3>
+          <p>En redes masivas pagas por impactos a practicantes, estudiantes o personas que buscan empleo. Tu equipo comercial pierde horas persiguiendo prospectos que no tienen presupuesto ni autorización de compra.</p>
         </div>
 
-        <div class="card step-card">
-          <div class="step-number rotate-right">02</div>
-          <h3>Configuración</h3>
-          <p>Alineamos el tag de seguimiento de LinkedIn (Insight Tag) para medir conversiones y configurar públicos.</p>
+        <div class="card problem-card">
+          <div class="problem-card-icon">💸</div>
+          <h3>Campañas Optimizadas por Clics Baratos</h3>
+          <p>Las agencias tradicionales te presumen un "Costo por Clic bajo" trayendo tráfico de curiosos, pero la tasa de cierre en ventas es cero. En B2B no necesitas 10,000 visitas baratas; necesitas 20 conversaciones con directores generales.</p>
         </div>
 
-        <div class="card step-card">
-          <div class="step-number rotate-left">03</div>
-          <h3>Anuncios</h3>
-          <p>Redactamos mensajes con enfoque profesional que apelan a problemáticas y soluciones del negocio.</p>
+        <div class="card problem-card">
+          <div class="problem-card-icon">⏳</div>
+          <h3>Ciclos de Venta Rotos Sin Nutrición</h3>
+          <p>Una venta corporativa tarda de 30 a 90 días en cerrarse. Enviar tráfico frío a una web genérica sin retargeting por cargo ni contenido de autoridad hace que el prospecto corporativo se olvide de ti al día siguiente.</p>
+        </div>
+      </div>
+
+      <div class="solution-highlight-box card">
+        <div class="solution-header">
+          <span class="solution-badge">LA SOLUCIÓN</span>
+          <h3>El Sistema de Prospección Directiva en LinkedIn Ads</h3>
+        </div>
+        <p>
+          LinkedIn es la única base de datos empresarial del mundo que se actualiza en tiempo real por los propios usuarios. Estructuro un ecosistema donde segmentamos por <strong>cargo específico, industria vertical, tamaño de facturación y tecnología instalada</strong>. Combinamos formularios nativos de auto-relleno con secuencias de nutrición de autoridad para que tus ejecutivos comerciales solo tengan llamadas con prospectos que verdaderamente pueden contratar tu solución.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Frentes de Especialización en LinkedIn Ads -->
+  <section class="section specialization-section" id="especializacion">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Metodología Comprobada</span>
+        <h2>Los 4 Pilares de Mi Estrategia en LinkedIn Ads</h2>
+        <p class="section-lead">Cada campaña se configura bajo un estándar riguroso para maximizar la calidad de los contactos y reducir el Costo por Adquisición:</p>
+      </div>
+
+      <div class="grid grid-2 spec-grid">
+        <!-- Pilar 1 -->
+        <div class="card spec-card">
+          <div class="spec-card-header">
+            <span class="spec-number">01</span>
+            <h3>Account-Based Marketing (ABM) & Matched Audiences</h3>
+          </div>
+          <p class="spec-desc">
+            Si tu equipo comercial tiene una lista de 200, 500 o 1,000 empresas objetivo que sueñas con cerrar, las convertimos en audiencias de pauta directa.
+          </p>
+          <ul class="spec-bullets">
+            <li><strong>Carga de listas de cuentas (Company Match):</strong> Pauta exclusiva dirigida a las compañías que tú seleccionas.</li>
+            <li><strong>Filtro cruzado por jerarquía:</strong> Mostramos anuncios únicamente a los cargos con poder de firma (C-Level, VP, Directores).</li>
+            <li><strong>Exclusión de competidores y empleados propios:</strong> Ningún dólar se malgasta en ojos irrelevantes.</li>
+          </ul>
         </div>
 
-        <div class="card step-card">
-          <div class="step-number rotate-right">04</div>
-          <h3>Optimización</h3>
-          <p>Monitoreamos costes por lead y optimizamos los presupuestos para obtener prospectos de alto ticket.</p>
+        <!-- Pilar 2 -->
+        <div class="card spec-card">
+          <div class="spec-card-header">
+            <span class="spec-number">02</span>
+            <h3>Lead Gen Forms Nativos con Cualificación Previa</h3>
+          </div>
+          <p class="spec-desc">
+            Captamos la información verídica del profesional sin sacarlo de su flujo de trabajo habitual en LinkedIn.
+          </p>
+          <ul class="spec-bullets">
+            <li><strong>Datos corporativos verificados:</strong> Correo de empresa, teléfono directo, cargo y nombre de la organización auto-rellenados.</li>
+            <li><strong>Preguntas de filtro personalizadas:</strong> Agregamos campos como <em>"¿Cuál es el presupuesto anual para este proyecto?"</em> o <em>"¿Cuántos empleados tiene tu empresa?"</em>.</li>
+            <li><strong>Tasa de conversión de 10% a 18%:</strong> Muy superior al 2% típico de las páginas de aterrizaje externas.</li>
+          </ul>
+        </div>
+
+        <!-- Pilar 3 -->
+        <div class="card spec-card">
+          <div class="spec-card-header">
+            <span class="spec-number">03</span>
+            <h3>Contenido de Autoridad, Document Ads & Thought Leadership</h3>
+          </div>
+          <p class="spec-desc">
+            En el sector corporativo, nadie compra sin percibir competencia técnica y solvencia estratégica demostrable.
+          </p>
+          <ul class="spec-bullets">
+            <li><strong>Document Ads (PDFs y Whitepapers interactivos):</strong> Los prospectos hojean informes de la industria o casos de éxito sin salir de la plataforma.</li>
+            <li><strong>Thought Leadership Ads:</strong> Promocionamos publicaciones directas del perfil de tu fundador o CEO para humanizar la marca.</li>
+            <li><strong>Copywriting B2B persuasivo:</strong> Mensajes que atacan los dolores reales de la junta directiva: costos operativos, riesgos y eficiencia.</li>
+          </ul>
+        </div>
+
+        <!-- Pilar 4 -->
+        <div class="card spec-card">
+          <div class="spec-card-header">
+            <span class="spec-number">04</span>
+            <h3>Retargeting B2B Multicanal & Sincronización con CRM</h3>
+          </div>
+          <p class="spec-desc">
+            Cercamos digitalmente al comité evaluador durante todo su proceso de análisis y toma de decisiones.
+          </p>
+          <ul class="spec-bullets">
+            <li><strong>LinkedIn Insight Tag + Conversiones CAPI:</strong> Medición milimétrica de descargas, vistas de vídeo y visitas a tu web.</li>
+            <li><strong>Retargeting secuencial de 3 fases:</strong> Dolor inicial &rarr; Caso de éxito con cifras &rarr; Invitación a sesión de diagnóstico.</li>
+            <li><strong>Integración en tiempo real con tu CRM:</strong> Los prospectos llegan en segundos a HubSpot, Salesforce, Zoho o Slack.</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
+  <!-- Entregables Concretos de la Gestión Mensual -->
+  <section class="section deliverables-section" id="entregables">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Alcance del Servicio</span>
+        <h2>¿Qué Incluye Mi Servicio Mensual de LinkedIn Ads?</h2>
+        <p class="section-lead">Gestión estratégica y técnica integral para que tu equipo comercial se concentre únicamente en cerrar propuestas:</p>
+      </div>
+
+      <div class="grid grid-3 deliv-grid">
+        <div class="card deliv-card">
+          <div class="deliv-badge">FASE 1</div>
+          <h3>Auditoría de ICP & Segmentación</h3>
+          <p>Definimos con tu equipo el perfil de cliente ideal (ICP), industrias prioritarias, cargos exactos, exclusiones y listas de empresas estratégicas para pauta.</p>
+          <ul class="deliv-bullets">
+            <li>Mapeo de tomadores de decisión y comités de compra.</li>
+            <li>Configuración o depuración de LinkedIn Campaign Manager.</li>
+            <li>Instalación y verificación del LinkedIn Insight Tag.</li>
+          </ul>
+        </div>
+
+        <div class="card deliv-card">
+          <div class="deliv-badge">FASE 2</div>
+          <h3>Diseño de Campañas & Lead Gen</h3>
+          <p>Estructuración de anuncios con enfoque de solución ejecutiva y diseño de formularios nativos con preguntas de calificación.</p>
+          <ul class="deliv-bullets">
+            <li>Redacción de copys persuasivos B2B sin jerga vacía.</li>
+            <li>Creación de creatividades estáticas y Document Ads.</li>
+            <li>Conexión de formularios con CRM (HubSpot, Salesforce, etc.).</li>
+          </ul>
+        </div>
+
+        <div class="card deliv-card">
+          <div class="deliv-badge">FASE 3</div>
+          <h3>Optimización Continua & Calibración</h3>
+          <p>Monitoreo semanal del Costo por Lead (CPL), depuración demográfica de empresas impactadas y escalamiento de audiencias ganadoras.</p>
+          <ul class="deliv-bullets">
+            <li>Revisión del reporte demográfico de LinkedIn semanalmente.</li>
+            <li>Ajuste de pujas manuales y automáticas por impresión/clic.</li>
+            <li>Reunión mensual de balance comercial y optimización de pipeline.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 2rem;">
+        <a href="#formulario-contacto" class="btn btn-primary" id="linkedin-cta-deliverables-bottom">
+          ⚡ Solicitar Cotización de este Servicio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calificación: Para Quién Es y Para Quién NO Es -->
+  <section class="section qualification-section" id="criterio">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Filtro de Idoneidad</span>
+        <h2>¿LinkedIn Ads es el Canal Adecuado para Tu Negocio?</h2>
+        <p class="section-lead">
+          LinkedIn Ads es una herramienta extraordinaria, pero no sirve para todo tipo de empresa. Trabajemos juntos si cumplimos estas condiciones:
+        </p>
+      </div>
+
+      <div class="grid grid-2 qualification-grid">
+        <div class="card qual-card qual-good">
+          <h3 class="qual-title text-success">✓ Sí es para ti si:</h3>
+          <ul class="qual-list">
+            <li><strong>Vendes soluciones B2B o servicios corporativos:</strong> Software SaaS, consultoría financiera/legal, logística, ciberseguridad, maquinaria o servicios profesionales.</li>
+            <li><strong>Tu ticket promedio o LTV supera los $1,500 USD:</strong> Si el cierre de un solo cliente te deja miles de dólares de margen, LinkedIn es el canal más rentable del mercado.</li>
+            <li><strong>Tus clientes son directores o cargos ejecutivos específicos:</strong> Necesitas hablar con el Director de TI, la Gerente de RRHH o el CEO, no con el público general.</li>
+            <li><strong>Tienes un equipo comercial activo que contacta leads rápido:</strong> Un lead de LinkedIn debe ser contactado en las primeras 2 a 4 horas para mantener la temperatura de compra.</li>
+            <li><strong>Cuentas con presupuesto mensual de pauta de al menos $800 USD:</strong> Para competir con solvencia en la subasta profesional.</li>
+          </ul>
+        </div>
+
+        <div class="card qual-card qual-bad">
+          <h3 class="qual-title text-danger">✗ NO es para ti si:</h3>
+          <ul class="qual-list">
+            <li><strong>Vendes productos de consumo masivo o bajo ticket B2C:</strong> Para ropa, calzado o accesorios de $30 USD, Meta Ads y TikTok Ads son infinitamente más eficientes.</li>
+            <li><strong>Tu presupuesto total mensual de pauta es menor a $500 USD:</strong> En LinkedIn los CPMs son más altos; con poco presupuesto no alcanzarás masa crítica de aprendizaje.</li>
+            <li><strong>Buscas venta impulsiva sin ciclo de contacto:</strong> Las decisiones corporativas requieren confianza, reuniones de demostración y propuestas formales.</li>
+            <li><strong>Nadie en tu empresa llama o responde a los prospectos:</strong> Si los leads se quedan acumulados en un Excel sin seguimiento, la inversión se perderá por completo.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabla Comparativa: Conmigo vs Agencia Tradicional vs Freelancer Genérico -->
+  <section class="section comparison-table-section" id="comparativa">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Comparativa Directa</span>
+        <h2>¿Por Qué Gestionar Tu LinkedIn Ads Conmigo?</h2>
+      </div>
+
+      <div class="comparison-table-wrapper card">
+        <table class="brutalist-table">
+          <thead>
+            <tr>
+              <th>Factor Clave</th>
+              <th class="highlight-col">Conmigo (Especialista Senior B2B)</th>
+              <th>Agencia Tradicional</th>
+              <th>Freelancer Genérico</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Experiencia en B2B Real</strong></td>
+              <td class="highlight-col"><strong>Más de 10 años especializándome en captación corporativa y ABM</strong></td>
+              <td>Enfoque masivo B2C aplicado erróneamente a cuentas corporativas</td>
+              <td>Conocimiento superficial de botones de pauta sin estrategia de negocio</td>
+            </tr>
+            <tr>
+              <td><strong>Atención & Ejecución</strong></td>
+              <td class="highlight-col"><strong>Directa 1 a 1 sin intermediarios ni analistas junior</strong></td>
+              <td>Delegada a becarios o analistas que gestionan 30 clientes a la vez</td>
+              <td>Disponibilidad inestable e informal</td>
+            </tr>
+            <tr>
+              <td><strong>Calificación de Prospectos</strong></td>
+              <td class="highlight-col"><strong>Filtros personalizados en Lead Gen Forms y CRM conectado</strong></td>
+              <td>Te entregan listas de nombres sin verificar si tienen presupuesto</td>
+              <td>No conecta con CRM ni configura automatizaciones de ventas</td>
+            </tr>
+            <tr>
+              <td><strong>Propiedad de la Cuenta</strong></td>
+              <td class="highlight-col"><strong>100% tuya con acceso total a audiencias y métricas</strong></td>
+              <td>Muchas agencias retienen la cuenta o cobran penalidades de salida</td>
+              <td>Suelen mezclar facturaciones en cuentas personales</td>
+            </tr>
+            <tr>
+              <td><strong>Contratos & Permanencia</strong></td>
+              <td class="highlight-col"><strong>Sin cláusulas de amarre forzoso; renuevas por resultados</strong></td>
+              <td>Contratos forzosos de 6 a 12 meses con penalizaciones</td>
+              <td>Sin contrato formal ni acuerdos de confidencialidad (NDA)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Intermedio (Amarillo Vibrante Neo-Brutalista) -->
+  <section class="section mid-cta-section">
+    <div class="container">
+      <div class="cta-banner-brutalist">
+        <span class="cta-tag">⚡ DIAGNÓSTICO B2B SIN COSTO</span>
+        <h2>¿Quieres saber si tus clientes corporativos ideales están activos en LinkedIn?</h2>
+        <p>Revisemos tu mercado objetivo juntos. Calcularé el tamaño de la audiencia de directores en tu sector y el costo estimado por lead calificado sin compromiso.</p>
+        <div class="cta-banner-actions">
+          <a href="#hero" class="btn btn-primary" id="linkedin-mid-cta-form">
+            ⚡ Cotizar Estrategia Arriba
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20hacer%20un%20diagn%C3%B3stico%20de%20mi%20mercado%20B2B%20en%20LinkedIn" class="btn btn-whatsapp" id="linkedin-mid-cta-whatsapp" target="_blank" rel="noopener noreferrer">
+            💬 Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recursos del Cluster B2B & Pauta (Interlinking de Autoridad) -->
+  <section class="section cluster-resources-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Artículos Especializados</span>
+        <h2>Aprende Más Sobre Estrategia Publicitaria B2B</h2>
+        <p class="section-lead">Guías tácticas escritas desde mi experiencia práctica gestionando presupuestos corporativos:</p>
+      </div>
+
+      <div class="grid grid-3 cluster-grid">
+        <a href="/linkedin-ads-vs-google-ads-b2b" class="card cluster-card">
+          <span class="cluster-tag">Comparativa B2B</span>
+          <h3>LinkedIn Ads vs Google Ads en B2B</h3>
+          <p>Cuándo priorizar intención de búsqueda versus segmentación por cargo directivo en tu estrategia comercial.</p>
+          <span class="read-more-link">Leer Comparativa &rarr;</span>
+        </a>
+
+        <a href="/publicidad-en-linkedin-para-universidades" class="card cluster-card">
+          <span class="cluster-tag">Casos de Uso</span>
+          <h3>Publicidad en LinkedIn para Posgrados y Servicios</h3>
+          <p>Estrategias de captación para programas ejecutivos y servicios de alto valor mediante Lead Gen Forms.</p>
+          <span class="read-more-link">Ver Estrategia &rarr;</span>
+        </a>
+
+        <a href="/cuanto-cobra-un-trafficker-digital" class="card cluster-card">
+          <span class="cluster-tag">Inversión y Retorno</span>
+          <h3>Cuánto Cuesta un Especialista en Pauta Digital</h3>
+          <p>Modelos de honorarios de gestión, presupuestos mínimos de pauta y cómo medir el retorno real sobre tu inversión.</p>
+          <span class="read-more-link">Ver Guía &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Schema FAQPage) -->
   <section class="section faq-section" id="faq">
     <div class="container">
       <div class="section-header text-center">
         <span class="step-subtitle">Dudas Comunes</span>
-        <h2>Preguntas Frecuentes sobre LinkedIn Ads</h2>
+        <h2>Preguntas Frecuentes sobre Mi Servicio de LinkedIn Ads</h2>
       </div>
 
       <div class="faq-wrap card">
         <div class="faq-item">
-          <h4>¿Por qué LinkedIn Ads es más costoso que Facebook Ads?</h4>
-          <p>El coste por clic en LinkedIn es más alto debido a la calidad de la base de datos y la capacidad única de segmentar por cargos y datos profesionales reales. Es ideal para negocios B2B donde un solo cliente cerrado compensa con creces el costo del lead.</p>
+          <h4>¿Por qué LinkedIn Ads es más costoso por clic y cómo se justifica el ROI?</h4>
+          <p>El coste por clic en LinkedIn es más elevado porque compras certeza profesional: accedes a datos verificados de cargos, nivel de antigüedad, industrias y tamaño de empresa que ninguna otra red social posee. En negocios B2B o servicios de alto ticket, un solo contrato cerrado de $5,000 o $20,000 USD compensa con creces el costo por lead, logrando un retorno sobre la inversión (ROI) exponencial.</p>
         </div>
 
         <div class="faq-item">
-          <h4>¿Qué es el LinkedIn Insight Tag?</h4>
-          <p>Es el píxel de seguimiento de LinkedIn. Te permite entender qué perfiles profesionales visitan tu web, crear públicos de retargeting en base a su industria y medir las conversiones de tus anuncios.</p>
+          <h4>¿Qué presupuesto mínimo de inversión se requiere para que LinkedIn Ads funcione?</h4>
+          <p>Para empresas en Colombia y Latinoamérica recomiendo iniciar con un presupuesto de pauta de al menos $800 a $1,500 USD al mes. Para campañas dirigidas a Estados Unidos y Europa, el mínimo sugerido es de $2,000 a $3,500 USD al mes. Esto permite pujar con solvencia en las subastas de LinkedIn, alimentar el algoritmo y conseguir un volumen estadístico sólido de prospectos calificados.</p>
         </div>
 
         <div class="faq-item">
-          <h4>¿Qué formatos de anuncios son recomendables?</h4>
-          <p>Los formularios de generación de prospectos (Lead Gen Forms) combinados con imágenes estáticas o videos cortos ofrecen excelentes tasas de conversión debido a la fricción mínima al rellenar datos.</p>
+          <h4>¿Qué son los Lead Gen Forms nativos y por qué superan a las landing pages en B2B?</h4>
+          <p>Los Lead Gen Forms son formularios integrados directamente en el feed de LinkedIn. Cuando un profesional pulsa tu anuncio, el formulario se auto-rellena al instante con su nombre, correo corporativo, cargo y empresa según su perfil verificado. Esto elimina la fricción de navegación externa y suele triplicar la tasa de conversión en comparación con una landing page tradicional.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>¿Qué es una estrategia de Account-Based Marketing (ABM) con Matched Audiences?</h4>
+          <p>Es la técnica más poderosa de LinkedIn Ads: nos permite cargar una lista específica de empresas objetivo (target accounts) que tu equipo comercial desea cerrar. El algoritmo de LinkedIn cruza la lista y muestra tus anuncios exclusivamente a los tomadores de decisión (CEOs, CFOs, Directores de TI, etc.) de esas organizaciones, cercando comercialmente al comité evaluador.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>¿Cómo conectamos los prospectos de LinkedIn con nuestro CRM?</h4>
+          <p>Integro tus campañas directamente con HubSpot, Salesforce, Zoho, ActiveCampaign o mediante Webhooks y Zapier/Make. Cada vez que un tomador de decisión completa un Lead Gen Form, los datos ingresan en tiempo real a tu pipeline comercial y disparan alertas inmediatas por correo o Slack para que tus ejecutivos atiendan el prospecto en minutos.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>¿Quién es el propietario de la cuenta publicitaria y de los datos de prospección?</h4>
+          <p>Tu empresa es la única y legítima dueña del 100% de la cuenta en LinkedIn Campaign Manager, de las audiencias creadas y de cada registro captado. Yo administro la cuenta con acceso delegado de especialista. Toda la información histórica y estratégica permanece siempre bajo tu absoluto control.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bottom CTA -->
-  <section class="section detail-cta-section">
+  <!-- Bottom Closing CTA (Amarillo Vibrante Neo-Brutalista) -->
+  <section class="section detail-cta-section" id="formulario-contacto">
     <div class="container">
       <div class="cta-banner-brutalist">
-        <h2>¿Quieres captar clientes corporativos de alto valor?</h2>
-        <p>Hablemos por WhatsApp y diseñemos tu segmentación profesional de LinkedIn Ads.</p>
-        <a href="/servicios#cotizador-sec" class="btn btn-primary" id="linkedin-bottom-cta">
-          ⚡ Cotizar mis campañas
-        </a>
+        <span class="cta-tag">⚡ EMPIEZA A CAPTAR CLIENTES B2B HOY</span>
+        <h2>¿Listo para sentarte a negociar con directores y decisores de compra?</h2>
+        <p>Deja de esperar que los clientes corporativos lleguen por casualidad. Diseñemos una estrategia de prospección en LinkedIn Ads que llene el pipeline de tu equipo comercial con oportunidades de alto ticket.</p>
+        <div class="cta-banner-actions">
+          <a href="#hero" class="btn btn-primary" id="linkedin-bottom-cta">
+            ⚡ Cotizar Estrategia Arriba
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20empezar%20a%20captar%20clientes%20B2B%20con%20LinkedIn%20Ads" class="btn btn-whatsapp" id="linkedin-bottom-whatsapp" target="_blank" rel="noopener noreferrer">
+            💬 Escríbeme por WhatsApp Directo
+          </a>
+        </div>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
+  /* Hero 2 Columnas */
   .service-hero-detail {
-    padding: 8rem 0 5rem 0;
+    padding: 7rem 0 4rem 0;
   }
 
-  .srv-detail-grid {
+  .srv-hero-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
-    align-items: center;
+    gap: 3.5rem;
+    align-items: start;
   }
 
   @media (min-width: 992px) {
-    .srv-detail-grid {
-      grid-template-columns: 1.25fr 0.75fr;
+    .srv-hero-grid {
+      grid-template-columns: 1.15fr 0.85fr;
     }
   }
 
   .badge-wrapper {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
   }
 
   .hero-badge {
@@ -198,40 +614,61 @@ const description = "Capta clientes corporativos con un Trafficker especialista 
     color: var(--accent-primary);
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding: 0.4rem 1rem;
+    padding: 0.4rem 0.9rem;
     border: 2px solid var(--border-color);
     display: inline-block;
   }
 
   .hero-title {
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-size: clamp(2rem, 4vw, 3.4rem);
     letter-spacing: -0.04em;
-    line-height: 1.05;
-    margin-bottom: 1.8rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
     font-weight: 900;
   }
 
   .highlight-text {
     background-color: var(--accent-primary);
     color: #000000;
-    padding: 0 0.5rem;
+    padding: 0 0.4rem;
     border: 3px solid var(--border-color);
     box-shadow: 3px 3px 0px var(--border-color);
     display: inline-block;
     transform: rotate(-0.5deg);
-    margin-top: 0.2rem;
   }
 
   .hero-subtitle {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: 2.8rem;
-    max-width: 650px;
+    margin-bottom: 2rem;
     font-weight: 500;
     line-height: 1.6;
+  }
+
+  /* Viñetas del Hero */
+  .hero-bullet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .hero-bullet-item {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .bullet-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
   }
 
   .hero-actions {
@@ -240,202 +677,495 @@ const description = "Capta clientes corporativos con un Trafficker especialista 
     gap: 1rem;
   }
 
-  .hero-actions .btn {
-    border-width: 3px;
-  }
-
-  .srv-hero-visual {
+  /* Barra de Audiencia B2B sobre el formulario */
+  .google-partner-hero-bar {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: #ffffff;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    padding: 0.7rem 1.2rem;
+    margin-bottom: 1.2rem;
   }
 
-  .visual-stat-card {
-    width: 260px;
-    height: 260px;
+  .gp-bar-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg-primary);
-    position: relative;
-    padding: 2rem;
+    flex-shrink: 0;
   }
 
-  .stat-badge {
-    position: absolute;
-    top: -15px;
-    left: 20px;
-    font-size: 0.8rem;
-    padding: 0.2rem 0.6rem;
-    transform: rotate(-3deg);
-  }
-
-  .stat-group {
-    text-align: center;
-  }
-
-  .stat-number {
-    font-family: var(--font-heading);
-    font-weight: 900;
-    font-size: 3.5rem;
-    color: var(--text-primary);
-    display: block;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-  }
-
-  .stat-label {
-    font-family: var(--font-heading);
-    font-weight: 800;
+  .gp-bar-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
     font-size: 0.85rem;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    letter-spacing: 0.05em;
-  }
-
-  .metrics-section {
-    background-color: var(--bg-secondary);
-    border-top: 3px solid var(--border-color);
-    border-bottom: 3px solid var(--border-color);
-  }
-
-  .metric-card {
-    padding: 2.5rem 2rem;
-  }
-
-  .metric-card h3 {
-    font-size: 1.3rem;
-    font-weight: 900;
-    margin-bottom: 0.8rem;
-  }
-
-  .metric-card p {
-    color: var(--text-secondary);
-    font-weight: 500;
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-
-  .process-section {
-    padding-bottom: 5rem;
-  }
-
-  .step-grid {
-    margin-top: 4rem;
-  }
-
-  .step-card {
-    padding: 2.5rem 2rem;
-    position: relative;
-    height: 100%;
-  }
-
-  .step-number {
-    position: absolute;
-    top: -15px;
-    left: 20px;
     font-family: var(--font-heading);
-    font-weight: 900;
-    font-size: 1.4rem;
-    background-color: var(--accent-primary);
-    color: #000000;
-    border: 2px solid var(--border-color);
-    box-shadow: 2px 2px 0px var(--border-color);
-    padding: 0.1rem 0.5rem;
+    color: var(--text-primary);
   }
 
-  .step-card h3 {
-    font-size: 1.25rem;
-    font-weight: 900;
-    margin-bottom: 0.8rem;
-    margin-top: 0.5rem;
+  .gp-subtle-sep {
+    color: var(--text-muted);
   }
 
-  .step-card p {
+  .gp-subtle-desc {
     color: var(--text-secondary);
     font-weight: 500;
-    font-size: 0.9rem;
-    line-height: 1.6;
   }
 
-  /* FAQ Styles */
-  .faq-section {
-    background-color: var(--bg-secondary);
+  .hero-form-trust {
+    margin-top: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    font-family: var(--font-heading);
+  }
+
+  /* Barra de Autoridad y Métricas Compacta (Ribbon) */
+  .authority-metrics-bar {
+    background-color: var(--bg-surface);
     border-top: 3px solid var(--border-color);
     border-bottom: 3px solid var(--border-color);
+    padding: 1.2rem 0;
   }
 
-  .faq-wrap {
-    max-width: 800px;
-    margin: 3rem auto 0 auto;
-    padding: 3rem;
+  .metrics-compact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
-  .faq-item {
+  @media (min-width: 768px) {
+    .metrics-compact-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+    }
+  }
+
+  .metric-compact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding-left: 0.8rem;
+    border-left: 4px solid var(--accent-primary);
+  }
+
+  .metric-number {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--text-primary);
+    white-space: nowrap;
+  }
+
+  .metric-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .metric-title {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-primary);
+  }
+
+  .metric-caption {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    line-height: 1.2;
+  }
+
+  /* Problema vs Solución */
+  .problem-cards-grid {
     margin-bottom: 2.5rem;
   }
 
+  .problem-card {
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    padding: 2rem;
+    background-color: #ffffff;
+  }
+
+  .problem-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .problem-card h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+  }
+
+  .problem-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .solution-highlight-box {
+    border: 4px solid var(--border-color);
+    box-shadow: 6px 6px 0px var(--border-color);
+    background-color: #f0fdf4;
+    padding: 2.5rem;
+  }
+
+  .solution-badge {
+    background-color: #16a34a;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+    border: 2px solid var(--border-color);
+    display: inline-block;
+    margin-bottom: 0.6rem;
+  }
+
+  .solution-header h3 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  .solution-highlight-box p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  /* 4 Pilares de Especialización */
+  .spec-grid {
+    gap: 2rem;
+  }
+
+  .spec-card {
+    border: 3px solid var(--border-color);
+    box-shadow: 5px 5px 0px var(--border-color);
+    padding: 2.2rem;
+    background-color: #ffffff;
+  }
+
+  .spec-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .spec-number {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 900;
+    background-color: var(--accent-primary);
+    color: #000000;
+    padding: 0.3rem 0.7rem;
+    border: 2px solid var(--border-color);
+    box-shadow: 2px 2px 0px var(--border-color);
+    flex-shrink: 0;
+  }
+
+  .spec-card-header h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .spec-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+
+  .spec-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .spec-bullets li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 1.4rem;
+  }
+
+  .spec-bullets li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    font-weight: 900;
+    color: var(--accent-primary);
+  }
+
+  /* Entregables Concretos */
+  .deliv-grid {
+    gap: 2rem;
+  }
+
+  .deliv-card {
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    padding: 2rem;
+    background-color: #ffffff;
+  }
+
+  .deliv-badge {
+    display: inline-block;
+    background-color: var(--text-primary);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid var(--border-color);
+  }
+
+  .deliv-card h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+  }
+
+  .deliv-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+
+  .deliv-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .deliv-bullets li {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 1.2rem;
+  }
+
+  .deliv-bullets li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: 900;
+    color: #16a34a;
+  }
+
+  /* Calificación Para Quién Es y NO Es */
+  .qualification-grid {
+    gap: 2rem;
+  }
+
+  .qual-card {
+    border: 4px solid var(--border-color);
+    padding: 2.5rem;
+    background-color: #ffffff;
+  }
+
+  .qual-good {
+    box-shadow: 6px 6px 0px #16a34a;
+    border-color: var(--border-color);
+  }
+
+  .qual-bad {
+    box-shadow: 6px 6px 0px #dc2626;
+    border-color: var(--border-color);
+  }
+
+  .qual-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+  }
+
+  .text-success {
+    color: #16a34a;
+  }
+
+  .text-danger {
+    color: #dc2626;
+  }
+
+  .qual-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .qual-list li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Tabla Comparativa Brutalista */
+  .comparison-table-wrapper {
+    overflow-x: auto;
+    border: 4px solid var(--border-color);
+    box-shadow: 6px 6px 0px var(--border-color);
+    padding: 0;
+    background-color: #ffffff;
+  }
+
+  .brutalist-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+  }
+
+  .brutalist-table th,
+  .brutalist-table td {
+    padding: 1.2rem 1.4rem;
+    border: 2px solid var(--border-color);
+    line-height: 1.5;
+  }
+
+  .brutalist-table thead th {
+    background-color: var(--bg-surface);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.95rem;
+  }
+
+  .brutalist-table th.highlight-col,
+  .brutalist-table td.highlight-col {
+    background-color: #fef9c3;
+    border-left: 3px solid var(--border-color);
+    border-right: 3px solid var(--border-color);
+  }
+
+  /* CTA Intermedio */
+  .mid-cta-section {
+    padding: 4rem 0;
+  }
+
+  .cta-banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  /* Cluster de Recursos */
+  .cluster-grid {
+    gap: 1.8rem;
+  }
+
+  .cluster-card {
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    padding: 1.8rem;
+    background-color: #ffffff;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .cluster-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0px var(--border-color);
+  }
+
+  .cluster-tag {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+    display: inline-block;
+  }
+
+  .cluster-card h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+  }
+
+  .cluster-card p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+
+  .read-more-link {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--text-primary);
+  }
+
+  /* FAQ */
+  .faq-wrap {
+    border: 3px solid var(--border-color);
+    box-shadow: 5px 5px 0px var(--border-color);
+    padding: 2.5rem;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .faq-item {
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1.5rem;
+  }
+
   .faq-item:last-child {
-    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
   .faq-item h4 {
     font-size: 1.2rem;
-    font-weight: 900;
+    font-weight: 800;
     margin-bottom: 0.8rem;
-    position: relative;
-    padding-left: 1.5rem;
-  }
-
-  .faq-item h4::before {
-    content: "Q.";
-    position: absolute;
-    left: 0;
-    color: var(--accent-primary);
-    font-weight: 900;
+    font-family: var(--font-heading);
+    color: var(--text-primary);
   }
 
   .faq-item p {
-    color: var(--text-secondary);
     font-size: 0.95rem;
+    color: var(--text-secondary);
     line-height: 1.6;
-    font-weight: 500;
-    padding-left: 1.5rem;
   }
 
-  /* CTA banner */
-  .cta-banner-brutalist {
-    background-color: var(--text-primary);
-    color: var(--bg-primary);
-    border: 3px solid var(--border-color);
-    padding: 4rem 3rem;
-    text-align: center;
-    box-shadow: 6px 6px 0px var(--border-color);
-  }
-
-  .cta-banner-brutalist h2 {
-    color: #ffffff;
-    font-size: 2rem;
-    font-weight: 900;
-    margin-bottom: 1rem;
-  }
-
-  .cta-banner-brutalist p {
-    color: var(--bg-tertiary);
-    max-width: 600px;
-    margin: 0 auto 2.5rem auto;
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
-
-  .cta-banner-brutalist .btn-primary {
-    background-color: var(--accent-primary);
-    color: #000000;
-    box-shadow: 4px 4px 0px #ffffff;
-    border-color: #ffffff;
-  }
-
-  .cta-banner-brutalist .btn-primary:hover {
-    background-color: var(--accent-hover);
-    box-shadow: 6px 6px 0px #ffffff;
+  /* CTA Bottom */
+  .detail-cta-section {
+    padding: 5rem 0;
   }
 </style>

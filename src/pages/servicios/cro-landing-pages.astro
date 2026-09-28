@@ -1,196 +1,633 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import LeadForm from '../../components/LeadForm';
 
-const title = "Páginas de Aterrizaje CRO & Optimización de Conversión | Funnel Builder";
-const description = "Diseño de Landing Pages de alta conversión y optimización CRO. Convierte el tráfico de tus campañas publicitarias en leads y clientes reales.";
+const title = "Diseño de Landing Pages de Alta Conversión & CRO | Consultor Web";
+const description = "Diseño y optimización de Landing Pages con metodología CRO (Conversion Rate Optimization). Carga en <1 segundo, copywriting persuasivo y máxima tasa de conversión.";
 ---
 
 <Layout title={title} description={description}>
-  <!-- Schema: FAQPage JSON-LD -->
+  <!-- Schema: Service & FAQPage JSON-LD -->
   <script type="application/ld+json" slot="head">
     {
       "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
+      "@graph": [
         {
-          "@type": "Question",
-          "name": "¿Por qué es importante la velocidad de carga de una landing page?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cada segundo de demora en móviles reduce la tasa de conversión en un 20%. Si estás pagando por cada clic en anuncios, un sitio lento significa quemar dinero antes de que el usuario vea tu propuesta de valor."
-          }
+          "@type": "Service",
+          "name": "Diseño de Landing Pages de Alta Conversión y Optimización CRO",
+          "serviceType": "Optimización de la Tasa de Conversión (CRO) & Desarrollo Web",
+          "provider": {
+            "@type": "Person",
+            "name": "Fabián Pérez",
+            "jobTitle": "Especialista Senior en CRO & Trafficker Digital",
+            "url": "https://fabipers.com"
+          },
+          "areaServed": [
+            { "@type": "Country", "name": "Colombia" },
+            { "@type": "Country", "name": "Estados Unidos" }
+          ],
+          "description": "Diseño, desarrollo y optimización de páginas de aterrizaje (landing pages) ultrarrápidas, copywriting persuasivo y arquitectura CRO para campañas de Google Ads, Meta Ads y funnels comerciales."
         },
         {
-          "@type": "Question",
-          "name": "¿Qué es CRO?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CRO (Conversion Rate Optimization) es el conjunto de técnicas científicas y de diseño utilizadas para incrementar el porcentaje de visitantes de tu web que realizan una acción deseada (comprar, rellenar un formulario)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Tengo que contratar hosting y dominio aparte para mi landing page?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yo me encargo de sugerirte las mejores alternativas (como Cloudflare, Vercel o servidores VPS con Coolify) y ayudarte con la configuración de DNS para que tu sitio cargue a la velocidad de la luz."
-          }
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué es CRO (Conversion Rate Optimization) y por qué lo necesita mi negocio?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CRO es el proceso científico de optimizar los elementos visuales, textos y usabilidad de una página web para aumentar el porcentaje de visitantes que completan una acción comercial deseada (comprar, agendar o contactar por WhatsApp). Sin CRO, duplicar tus ventas suele requerir duplicar tu gasto publicitario. Con CRO, aumentas tus ingresos usando exactamente el mismo tráfico y presupuesto de pauta."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Por qué la velocidad de carga de una landing page es tan crítica para la pauta?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Estudios de Google demuestran que si una página tarda más de 3 segundos en cargar en dispositivos móviles, más del 50% de los usuarios la abandonan antes de verla. Si estás pagando por cada clic en Google Ads o Facebook Ads, una web lenta significa tirar la mitad de tu presupuesto publicitario a la basura de inmediato. Mis landings están programadas en código ultraligero y cargan en menos de 1 segundo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué diferencia hay entre una página web corporativa tradicional y una Landing Page CRO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Una web corporativa tiene menús múltiples, enlaces al blog, 'quiénes somos' y decenas de distracciones donde el usuario se pierde sin comprar. Una Landing Page CRO tiene un único objetivo de conversión (Single Conversion Goal), sin menús de escape, con textos orientados al beneficio del cliente y llamados a la acción repetidos y estratégicamente ubicados."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Quién se encarga del copywriting y los textos de la página?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yo me encargo de investigar tu mercado, dolores del cliente y objeciones de compra para redactar el 100% del copywriting persuasivo de la landing page. No te pediré que redactes los textos; aplicamos fórmulas psicológicas de ventas (AIDA, PAS) respaldadas por tu propuesta de valor."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿En qué tecnología o plataforma desarrollas las landing pages?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Desarrollo con tecnologías web modernas y estáticas (Astro, React, Tailwind CSS o WordPress altamente optimizado sin constructores pesados como Elementor o Divi). Esto garantiza puntuaciones de 95+ en Google PageSpeed Insights y tiempos de carga instantáneos en cualquier red móvil."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Incluye la integración con analítica, píxeles y WhatsApp?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí, absolutamente. Toda landing page que entrego incluye la configuración completa de Google Analytics 4, Google Tag Manager, Píxel de Meta, API de Conversiones (CAPI) y seguimiento de clics a WhatsApp con mensajes prellenados y medición de eventos de conversión."
+              }
+            }
+          ]
         }
       ]
     }
   </script>
-  <!-- Hero Section -->
+
+  <!-- Hero Section con Formulario en Parte Superior Derecha -->
   <section class="section service-hero-detail" id="hero">
-    <div class="container srv-detail-grid">
+    <div class="container srv-hero-grid">
+      <!-- Columna Izquierda: Mensaje Comercial y Autoridad -->
       <div class="srv-hero-content">
         <div class="badge-wrapper">
-          <span class="hero-badge rotate-left">⚡ Landing Pages & CRO</span>
+          <span class="hero-badge rotate-left">⚡ ESPECIALISTA EN CRO & LANDING PAGES DE ALTA CONVERSIÓN</span>
         </div>
         <h1 class="hero-title">
-          Convierte más clics en clientes con <span class="highlight-text">Landings CRO</span>
+          Diseño de <span class="highlight-text">Landing Pages</span> de Alta Conversión y Optimización CRO
         </h1>
         <p class="hero-subtitle">
-          El tráfico es inútil si llega a una página lenta y confusa. Construyo páginas de aterrizaje ligeras, persuasivas y optimizadas al milisegundo bajo metodologías CRO para multiplicar tus tasas de conversión.
+          De nada sirve pagar por clics costosos en Google Ads o Meta Ads si tus visitantes aterrizan en una página web lenta, confusa o sin llamado a la acción claro. Como especialista en CRO y desarrollo web de alto rendimiento, diseño páginas de aterrizaje ultrarrápidas <strong>(carga en &lt; 1s)</strong> estructuradas psicológicamente para convertir visitas en clientes reales.
         </p>
+
+        <!-- Puntos Fuertes en Viñetas Brutalistas -->
+        <div class="hero-bullet-list">
+          <div class="hero-bullet-item">
+            <span class="bullet-icon">⚡</span>
+            <div>
+              <strong>Velocidad Extrema (&lt; 1 Segundo):</strong> Desarrolladas en código estático moderno sin constructores pesados (Elementor o Divi) que hacen rebotar al 40% del tráfico móvil.
+            </div>
+          </div>
+          <div class="hero-bullet-item">
+            <span class="bullet-icon">🧠</span>
+            <div>
+              <strong>Arquitectura Persuasiva & Copywriting:</strong> Flujo narrativo diseñado para derribar objeciones, generar confianza inmediata y guiar al usuario hacia el formulario o WhatsApp.
+            </div>
+          </div>
+          <div class="hero-bullet-item">
+            <span class="bullet-icon">📈</span>
+            <div>
+              <strong>Metodología CRO Científica:</strong> Optimización de cada botón, campo y llamada a la acción para duplicar tu tasa de conversión sin gastar más en pauta.
+            </div>
+          </div>
+        </div>
+
         <div class="hero-actions">
-          <a href="/servicios#cotizador-sec" class="btn btn-primary" id="cro-cta-quote">
-            ⚡ Cotizar Diseño Landings
+          <a href="#formulario-contacto" class="btn btn-primary" id="cro-cta-quote-top">
+            ⚡ Cotizar mi Landing Page
           </a>
-          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20cotizar%20servicios%20de%20CRO%20y%20Landing%20Pages" class="btn btn-whatsapp" id="cro-cta-whatsapp" target="_blank" rel="noopener noreferrer">
-            💬 WhatsApp Directo
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20cotizar%20el%20dise%C3%B1o%20de%20una%20Landing%20Page%20CRO" class="btn btn-whatsapp" id="cro-cta-whatsapp" target="_blank" rel="noopener noreferrer">
+            💬 WhatsApp (+57 318 287 3558)
+          </a>
+          <a href="#entregables" class="btn btn-secondary" id="cro-cta-deliverables">
+            Ver Entregables &darr;
           </a>
         </div>
       </div>
 
-      <div class="srv-hero-visual">
-        <div class="visual-stat-card card rotate-right">
-          <span class="stat-badge highlight-box">CRO LANDINGS</span>
-          <div class="stat-group">
-            <span class="stat-number">&lt; 1s</span>
-            <span class="stat-label">Tiempo de Carga en Dispositivos Móviles</span>
+      <!-- Columna Derecha: Formulario de Contacto Superior -->
+      <div class="srv-hero-form-col">
+        <div class="google-partner-hero-bar">
+          <div class="gp-bar-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="gp-bar-text">
+            <strong>Arquitectura Web & Rendimiento CRO</strong>
+            <span class="gp-subtle-sep">•</span>
+            <span class="gp-subtle-desc">Carga &lt; 1s & PageSpeed 95+</span>
+          </div>
+        </div>
+
+        <LeadForm 
+          client:load 
+          locationName="Colombia & Miami"
+          formTitle="Cotiza tu Landing Page o Auditoría CRO"
+          formSubtitle="Analizaré tu página actual o modelo de negocio para diseñar una propuesta de aterrizaje de alta conversión en menos de 24h."
+          tagText="⚡ PROPUESTA EN 24H"
+          sourcePage="landing_servicio_cro_pages"
+          defaultService="Auditoría de Cuentas & Optimización CRO"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Barra de Autoridad y Métricas Clave (Compacta) -->
+  <section class="authority-metrics-bar">
+    <div class="container">
+      <div class="metrics-compact-grid">
+        <div class="metric-compact-item">
+          <span class="metric-number">&lt; 1 Segundo</span>
+          <div class="metric-info">
+            <strong class="metric-title">Carga en Móviles</strong>
+            <span class="metric-caption">Puntuación 95+ en PageSpeed</span>
+          </div>
+        </div>
+        <div class="metric-compact-item">
+          <span class="metric-number">+45%</span>
+          <div class="metric-info">
+            <strong class="metric-title">Tasa de Conversión</strong>
+            <span class="metric-caption">Mejora promedio vs webs genéricas</span>
+          </div>
+        </div>
+        <div class="metric-compact-item">
+          <span class="metric-number">0 Fricción</span>
+          <div class="metric-info">
+            <strong class="metric-title">UX Neo-Brutalista</strong>
+            <span class="metric-caption">Llamados a la acción claros y visibles</span>
+          </div>
+        </div>
+        <div class="metric-compact-item">
+          <span class="metric-number">100% Tuyo</span>
+          <div class="metric-info">
+            <strong class="metric-title">Código Propio</strong>
+            <span class="metric-caption">Sin mensualidades de constructores</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Metrics / Key value -->
-  <section class="section metrics-section" id="metrics">
-    <div class="container">
-      <div class="grid grid-3">
-        <div class="card metric-card text-center">
-          <h3>Velocidad Extrema</h3>
-          <p>Desarrollo estático moderno con Astro y React. Tiempos de carga mínimos significan menor rebote en campañas.</p>
-        </div>
-        <div class="card metric-card text-center">
-          <h3>Estructura Persuasiva</h3>
-          <p>Copywriting enfocado en la conversión, resolviendo objeciones y facilitando la toma de decisión.</p>
-        </div>
-        <div class="card metric-card text-center">
-          <h3>A/B Testing Local</h3>
-          <p>Diseño experimental de cabeceras, formularios y botones de acción para refinar qué funciona mejor.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="section process-section" id="proceso">
+  <!-- Problema vs Solución: Por Qué la Mayoría de Landing Pages No Convierten -->
+  <section class="section compare-problem-section" id="problema">
     <div class="container">
       <div class="section-header text-center">
-        <span class="step-subtitle">Mi Metodología</span>
-        <h2>¿Cómo Trabajaremos en CRO & Landings?</h2>
+        <span class="step-subtitle">Diagnóstico de Fuga</span>
+        <h2>¿Por Qué el 90% de las Páginas de Aterrizaje Queman Presupuesto sin Vender?</h2>
+        <p class="section-lead">
+          En mis auditorías a páginas de destino que reciben tráfico pago, detecto constantemente los mismos 5 errores críticos que provocan que los usuarios se marchen sin dejar sus datos:
+        </p>
       </div>
 
-      <div class="grid grid-4 step-grid">
-        <div class="card step-card">
-          <div class="step-number rotate-left">01</div>
-          <h3>Copywriting</h3>
-          <p>Estructuramos los textos de venta y el flujo narrativo enfocado a resolver los dolores de tu cliente.</p>
+      <div class="grid grid-2 compare-grid">
+        <!-- Tarjeta Problema -->
+        <div class="card problem-brutalist-card">
+          <div class="card-status-badge status-bad">❌ La Landing Tradicional Ineficiente</div>
+          <h3>Páginas Pesadas y Llenas de Distracciones</h3>
+          <ul class="problem-list">
+            <li><strong>Lentitud extrema en teléfonos móviles:</strong> Construidas con plantillas prediseñadas y plugins pesados que tardan 5 a 8 segundos en cargar, perdiendo la mitad del tráfico.</li>
+            <li><strong>Menús de navegación llenos de enlaces de escape:</strong> El usuario hace clic en el logo, el menú o redes sociales y jamás vuelve a completar la compra.</li>
+            <li><strong>Copywriting aburrido y centrado en la empresa:</strong> Textos del estilo <em>"Somos una empresa líder..."</em> en lugar de hablar del dolor urgente que el cliente quiere resolver.</li>
+            <li><strong>Formularios kilométricos y complejos:</strong> Piden 10 campos innecesarios que nadie quiere rellenar desde un teclado táctil.</li>
+            <li><strong>Cero coherencia con el anuncio (Message Mismatch):</strong> El anuncio promete una oferta y la página habla de un tema diferente, generando desconfianza instantánea.</li>
+          </ul>
         </div>
 
-        <div class="card step-card">
-          <div class="step-number rotate-right">02</div>
-          <h3>Diseño Brutalista</h3>
-          <p>Diseñamos una UI limpia, llamativa y de alto contraste que prioriza los botones de acción.</p>
-        </div>
-
-        <div class="card step-card">
-          <div class="step-number rotate-left">03</div>
-          <h3>Desarrollo</h3>
-          <p>Programamos el sitio con código ultra optimizado libre de código innecesario o plugins pesados.</p>
-        </div>
-
-        <div class="card step-card">
-          <div class="step-number rotate-right">04</div>
-          <h3>Optimización</h3>
-          <p>Analizamos mapas de calor e interacciones de usuarios para seguir afinando las tasas de conversión.</p>
+        <!-- Tarjeta Solución -->
+        <div class="card solution-brutalist-card">
+          <div class="card-status-badge status-good">✓ Mi Metodología de Landing Page CRO</div>
+          <h3>Arquitectura Ligera Orientada a Conversión</h3>
+          <ul class="solution-list">
+            <li><strong>Código Limpio con Carga en Menos de 1 Segundo:</strong> Desarrolladas en Astro y componentes ligeros, garantizando retención total del usuario en redes 4G/5G.</li>
+            <li><strong>Un Solo Objetivo de Conversión (Sin Fugas):</strong> Eliminamos menús y distracciones para enfocar el 100% de la atención en el formulario o botón de WhatsApp.</li>
+            <li><strong>Copywriting Persuasivo Enfocado en Beneficios:</strong> Fórmulas de ventas (Problema, Agitación, Solución, Prueba Social) que guían la decisión de compra.</li>
+            <li><strong>Formularios de Fricción Mínima:</strong> Solo los campos indispensables para contactar al prospecto, con auto-formato en móviles y validación inmediata.</li>
+            <li><strong>Concordancia Perfecta con Anuncios:</strong> Alineación milimétrica entre la palabra clave o anuncio y el titular de la landing, elevando el Nivel de Calidad.</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
+  <!-- Mis 4 Frentes de Especialización en Landing Pages & CRO -->
+  <section class="section frameworks-section" id="especialidades">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Focos de Conversión</span>
+        <h2>Mis 4 Frentes de Especialización en Páginas de Aterrizaje</h2>
+        <p class="section-lead">
+          Diseño páginas específicas para el canal publicitario y el modelo de cierre que mejor se ajusta a tu empresa:
+        </p>
+      </div>
+
+      <div class="grid grid-2 framework-grid">
+        <div class="card framework-card">
+          <div class="framework-icon-box">🎯</div>
+          <h3>1. Landings para Campañas de Pauta (Google & Meta Ads)</h3>
+          <p>
+            Páginas diseñadas con estricta concordancia con la intención de búsqueda del usuario. Maximizamos el Quality Score en Google Ads para abaratar el costo por clic (CPC) y elevamos la tasa de conversión en tráfico frío de redes sociales.
+          </p>
+          <ul class="framework-bullets">
+            <li>Titulares de impacto directo y congruencia con el anuncio.</li>
+            <li>Secciones de prueba social (reseñas, clientes, casos de éxito).</li>
+            <li>Llamados a la acción repetidos a lo largo del scroll.</li>
+          </ul>
+        </div>
+
+        <div class="card framework-card">
+          <div class="framework-icon-box">💬</div>
+          <h3>2. Embudos Híbridos para Cierre por WhatsApp</h3>
+          <p>
+            En Colombia y Latinoamérica, el chat de WhatsApp es la herramienta reina de cierre de ventas. Creamos landings de precalificación que informan sobre el precio y características antes de derivar al usuario con un mensaje contextualizado.
+          </p>
+          <ul class="framework-bullets">
+            <li>Filtro previo para evitar que tu equipo pierda tiempo con curiosos.</li>
+            <li>Botón flotante y enlaces directos con textos preconfigurados.</li>
+            <li>Disparo de evento de conversión en GA4 y Meta CAPI al hacer clic en WhatsApp.</li>
+          </ul>
+        </div>
+
+        <div class="card framework-card">
+          <div class="framework-icon-box">💼</div>
+          <h3>3. Páginas de Venta Long-Form para Servicios High-Ticket & B2B</h3>
+          <p>
+            Para servicios profesionales, asesorías, software o programas de formación donde el cliente necesita profundidad argumental antes de solicitar una llamada o cotización formal.
+          </p>
+          <ul class="framework-bullets">
+            <li>Estructura narrativa completa: problema, metodología, resultados y garantías.</li>
+            <li>Tablas comparativas que demuestran tu superioridad frente a la competencia.</li>
+            <li>Módulo de Preguntas Frecuentes interactivo para resolver objeciones finales.</li>
+          </ul>
+        </div>
+
+        <div class="card framework-card">
+          <div class="framework-icon-box">🔬</div>
+          <h3>4. Auditoría CRO & Rediseño de Landings Existentes</h3>
+          <p>
+            Si ya tienes una página web que recibe tráfico pero no convierte, realizo un análisis forense de usabilidad, mapas de calor, puntos de fuga y textos para reconstruirla bajo criterios de alta conversión.
+          </p>
+          <ul class="framework-bullets">
+            <li>Evaluación técnica de velocidad de carga y Core Web Vitals.</li>
+            <li>Detección de puntos de fricción en formularios y botones.</li>
+            <li>Propuesta de rediseño visual y textual con estimación de impacto.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Entregables Concretos del Servicio -->
+  <section class="section deliverables-section" id="entregables">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Proceso de Construcción</span>
+        <h2>¿Qué Incluye el Servicio de Creación de Landing Pages CRO?</h2>
+        <p class="section-lead">
+          Entrego una herramienta de ventas lista para recibir tráfico, medir resultados y generar prospectos comerciales desde el primer día:
+        </p>
+      </div>
+
+      <div class="grid grid-3 deliverables-grid">
+        <div class="card deliverable-card">
+          <span class="deliv-number">01</span>
+          <h3>Investigación & Estrategia</h3>
+          <p>Estudio de tu propuesta de valor, competidores directos, objeciones comunes y perfil de cliente ideal para definir la narrativa de venta.</p>
+          <ul class="deliv-bullets">
+            <li>Entrevista estratégica inicial.</li>
+            <li>Mapeo de beneficios vs características.</li>
+            <li>Definición del objetivo de conversión principal.</li>
+          </ul>
+        </div>
+
+        <div class="card deliverable-card">
+          <span class="deliv-number">02</span>
+          <h3>Copywriting Persuasivo Completo</h3>
+          <p>Redacción profesional de cada titular, viñeta, llamado a la acción y respuesta a objeciones. Todo redactado para persuadir y vender.</p>
+          <ul class="deliv-bullets">
+            <li>Fórmulas de persuasión probadas (AIDA, PAS).</li>
+            <li>Micro-copy en botones y formularios para reducir fricción.</li>
+            <li>Estructuración de testimonios y prueba social.</li>
+          </ul>
+        </div>
+
+        <div class="card deliverable-card">
+          <span class="deliv-number">03</span>
+          <h3>Diseño UI/UX Neo-Brutalista</h3>
+          <p>Diseño visual de alto contraste, limpio y moderno. Jerarquía tipográfica impecable que destaca de inmediato lo verdaderamente importante.</p>
+          <ul class="deliv-bullets">
+            <li>Diseño 100% responsivo pensado Mobile-First.</li>
+            <li>Paleta de colores optimizada para legibilidad.</li>
+            <li>Iconografía y componentes visuales a medida.</li>
+          </ul>
+        </div>
+
+        <div class="card deliverable-card">
+          <span class="deliv-number">04</span>
+          <h3>Desarrollo Ultrarrápido (<1s)</h3>
+          <p>Programación en código estático moderno sin constructores lentos. Tu página volará en cualquier celular y red móvil.</p>
+          <ul class="deliv-bullets">
+            <li>Optimización de imágenes en formatos modernos (WebP/AVIF).</li>
+            <li>Cumplimiento estricto de Core Web Vitals (PageSpeed 95+).</li>
+            <li>Cero scripts innecesarios ni dependencias pesadas.</li>
+          </ul>
+        </div>
+
+        <div class="card deliverable-card">
+          <span class="deliv-number">05</span>
+          <h3>Integración de Analítica & Tracking</h3>
+          <p>Configuración completa de eventos de conversión para que tus campañas de Google Ads y Meta Ads midan cada lead al instante.</p>
+          <ul class="deliv-bullets">
+            <li>Google Analytics 4 y Google Tag Manager.</li>
+            <li>Píxel de Meta con API de Conversiones (CAPI).</li>
+            <li>Medición de clics en WhatsApp y envíos de formulario.</li>
+          </ul>
+        </div>
+
+        <div class="card deliverable-card">
+          <span class="deliv-number">06</span>
+          <h3>Despliegue, Dominio & Traspaso</h3>
+          <p>Puesta en marcha en infraestructura de servidores de alta velocidad (CDN Cloudflare / Coolify VPS) y traspaso de propiedad 100% a tu nombre.</p>
+          <ul class="deliv-bullets">
+            <li>Certificado de seguridad SSL (HTTPS) activado.</li>
+            <li>Configuración de registros DNS en tu dominio.</li>
+            <li>Código y accesos entregados sin contratos de amarre.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 2rem;">
+        <a href="#formulario-contacto" class="btn btn-primary" id="cro-cta-deliverables-bottom">
+          ⚡ Solicitar Cotización de este Servicio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calificación: Para Quién Es y Para Quién NO Es -->
+  <section class="section qualification-section" id="criterio">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Filtro de Compatibilidad</span>
+        <h2>¿Este Servicio es el Adecuado para Tu Negocio?</h2>
+        <p class="section-lead">
+          Una Landing Page CRO es una máquina de conversión que potencia negocios con propuestas claras e inversión comercial activa:
+        </p>
+      </div>
+
+      <div class="grid grid-2 qualification-grid">
+        <div class="card qual-card qual-good">
+          <h3 class="qual-title text-success">✓ Sí es para ti si:</h3>
+          <ul class="qual-list">
+            <li><strong>Inviertes o planeas invertir en publicidad digital:</strong> Quieres que cada clic pagado en Google o Meta rinda el doble de conversiones.</li>
+            <li><strong>Vendes servicios profesionales, B2B, salud o productos de valor:</strong> Tu proceso de venta requiere confianza, claridad y diferenciación inmediata.</li>
+            <li><strong>Notas que tu página actual es lenta y no genera contactos:</strong> Recibes tráfico pero los usuarios se marchan sin interactuar.</li>
+            <li><strong>Valoras la velocidad, la claridad y el diseño que convierte:</strong> Entiendes que una web bonita que no vende no le sirve a tu negocio.</li>
+            <li><strong>Quieres ser el dueño absoluto de tu infraestructura:</strong> Sin pagar cuotas mensuales a plataformas cerradas ni intermediarios.</li>
+          </ul>
+        </div>
+
+        <div class="card qual-card qual-bad">
+          <h3 class="qual-title text-danger">✗ NO es para ti si:</h3>
+          <ul class="qual-list">
+            <li><strong>Buscas un sitio web corporativo de 20 páginas con blog y foros:</strong> Mi servicio se enfoca en páginas de aterrizaje hiper-optimizadas para vender.</li>
+            <li><strong>Quieres una plantilla prediseñada de $10 USD:</strong> Cada landing que construyo tiene arquitectura personalizada y copy redactado a medida.</li>
+            <li><strong>No tienes claro qué vendes ni a qué precio:</strong> Para persuadir al usuario, la oferta del negocio debe estar mínimamente definida.</li>
+            <li><strong>Esperas vender sin atender a los prospectos:</strong> Si te llegan leads calificados pero tu equipo comercial responde a los dos días, ninguna landing te salvará.</li>
+            <li><strong>Quieres efectos visuales lentos que retrasen la carga:</strong> Priorizo la velocidad de carga y la conversión sobre animaciones pesadas innecesarias.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabla Comparativa: Conmigo vs Agencia Tradicional vs Diseñador Freelancer -->
+  <section class="section comparison-table-section" id="comparativa">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Comparativa Directa</span>
+        <h2>¿Por Qué Construir Tu Landing Page Conmigo?</h2>
+      </div>
+
+      <div class="comparison-table-wrapper card">
+        <table class="brutalist-table">
+          <thead>
+            <tr>
+              <th>Factor Clave</th>
+              <th class="highlight-col">Conmigo (Especialista en CRO & Pauta)</th>
+              <th>Agencia de Diseño Web Tradicional</th>
+              <th>Diseñador Freelancer Genérico</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Velocidad de Carga en Móvil</strong></td>
+              <td class="highlight-col"><strong>Menos de 1 segundo (Astro/código estático, PageSpeed 95+)</strong></td>
+              <td>4 a 7 segundos (WordPress con Elementor, Divi y 30 plugins)</td>
+              <td>Variable, suelen usar constructores lentos sin optimizar</td>
+            </tr>
+            <tr>
+              <td><strong>Copywriting Persuasivo</strong></td>
+              <td class="highlight-col"><strong>100% redactado por mí con fórmulas de conversión</strong></td>
+              <td>Te piden que tú les entregues los textos de la página</td>
+              <td>Pega textos tipo "lorem ipsum" o genéricos sin gancho</td>
+            </tr>
+            <tr>
+              <td><strong>Integración con Campañas de Pauta</strong></td>
+              <td class="highlight-col"><strong>Alineada a Google Ads, Meta Ads y CAPI con tracking exacto</strong></td>
+              <td>Diseñan la página pero no saben cómo funciona la pauta paga</td>
+              <td>Solo instalan el píxel básico si se lo pides expresamente</td>
+            </tr>
+            <tr>
+              <td><strong>Enfoque de Negocio</strong></td>
+              <td class="highlight-col"><strong>Tasa de conversión, leads calificados y retorno de inversión</strong></td>
+              <td>"Que se vea bonita y moderna", sin métricas de ventas</td>
+              <td>Solo entrega el archivo visual sin pruebas de uso</td>
+            </tr>
+            <tr>
+              <td><strong>Propiedad de la Web</strong></td>
+              <td class="highlight-col"><strong>100% tuya, sin licencias mensuales ni códigos ocultos</strong></td>
+              <td>Cobran mensualidades de mantenimiento forzosas</td>
+              <td>Cuentas desordenadas o licencias piratas de plugins</td>
+            </tr>
+            <tr>
+              <td><strong>Atención y Soporte</strong></td>
+              <td class="highlight-col"><strong>Directa 1 a 1 conmigo con más de 10 años de experiencia</strong></td>
+              <td>Ejecutivo de cuentas que no sabe de código ni pauta</td>
+              <td>Disponibilidad inestable e informal</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Intermedio (Amarillo Vibrante Neo-Brutalista) -->
+  <section class="section mid-cta-section">
+    <div class="container">
+      <div class="cta-banner-brutalist">
+        <span class="cta-tag">⚡ AUDITORÍA DE CONVERSIÓN</span>
+        <h2>¿Tu página actual recibe visitas pero nadie te compra ni escribe?</h2>
+        <p>Revisemos tu landing page en vivo. Te diré exactamente qué fricciones visuales, de carga o de copy están deteniendo tus conversiones y cómo corregirlas.</p>
+        <div class="cta-banner-actions">
+          <a href="#hero" class="btn btn-primary" id="cro-mid-cta-form">
+            ⚡ Cotizar Diseño Arriba
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20consultarte%20sobre%20mi%20landing%20page%20y%20CRO" class="btn btn-whatsapp" id="cro-mid-cta-whatsapp" target="_blank" rel="noopener noreferrer">
+            💬 Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recursos del Cluster de Conversión & Pauta (Interlinking de Autoridad) -->
+  <section class="section cluster-resources-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="step-subtitle">Guías y Recursos Técnicos</span>
+        <h2>Aprende Más Sobre Optimización de Conversión y Rendimiento</h2>
+        <p class="section-lead">Artículos redactados desde mi experiencia práctica para ayudarte a mejorar la rentabilidad de tus páginas y campañas:</p>
+      </div>
+
+      <div class="grid grid-3 cluster-grid">
+        <a href="/por-que-google-ads-no-convierte-auditoria-2027" class="card cluster-card">
+          <span class="cluster-tag">Auditoría de Pauta</span>
+          <h3>Por Qué Google Ads No Convierte (Landing Page Fails)</h3>
+          <p>Cómo una mala página de aterrizaje destruye tu Nivel de Calidad en Google y triplica tus costos por adquisición.</p>
+          <span class="read-more-link">Leer Diagnóstico &rarr;</span>
+        </a>
+
+        <a href="/que-es-el-ctr-y-como-medir-el-ctr" class="card cluster-card">
+          <span class="cluster-tag">Métricas de Rendimiento</span>
+          <h3>Qué es el CTR y Cómo Afecta tus Landings</h3>
+          <p>La relación entre la tasa de clics de tus anuncios y la coherencia del mensaje en tu página de destino.</p>
+          <span class="read-more-link">Ver Artículo &rarr;</span>
+        </a>
+
+        <a href="/que-son-las-conversiones-en-google-o-facebook" class="card cluster-card">
+          <span class="cluster-tag">Tracking & CRO</span>
+          <h3>Qué Son las Conversiones en Google y Meta</h3>
+          <p>Diferencias entre micro y macro conversiones y cómo estructurarlas para alimentar los algoritmos de venta.</p>
+          <span class="read-more-link">Conocer Más &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Schema FAQPage) -->
   <section class="section faq-section" id="faq">
     <div class="container">
       <div class="section-header text-center">
         <span class="step-subtitle">Dudas Comunes</span>
-        <h2>Preguntas Frecuentes sobre CRO</h2>
+        <h2>Preguntas Frecuentes sobre Mi Servicio de Landing Pages & CRO</h2>
       </div>
 
       <div class="faq-wrap card">
         <div class="faq-item">
-          <h4>¿Por qué es importante la velocidad de carga de una landing page?</h4>
-          <p>Cada segundo de demora en móviles reduce la tasa de conversión en un 20%. Si estás pagando por cada clic en anuncios, un sitio lento significa quemar dinero antes de que el usuario vea tu propuesta de valor.</p>
+          <h4>¿Qué es CRO y en qué beneficia a mis campañas publicitarias?</h4>
+          <p>CRO (Conversion Rate Optimization) consiste en diseñar y afinar cada elemento de tu página para aumentar el porcentaje de visitas que se convierten en compradores o prospectos. Si tu página convierte al 1% y con CRO sube al 2.5%, estás más que duplicando tus ventas sin tener que gastar un solo peso más en pauta publicitaria.</p>
         </div>
 
         <div class="faq-item">
-          <h4>¿Qué es CRO?</h4>
-          <p>CRO (Conversion Rate Optimization) es el conjunto de técnicas científicas y de diseño utilizadas para incrementar el porcentaje de visitantes de tu web que realizan una acción deseada (comprar, rellenar un formulario).</p>
+          <h4>¿Por qué insistes tanto en que la página cargue en menos de 1 segundo?</h4>
+          <p>Porque el usuario que hace clic en un anuncio en su celular no tiene paciencia. Cada segundo adicional de demora genera un 20% de rebote inmediato. Una página desarrollada en código limpio y estático retiene al visitante y permite que lea tu propuesta antes de perder el interés.</p>
         </div>
 
         <div class="faq-item">
-          <h4>¿Tengo que contratar hosting y dominio aparte?</h4>
-          <p>Yo me encargo de sugerirte las mejores alternativas (como Cloudflare, Vercel o servidores VPS con Coolify) y ayudarte con la configuración de DNS para que tu sitio cargue a la velocidad de la luz.</p>
+          <h4>¿Tengo que escribir yo los textos o redactar los títulos?</h4>
+          <p>No. Yo me encargo del copywriting integral de la landing page. A partir de una sesión inicial donde analizamos tu negocio, redacto titulares, textos explicativos, llamados a la acción y respuestas a objeciones con fórmulas de persuasión comprobadas.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>¿La página incluirá formularios y botones a WhatsApp?</h4>
+          <p>Sí. Configuramos formularios ligeros y botones inteligentes de WhatsApp con mensajes prellenados contextualizados y seguimiento de conversiones en Google Analytics 4 y Meta CAPI.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>¿Qué necesito para empezar el desarrollo de mi landing page?</h4>
+          <p>Solo requerimos definir tu oferta comercial, tu cliente ideal, material visual que tengas de tu negocio (fotos, logotipo) y acceso a tu dominio o registrador de DNS para vincular el sitio.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>¿A nombre de quién queda el sitio y el código?</h4>
+          <p>A tu nombre al 100%. No creo dependencias técnicas ni te ato a contratos de mantenimiento forzoso. Te entrego la propiedad completa de tus archivos, servidor y accesos de administración.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bottom CTA -->
+  <!-- Bottom Closing CTA (Amarillo Vibrante Neo-Brutalista) -->
   <section class="section detail-cta-section">
     <div class="container">
       <div class="cta-banner-brutalist">
-        <h2>¿Quieres multiplicar las ventas de tus anuncios de pauta?</h2>
-        <p>Hablemos por WhatsApp y diseñemos una página de aterrizaje de alto impacto y conversión extrema.</p>
-        <a href="/servicios#cotizador-sec" class="btn btn-primary" id="cro-bottom-cta">
-          ⚡ Cotizar mi landing page
-        </a>
+        <span class="cta-tag">⚡ MAXIMIZA TUS RESULTADOS HOY</span>
+        <h2>¿Listo para que tu inversión en publicidad se convierta en clientes reales?</h2>
+        <p>No dejes que tus visitas se marchen sin comprar. Construyamos una landing page ultrarrápida diseñada científicamente para vender tu producto o servicio.</p>
+        <div class="cta-banner-actions">
+          <a href="#hero" class="btn btn-primary" id="cro-bottom-cta">
+            ⚡ Solicitar Cotización Arriba
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=+573182873558&text=Hola%20Fabi%C3%A1n,%20quiero%20cotizar%20el%20dise%C3%B1o%20de%20una%20Landing%20Page%20CRO" class="btn btn-whatsapp" id="cro-bottom-whatsapp" target="_blank" rel="noopener noreferrer">
+            💬 Escríbeme por WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
+  /* Hero 2 Columnas */
   .service-hero-detail {
-    padding: 8rem 0 5rem 0;
+    padding: 7rem 0 4rem 0;
   }
 
-  .srv-detail-grid {
+  .srv-hero-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
-    align-items: center;
+    gap: 3.5rem;
+    align-items: start;
   }
 
   @media (min-width: 992px) {
-    .srv-detail-grid {
-      grid-template-columns: 1.25fr 0.75fr;
+    .srv-hero-grid {
+      grid-template-columns: 1.15fr 0.85fr;
     }
   }
 
   .badge-wrapper {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
   }
 
   .hero-badge {
@@ -198,40 +635,61 @@ const description = "Diseño de Landing Pages de alta conversión y optimizació
     color: var(--accent-primary);
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding: 0.4rem 1rem;
+    padding: 0.4rem 0.9rem;
     border: 2px solid var(--border-color);
     display: inline-block;
   }
 
   .hero-title {
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-size: clamp(2rem, 4vw, 3.4rem);
     letter-spacing: -0.04em;
-    line-height: 1.05;
-    margin-bottom: 1.8rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
     font-weight: 900;
   }
 
   .highlight-text {
     background-color: var(--accent-primary);
     color: #000000;
-    padding: 0 0.5rem;
+    padding: 0 0.4rem;
     border: 3px solid var(--border-color);
     box-shadow: 3px 3px 0px var(--border-color);
     display: inline-block;
     transform: rotate(-0.5deg);
-    margin-top: 0.2rem;
   }
 
   .hero-subtitle {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: 2.8rem;
-    max-width: 650px;
+    margin-bottom: 2rem;
     font-weight: 500;
     line-height: 1.6;
+  }
+
+  /* Viñetas del Hero */
+  .hero-bullet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .hero-bullet-item {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .bullet-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
   }
 
   .hero-actions {
@@ -240,124 +698,447 @@ const description = "Diseño de Landing Pages de alta conversión y optimizació
     gap: 1rem;
   }
 
-  .hero-actions .btn {
-    border-width: 3px;
-  }
-
-  .srv-hero-visual {
+  /* Barra de Rendimiento sobre el formulario */
+  .google-partner-hero-bar {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: #ffffff;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    padding: 0.7rem 1.2rem;
+    margin-bottom: 1.2rem;
   }
 
-  .visual-stat-card {
-    width: 260px;
-    height: 260px;
+  .gp-bar-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg-primary);
-    position: relative;
-    padding: 2rem;
   }
 
-  .stat-badge {
-    position: absolute;
-    top: -15px;
-    left: 20px;
-    font-size: 0.8rem;
-    padding: 0.2rem 0.6rem;
-    transform: rotate(-3deg);
+  .gp-bar-text {
+    font-size: 0.85rem;
+    color: var(--text-primary);
   }
 
-  .stat-group {
-    text-align: center;
+  .gp-subtle-sep {
+    margin: 0 0.4rem;
+    color: #a1a1aa;
   }
 
-  .stat-number {
+  .gp-subtle-desc {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* Métricas de Autoridad Compactas */
+  .authority-metrics-bar {
+    background-color: var(--bg-secondary);
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+    padding: 1.25rem 0;
+  }
+
+  .metrics-compact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  @media (min-width: 900px) {
+    .metrics-compact-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  .metric-compact-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 4px solid var(--accent-primary);
+    padding-left: 0.9rem;
+    text-align: left;
+  }
+
+  .metric-number {
     font-family: var(--font-heading);
     font-weight: 900;
-    font-size: 3.5rem;
+    font-size: 1.35rem;
     color: var(--text-primary);
-    display: block;
-    line-height: 1;
-    margin-bottom: 0.5rem;
+    line-height: 1.15;
+    margin-bottom: 0.2rem;
   }
 
-  .stat-label {
+  .metric-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .metric-title {
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: 0.85rem;
     text-transform: uppercase;
-    color: var(--text-muted);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
+    color: var(--text-primary);
   }
 
-  .metrics-section {
-    background-color: var(--bg-secondary);
-    border-top: 3px solid var(--border-color);
-    border-bottom: 3px solid var(--border-color);
+  .metric-caption {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.3;
+    margin: 0;
+    font-weight: 500;
   }
 
-  .metric-card {
+  /* Problema vs Solución */
+  .section-lead {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0.8rem auto 0 auto;
+    font-weight: 500;
+  }
+
+  .compare-grid {
+    margin-top: 3.5rem;
+  }
+
+  .problem-brutalist-card {
+    background-color: #fef2f2;
+    border-color: #ef4444;
+    padding: 2.5rem;
+  }
+
+  .solution-brutalist-card {
+    background-color: #f0fdf4;
+    border-color: #16a34a;
+    padding: 2.5rem;
+  }
+
+  .card-status-badge {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border: 2px solid;
+    margin-bottom: 1.2rem;
+  }
+
+  .status-bad {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border-color: #ef4444;
+  }
+
+  .status-good {
+    background-color: #dcfce7;
+    color: #15803d;
+    border-color: #16a34a;
+  }
+
+  .problem-brutalist-card h3, .solution-brutalist-card h3 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+  }
+
+  .problem-list, .solution-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .problem-list li::before {
+    content: "✗ ";
+    color: #ef4444;
+    font-weight: 900;
+  }
+
+  .solution-list li::before {
+    content: "✓ ";
+    color: #16a34a;
+    font-weight: 900;
+  }
+
+  /* Frameworks / Frentes */
+  .framework-grid {
+    margin-top: 3.5rem;
+  }
+
+  .framework-card {
     padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
   }
 
-  .metric-card h3 {
+  .framework-icon-box {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .framework-card h3 {
     font-size: 1.3rem;
     font-weight: 900;
     margin-bottom: 0.8rem;
   }
 
-  .metric-card p {
+  .framework-card p {
+    font-size: 0.95rem;
     color: var(--text-secondary);
-    font-weight: 500;
-    font-size: 0.9rem;
     line-height: 1.6;
+    margin-bottom: 1.2rem;
   }
 
-  .process-section {
-    padding-bottom: 5rem;
+  .framework-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border-top: 1px dashed var(--border-color);
+    padding-top: 1rem;
+    margin-top: auto;
   }
 
-  .step-grid {
-    margin-top: 4rem;
+  .framework-bullets li::before {
+    content: "• ";
+    color: var(--accent-primary);
+    font-weight: 900;
   }
 
-  .step-card {
+  /* Entregables */
+  .deliverables-section {
+    background-color: var(--bg-secondary);
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+  }
+
+  .deliverables-grid {
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .deliverable-card {
     padding: 2.5rem 2rem;
     position: relative;
-    height: 100%;
+    background-color: var(--bg-primary);
   }
 
-  .step-number {
+  .deliv-number {
     position: absolute;
     top: -15px;
     left: 20px;
     font-family: var(--font-heading);
     font-weight: 900;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     background-color: var(--accent-primary);
     color: #000000;
     border: 2px solid var(--border-color);
     box-shadow: 2px 2px 0px var(--border-color);
-    padding: 0.1rem 0.5rem;
+    padding: 0.1rem 0.6rem;
   }
 
-  .step-card h3 {
+  .deliverable-card h3 {
     font-size: 1.25rem;
     font-weight: 900;
-    margin-bottom: 0.8rem;
     margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
   }
 
-  .step-card p {
-    color: var(--text-secondary);
-    font-weight: 500;
+  .deliverable-card p {
     font-size: 0.9rem;
+    color: var(--text-secondary);
     line-height: 1.6;
+    margin-bottom: 1rem;
+    font-weight: 500;
   }
 
-  /* FAQ Styles */
+  .deliv-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-top: 1px dashed var(--border-color);
+    padding-top: 0.8rem;
+  }
+
+  .deliv-bullets li::before {
+    content: "✓ ";
+    color: #16a34a;
+    font-weight: 800;
+  }
+
+  /* Calificación */
+  .qualification-grid {
+    margin-top: 3.5rem;
+  }
+
+  .qual-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .qual-title {
+    font-size: 1.35rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+  }
+
+  .text-success {
+    color: #15803d;
+  }
+
+  .text-danger {
+    color: #b91c1c;
+  }
+
+  .qual-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .qual-good .qual-list li::before {
+    content: "✓ ";
+    color: #15803d;
+    font-weight: 900;
+  }
+
+  .qual-bad .qual-list li::before {
+    content: "✗ ";
+    color: #b91c1c;
+    font-weight: 900;
+  }
+
+  /* Tabla Comparativa */
+  .comparison-table-section {
+    background-color: var(--bg-secondary);
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+  }
+
+  .comparison-table-wrapper {
+    margin-top: 3.5rem;
+    overflow-x: auto;
+    padding: 0;
+  }
+
+  .brutalist-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .brutalist-table th, .brutalist-table td {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
+  }
+
+  .brutalist-table th:last-child, .brutalist-table td:last-child {
+    border-right: none;
+  }
+
+  .brutalist-table thead tr {
+    background-color: var(--text-primary);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-weight: 800;
+  }
+
+  .brutalist-table thead th.highlight-col {
+    background-color: var(--accent-primary);
+    color: #000000;
+  }
+
+  .brutalist-table td.highlight-col {
+    background-color: #fefce8;
+    color: #000000;
+  }
+
+  /* Cluster Resources */
+  .cluster-resources-section {
+    background-color: var(--bg-primary);
+  }
+
+  .cluster-grid {
+    margin-top: 3rem;
+  }
+
+  .cluster-card {
+    padding: 2.2rem 1.8rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .cluster-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 6px 0px var(--border-color);
+  }
+
+  .cluster-tag {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    background-color: var(--text-primary);
+    color: var(--accent-primary);
+    padding: 0.2rem 0.6rem;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .cluster-card h3 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .cluster-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .read-more-link {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: var(--accent-primary);
+    text-decoration: underline;
+  }
+
+  /* FAQ */
   .faq-section {
     background-color: var(--bg-secondary);
     border-top: 3px solid var(--border-color);
@@ -365,13 +1146,13 @@ const description = "Diseño de Landing Pages de alta conversión y optimizació
   }
 
   .faq-wrap {
-    max-width: 800px;
+    max-width: 850px;
     margin: 3rem auto 0 auto;
     padding: 3rem;
   }
 
   .faq-item {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.2rem;
   }
 
   .faq-item:last-child {
@@ -379,9 +1160,9 @@ const description = "Diseño de Landing Pages de alta conversión y optimizació
   }
 
   .faq-item h4 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 900;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
     position: relative;
     padding-left: 1.5rem;
   }
@@ -391,7 +1172,6 @@ const description = "Diseño de Landing Pages de alta conversión y optimizació
     position: absolute;
     left: 0;
     color: var(--accent-primary);
-    font-weight: 900;
   }
 
   .faq-item p {
@@ -402,40 +1182,71 @@ const description = "Diseño de Landing Pages de alta conversión y optimizació
     padding-left: 1.5rem;
   }
 
-  /* CTA banner */
+  /* CTAs Neo-Brutalistas (Fondo Amarillo Vibrante / Alto Contraste) */
   .cta-banner-brutalist {
-    background-color: var(--text-primary);
-    color: var(--bg-primary);
-    border: 3px solid var(--border-color);
-    padding: 4rem 3rem;
+    background-color: var(--accent-secondary);
+    color: var(--text-primary);
+    border: 4px solid var(--border-color);
+    padding: 3.5rem 2rem;
     text-align: center;
-    box-shadow: 6px 6px 0px var(--border-color);
+    box-shadow: 8px 8px 0px var(--border-color);
+    position: relative;
   }
 
   .cta-banner-brutalist h2 {
-    color: #ffffff;
-    font-size: 2rem;
+    color: var(--text-primary);
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
     font-weight: 900;
     margin-bottom: 1rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
   }
 
   .cta-banner-brutalist p {
-    color: var(--bg-tertiary);
-    max-width: 600px;
-    margin: 0 auto 2.5rem auto;
+    color: #18181b;
+    max-width: 650px;
+    margin: 0 auto 2.2rem auto;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  .cta-banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
   }
 
   .cta-banner-brutalist .btn-primary {
-    background-color: var(--accent-primary);
-    color: #000000;
-    box-shadow: 4px 4px 0px #ffffff;
-    border-color: #ffffff;
+    background-color: var(--text-primary);
+    color: #ffffff;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
   }
 
   .cta-banner-brutalist .btn-primary:hover {
-    background-color: var(--accent-hover);
-    box-shadow: 6px 6px 0px #ffffff;
+    background-color: #18181b;
+    color: var(--accent-secondary);
+    box-shadow: 6px 6px 0px var(--border-color);
+  }
+
+  .cta-banner-brutalist .btn-whatsapp {
+    box-shadow: 4px 4px 0px var(--border-color);
+  }
+
+  .cta-tag {
+    display: inline-block;
+    background-color: var(--text-primary);
+    color: var(--accent-secondary);
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border: 2px solid var(--border-color);
+    box-shadow: 2px 2px 0px var(--border-color);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
   }
 </style>
