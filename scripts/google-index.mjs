@@ -16,6 +16,9 @@ const DEFAULT_URLS = [
   'https://fabipers.com/sobre-mi',
   'https://fabipers.com/cuanto-cuesta-campana-linkedin-ads-b2b',
   'https://fabipers.com/auditoria-meta-ads-campanas-no-convierten',
+  'https://fabipers.com/que-preguntar-antes-de-contratar-trafficker-digital',
+  'https://fabipers.com/landing-page-para-vender-servicios-b2b',
+  'https://fabipers.com/mi-campana-de-google-ads-no-tiene-impresiones-ni-conversiones',
   'https://fabipers.com/cuanto-cobra-un-trafficker-digital',
   'https://fabipers.com/linkedin-ads-vs-google-ads-b2b',
   'https://fabipers.com/por-que-google-ads-no-convierte-auditoria-2027'
