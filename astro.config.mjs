@@ -7,6 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://fabipers.com',
+  trailingSlash: 'always',
   output: 'server',
   adapter: node({
     mode: 'standalone'

@@ -35,3 +35,6 @@ convert_wp_to_astro.py
 inspect_posts.py
 inspect_xml.py
 
+# credentials
+service_account.json
+

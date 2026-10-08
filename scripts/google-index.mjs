@@ -21,7 +21,11 @@ const DEFAULT_URLS = [
   'https://fabipers.com/mi-campana-de-google-ads-no-tiene-impresiones-ni-conversiones',
   'https://fabipers.com/cuanto-cobra-un-trafficker-digital',
   'https://fabipers.com/linkedin-ads-vs-google-ads-b2b',
-  'https://fabipers.com/por-que-google-ads-no-convierte-auditoria-2027'
+  'https://fabipers.com/por-que-google-ads-no-convierte-auditoria-2027',
+  'https://fabipers.com/gestion-y-administracion-de-google-ads',
+  'https://fabipers.com/por-que-leads-facebook-ads-mala-calidad-como-filtrar',
+  'https://fabipers.com/google-ads-vs-meta-ads-colombia-donde-invertir',
+  'https://fabipers.com/consultoria-google-ads-vs-agencia-marketing'
 ];
 
 function base64url(input) {
